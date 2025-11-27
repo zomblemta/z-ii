@@ -11,13 +11,74 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_text_pVwzhW": {
+      "type": "image-text",
+      "name": "Image Text",
+      "settings": {
+        "desktop_image": "shopify://shop_images/2025.06.28_Preprework3699.jpg",
+        "mobile_image": "shopify://shop_images/2025.06.28_Preprework4088.jpg",
+        "title": "We source sustainable business gifts",
+        "description": "<p>We believe that quality can win over quantity. And we thought that a better sourcing and transparency on where and how our promotional products are made would bring back value to this short term game.<br/><br/>That's why we source only thoughtful gifts options. From high-quality leather goods to eco-friendly products, our team of experts carefully selects each item to ensure that they meet our standards of quality and sustainability. We're proud to propose you a catalogue full of top brands and products, with real values & commitment towards both people and planet.</p>",
+        "image_position": "right"
+      }
+    },
+    "about_us_yVqfQF": {
+      "type": "about-us",
+      "name": "About Us",
+      "settings": {}
+    },
+    "index_discover_NdmV7P": {
+      "type": "index-discover",
+      "blocks": {
+        "discover_AeCRg8": {
+          "type": "discover",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework1520.jpg",
+            "title": "Exploremore styles",
+            "description": "",
+            "url": ""
+          }
+        },
+        "discover_UV8XzN": {
+          "type": "discover",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework4088.jpg",
+            "title": "Exploremore styles",
+            "description": "",
+            "url": ""
+          }
+        },
+        "discover_PUxEV4": {
+          "type": "discover",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework4107.jpg",
+            "title": "Exploremore styles",
+            "description": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "discover_AeCRg8",
+        "discover_UV8XzN",
+        "discover_PUxEV4"
+      ],
+      "name": "Index Discover",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_text_pVwzhW",
+    "about_us_yVqfQF",
+    "index_discover_NdmV7P"
   ]
 }
