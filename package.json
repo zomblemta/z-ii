@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "shopify theme dev --store bzpriz-vs.myshopify.com",
+    "dev:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "@tailwindcss/postcss": "^4.1.17",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22"
+  }
+}

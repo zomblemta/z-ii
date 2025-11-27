@@ -10,7 +10,6 @@
   display: inline-flex;
   flex-wrap: wrap;
   flex: initial;
-  padding: 1rem 0;
 }
 
 .localization-form:only-child .button,
@@ -21,7 +20,7 @@
 
 @media screen and (min-width: 750px) {
   .localization-form {
-    padding: 1rem 2rem 1rem 0;
+    /* padding: 0rem 2rem 0rem 0; */
   }
 
   .localization-form:first-of-type {
@@ -31,17 +30,18 @@
   .localization-form:only-child {
     justify-content: start;
     width: auto;
-    margin: 0 1rem 0 0;
+    margin: 0;
   }
 
   .localization-form:only-child .button,
   .localization-form:only-child .localization-form__select {
-    margin: 1rem 0;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .localization-form .button {
-  padding: 1rem;
+  padding: 0rem;
 }
 
 .localization-form__currency {
@@ -67,8 +67,6 @@
   margin-bottom: 1.5rem;
   padding-left: 1rem;
   text-align: left;
-  min-height: calc(4rem + var(--inputs-border-width) * 2);
-  min-width: calc(7rem + var(--inputs-border-width) * 2);
 }
 
 .disclosure__button.localization-form__select {
@@ -80,8 +78,8 @@
   position: absolute;
   content: '';
   height: 0.6rem;
-  right: calc(var(--inputs-border-width) + 1.5rem);
-  top: calc(50% - 0.2rem);
+  right:  -20px;
+  top: calc(50% - 0.3rem);
 }
 
 .localization-selector.link {
@@ -116,9 +114,9 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  height: 4rem;
+  height: 19px;
   padding: 0 1.5rem 0 1.5rem;
-  font-size: 1.3rem;
+  font-size: 14px;
   background-color: transparent;
 }
 
@@ -128,8 +126,6 @@
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
   overflow: hidden;
   position: absolute;
-  bottom: 100%;
-  transform: translateY(-1rem);
   z-index: 2;
   background-color: rgb(var(--color-background));
   border-radius: var(--popup-corner-radius);
@@ -141,13 +137,13 @@
 .disclosure__list {
   position: relative;
   overflow-y: auto;
-  font-size: 1.4rem;
+  font-size: 14px;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   scroll-padding: 0.5rem 0;
   max-height: 20.5rem;
-  max-width: 25.5rem;
-  min-width: 12rem;
+  max-width: 18rem;
+  min-width: 10rem;
   width: max-content;
 }
 
@@ -157,7 +153,7 @@
 }
 
 .country-selector__list--with-multiple-currencies {
-  width: 25.5rem;
+  width: 18rem;
 }
 
 .country-selector__close-button {
@@ -246,7 +242,8 @@
     animation: animateLocalization var(--duration-default) ease;
   }
 
-  .disclosure__list-wrapper.country-selector {
+  /* 移动端全屏弹窗（排除菜单抽屉） */
+  .disclosure__list-wrapper.country-selector:not(.menu-drawer__localization .disclosure__list-wrapper) {
     position: fixed;
     bottom: -1rem;
     left: 0;
@@ -259,11 +256,55 @@
     z-index: 4;
   }
 
-  .disclosure__list.country-selector__list {
+  .disclosure__list.country-selector__list:not(.menu-drawer__localization .disclosure__list) {
     max-height: 85%;
     min-width: 100%;
     margin-bottom: 0;
     z-index: 5;
+  }
+
+  /* Mobile menu drawer localization - popup above selector */
+  .menu-drawer__localization .disclosure__list-wrapper {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: 27.5rem !important;
+    border-radius: var(--popup-corner-radius) !important;
+    border-width: var(--popup-border-width) !important;
+    border-style: solid !important;
+    border-color: rgba(var(--color-foreground), var(--popup-border-opacity)) !important;
+    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
+      rgba(var(--color-shadow), var(--popup-shadow-opacity)) !important;
+    transform: translateY(-1rem) !important;
+    z-index: 2 !important;
+  }
+
+  .menu-drawer__localization .disclosure__list.country-selector__list {
+    max-height: 20.5rem !important;
+    max-width: 18rem !important;
+    min-width: 10rem !important;
+    width: max-content !important;
+    font-size: 14px !important;
+  }
+
+  .menu-drawer__localization .disclosure__list {
+    max-height: 20.5rem !important;
+    max-width: 18rem !important;
+    min-width: 10rem !important;
+    width: max-content !important;
+    font-size: 14px !important;
+  }
+
+  .menu-drawer__localization .country-selector__overlay {
+    display: none !important;
+  }
+
+  .menu-drawer__localization .country-selector__close-button {
+    display: none !important;
   }
 
   .country-selector__close-button.link {
@@ -283,6 +324,37 @@
 
   .country-filter {
     padding: 1.5rem 2rem 0.6rem 1.5rem;
+  }
+
+  /* Mobile language and currency selector font styles */
+  .disclosure__link {
+    color: #000 !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    line-height: normal !important;
+    letter-spacing: 1.4px !important;
+    text-transform: uppercase !important;
+  }
+
+  .localization-form__select {
+    color: #000 !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    line-height: normal !important;
+    letter-spacing: 1.4px !important;
+    text-transform: uppercase !important;
+  }
+
+  .localization-form__select span {
+    color: #000 !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    line-height: normal !important;
+    letter-spacing: 1.4px !important;
+    text-transform: uppercase !important;
   }
 }
 
@@ -312,6 +384,7 @@
   gap: 0.5rem;
   padding: 0.9rem 1.5rem;
   text-decoration: none;
+  font-size: 14px;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   color: rgba(var(--color-foreground), 0.75);
   word-break: break-word;
@@ -344,7 +417,7 @@
 }
 
 .header-localization .disclosure .localization-form__select {
-  font-size: 1.4rem;
+  font-size: 14px;
   letter-spacing: 0.06rem;
   height: auto;
   min-height: initial;
@@ -411,10 +484,29 @@
 }
 
 .header-localization:not(.menu-drawer__localization) .disclosure__list-wrapper {
-  bottom: initial;
-  top: 100%;
   right: 0;
-  transform: translateY(0);
+}
+
+/* PC Desktop - popup below selector */
+@media screen and (min-width: 750px) {
+  /* PC端所有弹窗默认在下方 */
+  .disclosure__list-wrapper {
+    top: 100%;
+    bottom: auto;
+    transform: translateY(1rem);
+    left: auto;
+    right: 0;
+  }
+  
+  /* Header中的语言币种选择器弹窗 */
+  .header__icons .disclosure__list-wrapper,
+  .header__icons localization-form .disclosure__list-wrapper {
+    top: 100%;
+    bottom: auto;
+    transform: translateY(1rem);
+    left: auto;
+    right: 0;
+  }
 }
 
 /* Menu drawer */

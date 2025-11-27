@@ -34,7 +34,7 @@
     aria-describedby="{{ localPosition }}Label"
   >
     <span>
-      {{- localization.country.name }} |
+      {% comment %} {{- localization.country.name }} | {% endcomment %}
       {{ localization.country.currency.iso_code }}
       {{ localization.country.currency.symbol -}}
     </span>
@@ -42,7 +42,7 @@
   </button>
   <div class="disclosure__list-wrapper country-selector" hidden>
     <div class="country-filter{% unless show_country_filter %} country-filter--no-padding{% endunless %}">
-      {% if show_country_filter %}
+      {% comment %} {% if show_country_filter %}
         <div class="field">
           <input
             class="country-filter__input field__input"
@@ -73,7 +73,7 @@
             {{- 'icon-search.svg' | inline_asset_content -}}
           </div>
         </div>
-      {% endif %}
+      {% endif %} {% endcomment %}
       <button
         class="country-selector__close-button button--small link"
         type="button"
@@ -151,6 +151,6 @@
       </ul>
     </div>
   </div>
-  <div class="country-selector__overlay"></div>
+  {% comment %} <div class="country-selector__overlay"></div> {% endcomment %}
 </div>
 <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">

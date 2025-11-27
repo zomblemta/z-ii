@@ -22,7 +22,7 @@ h6:empty {
 }
 
 html {
-  font-size: calc(var(--font-body-scale) * 62.5%);
+  font-size: calc(var(--font-body-scale) * 100%);
   box-sizing: border-box;
   height: 100%;
 }

@@ -1,3 +1,4 @@
+@import "tailwindcss";
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -125,10 +126,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 @media screen and (min-width: 990px) {
-  .header:not(.drawer-menu).page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+
 
   .page-width--narrow {
     max-width: 72.6rem;
@@ -2410,9 +2408,7 @@ input[type='checkbox'] {
     grid-template-columns: 1fr auto 1fr;
   }
 
-  .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
-    margin-top: 1.05rem;
-  }
+
 }
 
 .header *[tabindex='-1']:focus {
@@ -2436,7 +2432,6 @@ input[type='checkbox'] {
 
 .header__heading-link {
   display: inline-block;
-  padding: 0.75rem;
   text-decoration: none;
   word-break: break-word;
 }
@@ -2554,14 +2549,13 @@ input[type='checkbox'] {
 
 .header__icon,
 .header__icon--cart .icon {
-  height: 4.4rem;
-  width: 4.4rem;
+  height: 28px;
+  width: 28px;
   padding: 0;
 }
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
 }
 
 .header__icon--menu[aria-expanded='true']::before {
@@ -2792,7 +2786,6 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
@@ -2825,8 +2818,6 @@ details[open] > .header__menu-item .icon-caret {
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {
@@ -3595,3 +3586,216 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+/* Custom Header Styles */
+.header--custom {
+  display: flex;
+  flex-direction: row;
+
+}
+
+@media screen and (max-width: 768px) {
+  .header--custom {
+    flex-direction: column;
+  }
+}
+
+
+.header__mobile-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 989px) {
+  .header__top-row {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__heading {
+  margin: 0;
+}
+
+.header__search-wrapper {
+  max-width: 600px;
+  justify-self: center;
+}
+
+.header__search-inline {
+  width: 100%;
+}
+
+.header__search-inline .search-inline {
+  width: 100%;
+}
+
+.header__search-inline .field {
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+/* 移除搜索框的边框 */
+.header__search-inline .field:after {
+  display: none;
+}
+
+.header__search-inline .field:hover:after {
+  display: none;
+}
+
+.header__search-inline .search__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.header__search-inline .search__input:focus,
+.header__search-inline .search__input:focus-visible {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.header__search-inline .search__button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+@media screen and (max-width: 768px) {
+  .header__search-inline .search__button {
+    transform: translateY(0%);
+    right: 16px;
+  }
+
+}
+
+.header__search-inline .reset__button {
+  position: absolute;
+  right: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__icons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.header__icon .svg-wrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__icon--email .icon-email {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header__bottom-row {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+}
+
+.header__bottom-row .header__inline-menu {
+  margin: 0;
+}
+
+.header__bottom-row .list-menu {
+  justify-content: center;
+}
+
+.header__bottom-row .header__menu-item {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.6px;
+}
+
+/* 移动端搜索图标 */
+.header__search-mobile {
+  display: flex;
+}
+
+/* 语言和货币选择器样式 */
+.header__icons-wrapper .localization-form {
+  display: flex;
+  align-items: center;
+}
+
+.header__icons-wrapper .localization-selector {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* 响应式 */
+@media screen and (max-width: 989px) {
+  .header__search-wrapper {
+    display: none !important;
+  }
+  
+  .header__bottom-row {
+    display: none !important;
+  }
+  
+  .header__icons-wrapper {
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .header__mobile-nav {
+    display: none !important;
+  }
+  
+  .header__search-mobile {
+    display: none !important;
+  }
+}
+
+

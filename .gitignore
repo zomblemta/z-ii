@@ -1,0 +1,84 @@
+# 依赖文件
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# 构建输出
+dist/
+build/
+
+
+# 环境变量
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.temp
+
+# 缓存文件
+.cache/
+.parcel-cache/
+
+# Shopify 特定文件
+.shopifyignore
+.shopify/
+
+# 主题备份文件
+*.backup
+*.bak
+
+# 测试覆盖率
+coverage/
+.nyc_output/
+
+# 本地开发文件
+.local/
+local/
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.rar
+
+# 数据库文件
+*.db
+*.sqlite
+
+# 密钥文件
+*.pem
+*.key
+*.crt
+
+# 其他
+*.pid
+*.seed
+*.pid.lock 

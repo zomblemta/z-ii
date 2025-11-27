@@ -4,6 +4,8 @@ if (!customElements.get('localization-form')) {
     class LocalizationForm extends HTMLElement {
       constructor() {
         super();
+        console.log('🔧 Localization Form Component Initialized');
+        
         this.mql = window.matchMedia('(min-width: 750px)');
         this.header = document.querySelector('.header-wrapper');
         this.elements = {
@@ -16,10 +18,27 @@ if (!customElements.get('localization-form')) {
           searchIcon: this.querySelector('.country-filter__search-icon'),
           liveRegion: this.querySelector('#sr-country-search-results'),
         };
+        
+        // Debug: Check if required elements are found
+        console.log('Input element:', this.elements.input);
+        console.log('Button element:', this.elements.button);
+        console.log('Form element:', this.querySelector('form'));
+        console.log('Country links:', this.querySelectorAll('a').length);
+        
+        if (!this.elements.input) {
+          console.warn('⚠️ Input element not found during initialization!');
+        }
+        if (!this.querySelector('form')) {
+          console.warn('⚠️ Form element not found during initialization!');
+        }
+        
         this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
         this.addEventListener('keydown', this.onContainerKeyDown.bind(this));
         this.addEventListener('focusout', this.closeSelector.bind(this));
-        this.elements.button.addEventListener('click', this.openSelector.bind(this));
+        
+        if (this.elements.button) {
+          this.elements.button.addEventListener('click', this.openSelector.bind(this));
+        }
 
         if (this.elements.search) {
           this.elements.search.addEventListener('keyup', this.filterCountries.bind(this));
@@ -36,6 +55,7 @@ if (!customElements.get('localization-form')) {
         }
 
         this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
+        console.log('✅ Localization Form Component Ready');
       }
 
       hidePanel() {
@@ -104,12 +124,41 @@ if (!customElements.get('localization-form')) {
 
       onItemClick(event) {
         event.preventDefault();
+        console.log('=== Currency Selector Clicked ===');
+        console.log('Selected value:', event.currentTarget.dataset.value);
+        
         const form = this.querySelector('form');
+        console.log('Form found:', !!form);
+        console.log('Input element found:', !!this.elements.input);
+        
+        if (!this.elements.input) {
+          console.error('❌ Input element not found!');
+          console.log('Available inputs:', this.querySelectorAll('input'));
+          return;
+        }
+        
+        if (!form) {
+          console.error('❌ Form element not found!');
+          console.log('Component HTML:', this.outerHTML.substring(0, 300));
+          return;
+        }
+        
         this.elements.input.value = event.currentTarget.dataset.value;
-        if (form) form.submit();
+        console.log('✅ Input value set to:', this.elements.input.value);
+        console.log('Form action:', form.action);
+        console.log('Form method:', form.method);
+        
+        try {
+          console.log('🚀 Submitting form...');
+          form.submit();
+          console.log('✅ Form submitted successfully');
+        } catch (error) {
+          console.error('❌ Form submission error:', error);
+        }
       }
 
       openSelector() {
+        console.log('openSelector');
         this.elements.button.focus();
         this.elements.panel.toggleAttribute('hidden');
         this.elements.button.setAttribute(
