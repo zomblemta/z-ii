@@ -1,0 +1,79 @@
+<div class="mx-[15px] mt-[30px] md:mt-[90px] mb-[70px] mb:mb-[60px] ">
+  <div class="relative">
+    {% render 'alp-responsive-image',
+      image: section.settings.image,
+      image_mobile: section.settings.image_mobile,
+      class: 'w-full h-auto aspect-[208/277] md:aspect-[1332/700]'
+    %}
+    <div class="absolute left-1/2 bottom-[50px] md:bottom-1/2 -translate-x-1/2 md:-translate-y-1/2">
+
+      <h3 class="text-[46px] md:text-[96px] font-normal uppercase font-Montaga leading-normal m-0">
+        {{ section.settings.title }}
+      </h3>
+
+      <p class="text-lg leading-[22px] font-light font-Montaga m-0 mt-[6px] md:mt-[16px]">
+        {{ section.settings.description }}
+      </p>
+
+      <a
+        href="{{ section.settings.button_url }}"
+        class="rounded-[5px] bg-black text-white text-base font-normal tracking-[1.6px] uppercase mt-[40px]  px-[17px] py-[8px] md:px-[24px] md:py-[16px]"
+      >
+        {{ section.settings.button_label }}
+      </a>
+
+    </div>
+  </div>
+
+  <div class="w-full text-center mt-[60px] md:mt-[70px] font-Montaga font-normal  text-[40px] leading-[36px] md:text-[96px] md:leading-[96px]">
+    {{ section.settings.text_content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Index Services",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image Mobile"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "html",
+      "id": "text_content",
+      "label": "Text Content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Index Services"
+    }
+  ]
+}
+{% endschema %}

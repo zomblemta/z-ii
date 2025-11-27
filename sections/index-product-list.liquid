@@ -1,0 +1,433 @@
+<style>
+  .alp-page-container {
+  margin: 0 54px;
+  margin-top: 40px;
+}
+
+  .alp-index-product-list-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+  }
+  .alp-index-product-list-title-icon {
+    width: 20px;
+    height: 20px;
+  }
+  /* PC端样式 - 滑动布局 */
+  @media screen and (min-width: 1000px) {
+    /* 导航按钮容器 */
+    .alp-index-product-list-nav {
+      position: relative;
+      overflow: visible;
+    }
+
+    .alp-index-product-list-container {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      padding-bottom: 20px;
+    }
+
+    .alp-index-product-list-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+    .alp-index-product-list-item {
+      flex: 0 0 calc(25% - 15px);
+      min-width: calc(25% - 15px);
+      display: flex;
+      flex-direction: column;
+      scroll-snap-align: start;
+    }
+
+    .alp-index-product-list-nav-btn {
+      background-color: transparent;
+      position: absolute;
+      top: 32%;
+      width: 50px;
+      height: 50px;
+      transform: translateY(-50%);
+      display: flex;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .alp-index-product-list-nav-btn:hover {
+      opacity: 0.8;
+    }
+
+    .alp-index-product-list-nav-btn.prev {
+      left: -46px;
+    }
+
+    .alp-index-product-list-nav-btn.next {
+      right: -46px;
+    }
+
+    .alp-index-product-list-nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  /* 移动端隐藏导航按钮 */
+  @media screen and (max-width: 999px) {
+    .alp-index-product-list-nav-btn {
+      display: none !important;
+    }
+  }
+
+  /* 移动端样式 - 滑动容器显示1个多 */
+  @media screen and (max-width: 786px) {
+    .alp-page-container {
+      margin: 0 ;
+    }
+    .alp-index-product-list-title-icon {
+      width: 10px;
+      height: 10px;
+    }
+    .alp-index-product-list-title {
+      margin-top: 20px;
+      margin-bottom: 0px;
+      color: #000;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+    .alp-index-product-list {
+      padding: 20px 17px;
+    }
+    .alp-index-product-list-title {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .alp-index-product-list-container {
+      display: flex;
+      align-items: stretch;
+      overflow-x: auto;
+      gap: 12px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+
+    .alp-index-product-list-item {
+      flex: 0 0 75%;
+      min-width: 75%;
+      display: flex;
+      flex-direction: column;
+      scroll-snap-align: start;
+    }
+
+    .alp-index-product-list-item-image {
+      aspect-ratio: 210/280;
+    }
+
+    .alp-index-product-list-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+    /* 滚动进度条 */
+    .alp-index-product-list-progress-bar-wrapper {
+      display: block;
+    }
+  }
+
+  /* PC端隐藏进度条 */
+  @media screen and (min-width: 787px) {
+    .alp-index-product-list-progress-bar-wrapper {
+      display: none;
+    }
+  }
+
+  /* 进度条样式 */
+  .alp-index-product-list-progress-bar-wrapper {
+    width: 100%;
+    height: 2px;
+    background-color: #e5e5e5;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .alp-index-product-list-progress-bar {
+    height: 100%;
+    background-color: #000;
+    width: 0%;
+    transition: width 0.3s ease-out;
+  }
+
+  .alp-index-product-list-item-image {
+    width: 100%;
+    aspect-ratio: 318/424;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .alp-index-product-list-item-title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .alp-index-product-list-item-products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* 确保产品卡片高度一致 */
+  .alp-index-product-list-item > product-item,
+  .alp-index-product-list-item .product-collection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alp-index-product-list-item .product-collection__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .alp-index-product-list-item .product-collection__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+
+<div>
+  <div class="alp-index-product-list alp-page-container">
+    {% if section.settings.title != blank %}
+      <a href="{{ section.settings.url }}">
+      <div class="alp-index-product-list-title">
+        {{ section.settings.title }}
+      </div>
+      </a>
+    {% endif %}
+    <div class="alp-index-product-list-nav">
+      <div class="alp-index-product-list-container" product-list-data-scroll-container>
+        {% for product in section.settings.product_list %}
+          <div class="alp-index-product-list-item">
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: 'portrait',
+              show_secondary_image: false,
+              show_vendor: false,
+              show_rating: false,
+              lazy_load: true,
+              section_id: section.id
+            %}
+          </div>
+        {% endfor %}
+      </div>
+      <!-- PC端导航按钮 -->
+      <span class="alp-index-product-list-nav-btn prev" product-list-data-nav-prev aria-label="Previous">
+        {% render 'icon', icon: 'icon-arrow-prev' %}
+      </span>
+      <span class="alp-index-product-list-nav-btn next" product-list-data-nav-next aria-label="Next">
+        {% render 'icon', icon: 'icon-arrow-next' %}
+      </span>
+    </div>
+
+    <!-- 滚动进度条 -->
+    <div class="alp-index-product-list-progress-bar-wrapper">
+      <div class="alp-index-product-list-progress-bar" product-list-data-progress-bar></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    'use strict';
+
+    function initScrollProgress() {
+      const scrollContainer = document.querySelector('[product-list-data-scroll-container]');
+      const progressBar = document.querySelector('[product-list-data-progress-bar]');
+
+      if (!scrollContainer || !progressBar) return;
+
+      function updateProgress() {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const scrollWidth = scrollContainer.scrollWidth;
+        const clientWidth = scrollContainer.clientWidth;
+
+        if (scrollWidth > clientWidth) {
+          // 计算已浏览的内容比例（包括当前可见区域）
+          const viewedContent = scrollLeft + clientWidth;
+          const progress = (viewedContent / scrollWidth) * 100;
+          progressBar.style.width = progress + '%';
+        } else {
+          // 如果内容不足以滚动，显示100%
+          progressBar.style.width = '100%';
+        }
+      }
+
+      // 监听滚动事件
+      scrollContainer.addEventListener('scroll', updateProgress);
+
+      // 初始化进度（延迟执行确保布局完成）
+      setTimeout(updateProgress, 0);
+      setTimeout(updateProgress, 100);
+
+      // 窗口大小改变时重新计算
+      window.addEventListener('resize', updateProgress);
+    }
+
+    function initNavigationButtons() {
+      const scrollContainer = document.querySelector('[product-list-data-scroll-container]');
+      const prevBtn = document.querySelector('[product-list-data-nav-prev]');
+      const nextBtn = document.querySelector('[product-list-data-nav-next]');
+
+      if (!scrollContainer || !prevBtn || !nextBtn) return;
+
+      // 检查是否为PC端（宽度大于1000px）
+      function isDesktop() {
+        return window.innerWidth >= 1000;
+      }
+
+      // 更新按钮状态
+      function updateButtonStates() {
+        if (!isDesktop()) {
+          prevBtn.style.display = 'none';
+          nextBtn.style.display = 'none';
+          return;
+        }
+
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+
+        const scrollLeft = scrollContainer.scrollLeft;
+        const scrollWidth = scrollContainer.scrollWidth;
+        const clientWidth = scrollContainer.clientWidth;
+        const maxScrollLeft = scrollWidth - clientWidth;
+
+        // 更新按钮启用/禁用状态
+        prevBtn.disabled = scrollLeft <= 0;
+        nextBtn.disabled = scrollLeft >= maxScrollLeft - 1; // 使用-1避免浮点数精度问题
+      }
+
+      // 获取一个item的宽度（包括gap）
+      function getItemWidth() {
+        const items = scrollContainer.querySelectorAll('.alp-index-product-list-item');
+        if (items.length === 0) return 0;
+
+        const firstItem = items[0];
+        const itemWidth = firstItem.offsetWidth;
+        const gap = 20; // 与CSS中的gap值保持一致
+        return itemWidth + gap;
+      }
+
+      // 向前滑动一个item
+      prevBtn.addEventListener('click', function () {
+        if (prevBtn.disabled) return;
+        const itemWidth = getItemWidth();
+        const currentScroll = scrollContainer.scrollLeft;
+        const targetScroll = Math.max(0, currentScroll - itemWidth);
+
+        scrollContainer.scrollTo({
+          left: targetScroll,
+          behavior: 'smooth',
+        });
+      });
+
+      // 向后滑动一个item
+      nextBtn.addEventListener('click', function () {
+        if (nextBtn.disabled) return;
+        const itemWidth = getItemWidth();
+        const currentScroll = scrollContainer.scrollLeft;
+        const scrollWidth = scrollContainer.scrollWidth;
+        const clientWidth = scrollContainer.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+        const targetScroll = Math.min(maxScroll, currentScroll + itemWidth);
+
+        scrollContainer.scrollTo({
+          left: targetScroll,
+          behavior: 'smooth',
+        });
+      });
+
+      // 监听滚动事件更新按钮状态
+      scrollContainer.addEventListener('scroll', updateButtonStates);
+
+      // 监听窗口大小改变
+      window.addEventListener('resize', function () {
+        updateButtonStates();
+        // 延迟更新，确保布局完成
+        setTimeout(updateButtonStates, 100);
+      });
+
+      // 初始化按钮状态
+      setTimeout(updateButtonStates, 0);
+      setTimeout(updateButtonStates, 100);
+    }
+
+    // 页面加载完成后初始化
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        initScrollProgress();
+        initNavigationButtons();
+      });
+    } else {
+      initScrollProgress();
+      initNavigationButtons();
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Alp Index Product List",
+  "settings": [
+    {
+      "type": "url",
+      "id": "url",
+      "label": "URL"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alp Index Product List"
+    }
+  ]
+}
+{% endschema %}

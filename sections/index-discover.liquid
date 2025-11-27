@@ -1,0 +1,71 @@
+<div class="w-full mx-[15px] mt-[30px] mb-[45px] flex flex-col gap-[30px] md:gap-[42px]">
+  <h3 class="m-0 text-xl font-medium leading-normal uppercase tracking-[2px]">
+    {{ section.settings.title }}
+  </h3>
+
+  <div class="flex flex-col md:flex-row gap-[30px] md:gap-[36px]">
+    {% for block in section.blocks %}
+      <div class="flex flex-col  ">
+        {% render 'alp-responsive-image',
+          image: block.settings.image,
+          image_mobile: block.settings.image,
+          alt: block.settings.title,
+          class: 'aspect-[430/573] md:aspect-1/1'
+        %}
+
+        <span class="text-lg font-normal font-Montaga leading-[18px] uppercase mt-[12px] md:mt-[30px]">
+          {{ block.settings.title }}
+        </span>
+        <span class="text-xs font-light leading-[16px] mt-[6px] md:mt-[20px]">
+          {{ block.settings.description }}
+        </span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Index Discover",
+  "blocks": [
+    {
+      "type": "discover",
+      "name": "Discover",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Index Discover"
+    }
+  ]
+}
+{% endschema %}

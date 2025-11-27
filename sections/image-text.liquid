@@ -1,0 +1,82 @@
+<div class="w-full">
+  <div class="flex flex-col md:flex-row {% if section.settings.image_position == 'right' %}md:flex-row-reverse{% endif %}">
+    {%- comment -%} 移动端显示移动图片，PC端显示PC图片 {%- endcomment -%}
+    <div class="w-full md:w-1/2">
+      {%- if section.settings.mobile_image != blank -%}
+        <div class="md:hidden aspect-[479.65/281.79] overflow-hidden">
+            {% render 'alp-responsive-image' , image: section.settings.mobile_image, width: 479.65, height: 281.79 %}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.desktop_image != blank -%}
+        <div class="hidden md:block aspect-921/541 overflow-hidden">
+        {% render 'alp-responsive-image' , image: section.settings.desktop_image, width: 921, height: 541 %}
+        </div>
+      {%- endif -%}
+     
+    </div>
+
+    <div class="w-full md:w-1/2 p-4 md:p-[50px]">
+      <div class="h-full  flex flex-col justify-center">
+        {%- if section.settings.title != blank -%}
+          <h2 class="text-[24px] md:text-[36px] font-Montaga font-normal mb-[10px] md:mb-4">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="text-xs md:text-base font-light leading-[16px] md:leading-[24px]">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Your Title Here"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Your description here</p>"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position (Desktop)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,28 @@
+{% comment %}
+  Use:
+  {% render 'alp-responsive-image', image: image, image_mobile: image_mobile, desktop_width: 1280, mobile_width: 600, aspect_ratio: '1/1',alt: 'Alt text' %}
+{% endcomment %}
+
+{%- assign desktop = desktop_width | default: 1920 -%}
+{%- assign mobile = mobile_width | default: 600 -%}
+{%- assign mobile_img = image_mobile | default: image -%}
+{%- capture aspect_ratio_style -%}
+    {%- if aspect_ratio != blank -%}
+        --aspect-ratio:{{ aspect_ratio }}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- if image or mobile_img -%}
+  <picture style="{{ aspect_ratio_style }}">
+    <source srcset="{{ image | image_url: width: desktop }}" media="(min-width: 768px)">
+    <img
+      src="{{ mobile_img | image_url: width: mobile }}"
+      alt="{{ alt | default: image.alt }}"
+      loading="lazy"
+      width="100%"
+      height="auto"
+      style="max-width: 100%; object-fit: cover;"
+      class="{{ class }}"
+    >
+  </picture>
+{%- endif -%}
