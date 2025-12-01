@@ -1,0 +1,132 @@
+<style>
+  .popup-product-contact {
+    display: none;
+  }
+  .popup-product-contact.active {
+    display: flex;
+  }
+  .popup-product-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .popup-product-contact form input {
+    outline: none;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    border-top: none;
+    border-right: none;
+  }
+  .popup-product-contact form textarea {
+    outline: none;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    border-top: none;
+    border-right: none;
+  }
+  .popup-product-contact form button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+  }
+</style>
+<div
+  class="popup-product-contact position-relative py-30 px-15 w-full h-full bg-[#00000050] fixed top-0 left-0 z-[1000] flex flex-col justify-center items-center"
+  data-popup-content
+>
+  <div class="popup-product-contact__content bg-white p-4 mx-auto max-w-[60%] md:min-w-[40%] min-w-[90%]">
+    <div class="flex justify-between items-center w-full">
+      <h3 class="text-2xl font-bold">Drop Us A Line</h3>
+      <i class="popup-product-contact__close cursor-pointer " data-message-popup-close>
+        {%- render 'icon', icon: 'icon-close-black' -%}
+      </i>
+    </div>
+    <p class="text-sm font-normal md:w-[400px] w-[80%]">
+      We’re happy to answer any questions you have or provide you with an estimate. Just send us a message in the form
+      below with any questions you may have.
+    </p>
+    {% form 'contact' %}
+      {% render 'form-get-check-error-popup' %}
+      {%- if form.posted_successfully? -%}
+        <p class="form-success text-sm font-normal text-center mt-4 w-[400px]">
+          We’re happy to answer any questions you have or provide you with an estimate. Just send us a message in the
+          form below with any questions you may have.
+        </p>
+      {%- endif -%}
+      <input
+        type="text"
+        name="contact[product_url]"
+        id="ContactFormProductUrl"
+        value="{{ shop.domain }}{{ url }}?variant={{ current_variant_id }}"
+        hidden="hidden"
+        required="required"
+      >
+      <input
+        type="text"
+        name="contact[product_sku]"
+        id="ContactFormProductSKU"
+        value="{{ sku }}"
+        hidden="hidden"
+      >
+      <input
+        type="text"
+        name="contact[name]"
+        id="ContactFormName"
+        placeholder="Please enter your name"
+        value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+        required="required"
+      >
+      <input
+        type="email"
+        name="contact[email]"
+        id="ContactFormEmail"
+        placeholder="Please enter your email"
+        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+        spellcheck="false"
+        autocomplete="off"
+        autocapitalize="off"
+        required="required"
+      >
+      <input
+        type="tel"
+        class="form-control"
+        name="contact[phone]"
+        id="ContactFormPhone"
+        placeholder="Please enter your phone"
+        value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+        required="required"
+      >
+      <textarea
+        rows="8"
+        name="contact[body]"
+        id="ContactFormMessage"
+        placeholder="Please enter your message"
+        required="required"
+      >
+              {%- if form.body -%}
+                  {{ form.body }}
+              {%- endif -%}
+            </textarea>
+      {% render 'form-get-message' %}
+      <div class="pt-10">
+        <button type="submit" class="hover:opacity-80 outline-none border-none">Submit</button>
+      </div>
+    {% endform %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sizeGuideTrigger = document.querySelector('[data-message-popup-trigger]');
+    const popupSizeGuide = document.querySelector('.popup-product-contact');
+    sizeGuideTrigger.addEventListener('click', function () {
+      popupSizeGuide.classList.add('active');
+    });
+    const sizeGuideClose = document.querySelector('[data-message-popup-close]');
+    sizeGuideClose.addEventListener('click', function () {
+      popupSizeGuide.classList.remove('active');
+    });
+  });
+</script>

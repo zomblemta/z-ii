@@ -8,83 +8,42 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+
+{% assign color_label = 'color,farve,farbe,couleur,cor,color,farve,farbe,couleur,cor,colour' | split: ',' %}
+{% assign size_label = 'size,format,größe,talla,taille,dimension,mărime,dimensione,tamanho,寸法' | split: ',' %}
+
 {%- unless product.has_only_default_variant -%}
   <variant-selects
     id="variant-selects-{{ section.id }}"
     data-section="{{ section.id }}"
+    class="flex flex-col gap-y-[28px]"
     {{ block.shopify_attributes }}
   >
     {%- for option in product.options_with_values -%}
-      {%- liquid
-        assign swatch_count = option.values | map: 'swatch' | compact | size
-        assign picker_type = block.settings.picker_type
 
-        if swatch_count > 0 and block.settings.swatch_shape != 'none'
-          if block.settings.picker_type == 'dropdown'
-            assign picker_type = 'swatch_dropdown'
-          else
-            assign picker_type = 'swatch'
-          endif
-        endif
-      -%}
-      {%- if picker_type == 'swatch' -%}
-        <fieldset class="js product-form__input product-form__input--swatch">
-          <legend class="form__label">
-            {{ option.name }}:
-            <span data-selected-value>
-              {{- option.selected_value -}}
+      {% assign option_name_lower = option.name | downcase %}
+      {% assign is_color_label = false %}
+      {% for color_name in color_label %}
+        {% if option_name_lower contains color_name %}
+          {% assign is_color_label = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+
+      <fieldset class="js product-form__input product-form__input--pill p-0 flex justify-start gap-x-[25px] w-full items-center  {% if is_color_label %} product-form__input--color {% else %} product-form__input--size {% endif %}">
+        <span class="form__label flex items-center gap-x-1 md:gap-x-2 text-xs md:text-sm font-normal tracking-[1.2px] md:tracking-[1.4px] uppercase text-black">
+          {{ option.name }}:
+          {% if is_color_label %}
+            <span data-js-color-name class=" w-max-content text-xs md:text-sm font-normal tracking-[1.2px] md:tracking-[1.4px] uppercase text-black">
+              {{ option.selected_value | default: option.values.first }}
             </span>
-          </legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
-        </fieldset>
-      {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
-        </fieldset>
-      {%- else -%}
-        <div class="product-form__input product-form__input--dropdown">
-          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-            {{ option.name }}
-          </label>
-          <div class="select">
-            {%- if picker_type == 'swatch_dropdown' -%}
-              <span
-                data-selected-value
-                class="dropdown-swatch"
-              >
-                {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
-              </span>
-            {%- endif -%}
-            <select
-              id="Option-{{ section.id }}-{{ forloop.index0 }}"
-              class="select__select"
-              name="options[{{ option.name | escape }}]"
-              form="{{ product_form_id }}"
-            >
-              {% render 'product-variant-options',
-                product: product,
-                option: option,
-                block: block,
-                picker_type: picker_type
-              %}
-            </select>
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </div>
+          {% endif %}
+        </span>
+        <div class="flex gap-x-[25px] gap-y-2 w-full flex-wrap">
+          {% render 'product-variant-options', product: product, option: option, block: block, picker_type: 'button', is_color_label: is_color_label %}
         </div>
-      {%- endif -%}
+      </fieldset>
     {%- endfor -%}
 
     <script type="application/json" data-selected-variant>

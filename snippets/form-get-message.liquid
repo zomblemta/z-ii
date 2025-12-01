@@ -1,0 +1,26 @@
+{%- assign default-message-text = 'Your message has been sent successfully' -%}
+{%- assign loc-message-text = set-message-text | default: default-message-text -%}
+{%- if form.errors -%}
+    {%- assign res-error-fields = null -%}
+    <div class="note note--error">
+        <ul>
+            {%- for field in form.errors -%}
+                {%- if forloop.first != true -%}
+                    {%- assign res-error-fields = res-error-fields | append: '|' -%}
+                {%- endif -%}
+                {%- assign res-error-fields = res-error-fields | append: field -%}
+                <li>
+                    {%- if field == 'form' -%}
+                        {{ form.errors.messages[field] }}
+                    {%- else -%}
+                        {{ form.errors.translated_fields[field] }} - {{ form.errors.messages[field] }}
+                    {%- endif -%}
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+{%- endif -%}
+{%- assign res-error-fields = res-error-fields | split: '|' -%}
+{%- if form.posted_successfully? -%}
+    <div class="note note--success mt-20" id="ResetSuccess">{{ loc-message-text }}</div>
+{%- endif -%}

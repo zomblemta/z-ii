@@ -10,6 +10,11 @@ if (!customElements.get('media-gallery')) {
           thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
         };
         this.mql = window.matchMedia('(min-width: 750px)');
+        this.swiperInstance = null;
+        
+        // Wait for Swiper to be initialized
+        this.initializeSwiperListener();
+        
         if (!this.elements.thumbnails) return;
 
         this.elements.viewer.addEventListener('slideChanged', debounce(this.onSlideChanged.bind(this), 500));
@@ -21,6 +26,19 @@ if (!customElements.get('media-gallery')) {
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
       }
 
+      initializeSwiperListener() {
+        // Store reference to Swiper instance when available
+        const checkSwiper = () => {
+          const swiperContainer = this.querySelector('.product-gallery-main');
+          if (swiperContainer && swiperContainer.swiper) {
+            this.swiperInstance = swiperContainer.swiper;
+          } else {
+            setTimeout(checkSwiper, 100);
+          }
+        };
+        checkSwiper();
+      }
+
       onSlideChanged(event) {
         const thumbnail = this.elements.thumbnails.querySelector(
           `[data-target="${event.detail.currentElement.dataset.mediaId}"]`
@@ -29,6 +47,26 @@ if (!customElements.get('media-gallery')) {
       }
 
       setActiveMedia(mediaId, prepend) {
+        // Check if using Swiper
+        const swiperContainer = this.querySelector('.product-gallery-main');
+        
+        if (swiperContainer && this.swiperInstance) {
+          // Using Swiper - find the slide index and navigate to it
+          const slides = swiperContainer.querySelectorAll('.swiper-slide');
+          let targetIndex = 0;
+          
+          slides.forEach((slide, index) => {
+            if (slide.getAttribute('data-media-id') === mediaId) {
+              targetIndex = index;
+            }
+          });
+          
+          this.swiperInstance.slideTo(targetIndex);
+          this.preventStickyHeader();
+          return;
+        }
+        
+        // Fallback to original implementation for non-Swiper galleries
         const activeMedia =
           this.elements.viewer.querySelector(`[data-media-id="${mediaId}"]`) ||
           this.elements.viewer.querySelector('[data-media-id]');

@@ -25,20 +25,6 @@
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
 
-  {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
-
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-    }
-  {%- endstyle -%}
-
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
@@ -73,15 +59,15 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width">
-    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div class="">
+    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}  flex flex-col md:flex-row {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
           id="ProductInfo-{{ section.id }}"
-          class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
+          class="product__info-container px-[15px] md:px-0 {% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
@@ -89,22 +75,52 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
-              {%- when 'text' -%}
-                <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
-                  {{- block.settings.text -}}
-                </p>
+
               {%- when 'title' -%}
-                <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
-                  <a href="{{ product.url }}" class="product__title">
-                    <h2 class="h1">
+                <div class="flex flex-col gap-[10px] md:gap-[16px] md:flex-row md:items-center justify-between mt-4 md:mt-[30px]">
+                  <div class="product__title" {{ block.shopify_attributes }}>
+                    <h1 class="text-[22px] md:text-[36px] leading-normal font-Montaga font-normal">
                       {{ product.title | escape }}
-                    </h2>
-                  </a>
+                    </h1>
+                  </div>
+
+                  <div class="flex items-center gap-[12px] md:gap-[16px]">
+                    <div class="w-[26px] h-[26px] md:w-[36px] md:h-[36px] bg-[#E7E7E7] rounded-[5px] flex items-center justify-center">
+                      {% render 'icon', icon: 'icon-collect', class: 'md:w-[36px] md:h-[36px] ' %}
+                    </div>
+                    <div class="text-xs md:text-base text-nowrap font-light bg-[#E7E7E7] rounded-[5px] flex items-center gap-[6px] px-[8px] h-[26px] md:h-[36px] w-max-content">
+                      Buy a sample {% render 'icon', icon: 'icon-add-cart' %}
+                    </div>
+                  </div>
                 </div>
+                {% if product.description != blank %}
+                  <div class="text-xs leading-[16px] mt-[10px] md:mt-[16px] md:text-base md:leading-[24px] font-light">
+                    {{ product.description }}
+                  </div>
+                {% endif %}
+
+                <div class="flex gap-x-[20px] mt-[10px] md:mt-[16px] ">
+                  <div class="flex cursor-pointer items-center gap-x-[10px]" data-size-guide-trigger>
+                    {% render 'icon', icon: 'size-guide-icon' %}
+                    <p class="text-xs md:text-base font-light  underline m-0">Size Guide</p>
+                  </div>
+
+                  <div class="flex cursor-pointer items-center gap-x-[10px]" data-message-popup-trigger>
+                    {% render 'icon', icon: 'message-icon' %}
+                    <p class="text-xs md:text-base font-light  underline m-0">Message</p>
+                  </div>
+                </div>
+
+                {% comment %}
+                  {%- when 'description' -%}
+                  {%- if product.description != blank -%}
+                    <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                      {{ product.description }}
+                    </div>
+                  {%- endif -%}
+                {% endcomment %}
+              {%- when 'variant_picker' -%}
+                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -191,12 +207,7 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
-              {%- when 'description' -%}
-                {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
-                  </div>
-                {%- endif -%}
+
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -475,8 +486,6 @@
                   render 'share-button', block: block, share_link: share_url
                 %}
 
-              {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -683,6 +692,8 @@
         </section>
       </div>
     </div>
+    {% render 'poppu-size-guide' %}
+    {% render 'popup-product-contact' %}
 
     {% render 'product-media-modal', variant_images: variant_images %}
 

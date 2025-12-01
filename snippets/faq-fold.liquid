@@ -1,0 +1,74 @@
+<style>
+  .fold-border {
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .fold-content,.fold-content p {
+    color: #818181;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: 1.4px;
+  }
+  /* 箭头图标旋转动画 */
+  .arrow-icon {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrow-icon.rotate-180 {
+    transform: rotate(180deg);
+  }
+
+  /* 悬停效果 */
+  .arrow-icon {
+    transform: scale(1.1);
+  }
+
+  .arrow-icon.rotate-180 {
+    transform: rotate(180deg) scale(1.1);
+  }
+</style>
+{% assign id = 'menu-fold-' | append: id %}
+
+<div class="mt-4  rounded-[20px] bg-[#F2F2F2] overflow-hidden">
+  <div
+    id="{{id }}"
+    class="w-full flex justify-between items-center px-3 py-3 flex-row  text-sm  tracking-[1.4px] bg-[#F2F2F2]  text-left pl-4"
+  >
+    <span class="uppercase max-w-[80%]">{{ title }}</span>
+    <span class="arrow-icon">
+      {% render 'icon', icon: 'icon-arrow' %}
+    </span>
+  </div>
+
+  <div class="hidden  fold-content px-4 pb-5 bg-[#F2F2F2] text-xs  font-normal tracking-[1.2px]" id="{{ id }}-content">
+    <div class="fold-border h-[1px] px-[12px] mt-[12px] mb-[13px]"></div>
+    {{ description }}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let open = false;
+    let btnId = '{{ id }}';
+    let contentId = '{{ id }}-content';
+
+    let btn = document.querySelector('#' + btnId);
+    let content = document.querySelector('#' + contentId);
+    let arrowIcon = btn.querySelector('.arrow-icon');
+
+    if (btn && content) {
+      btn.addEventListener('click', function () {
+        content.classList.toggle('hidden');
+
+        arrowIcon.classList.toggle('rotate-180');
+      });
+    }
+  });
+</script>

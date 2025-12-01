@@ -50,13 +50,13 @@
       </button>
     </div>
 
-    {%- if settings.predictive_search_enabled -%}
+    {% comment %} {%- if settings.predictive_search_enabled -%}
       <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search id="predictive-search-results-inline">
         {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
       </div>
 
       <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
   </form>
   {%- if settings.predictive_search_enabled -%}
     </predictive-search>
