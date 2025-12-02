@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,10 +25,55 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "faq_ycQLR3": {
+      "type": "faq",
+      "blocks": {
+        "category_y4zR7H": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping",
+            "description": ""
+          }
+        },
+        "category_Kmq66J": {
+          "type": "category",
+          "settings": {
+            "title": "Return",
+            "description": ""
+          }
+        },
+        "category_wGmntM": {
+          "type": "category",
+          "settings": {
+            "title": "Customization",
+            "description": ""
+          }
+        },
+        "category_txdKJB": {
+          "type": "category",
+          "settings": {
+            "title": "FAQs",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_y4zR7H",
+        "category_Kmq66J",
+        "category_wGmntM",
+        "category_txdKJB"
+      ],
+      "name": "FAQ页面",
+      "settings": {
+        "title": "You have a question?",
+        "subtitle": "We might have the answer."
+      }
     }
   },
   "order": [
     "main",
-    "form"
+    "form",
+    "faq_ycQLR3"
   ]
 }
