@@ -394,13 +394,20 @@
                 
                 <!-- 获取当前分类下的所有项目 -->
                 <div class="faq-category__content">
+                  {% assign category_item_index = 0 %}
                   {%- for block in section.blocks -%}
                     {%- if block.settings.parent_category == category.id -%}
                       
                       {%- if block.type == "faq_item" and block.settings.question != blank -%}
                         <!-- 可折叠FAQ项目 -->
                         {% assign item_id = 'faq-item-' | append: section.id | append: '-' | append: block.id %}
-                        <div class="faq-item" {{ block.shopify_attributes }}>
+                        {% assign is_first = false %}
+                        {% if category_item_index == 0 %}
+                          {% assign is_first = true %}
+                        {% endif %}
+                        {% assign category_item_index = category_item_index | plus: 1 %}
+                        
+                        <div class="faq-item{% if is_first %} active{% endif %}" {{ block.shopify_attributes }}>
                           <button class="faq-item__header" onclick="toggleFaqItem('{{ item_id }}')">
                             <span class="faq-item__question">{{ block.settings.question }}</span>
                             <span class="faq-item__icon">
