@@ -36,6 +36,14 @@
             "description": ""
           }
         },
+        "faq_item_7ymqGa": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": "test",
+            "answer": "<p>asdasdfasfasfgas</p>"
+          }
+        },
         "category_Kmq66J": {
           "type": "category",
           "settings": {
@@ -60,6 +68,7 @@
       },
       "block_order": [
         "category_y4zR7H",
+        "faq_item_7ymqGa",
         "category_Kmq66J",
         "category_wGmntM",
         "category_txdKJB"
