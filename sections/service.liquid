@@ -1,0 +1,448 @@
+<!-- Hero Section -->
+<section class="service-hero relative bg-[#F5F5F5] overflow-hidden">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16">
+    <div class="flex flex-col md:flex-row items-center justify-between py-8 md:py-16 gap-8">
+      <!-- Left Content -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h1 class="text-[24px] md:text-[40px] lg:text-[48px] font-medium leading-tight text-[#1a1a1a]">
+          {{ section.settings.hero_title | default: 'Need customized services for your brand?' }}
+        </h1>
+        <p class="mt-4 text-[14px] md:text-[18px] text-[#666] leading-relaxed">
+          {{ section.settings.hero_subtitle | default: 'Trust us to do the job well for you!' }}
+        </p>
+      </div>
+      <!-- Right Image -->
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+        {%- if section.settings.hero_image != blank -%}
+          <div class="relative w-full max-w-[500px] aspect-4/3 rounded-lg overflow-hidden">
+            {{ section.settings.hero_image | image_url: width: 1000 | image_tag: 
+              class: 'w-full h-full object-cover',
+              loading: 'eager'
+            }}
+          </div>
+        {%- else -%}
+          <div class="w-full max-w-[500px] aspect-4/3 bg-[#e0e0e0] rounded-lg flex items-center justify-center">
+            <svg class="w-16 h-16 text-[#999]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="service-content py-8 md:py-16 bg-white" id="service-section-{{ section.id }}">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
+      
+      <!-- Left Navigation (PC Only) -->
+      <div class="hidden lg:block lg:w-[200px] shrink-0">
+        <nav class="sticky top-[120px]">
+          <ul class="space-y-2 border-l-2 border-[#e0e0e0]">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'service_item' -%}
+                <li>
+                  <a 
+                    href="#service-{{ block.id }}"
+                    class="service-nav-item block pl-4 py-2 text-[14px] text-[#666] hover:text-[#1a1a1a] transition-colors duration-300 border-l-2 border-transparent -ml-[2px] hover:border-[#1a1a1a]"
+                    data-target="service-{{ block.id }}"
+                  >
+                    {{ block.settings.title | default: 'Service Title' }}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="lg:hidden overflow-x-auto pb-4 -mx-4 px-4">
+        <div class="flex gap-2 min-w-max">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'service_item' -%}
+              <a 
+                href="#service-{{ block.id }}"
+                class="service-nav-item-mobile shrink-0 px-4 py-2 text-[12px] bg-[#f5f5f5] rounded-full text-[#666] hover:bg-[#1a1a1a] hover:text-white transition-colors duration-300"
+                data-target="service-{{ block.id }}"
+              >
+                {{ block.settings.title | default: 'Service Title' }}
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="flex-1 space-y-16 md:space-y-24">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'service_item' -%}
+            <div 
+              id="service-{{ block.id }}" 
+              class="service-item scroll-mt-[100px]"
+              {{ block.shopify_attributes }}
+            >
+              <div class="flex flex-col {% if block.settings.image_position == 'left' %}md:flex-row{% else %}md:flex-row-reverse{% endif %} gap-6 md:gap-12 items-start">
+                
+                <!-- Image -->
+                <div class="w-full md:w-[280px] lg:w-[320px] shrink-0">
+                  {%- if block.settings.image != blank -%}
+                    <div class="aspect-square rounded-lg overflow-hidden bg-[#f5f5f5]">
+                      {{ block.settings.image | image_url: width: 640 | image_tag: 
+                        class: 'w-full h-full object-cover',
+                        loading: 'lazy'
+                      }}
+                    </div>
+                  {%- else -%}
+                    <div class="aspect-square bg-[#f0f0f0] rounded-lg flex items-center justify-center">
+                      <svg class="w-12 h-12 text-[#ccc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  {%- endif -%}
+                </div>
+
+                <!-- Content -->
+                <div class="flex-1">
+                  <h2 class="text-[20px] md:text-[28px] lg:text-[32px] font-medium text-[#1a1a1a] mb-6">
+                    {{ block.settings.title | default: 'Service Title' }}
+                  </h2>
+                  
+                  <!-- Steps -->
+                  <div class="space-y-4">
+                    {%- if block.settings.step_1 != blank -%}
+                      <div class="flex items-start gap-4">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">1</span>
+                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_1 }}</p>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.step_2 != blank -%}
+                      <div class="flex items-start gap-4">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">2</span>
+                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_2 }}</p>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.step_3 != blank -%}
+                      <div class="flex items-start gap-4">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">3</span>
+                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_3 }}</p>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.step_4 != blank -%}
+                      <div class="flex items-start gap-4">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">4</span>
+                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_4 }}</p>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.step_5 != blank -%}
+                      <div class="flex items-start gap-4">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">5</span>
+                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_5 }}</p>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.step_6 != blank -%}
+                      <div class="flex items-start gap-4">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">6</span>
+                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_6 }}</p>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="service-cta relative overflow-hidden">
+  <div class="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center">
+    <!-- Background Image -->
+    {%- if section.settings.cta_background_image != blank -%}
+      <div class="absolute inset-0 z-0">
+        {{ section.settings.cta_background_image | image_url: width: 1920 | image_tag: 
+          class: 'w-full h-full object-cover',
+          loading: 'lazy'
+        }}
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+    {%- else -%}
+      <div class="absolute inset-0 z-0 bg-linear-to-r from-[#2a2a2a] to-[#4a4a4a]"></div>
+    {%- endif -%}
+    
+    <!-- Content -->
+    <div class="relative z-10 text-center text-white px-4 py-12 md:py-16">
+      <h2 class="text-[28px] md:text-[40px] lg:text-[48px] font-medium italic mb-4">
+        {{ section.settings.cta_title | default: 'CONTACT US NOW' }}
+      </h2>
+      <p class="text-[14px] md:text-[18px] mb-8 opacity-90">
+        {{ section.settings.cta_subtitle | default: 'Launch exclusive customized services' }}
+      </p>
+      {%- if section.settings.cta_button_text != blank -%}
+        <a 
+          href="{{ section.settings.cta_button_link | default: '#' }}"
+          class="inline-block px-8 py-3 bg-transparent border-2 border-white text-white text-[14px] font-medium hover:bg-white hover:text-[#1a1a1a] transition-all duration-300 rounded-sm"
+        >
+          {{ section.settings.cta_button_text }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for smooth scrolling and active state -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionId = '{{ section.id }}';
+    const navItems = document.querySelectorAll(`#service-section-${sectionId} .service-nav-item, #service-section-${sectionId} .service-nav-item-mobile`);
+    const serviceItems = document.querySelectorAll(`#service-section-${sectionId} .service-item`);
+    
+    // Smooth scroll on click
+    navItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Update active state on scroll (PC only)
+    function updateActiveNav() {
+      const scrollPosition = window.scrollY + 150;
+      
+      serviceItems.forEach(item => {
+        const itemTop = item.offsetTop;
+        const itemBottom = itemTop + item.offsetHeight;
+        const itemId = item.getAttribute('id');
+        
+        if (scrollPosition >= itemTop && scrollPosition < itemBottom) {
+          navItems.forEach(nav => {
+            const navTarget = nav.getAttribute('data-target');
+            if (navTarget === itemId) {
+              nav.classList.add('text-[#1a1a1a]', 'border-[#1a1a1a]', 'font-medium');
+              nav.classList.remove('text-[#666]', 'border-transparent');
+              // Mobile button style
+              if (nav.classList.contains('service-nav-item-mobile')) {
+                nav.classList.add('bg-[#1a1a1a]', 'text-white');
+                nav.classList.remove('bg-[#f5f5f5]', 'text-[#666]');
+              }
+            } else {
+              nav.classList.remove('text-[#1a1a1a]', 'border-[#1a1a1a]', 'font-medium');
+              nav.classList.add('text-[#666]', 'border-transparent');
+              // Mobile button style
+              if (nav.classList.contains('service-nav-item-mobile')) {
+                nav.classList.remove('bg-[#1a1a1a]', 'text-white');
+                nav.classList.add('bg-[#f5f5f5]', 'text-[#666]');
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // Initial check
+    updateActiveNav();
+    
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Service",
+  "tag": "section",
+  "class": "section-service",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Need customized services for your brand?"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero Subtitle",
+      "default": "Trust us to do the job well for you!"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "header",
+      "content": "CTA Section"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "CTA Title",
+      "default": "CONTACT US NOW"
+    },
+    {
+      "type": "text",
+      "id": "cta_subtitle",
+      "label": "CTA Subtitle",
+      "default": "Launch exclusive customized services"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_background_image",
+      "label": "CTA Background Image"
+    },
+    {
+      "type": "text",
+      "id": "cta_button_text",
+      "label": "CTA Button Text",
+      "default": "LEARN MORE"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_link",
+      "label": "CTA Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service_item",
+      "name": "Service Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Service Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image Position",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "header",
+          "content": "Steps"
+        },
+        {
+          "type": "textarea",
+          "id": "step_1",
+          "label": "Step 1",
+          "default": "Please contact our customer service team first and let them know the style you need."
+        },
+        {
+          "type": "textarea",
+          "id": "step_2",
+          "label": "Step 2",
+          "default": "Let us know the quantity you need and wait for our quote."
+        },
+        {
+          "type": "textarea",
+          "id": "step_3",
+          "label": "Step 3",
+          "default": "Let us know the quantity you need and wait for our quote."
+        },
+        {
+          "type": "textarea",
+          "id": "step_4",
+          "label": "Step 4"
+        },
+        {
+          "type": "textarea",
+          "id": "step_5",
+          "label": "Step 5"
+        },
+        {
+          "type": "textarea",
+          "id": "step_6",
+          "label": "Step 6"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service",
+      "blocks": [
+        {
+          "type": "service_item",
+          "settings": {
+            "title": "Blank Plain Wholesale",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "Let us know the quantity you need and wait for our quote.",
+            "step_5": "Let us know the quantity you need and wait for our quote."
+          }
+        },
+        {
+          "type": "service_item",
+          "settings": {
+            "title": "Custom Logo Printing",
+            "image_position": "right",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote."
+          }
+        },
+        {
+          "type": "service_item",
+          "settings": {
+            "title": "Design Clothing for Startups",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "Let us know the quantity you need and wait for our quote.",
+            "step_5": "Let us know the quantity you need and wait for our quote."
+          }
+        },
+        {
+          "type": "service_item",
+          "settings": {
+            "title": "Replace Your Brand Labels",
+            "image_position": "right",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "Please contact our customer service team first and let them know the style you need."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

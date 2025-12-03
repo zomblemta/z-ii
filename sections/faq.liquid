@@ -4,19 +4,21 @@
     margin: 0 auto;
     padding: 40px 20px 60px;
   }
-  
+
   .faq-header {
     margin-bottom: 40px;
   }
-  
+
   .faq-title {
-    font-family: 'Montaga', serif;
-    font-size: 28px;
-    line-height: 36px;
+    color: #000;
+    font-family: Montaga;
+    font-size: 26px;
+    font-style: normal;
     font-weight: 400;
-    margin: 0 0 4px 0;
+    line-height: 32px; /* 123.077% */
+    margin-bottom: 20px;
   }
-  
+
   .faq-subtitle {
     font-family: 'Montaga', serif;
     font-size: 28px;
@@ -24,13 +26,13 @@
     font-weight: 400;
     margin: 0;
   }
-  
+
   .faq-container {
     display: flex;
     gap: 40px;
     position: relative;
   }
-  
+
   /* 左侧导航栏 - PC端 */
   .faq-sidebar {
     flex-shrink: 0;
@@ -38,14 +40,16 @@
     position: sticky;
     top: 100px;
     height: fit-content;
+    border-right: 1px solid #BABABA;
+    padding-right: 28px;
   }
-  
+
   .faq-nav {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-  
+
   .faq-nav__item {
     padding: 14px 16px;
     font-size: 14px;
@@ -59,72 +63,64 @@
     font-family: inherit;
     border-radius: 0;
   }
-  
+
   .faq-nav__item:hover {
     color: #000;
     background-color: #f5f5f5;
   }
-  
+
   .faq-nav__item.active {
     color: #000;
-    font-weight: 400;
+    background-color: #f5f5f5;
     background-color: #000;
     color: #fff;
   }
-  
+
   /* 右侧内容区域 */
   .faq-content {
     flex: 1;
     min-width: 0;
   }
-  
+
   .faq-category {
     margin-bottom: 50px;
     scroll-margin-top: 120px;
   }
-  
+
   .faq-category:last-child {
     margin-bottom: 0;
   }
-  
+
   .faq-category__title {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    color: #000;
+    font-family: Montaga;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: #000;
   }
-  
+
   .faq-category__description {
     font-size: 13px;
     line-height: 20px;
     color: #666;
     margin-bottom: 16px;
   }
-  
+
   .faq-category__content {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-  
-  /* 可折叠项目 */
-  .faq-item {
-    border-top: 1px solid #e5e5e5;
-  }
-  
-  .faq-item:last-child {
-    border-bottom: 1px solid #e5e5e5;
-  }
-  
+
   .faq-item__header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 0;
+    padding: 12px 0;
     background: none;
     border: none;
     cursor: pointer;
@@ -132,15 +128,21 @@
     font-family: inherit;
     gap: 20px;
   }
-  
+
+  .faq-item.active .faq-item__header {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
   .faq-item__question {
-    font-size: 13px;
-    line-height: 18px;
     color: #000;
-    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
     flex: 1;
   }
-  
+
   .faq-item__icon {
     flex-shrink: 0;
     width: 16px;
@@ -148,49 +150,59 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
     color: #000;
+    position: relative;
   }
-  
+
   .faq-item__icon svg {
     width: 100%;
     height: 100%;
   }
-  
-  .faq-item.active .faq-item__icon {
-    transform: rotate(180deg);
+
+  .faq-item__icon-down {
+    display: block;
   }
-  
+
+  .faq-item__icon-up {
+    display: none;
+  }
+
+  .faq-item.active .faq-item__icon-down {
+    display: none;
+  }
+
+  .faq-item.active .faq-item__icon-up {
+    display: block;
+  }
+
   .faq-item__answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    opacity: 0;
   }
-  
+
   .faq-item.active .faq-item__answer {
     max-height: 2000px;
+    opacity: 1;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease 0.1s;
   }
-  
+
   .faq-item__answer-content {
-    padding: 0 0 20px 0;
-    font-size: 13px;
-    line-height: 20px;
-    color: #666;
+    padding: 12px 0;
+    color: #818181;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 142.857% */
+    transform: translateY(-10px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .faq-item__answer-content p {
-    margin: 0 0 12px 0;
+
+  .faq-item.active .faq-item__answer-content {
+    transform: translateY(0);
   }
-  
-  .faq-item__answer-content p:last-child {
-    margin-bottom: 0;
-  }
-  
-  .faq-item__answer-content a {
-    color: #000;
-    text-decoration: underline;
-  }
-  
+
   /* 简单文本项目（不可折叠） */
   .faq-simple-item {
     border-top: 1px solid #e5e5e5;
@@ -199,124 +211,132 @@
     line-height: 18px;
     color: #000;
   }
-  
+
   .faq-simple-item:last-child {
     border-bottom: 1px solid #e5e5e5;
   }
-  
+
   /* 移动端横向导航 */
   .faq-mobile-nav {
     display: none;
     overflow-x: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     position: relative;
   }
-  
-  .faq-mobile-nav::-webkit-scrollbar {
-    display: none;
-  }
-  
+
   .faq-mobile-nav__list {
     display: flex;
     gap: 0;
     padding-bottom: 2px;
-    border-bottom: 1px solid #e5e5e5;
   }
-  
+
   .faq-mobile-nav__item {
     flex-shrink: 0;
-    padding: 12px 0;
-    margin-right: 24px;
-    font-size: 13px;
-    line-height: 18px;
-    color: #999;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid transparent;
+    padding: 4px 5px;
+    margin-right: 6px;
+    background: #f2f2f2;
+    border-radius: 2px;
     cursor: pointer;
     white-space: nowrap;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
     transition: all 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-  
+
   .faq-mobile-nav__item.active {
-    color: #000;
-    border-bottom-color: #000;
-    font-weight: 500;
+    color: #fff;
+    background-color: #000;
   }
-  
+
   /* 响应式 - 平板和PC */
   @media screen and (min-width: 768px) {
     .faq-section {
       padding: 60px 40px 100px;
     }
-    
+
     .faq-title,
     .faq-subtitle {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 72px;
+      margin: 70px 0;
     }
-    
+    .faq-nav__item {
+      padding: 12px 10px;
+      font-size: 20px;
+      border-radius: 5px;
+      background: #f2f2f2;
+      margin-bottom: 30px;
+    }
+
     .faq-container {
-      gap: 60px;
+      gap: 28px;
     }
-    
+
     .faq-category {
       scroll-margin-top: 100px;
     }
-    
+
     .faq-category__title {
-      font-size: 15px;
-      line-height: 22px;
+      font-style: normal;
+      font-weight: 400;
       margin-bottom: 24px;
     }
-    
+
     .faq-category__description {
       font-size: 13px;
       line-height: 22px;
       margin-bottom: 20px;
     }
-    
+
     .faq-item__question {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 20px;
     }
-    
+
     .faq-item__answer-content {
-      font-size: 13px;
-      line-height: 22px;
+      color: #818181;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px; /* 125% */
     }
-    
+
     .faq-simple-item {
       font-size: 14px;
       line-height: 20px;
     }
   }
-  
+
   @media screen and (min-width: 1024px) {
     .faq-sidebar {
       width: 220px;
     }
   }
-  
+
   /* 响应式 - 移动端 */
   @media screen and (max-width: 767px) {
     .faq-sidebar {
       display: none;
     }
-    
+
     .faq-mobile-nav {
       display: block;
     }
-    
+
     .faq-container {
       flex-direction: column;
       gap: 0;
     }
-    
+
     .faq-category {
       margin-bottom: 40px;
       scroll-margin-top: 60px;
@@ -332,14 +352,11 @@
         {%- if section.settings.title != blank -%}
           <h1 class="faq-title">{{ section.settings.title }}</h1>
         {%- endif -%}
-        {%- if section.settings.subtitle != blank -%}
-          <p class="faq-subtitle">{{ section.settings.subtitle }}</p>
-        {%- endif -%}
       </div>
     {%- endif -%}
-    
-    {%- assign categories = section.blocks | where: "type", "category" -%}
-    
+
+    {%- assign categories = section.blocks | where: 'type', 'category' -%}
+
     {%- if categories.size > 0 -%}
       <!-- 移动端横向导航 -->
       <div class="faq-mobile-nav">
@@ -347,8 +364,8 @@
           {%- for category in categories -%}
             {%- if category.settings.title != blank -%}
               {% assign category_id = 'category-' | append: section.id | append: '-' | append: category.id %}
-              <button 
-                class="faq-mobile-nav__item{% if forloop.first %} active{% endif %}" 
+              <button
+                class="faq-mobile-nav__item{% if forloop.first %} active{% endif %}"
                 data-category="{{ category_id }}"
                 onclick="scrollToCategory('{{ category_id }}', this, true)"
               >
@@ -358,7 +375,7 @@
           {%- endfor -%}
         </div>
       </div>
-      
+
       <div class="faq-container">
         <!-- PC端侧边栏导航 -->
         <aside class="faq-sidebar">
@@ -366,8 +383,8 @@
             {%- for category in categories -%}
               {%- if category.settings.title != blank -%}
                 {% assign category_id = 'category-' | append: section.id | append: '-' | append: category.id %}
-                <button 
-                  class="faq-nav__item{% if forloop.first %} active{% endif %}" 
+                <button
+                  class="faq-nav__item{% if forloop.first %} active{% endif %}"
                   data-category="{{ category_id }}"
                   onclick="scrollToCategory('{{ category_id }}', this, false)"
                 >
@@ -377,7 +394,7 @@
             {%- endfor -%}
           </nav>
         </aside>
-        
+
         <!-- 右侧内容区域 -->
         <div class="faq-content">
           {%- for category in categories -%}
@@ -385,20 +402,20 @@
               {% assign category_id = 'category-' | append: section.id | append: '-' | append: category.id %}
               <div class="faq-category" id="{{ category_id }}" {{ category.shopify_attributes }}>
                 <h2 class="faq-category__title">{{ category.settings.title }}</h2>
-                
+
                 {%- if category.settings.description != blank -%}
                   <div class="faq-category__description">
                     {{ category.settings.description }}
                   </div>
                 {%- endif -%}
-                
+
                 <!-- 获取当前分类下的所有项目 -->
                 <div class="faq-category__content">
                   {% assign category_item_index = 0 %}
+                  {% assign current_category_title = category.settings.title %}
                   {%- for block in section.blocks -%}
-                    {%- if block.settings.parent_category == category.id -%}
-                      
-                      {%- if block.type == "faq_item" and block.settings.question != blank -%}
+                    {%- if block.settings.parent_category == current_category_title -%}
+                      {%- if block.type == 'faq_item' and block.settings.question != blank -%}
                         <!-- 可折叠FAQ项目 -->
                         {% assign item_id = 'faq-item-' | append: section.id | append: '-' | append: block.id %}
                         {% assign is_first = false %}
@@ -406,14 +423,20 @@
                           {% assign is_first = true %}
                         {% endif %}
                         {% assign category_item_index = category_item_index | plus: 1 %}
-                        
-                        <div class="faq-item{% if is_first %} active{% endif %}" {{ block.shopify_attributes }}>
+
+                        <div
+                          class="faq-item{% if is_first %} active{% endif %} bg-[#F2F2F2] rounded-[5px] px-[20px]"
+                          {{ block.shopify_attributes }}
+                        >
                           <button class="faq-item__header" onclick="toggleFaqItem('{{ item_id }}')">
                             <span class="faq-item__question">{{ block.settings.question }}</span>
                             <span class="faq-item__icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
-                              </svg>
+                              <span class="faq-item__icon-down">
+                                {% render 'icon', icon: 'icon-arrow-down' %}
+                              </span>
+                              <span class="faq-item__icon-up">
+                                {% render 'icon', icon: 'icon-arrow-up' %}
+                              </span>
                             </span>
                           </button>
                           <div class="faq-item__answer" id="{{ item_id }}">
@@ -423,14 +446,13 @@
                           </div>
                         </div>
                       {%- endif -%}
-                      
-                      {%- if block.type == "simple_item" and block.settings.text != blank -%}
+
+                      {%- if block.type == 'simple_item' and block.settings.text != blank -%}
                         <!-- 简单文本项目（不可折叠） -->
                         <div class="faq-simple-item" {{ block.shopify_attributes }}>
                           {{ block.settings.text }}
                         </div>
                       {%- endif -%}
-                      
                     {%- endif -%}
                   {%- endfor -%}
                 </div>
@@ -450,52 +472,52 @@
     const item = answerElement.closest('.faq-item');
     item.classList.toggle('active');
   }
-  
+
   // 滚动到指定分类
   function scrollToCategory(categoryId, button, isMobile) {
     const category = document.getElementById(categoryId);
     if (category) {
       const offset = isMobile ? 60 : 100;
       const categoryTop = category.getBoundingClientRect().top + window.pageYOffset - offset;
-      
+
       window.scrollTo({
         top: categoryTop,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
-      
+
       // 更新导航活动状态
       const parentNav = button.closest('.faq-nav, .faq-mobile-nav__list');
       const navItems = parentNav.querySelectorAll('.faq-nav__item, .faq-mobile-nav__item');
-      navItems.forEach(item => item.classList.remove('active'));
+      navItems.forEach((item) => item.classList.remove('active'));
       button.classList.add('active');
     }
   }
-  
+
   // 滚动监听，自动更新活动导航项
   let scrollTimeout;
   let isUserScrolling = true;
-  
-  window.addEventListener('scroll', function() {
+
+  window.addEventListener('scroll', function () {
     if (!isUserScrolling) return;
-    
+
     clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(function() {
+    scrollTimeout = setTimeout(function () {
       const categories = document.querySelectorAll('.faq-category');
       let currentCategory = null;
       const isMobile = window.innerWidth < 768;
       const offset = isMobile ? 80 : 120;
-      
+
       // 找到当前视口中的分类
-      categories.forEach(category => {
+      categories.forEach((category) => {
         const rect = category.getBoundingClientRect();
         if (rect.top <= offset && rect.bottom > offset) {
           currentCategory = category.id;
         }
       });
-      
+
       // 如果没有找到，使用第一个进入视口的
       if (!currentCategory) {
-        categories.forEach(category => {
+        categories.forEach((category) => {
           const rect = category.getBoundingClientRect();
           if (rect.top > 0 && rect.top < window.innerHeight / 2) {
             if (!currentCategory) {
@@ -504,28 +526,28 @@
           }
         });
       }
-      
+
       if (currentCategory) {
         updateActiveNav(currentCategory, isMobile);
       }
     }, 100);
   });
-  
+
   // 更新导航活动状态
   function updateActiveNav(categoryId, isMobile) {
     // 更新PC端导航
     const navItems = document.querySelectorAll('.faq-nav__item');
-    navItems.forEach(item => {
+    navItems.forEach((item) => {
       if (item.getAttribute('data-category') === categoryId) {
         item.classList.add('active');
       } else {
         item.classList.remove('active');
       }
     });
-    
+
     // 更新移动端导航
     const mobileNavItems = document.querySelectorAll('.faq-mobile-nav__item');
-    mobileNavItems.forEach(item => {
+    mobileNavItems.forEach((item) => {
       if (item.getAttribute('data-category') === categoryId) {
         item.classList.add('active');
         // 移动端导航自动滚动到当前项
@@ -537,20 +559,20 @@
       }
     });
   }
-  
+
   // 页面加载时，如果URL有hash，滚动到对应位置
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     if (window.location.hash) {
       const targetId = window.location.hash.substring(1);
       const target = document.getElementById(targetId);
       if (target) {
-        setTimeout(function() {
+        setTimeout(function () {
           const isMobile = window.innerWidth < 768;
           const offset = isMobile ? 60 : 100;
           const targetTop = target.getBoundingClientRect().top + window.pageYOffset - offset;
           window.scrollTo({
             top: targetTop,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }, 100);
       }
@@ -606,35 +628,19 @@
         {
           "type": "text",
           "id": "parent_category",
-          "label": "所属分类ID",
-          "info": "填写上面创建的分类的ID，可在左侧块列表中查看"
+          "label": "所属分类名称",
+          "info": "填写分类的名称，例如：Shipping、Return、FAQs 等（必须与分类名称完全一致）",
+          "placeholder": "Shipping"
         },
         {
           "type": "text",
           "id": "question",
-          "label": "问题"
+          "label": "问题标题"
         },
         {
           "type": "richtext",
           "id": "answer",
-          "label": "答案"
-        }
-      ]
-    },
-    {
-      "type": "simple_item",
-      "name": "简单文本项（不可折叠）",
-      "settings": [
-        {
-          "type": "text",
-          "id": "parent_category",
-          "label": "所属分类ID",
-          "info": "填写上面创建的分类的ID"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "文本内容"
+          "label": "答案详情"
         }
       ]
     }
@@ -646,19 +652,39 @@
         {
           "type": "category",
           "settings": {
-            "title": "Shipping"
+            "title": "Shipping",
+            "description": "<p>了解我们的配送政策和时效</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": "USA",
+            "answer": "<p>美国境内配送说明...</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": "International",
+            "answer": "<p>国际配送说明...</p>"
           }
         },
         {
           "type": "category",
           "settings": {
-            "title": "Return"
+            "title": "Return",
+            "description": "<p>查看退换货政策和流程</p>"
           }
         },
         {
-          "type": "category",
+          "type": "faq_item",
           "settings": {
-            "title": "Customization"
+            "parent_category": "Return",
+            "question": "How to Make a Return",
+            "answer": "<p>退货流程说明...</p>"
           }
         },
         {
@@ -666,10 +692,17 @@
           "settings": {
             "title": "FAQs"
           }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "FAQs",
+            "question": "常见问题1",
+            "answer": "<p>答案内容...</p>"
+          }
         }
       ]
     }
   ]
 }
 {% endschema %}
-
