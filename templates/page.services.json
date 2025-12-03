@@ -11,13 +11,101 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "service_UxiADA": {
+      "type": "service",
+      "blocks": {
+        "service_item_jQjeg6": {
+          "type": "service_item",
+          "settings": {
+            "title": "Service Title",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "",
+            "step_5": "",
+            "step_6": ""
+          }
+        },
+        "service_item_VYULML": {
+          "type": "service_item",
+          "settings": {
+            "title": "Blank Plain Wholesale",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "Let us know the quantity you need and wait for our quote.",
+            "step_5": "Let us know the quantity you need and wait for our quote.",
+            "step_6": ""
+          }
+        },
+        "service_item_C7aJ37": {
+          "type": "service_item",
+          "settings": {
+            "title": "Custom Logo Printing",
+            "image_position": "right",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "",
+            "step_5": "",
+            "step_6": ""
+          }
+        },
+        "service_item_tmE6Y9": {
+          "type": "service_item",
+          "settings": {
+            "title": "Design Clothing for Startups",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "Let us know the quantity you need and wait for our quote.",
+            "step_5": "Let us know the quantity you need and wait for our quote.",
+            "step_6": ""
+          }
+        },
+        "service_item_PiRJcx": {
+          "type": "service_item",
+          "settings": {
+            "title": "Replace Your Brand Labels",
+            "image_position": "right",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "Please contact our customer service team first and let them know the style you need.",
+            "step_5": "",
+            "step_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "service_item_jQjeg6",
+        "service_item_VYULML",
+        "service_item_C7aJ37",
+        "service_item_tmE6Y9",
+        "service_item_PiRJcx"
+      ],
+      "name": "Service",
+      "settings": {
+        "hero_title": "Need customized services for your brand?",
+        "hero_subtitle": "Trust us to do the job well for you!",
+        "cta_title": "CONTACT US NOW",
+        "cta_subtitle": "Launch exclusive customized services",
+        "cta_button_text": "LEARN MORE",
+        "cta_button_link": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "service_UxiADA"
   ]
 }
