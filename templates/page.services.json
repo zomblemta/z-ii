@@ -20,23 +20,11 @@
     "service_UxiADA": {
       "type": "service",
       "blocks": {
-        "service_item_jQjeg6": {
-          "type": "service_item",
-          "settings": {
-            "title": "Service Title",
-            "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
-            "step_5": "",
-            "step_6": ""
-          }
-        },
         "service_item_VYULML": {
           "type": "service_item",
           "settings": {
             "title": "Blank Plain Wholesale",
+            "image": "shopify://shop_images/ef04387bac58a3d1f61513b305f9affd9d4a7ddd.png",
             "image_position": "left",
             "step_1": "Please contact our customer service team first and let them know the style you need.",
             "step_2": "Let us know the quantity you need and wait for our quote.",
@@ -50,6 +38,7 @@
           "type": "service_item",
           "settings": {
             "title": "Custom Logo Printing",
+            "image": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
             "image_position": "right",
             "step_1": "Please contact our customer service team first and let them know the style you need.",
             "step_2": "Let us know the quantity you need and wait for our quote.",
@@ -63,6 +52,7 @@
           "type": "service_item",
           "settings": {
             "title": "Design Clothing for Startups",
+            "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
             "image_position": "left",
             "step_1": "Please contact our customer service team first and let them know the style you need.",
             "step_2": "Let us know the quantity you need and wait for our quote.",
@@ -76,6 +66,7 @@
           "type": "service_item",
           "settings": {
             "title": "Replace Your Brand Labels",
+            "image": "shopify://shop_images/b09d24d4a4736f331a012030227147fe3beff4cc.png",
             "image_position": "right",
             "step_1": "Please contact our customer service team first and let them know the style you need.",
             "step_2": "Let us know the quantity you need and wait for our quote.",
@@ -87,7 +78,6 @@
         }
       },
       "block_order": [
-        "service_item_jQjeg6",
         "service_item_VYULML",
         "service_item_C7aJ37",
         "service_item_tmE6Y9",
@@ -97,8 +87,10 @@
       "settings": {
         "hero_title": "Need customized services for your brand?",
         "hero_subtitle": "Trust us to do the job well for you!",
+        "hero_image": "shopify://shop_images/aad3f937ea110a35a678819552d750439be66a9c.png",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Launch exclusive customized services",
+        "cta_background_image": "shopify://shop_images/d23fb419d3bf6e290e6a42364c80d4c7ef57cfde.jpg",
         "cta_button_text": "LEARN MORE",
         "cta_button_link": ""
       }
