@@ -12,80 +12,35 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
-        "subtitle_mT9Tif": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "BLACK FRIDAY",
-            "subtitle_color": "#000000"
-          }
-        },
-        "heading_dAHnF4": {
-          "type": "heading",
-          "settings": {
-            "heading": "UP TO 50% OFF",
-            "heading_size": "text-5xl md:text-6xl lg:text-7xl",
-            "heading_color": "#000000"
-          }
-        },
-        "text_awzn3z": {
-          "type": "text",
-          "settings": {
-            "text": "<p>精选商品限时特惠，不容错过的购物盛宴</p>",
-            "text_color": "#666666"
-          }
-        },
-        "button_6WxtHT": {
-          "type": "button",
-          "settings": {
-            "button_label": "立即购买",
-            "button_link": "",
-            "button_style": "primary",
-            "button_bg_color": "#000000",
-            "button_text_color": "#ffffff"
-          }
-        },
         "slide_gUi7BK": {
           "type": "slide",
           "settings": {
-            "slide_overlay_opacity": 0
+            "image": "shopify://shop_images/355577f1d217d6e124c0536ab8255d120e8b5a1d.jpg",
+            "title": "FW’2025<br>\nNEW ARRIVALS"
           }
         },
         "slide_Afcimb": {
           "type": "slide",
           "settings": {
-            "slide_overlay_opacity": 0
+            "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
+            "title": ""
           }
         },
         "slide_yzHmBm": {
           "type": "slide",
           "settings": {
-            "slide_overlay_opacity": 0
+            "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
+            "title": ""
           }
         }
       },
       "block_order": [
-        "subtitle_mT9Tif",
-        "heading_dAHnF4",
-        "text_awzn3z",
-        "button_6WxtHT",
         "slide_gUi7BK",
         "slide_Afcimb",
         "slide_yzHmBm"
       ],
       "name": "首页轮播Banner",
-      "settings": {
-        "color_scheme": "",
-        "content_bg_color": "transparent",
-        "enable_loop": true,
-        "enable_autoplay": true,
-        "autoplay_delay": 5,
-        "transition_speed": 600,
-        "transition_effect": "slide",
-        "show_navigation": true,
-        "show_pagination": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
+      "settings": {}
     },
     "index_product_list_JHytb3": {
       "type": "index-product-list",
