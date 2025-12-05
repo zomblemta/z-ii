@@ -12,7 +12,7 @@
     <search-form>
   {%- endif -%}
   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-inline">
-    <div class="">
+    <div class="relative">
       <input
         class="search__input text-white text-sm  bg-[#BABABA] h-[48px] rounded-[5px] px-[14px] py-[6px] sm:px-[11px] sm:text-xs"
         id="Search-Inline"
@@ -34,7 +34,7 @@
         {%- endif -%}
       >
       <input type="hidden" name="options[prefix]" value="last">
-      <button
+      {% comment %} <button
         type="reset"
         class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
         aria-label="{{ 'general.search.reset' | t }}"
@@ -42,7 +42,7 @@
         <span class="svg-wrapper">
           {{- 'icon-reset.svg' | inline_asset_content -}}
         </span>
-      </button>
+      </button> {% endcomment %}
       <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
         <span class="svg-wrapper">
          {% render 'icon', icon: 'search' %}

@@ -16,37 +16,6 @@
       </span>
 
       <div class="flex gap-x-[14px] items-center">
-        {% comment %} <span id="header__icon__menu-account">
-          {%- if shop.customer_accounts_enabled -%}
-            <a
-              href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-              class="header__icon header__icon--account link focus-inset"
-              rel="nofollow"
-            >
-              {%- if section.settings.enable_customer_avatar -%}
-                <account-icon>
-                  {%- if customer and customer.has_avatar? -%}
-                    {{ customer | avatar }}
-                  {%- else -%}
-                    <span class="svg-wrapper">{% render 'icon', icon: 'icon-user' %}</span>
-                  {%- endif -%}
-                </account-icon>
-              {%- else -%}
-                <span class="svg-wrapper">{% render 'icon', icon: 'icon-user' %}</span>
-              {%- endif -%}
-              <span class="visually-hidden">
-                {%- liquid
-                  if customer
-                    echo 'customer.account_fallback' | t
-                  else
-                    echo 'customer.log_in' | t
-                  endif
-                -%}
-              </span>
-            </a>
-          {%- endif -%}
-        </span> {% endcomment %}
-
         <i class=" header__icon__menu-close hidden">
           {% render 'icon', icon: 'icon-menu-close' %}
         </i>
@@ -54,11 +23,28 @@
     </summary>
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
       <div class="menu-drawer__inner-container">
+        <!-- Logo和关闭按钮 -->
+        <div class="menu-drawer__header">
+          <div class="menu-drawer__logo w-[40px] h-[40px]">
+            <a href="{{ routes.root_url }}" class="flex items-center justify-center">
+              {%- if settings.logo != blank -%}
+                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                {{ settings.logo | image_url: width: 200 | image_tag: class: 'menu-drawer__logo-image', alt: logo_alt }}
+              {%- else -%}
+                <span class="menu-drawer__logo-text">{{ shop.name }}</span>
+              {%- endif -%}
+            </a>
+          </div>
+          <button class="menu-drawer__close-icon" aria-label="Close menu">
+            {% render 'icon', icon: 'icon-menu-close' %}
+          </button>
+        </div>
+
         <div class="menu-drawer__navigation-container">
-          <nav class="menu-drawer__navigation pl-[22px] pr-[19px]">
+          <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
-                <li>
+                <li class="menu-drawer__menu-li">
                   {%- if link.links != blank -%}
                     <div id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                       <div class="submenu-details">
@@ -66,25 +52,30 @@
                           id="HeaderDrawer-{{ link.handle }}"
                           class="menu-drawer__menu-item list-menu__item w-full flex justify-between link link--text focus-inset submenu-trigger{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
                         >
-                          {{ link.title | escape }}
+                          <span class="menu-drawer__menu-title">{{ link.title | escape }}</span>
                           <span class="submenu-arrow">
-                            {% render 'icon', icon: 'icon-menu-arrow' %}
+                            <span class="submenu-icon-minus">
+                              {% render 'icon', icon: 'icon-menu-minus' %}
+                            </span>
+                            <span class="submenu-icon-plus">
+                              {% render 'icon', icon: 'icon-menu-plus' %}
+                            </span>
                           </span>
                         </div>
 
                         <div class="menu-drawer__inner-submenu">
                           <ul
-                            class="menu-drawer__menu list-none m-0 p-0 flex flex-col gap-y-[16px] pb-[16px]"
+                            class="menu-drawer__submenu-list"
                             role="list"
                             tabindex="-1"
                           >
                             {%- for childlink in link.links -%}
-                              <li class="shrink-0 h-5">
+                              <li>
                                 {%- if childlink.links == blank -%}
                                   <a
                                     id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
                                     href="{{ childlink.url }}"
-                                    class="submenu-item"
+                                    class="menu-drawer__submenu-item"
                                     {% if childlink.current %}
                                       aria-current="page"
                                     {% endif %}
@@ -102,22 +93,43 @@
                     <a
                       id="HeaderDrawer-{{ link.handle }}"
                       href="{{ link.url }}"
-                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %} {% if link.url == '/collections/black-friday' %} mega-menu__link--important{% endif %}"
+                      class="menu-drawer__menu-item menu-drawer__menu-item--single list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
                       {% if link.current %}
                         aria-current="page"
                       {% endif %}
                     >
-                      {{ link.title | escape }}
-
-                      {% if link.url == '/collections/black-friday' %}
-                        <span class="bg-black  rounded-[20px] py-1 px-[10px] text-white text-[9px]">UP TO 50%OFF</span>
-                      {% endif %}
+                      <span class="menu-drawer__menu-title">{{ link.title | escape }}</span>
                     </a>
-                
                   {%- endif -%}
                 </li>
               {%- endfor -%}
             </ul>
+
+            {%- if localization.available_languages and localization.available_languages.size > 1 -%}
+              <localization-form class="">
+                {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
+                  <div class="menu-drawer__localization-item">
+                    <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
+                      {{ 'localization.language_label' | t }}
+                    </h2>
+                    {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
+                  </div>
+                {%- endform -%}
+              </localization-form>
+            {%- endif -%}
+  
+            {%- if localization.available_countries and localization.available_countries.size > 1 -%}
+              <localization-form class="">
+                {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
+                  <div class="menu-drawer__localization-item">
+                    <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
+                      {{ 'localization.country_label' | t }}
+                    </h2>
+                    {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
+                  </div>
+                {%- endform -%}
+              </localization-form>
+            {% endif %}
             {% comment %}
               {%- for block in section.blocks -%}
                 {%- case block.type -%}
@@ -126,37 +138,15 @@
                 {%- endcase -%}
               {%- endfor -%}
             {% endcomment %}
-            {%- if localization.available_countries or localization.available_languages -%}
-              <div class="menu-drawer__localization header-localization">
-                {%- if localization.available_countries and localization.available_countries.size > 1 -%}
-                  <localization-form>
-                    {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
-                          {{ 'localization.country_label' | t }}
-                        </h2>
-                        {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {% endif %}
-
-                {%- if localization.available_languages and localization.available_languages.size > 1 -%}
-                  <localization-form>
-                    {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
-                          {{ 'localization.language_label' | t }}
-                        </h2>
-                        {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {%- endif -%}
-              </div>
-            {%- endif -%}
           </nav>
-    
+
+         
+
+          {% comment %} {%- if localization.available_countries or localization.available_languages -%}
+            <div class="menu-drawer__footer">
+           
+            </div>
+          {%- endif -%} {% endcomment %}
 
           {% comment %}
             <div class="menu-drawer__utility-links">
@@ -320,54 +310,278 @@
 </header-drawer>
 
 <style>
-  .submenu-details {
-    border: none;
-    outline: none;
-  }
+    /* 菜单抽屉样式重置 */
+    .menu-drawer {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      transform: translateX(-100%) !important;
+      background-color: #ffffff !important;
+      z-index: 9999 !important;
+      overflow-y: auto !important;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      visibility: hidden;
+    }
 
-  .submenu-trigger {
-    cursor: pointer;
-  }
+    .js details[open].menu-opening > .menu-drawer {
+      transform: translateX(0) !important;
+      visibility: visible;
+    }
 
-  .submenu-arrow {
-    transition: transform 0.3s ease;
-  }
+    /* 关闭动画状态 */
+    .js details.menu-closing > .menu-drawer {
+      transform: translateX(-100%) !important;
+    }
 
-  .menu-drawer__inner-submenu {
-    transition: max-height 0.3s ease;
-  }
+    /* 遮罩层移除 */
+    menu-drawer > details > summary::before {
+      display: none !important;
+    }
 
-  /* 初始隐藏关闭图标 */
-  .header__icon__menu-close {
-    display: none;
-    cursor: pointer;
-    height: 22px;
-    justify-content: center;
-    align-items: center;
-    width: 22px;
-  }
-  #header__icon__menu-account {
-    display: none;
-  }
+    /* 菜单头部：Logo和关闭按钮 */
+    .menu-drawer__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 40px 60px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-drawer__logo-image {
+      width: 80px;
+      height: auto;
+    }
+
+    .menu-drawer__logo-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .menu-drawer__close-icon {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: #000;
+      transition: opacity 0.2s;
+    }
+
+    .menu-drawer__close-icon:hover {
+      opacity: 0.7;
+    }
+
+    /* 导航容器 */
+    .menu-drawer__navigation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: calc(100vh - 180px);
+      min-height: calc(100dvh - 180px);
+    }
+
+    .menu-drawer__navigation {
+      padding: 40px;
+      flex: 1;
+    }
+
+    /* 菜单列表 */
+    .menu-drawer__menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .menu-drawer__menu-li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /* 菜单项 */
+    .menu-drawer__menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .menu-drawer__menu-item:hover {
+      opacity: 0.7;
+      background-color: transparent;
+    }
+
+    .menu-drawer__menu-title {
+      flex: 1;
+    }
+
+    /* 子菜单触发器 */
+    .submenu-details {
+      border: none;
+      outline: none;
+    }
+
+    .submenu-trigger {
+      cursor: pointer;
+    }
+
+     .submenu-arrow {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       position: relative;
+       width: 16px;
+       height: 16px;
+       color: #000;
+     }
+
+     .submenu-icon-minus,
+     .submenu-icon-plus {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       transition: opacity 0.3s ease;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+
+     /* 默认状态：显示plus，隐藏minus */
+     .submenu-icon-plus {
+       opacity: 1;
+     }
+
+     .submenu-icon-minus {
+       opacity: 0;
+     }
+
+     /* 展开状态：显示minus，隐藏plus */
+     .submenu-arrow.expanded .submenu-icon-plus {
+       opacity: 0;
+     }
+
+     .submenu-arrow.expanded .submenu-icon-minus {
+       opacity: 1;
+     }
+
+    /* 子菜单 */
+    .menu-drawer__inner-submenu {
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .menu-drawer__submenu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .menu-drawer__submenu-item {
+      display: block;
+      color: #787878;
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 0;
+      transition: color 0.2s;
+    }
+
+  
+
+    /* 底部本地化 */
+    .menu-drawer__footer {
+      padding: 40px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .menu-drawer__localization-item {
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Header图标隐藏 */
+    .header__icon__menu-close {
+      display: none;
+      cursor: pointer;
+      height: 22px;
+      justify-content: center;
+      align-items: center;
+      width: 22px;
+    }
+
+    /* 覆盖遮罩 */
+    .js menu-drawer > details > summary::before,
+    .js menu-drawer > details[open]:not(.menu-opening) > summary::before {
+      display: none !important;
+    }
+
+    /* 移动端优化 */
+    @media screen and (max-width: 749px) {
+      .menu-drawer__header {
+        padding: 20px 16px;
+      }
+
+      .menu-drawer__navigation {
+        padding: 0 22px;
+      }
+
+      .menu-drawer__footer {
+        padding: 24px;
+      }
+
+      .menu-drawer__logo-image {
+        width: 60px;
+      }
+
+      .menu-drawer__menu-item {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+    }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const submenuDetails = document.querySelectorAll('.submenu-details');
 
+    // 子菜单展开/收起
     submenuDetails.forEach((detail, index) => {
       const menuItem = detail.querySelector('.submenu-trigger');
       const submenu = detail.querySelector('.menu-drawer__inner-submenu');
       const arrow = detail.querySelector('.submenu-arrow');
 
-      // 初始状态
+      // 初始状态 - 第一个菜单默认展开
       submenu.style.overflow = 'hidden';
       if (index === 0) {
-        // 第一个菜单默认展开
         submenu.style.maxHeight = submenu.scrollHeight + 'px';
-        arrow.style.transform = 'rotate(180deg)';
+        arrow.classList.add('expanded');
       } else {
         submenu.style.maxHeight = '0px';
+        arrow.classList.remove('expanded');
       }
 
       menuItem.addEventListener('click', function (e) {
@@ -377,78 +591,72 @@
         const isOpen = submenu.style.maxHeight !== '0px';
 
         if (isOpen) {
-          // 收起子菜单
+          // 收起
           submenu.style.maxHeight = '0px';
-          arrow.style.transform = 'rotate(0deg)';
+          arrow.classList.remove('expanded');
         } else {
-          // 展开子菜单
+          // 展开
           submenu.style.maxHeight = submenu.scrollHeight + 'px';
-          arrow.style.transform = 'rotate(180deg)';
+          arrow.classList.add('expanded');
         }
       });
     });
 
-    // 获取相关元素
-    const header__search = document.querySelector('.header__search');
-    const header__icon_cart = document.querySelector('.header__icon--cart');
-    const menuOpen = document.querySelector('.header__icon-menu');
-    const header__icon_close = document.querySelector('.header__icon__menu-close');
+    // 菜单抽屉关闭动画处理
     const menuDrawerContainer = document.getElementById('Details-menu-drawer-container');
-    const header__icon_account = document.querySelector('#header__icon__menu-account');
+    const drawerCloseBtn = document.querySelector('.menu-drawer__close-icon');
+    let isClosing = false;
 
-    // 菜单打开函数
-    function openMenu() {
-      if (menuOpen) menuOpen.style.display = 'none';
-      if (header__icon_close) header__icon_close.style.display = 'flex';
-      if (header__search) header__search.style.display = 'none';
-      if (header__icon_cart) header__icon_cart.style.display = 'none';
-      if (header__icon_account) header__icon_account.style.display = 'block';
+    function closeMenuWithAnimation() {
+      if (!menuDrawerContainer || isClosing) return;
+
+      isClosing = true;
+      menuDrawerContainer.classList.add('menu-closing');
+
+      // 等待动画完成后再关闭
+      setTimeout(() => {
+        menuDrawerContainer.removeAttribute('open');
+        menuDrawerContainer.classList.remove('menu-closing');
+        isClosing = false;
+        document.body.style.overflow = '';
+      }, 400); // 与CSS transition时间一致
     }
 
-    // 菜单关闭函数
-    function closeMenu() {
-      if (menuOpen) menuOpen.style.display = 'flex';
-      if (header__icon_close) header__icon_close.style.display = 'none';
-      if (header__search) header__search.style.display = 'block';
-      if (header__icon_cart) header__icon_cart.style.display = 'block';
-      if (header__icon_account) header__icon_account.style.display = 'none';
-    }
-
-    // 监听关闭按钮点击事件
-    if (header__icon_close) {
-      header__icon_close.addEventListener('click', function (e) {
-        closeMenu();
+    // 菜单抽屉内部的关闭按钮
+    if (drawerCloseBtn && menuDrawerContainer) {
+      drawerCloseBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMenuWithAnimation();
       });
     }
 
-    // 监听菜单按钮点击事件
-    if (menuOpen) {
-      menuOpen.addEventListener('click', function (e) {
-        openMenu();
-      });
+    // 监听summary点击，处理关闭动画
+    if (menuDrawerContainer) {
+      const summary = menuDrawerContainer.querySelector('summary');
+
+      if (summary) {
+        summary.addEventListener('click', function (e) {
+          if (menuDrawerContainer.hasAttribute('open') && !isClosing) {
+            e.preventDefault();
+            closeMenuWithAnimation();
+          } else if (!menuDrawerContainer.hasAttribute('open')) {
+            // 打开时的处理
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      }
     }
 
-    // 绑定外部触发器：#mobile-menu-trigger
+    // 外部触发器支持
     const externalTrigger = document.getElementById('mobile-menu-trigger');
-    if (externalTrigger) {
+    if (externalTrigger && menuDrawerContainer) {
       externalTrigger.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        const headerDrawer = document.querySelector('header-drawer');
-        if (!headerDrawer) return;
-        const details = headerDrawer.querySelector('#Details-menu-drawer-container');
-        const summary = details ? details.querySelector('summary') : null;
-        if (!details || !summary) return;
-
-        const wasOpen = details.hasAttribute('open');
-        // 触发原生逻辑（会根据当前状态打开/关闭）
-        summary.click();
-
-        // 同步外层图标/元素显隐
-        if (!wasOpen) {
-          openMenu();
-        } else {
-          closeMenu();
+        const summary = menuDrawerContainer.querySelector('summary');
+        if (summary) {
+          summary.click();
         }
       });
     }

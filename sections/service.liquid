@@ -1,20 +1,28 @@
+<style>
+  .service-nav-item.active,
+  .service-nav-item-mobile.active {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+</style>
+
 <!-- Hero Section -->
-<section class="service-hero relative bg-[#F5F5F5] overflow-hidden">
-  <div class="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16">
-    <div class="flex flex-col md:flex-row items-center justify-between py-8 md:py-16 gap-8">
+<section class="service-hero relative md:bg-[#F2F2F2] overflow-hidden">
+  <div class=" mx-auto ">
+    <div class="flex flex-col md:flex-row items-center justify-between   gap-8">
       <!-- Left Content -->
-      <div class="w-full md:w-1/2 text-center md:text-left">
-        <h1 class="text-[24px] md:text-[40px] lg:text-[48px] font-medium leading-tight text-[#1a1a1a]">
+      <div class="w-full md:w-1/2 px-[14px] mb-[20px] md:text-left order-2 md:order-1 md:px-[75px]">
+        <h1 class="text-[30px] md:text-[64px]  font-Montaga leading-normal text-[#1a1a1a]">
           {{ section.settings.hero_title | default: 'Need customized services for your brand?' }}
         </h1>
-        <p class="mt-4 text-[14px] md:text-[18px] text-[#666] leading-relaxed">
+        <p class="mt-4 text-[16px] md:text-[32px]  leading-none">
           {{ section.settings.hero_subtitle | default: 'Trust us to do the job well for you!' }}
         </p>
       </div>
       <!-- Right Image -->
-      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
         {%- if section.settings.hero_image != blank -%}
-          <div class="relative w-full max-w-[500px] aspect-4/3 rounded-lg overflow-hidden">
+          <div class="relative w-full  aspect-375/281 md:aspect-720/622 overflow-hidden">
             {{ section.settings.hero_image | image_url: width: 1000 | image_tag: 
               class: 'w-full h-full object-cover',
               loading: 'eager'
@@ -33,28 +41,30 @@
 </section>
 
 <!-- Services Section -->
-<section class="service-content py-8 md:py-16 bg-white" id="service-section-{{ section.id }}">
-  <div class="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16">
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
+<section class="service-content py-8 md:py-16 pt-0 bg-white" id="service-section-{{ section.id }}">
+  <div class="max-w-[1440px] mx-auto  md:px-8 lg:px-16">
+    <div class="flex flex-col lg:flex-row gap-8 md:gap-[28px]">
       
       <!-- Left Navigation (PC Only) -->
-      <div class="hidden lg:block lg:w-[200px] shrink-0">
+      <div class="hidden md:block  shrink-0 pr-[28px] border-r border-[#BABABA] ">
         <nav class="sticky top-[120px]">
-          <ul class="space-y-2 border-l-2 border-[#e0e0e0]">
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'service_item' -%}
-                <li>
-                  <a 
-                    href="#service-{{ block.id }}"
-                    class="service-nav-item block pl-4 py-2 text-[14px] text-[#666] hover:text-[#1a1a1a] transition-colors duration-300 border-l-2 border-transparent -ml-[2px] hover:border-[#1a1a1a]"
-                    data-target="service-{{ block.id }}"
-                  >
-                    {{ block.settings.title | default: 'Service Title' }}
-                  </a>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          </ul>
+          <div class=" ">
+            <ul class="space-y-1 flex flex-col gap-[30px]">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'service_item' -%}
+                  <li class="bg-[#F2F2F2] rounded-[5px]">
+                    <a 
+                      href="#service-{{ block.id }}"
+                      class="service-nav-item block px-4 w-[240px] py-3 text-[14px] md:text-[20px] leading-normal transition-all duration-300 rounded-[5px]"
+                      data-target="service-{{ block.id }}"
+                    >
+                      {{ block.settings.title | default: 'Service Title' }}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
         </nav>
       </div>
 
@@ -65,7 +75,7 @@
             {%- if block.type == 'service_item' -%}
               <a 
                 href="#service-{{ block.id }}"
-                class="service-nav-item-mobile shrink-0 px-4 py-2 text-[12px] bg-[#f5f5f5] rounded-full text-[#666] hover:bg-[#1a1a1a] hover:text-white transition-colors duration-300"
+                class="service-nav-item-mobile text-[10px] shrink-0 px-1.5 py-1  bg-[#F2F2F2] rounded-[2px]  transition-colors duration-300"
                 data-target="service-{{ block.id }}"
               >
                 {{ block.settings.title | default: 'Service Title' }}
@@ -89,63 +99,58 @@
                 <!-- Image -->
                 <div class="w-full md:w-[280px] lg:w-[320px] shrink-0">
                   {%- if block.settings.image != blank -%}
-                    <div class="aspect-square rounded-lg overflow-hidden bg-[#f5f5f5]">
+                    <div class="aspect-375/280 md:aspect-266/397 overflow-hidden bg-[#f5f5f5]">
                       {{ block.settings.image | image_url: width: 640 | image_tag: 
                         class: 'w-full h-full object-cover',
                         loading: 'lazy'
                       }}
                     </div>
-                  {%- else -%}
-                    <div class="aspect-square bg-[#f0f0f0] rounded-lg flex items-center justify-center">
-                      <svg class="w-12 h-12 text-[#ccc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
+                
                   {%- endif -%}
                 </div>
 
                 <!-- Content -->
-                <div class="flex-1">
-                  <h2 class="text-[20px] md:text-[28px] lg:text-[32px] font-medium text-[#1a1a1a] mb-6">
+                <div class="flex-1 px-[14px]">
+                  <h2 class="text-[24px] md:text-[48px]  font-Montaga  mb-[10px]">
                     {{ block.settings.title | default: 'Service Title' }}
                   </h2>
                   
                   <!-- Steps -->
                   <div class="space-y-4">
                     {%- if block.settings.step_1 != blank -%}
-                      <div class="flex items-start gap-4">
-                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">1</span>
-                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_1 }}</p>
+                      <div class="flex items-center gap-4 md:bg-[#F4F4F4] md:px-[10px] md:py-[20px] rounded-[5px] text-[12px] leading-[16px] md:text-[20px] md:leading-[24px]">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center  ">1</span>
+                        <p class="text-[12px] md:text-[20px]  pt-0.5">{{ block.settings.step_1 }}</p>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.step_2 != blank -%}
-                      <div class="flex items-start gap-4">
+                      <div class="flex items-center gap-4 md:bg-[#F4F4F4] md:px-[10px] md:py-[20px] rounded-[5px] text-xs md:text-[20px] md:leading-[24px]">
                         <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">2</span>
-                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_2 }}</p>
+                        <p class="text-[12px] md:text-[20px]  pt-0.5">{{ block.settings.step_2 }}</p>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.step_3 != blank -%}
-                      <div class="flex items-start gap-4">
-                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">3</span>
-                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_3 }}</p>
+                      <div class="flex items-center gap-4 md:bg-[#F4F4F4] md:px-[10px] md:py-[20px] rounded-[5px] text-xs md:text-[20px] md:leading-[24px]">
+                        <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] leading-[16px] md:text-[20px] md:leading-[24px]">3</span>
+                        <p class="text-[12px] md:text-[20px]  pt-0.5">{{ block.settings.step_3 }}</p>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.step_4 != blank -%}
-                      <div class="flex items-start gap-4">
+                      <div class="flex items-center gap-4 md:bg-[#F4F4F4] md:px-[10px] md:py-[20px] rounded-[5px] text-xs md:text-[20px] md:leading-[24px]">
                         <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">4</span>
-                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_4 }}</p>
+                        <p class="text-[12px] md:text-[20px]  pt-0.5">{{ block.settings.step_4 }}</p>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.step_5 != blank -%}
-                      <div class="flex items-start gap-4">
+                      <div class="flex items-center gap-4 md:bg-[#F4F4F4] md:px-[10px] md:py-[20px] rounded-[5px] text-xs md:text-[20px] md:leading-[24px]">
                         <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">5</span>
-                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_5 }}</p>
+                        <p class="text-[12px] md:text-[20px]  pt-0.5">{{ block.settings.step_5 }}</p>
                       </div>
                     {%- endif -%}
                     {%- if block.settings.step_6 != blank -%}
-                      <div class="flex items-start gap-4">
+                      <div class="flex items-center gap-4 md:bg-[#F4F4F4] md:px-[10px] md:py-[20px] rounded-[5px] text-xs md:text-[20px] md:leading-[24px]">
                         <span class="shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] flex items-center justify-center text-[12px] font-medium">6</span>
-                        <p class="text-[14px] md:text-[16px] text-[#666] leading-relaxed pt-0.5">{{ block.settings.step_6 }}</p>
+                        <p class="text-[12px] md:text-[20px]  pt-0.5">{{ block.settings.step_6 }}</p>
                       </div>
                     {%- endif -%}
                   </div>
@@ -161,10 +166,10 @@
 
 <!-- CTA Section -->
 <section class="service-cta relative overflow-hidden">
-  <div class="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center">
+  <div class="relative px-[14px] md:px-[53px] flex items-center justify-center">
     <!-- Background Image -->
     {%- if section.settings.cta_background_image != blank -%}
-      <div class="absolute inset-0 z-0">
+      <div class="w-full aspect-346/500  md:aspect-1334/700">
         {{ section.settings.cta_background_image | image_url: width: 1920 | image_tag: 
           class: 'w-full h-full object-cover',
           loading: 'lazy'
@@ -176,17 +181,17 @@
     {%- endif -%}
     
     <!-- Content -->
-    <div class="relative z-10 text-center text-white px-4 py-12 md:py-16">
-      <h2 class="text-[28px] md:text-[40px] lg:text-[48px] font-medium italic mb-4">
+    <div class="absolute z-10 bottom-0 md:bottom-1/2 md:translate-y-1/2 text-center text-white px-4 py-12 md:py-16">
+      <h2 class="text-[40px] md:text-[80px]  font-Montaga mb-1 md:mb-4">
         {{ section.settings.cta_title | default: 'CONTACT US NOW' }}
       </h2>
-      <p class="text-[14px] md:text-[18px] mb-8 opacity-90">
+      <p class="text-[18px] md:text-[32px] mb-10 md:mb-[50px] px-[14px]">
         {{ section.settings.cta_subtitle | default: 'Launch exclusive customized services' }}
       </p>
       {%- if section.settings.cta_button_text != blank -%}
         <a 
           href="{{ section.settings.cta_button_link | default: '#' }}"
-          class="inline-block px-8 py-3 bg-transparent border-2 border-white text-white text-[14px] font-medium hover:bg-white hover:text-[#1a1a1a] transition-all duration-300 rounded-sm"
+          class="inline-block px-8 py-3   text-white bg-black text-[14px] leading-[16px] md:text-[20px] md:leading-[24px] font-medium hover:bg-white hover:text-[#1a1a1a] transition-all duration-300 rounded-sm"
         >
           {{ section.settings.cta_button_text }}
         </a>
@@ -218,7 +223,7 @@
       });
     });
 
-    // Update active state on scroll (PC only)
+    // Update active state on scroll
     function updateActiveNav() {
       const scrollPosition = window.scrollY + 150;
       
@@ -230,23 +235,7 @@
         if (scrollPosition >= itemTop && scrollPosition < itemBottom) {
           navItems.forEach(nav => {
             const navTarget = nav.getAttribute('data-target');
-            if (navTarget === itemId) {
-              nav.classList.add('text-[#1a1a1a]', 'border-[#1a1a1a]', 'font-medium');
-              nav.classList.remove('text-[#666]', 'border-transparent');
-              // Mobile button style
-              if (nav.classList.contains('service-nav-item-mobile')) {
-                nav.classList.add('bg-[#1a1a1a]', 'text-white');
-                nav.classList.remove('bg-[#f5f5f5]', 'text-[#666]');
-              }
-            } else {
-              nav.classList.remove('text-[#1a1a1a]', 'border-[#1a1a1a]', 'font-medium');
-              nav.classList.add('text-[#666]', 'border-transparent');
-              // Mobile button style
-              if (nav.classList.contains('service-nav-item-mobile')) {
-                nav.classList.remove('bg-[#1a1a1a]', 'text-white');
-                nav.classList.add('bg-[#f5f5f5]', 'text-[#666]');
-              }
-            }
+            nav.classList.toggle('active', navTarget === itemId);
           });
         }
       });
