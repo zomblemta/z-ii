@@ -1,138 +1,98 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
-{%- comment -%} {{ 'hero-banner-swiper.css' | asset_url | stylesheet_tag }} {%- endcomment %}
-
-{%- style -%}
-  #HeroBanner-{{ section.id }} {
-    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+{%- comment -%} {{ 'hero-banner-swiper.css' | asset_url | stylesheet_tag }} {%- endcomment -%}
+<style>
+  .hero-swiper-wrapper,
+  .hero-banner-wrapper {
+    height: calc(100vh - 142px);
   }
-
-  @media screen and (min-width: 750px) {
-    #HeroBanner-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+  .swiper-pagination {
+    width: max-content !important;
+    padding-left: 12px !important;
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-banner-container {
+      height: 100%;
+    }
+    .hero-content {
+      height: 100%;
     }
   }
+</style>
 
-  #HeroBanner-{{ section.id }} .hero-content {
-    background-color: {{ section.settings.content_bg_color }};
-  }
-{%- endstyle -%}
-
-<section 
-  id="HeroBanner-{{ section.id }}" 
-  class="hero-banner-section color-{{ section.settings.color_scheme }} gradient"
+<section
+  id="HeroBanner-{{ section.id }}"
+  class="hero-banner-section "
 >
-  <div class="page-width">
-    <div class="hero-banner-container flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-      
+  <div class="hero-banner-wrapper">
+    <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
       <!-- 左侧内容区 -->
-      <div class="hero-content w-full lg:w-1/2 order-2 lg:order-1">
+      <div class="hero-content w-full h-full bg-[#333] flex justify-center items-center  py-[30px] lg:p-0 lg:w-1/2  ">
         <div class="content-wrapper max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-          
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              
-              {%- when 'subtitle' -%}
-                {%- if block.settings.subtitle != blank -%}
-                  <p 
-                    class="hero-subtitle text-sm md:text-base font-medium tracking-wider uppercase mb-4"
-                    style="color: {{ block.settings.subtitle_color }};"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.subtitle }}
-                  </p>
-                {%- endif -%}
-              
-              {%- when 'heading' -%}
-                {%- if block.settings.heading != blank -%}
-                  <h1 
-                    class="hero-heading {{ block.settings.heading_size }} font-bold mb-6"
-                    style="color: {{ block.settings.heading_color }};"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.heading }}
-                  </h1>
-                {%- endif -%}
-              
-              {%- when 'text' -%}
-                {%- if block.settings.text != blank -%}
-                  <div 
-                    class="hero-text text-base md:text-lg mb-8 leading-relaxed"
-                    style="color: {{ block.settings.text_color }};"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.text }}
-                  </div>
-                {%- endif -%}
-              
-              {%- when 'button' -%}
-                {%- if block.settings.button_label != blank -%}
-                  <div class="hero-button mb-4" {{ block.shopify_attributes }}>
-                    <a 
-                      href="{{ block.settings.button_link | default: '#' }}"
-                      class="inline-block px-8 py-4 text-base md:text-lg font-semibold rounded transition-all duration-300 hover:scale-105 {% if block.settings.button_style == 'primary' %}bg-black text-white hover:bg-gray-800{% else %}bg-white text-black border-2 border-black hover:bg-black hover:text-white{% endif %}"
-                      style="{% if block.settings.button_style == 'primary' %}background-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_text_color }};{% else %}border-color: {{ block.settings.button_bg_color }}; color: {{ block.settings.button_bg_color }};{% endif %}"
-                    >
-                      {{ block.settings.button_label }}
-                    </a>
-                  </div>
-                {%- endif -%}
-              
-            {%- endcase -%}
-          {%- endfor -%}
-          
+          <div class="flex flex-col  gap-[30px]  md:gap-[60px]">
+            <h1 class="text-[32px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
+              {{ section.settings.title | default: '“ Studio Precision for Strong Labels. ”' }}
+            </h1>
+
+            <div class="flex gap-[24px] w-full justify-center items-center">
+              <a
+                href="{{ section.settings.shop_now_link }}"
+                class="text-white text-xs md:text-xl tracking-[1.2px] md:tracking-[2px] bg-black py-[8px] px-[17px] md:py-[12px] md:px-[20px] uppercase rounded-[5px]"
+              >
+                Shop Now
+              </a>
+              <a
+                href="{{ section.settings.talk_to_our_team_link }}"
+                class="text-black text-xs md:text-xl tracking-[1.2px] md:tracking-[2px] bg-white py-[8px] px-[17px] md:py-[12px] md:px-[20px] uppercase rounded-[5px]"
+              >
+                Talk to our team
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- 右侧轮播区 -->
-      <div class="hero-swiper-wrapper w-full lg:w-1/2 order-1 lg:order-2">
-        <div class="swiper heroSwiper-{{ section.id }} rounded-lg overflow-hidden shadow-2xl">
-          <div class="swiper-wrapper">
+      <div class="hero-swiper-wrapper w-full h-full lg:w-1/2  ">
+        <div class="swiper heroSwiper-{{ section.id }} overflow-hidden h-full">
+          <div class="swiper-wrapper h-full">
             {%- for block in section.blocks -%}
               {%- if block.type == 'slide' -%}
                 <div class="swiper-slide" {{ block.shopify_attributes }}>
                   {%- if block.settings.image != blank -%}
-                    <div class="aspect-[4/5] md:aspect-[3/4] relative">
+                    <div class=" relative h-full w-full">
                       {{
                         block.settings.image
                         | image_url: width: 1200
-                        | image_tag:
-                          loading: 'lazy',
-                          class: 'w-full h-full object-cover',
-                          alt: block.settings.image.alt | escape
+                        | image_tag: loading: 'lazy', class: 'w-full h-full object-cover', alt: block.settings.image.alt
+                        | escape
                       }}
-                      
+
                       {%- if block.settings.slide_overlay_opacity > 0 -%}
-                        <div 
+                        <div
                           class="absolute inset-0 bg-black"
                           style="opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100.0 }};"
                         ></div>
                       {%- endif -%}
-                    </div>
-                  {%- else -%}
-                    <div class="aspect-[4/5] md:aspect-[3/4] bg-gray-200 flex items-center justify-center">
-                      {{ 'hero-apparel-1' | placeholder_svg_tag: 'w-full h-full object-cover' }}
                     </div>
                   {%- endif -%}
                 </div>
               {%- endif -%}
             {%- endfor -%}
           </div>
-          
+
           <!-- 导航按钮 -->
           {%- if section.settings.show_navigation -%}
             <div class="swiper-button-next after:text-white"></div>
             <div class="swiper-button-prev after:text-white"></div>
           {%- endif -%}
-          
+
           <!-- 分页器 -->
           {%- if section.settings.show_pagination -%}
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination w-max-content pl-3"></div>
           {%- endif -%}
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -286,133 +246,6 @@
   ],
   "blocks": [
     {
-      "type": "subtitle",
-      "name": "副标题",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "subtitle",
-          "label": "副标题文本",
-          "default": "BLACK FRIDAY"
-        },
-        {
-          "type": "color",
-          "id": "subtitle_color",
-          "label": "副标题颜色",
-          "default": "#000000"
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "name": "主标题",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "heading",
-          "label": "主标题文本",
-          "default": "UP TO 50% OFF"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "label": "标题大小",
-          "options": [
-            {
-              "value": "text-3xl md:text-4xl lg:text-5xl",
-              "label": "小"
-            },
-            {
-              "value": "text-4xl md:text-5xl lg:text-6xl",
-              "label": "中"
-            },
-            {
-              "value": "text-5xl md:text-6xl lg:text-7xl",
-              "label": "大"
-            },
-            {
-              "value": "text-6xl md:text-7xl lg:text-8xl",
-              "label": "超大"
-            }
-          ],
-          "default": "text-5xl md:text-6xl lg:text-7xl"
-        },
-        {
-          "type": "color",
-          "id": "heading_color",
-          "label": "标题颜色",
-          "default": "#000000"
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "name": "描述文本",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "描述文本",
-          "default": "<p>精选商品限时特惠，不容错过的购物盛宴</p>"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "文本颜色",
-          "default": "#666666"
-        }
-      ]
-    },
-    {
-      "type": "button",
-      "name": "按钮",
-      "limit": 2,
-      "settings": [
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "按钮文本",
-          "default": "立即购买"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "按钮链接"
-        },
-        {
-          "type": "select",
-          "id": "button_style",
-          "label": "按钮样式",
-          "options": [
-            {
-              "value": "primary",
-              "label": "主要按钮"
-            },
-            {
-              "value": "secondary",
-              "label": "次要按钮"
-            }
-          ],
-          "default": "primary"
-        },
-        {
-          "type": "color",
-          "id": "button_bg_color",
-          "label": "按钮背景色",
-          "default": "#000000"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "按钮文字颜色",
-          "default": "#ffffff"
-        }
-      ]
-    },
-    {
       "type": "slide",
       "name": "轮播图片",
       "settings": [
@@ -439,18 +272,6 @@
       "name": "首页轮播Banner",
       "blocks": [
         {
-          "type": "subtitle"
-        },
-        {
-          "type": "heading"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "button"
-        },
-        {
           "type": "slide"
         },
         {
@@ -464,4 +285,3 @@
   ]
 }
 {% endschema %}
-
