@@ -241,6 +241,9 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
+  .bottom-\[44px\] {
+    bottom: 44px;
+  }
   .bottom-\[50px\] {
     bottom: 50px;
   }
@@ -249,6 +252,9 @@
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .left-\[20px\] {
+    left: 20px;
   }
   .isolate {
     isolation: isolate;

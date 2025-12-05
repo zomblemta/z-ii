@@ -5,11 +5,31 @@
   .hero-banner-wrapper {
     height: calc(100vh - 142px);
   }
+  
+  /* 分页器容器位置 */
   .swiper-pagination {
-    width: max-content !important;
-    padding-left: 12px !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    width: auto !important;
+    text-align: left !important;
   }
   
+  /* 分页器小圆点样式 */
+  .swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: rgba(255, 255, 255, 0.60) !important;
+    opacity: 1 !important;
+    border-radius: 3px !important;
+    transition: width 0.3s ease !important;
+  }
+  
+  /* 激活状态的小圆点 */
+  .swiper-pagination-bullet-active {
+    width: 30px !important;
+    background-color: rgba(255, 255, 255, 0.60) !important;
+  }
+
   @media (min-width: 1024px) {
     .hero-banner-container {
       height: 100%;
@@ -27,7 +47,7 @@
   <div class="hero-banner-wrapper">
     <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
       <!-- 左侧内容区 -->
-      <div class="hero-content w-full h-full bg-[#333] flex justify-center items-center  py-[30px] lg:p-0 lg:w-1/2  ">
+      <div class="hero-content w-full h-full bg-[#333] flex justify-center items-center  py-[30px] lg:p-0 md:w-1/2  ">
         <div class="content-wrapper max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
           <div class="flex flex-col  gap-[30px]  md:gap-[60px]">
             <h1 class="text-[32px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
@@ -64,16 +84,17 @@
                       {{
                         block.settings.image
                         | image_url: width: 1200
-                        | image_tag: loading: 'lazy', class: 'w-full h-full object-cover', alt: block.settings.image.alt
+                        | image_tag:
+                          loading: 'eager',
+                          class: 'w-full h-full object-cover',
+                          alt: block.settings.image.alt
                         | escape
                       }}
-
-                      {%- if block.settings.slide_overlay_opacity > 0 -%}
-                        <div
-                          class="absolute inset-0 bg-black"
-                          style="opacity: {{ block.settings.slide_overlay_opacity | divided_by: 100.0 }};"
-                        ></div>
-                      {%- endif -%}
+                    </div>
+                    <div class="absolute left-[20px] bottom-[44px] flex flex-col justify-center items-center">
+                      <h2 class="text-white text-sm tracking-[1.4px] font-light md:text-2xl md:tracking-[2px]">
+                        {{ block.settings.title }}
+                      </h2>
                     </div>
                   {%- endif -%}
                 </div>
@@ -81,16 +102,8 @@
             {%- endfor -%}
           </div>
 
-          <!-- 导航按钮 -->
-          {%- if section.settings.show_navigation -%}
-            <div class="swiper-button-next after:text-white"></div>
-            <div class="swiper-button-prev after:text-white"></div>
-          {%- endif -%}
-
           <!-- 分页器 -->
-          {%- if section.settings.show_pagination -%}
-            <div class="swiper-pagination w-max-content pl-3"></div>
-          {%- endif -%}
+            <div class="swiper-pagination "></div>
         </div>
       </div>
     </div>
@@ -100,32 +113,25 @@
 <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.heroSwiper-{{ section.id }}', {
-      loop: {{ section.settings.enable_loop }},
-      autoplay: {{ section.settings.enable_autoplay }} ? {
-        delay: {{ section.settings.autoplay_delay | times: 1000 }},
-        disableOnInteraction: false,
-      } : false,
-      speed: {{ section.settings.transition_speed }},
-      effect: '{{ section.settings.transition_effect }}',
-      {% if section.settings.transition_effect == 'fade' %}
+      loop: true,
+      autoplay: true
+        ? {
+            delay: 3000,
+            disableOnInteraction: false,
+          }
+        : false,
+      speed: 1000,
+      effect: 'fade',
       fadeEffect: {
-        crossFade: true
+        crossFade: true,
       },
-      {% endif %}
-      {% if section.settings.show_navigation %}
-      navigation: {
-        nextEl: '.heroSwiper-{{ section.id }} .swiper-button-next',
-        prevEl: '.heroSwiper-{{ section.id }} .swiper-button-prev',
-      },
-      {% endif %}
-      {% if section.settings.show_pagination %}
+
       pagination: {
         el: '.heroSwiper-{{ section.id }} .swiper-pagination',
         clickable: true,
       },
-      {% endif %}
     });
   });
 </script>
@@ -138,112 +144,7 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [
-    {
-      "type": "header",
-      "content": "配色方案"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "配色方案",
-      "default": "scheme-1"
-    },
-    {
-      "type": "color",
-      "id": "content_bg_color",
-      "label": "内容区背景色",
-      "default": "transparent"
-    },
-    {
-      "type": "header",
-      "content": "轮播设置"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_loop",
-      "label": "启用循环播放",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_autoplay",
-      "label": "启用自动播放",
-      "default": true
-    },
-    {
-      "type": "range",
-      "id": "autoplay_delay",
-      "min": 2,
-      "max": 10,
-      "step": 1,
-      "unit": "秒",
-      "label": "自动播放延迟",
-      "default": 5
-    },
-    {
-      "type": "range",
-      "id": "transition_speed",
-      "min": 300,
-      "max": 1500,
-      "step": 100,
-      "unit": "ms",
-      "label": "切换速度",
-      "default": 600
-    },
-    {
-      "type": "select",
-      "id": "transition_effect",
-      "label": "切换效果",
-      "options": [
-        {
-          "value": "slide",
-          "label": "滑动"
-        },
-        {
-          "value": "fade",
-          "label": "淡入淡出"
-        }
-      ],
-      "default": "slide"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_navigation",
-      "label": "显示导航按钮",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_pagination",
-      "label": "显示分页器",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "间距设置"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "上边距",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "下边距",
-      "default": 60
-    }
-  ],
+  "settings": [],
   "blocks": [
     {
       "type": "slide",
@@ -255,14 +156,9 @@
           "label": "图片"
         },
         {
-          "type": "range",
-          "id": "slide_overlay_opacity",
-          "min": 0,
-          "max": 80,
-          "step": 5,
-          "unit": "%",
-          "label": "图片遮罩透明度",
-          "default": 0
+          "type": "html",
+          "id": "title",
+          "label": "标题"
         }
       ]
     }
