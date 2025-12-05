@@ -39,6 +39,7 @@
     "header": {
       "type": "header",
       "settings": {
+        "desktop_mega_menu_image": "shopify://shop_images/355577f1d217d6e124c0536ab8255d120e8b5a1d.jpg",
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "customer-account-main-menu",
