@@ -78,6 +78,48 @@
       "type": "contact-us",
       "name": "Contact Us Form",
       "settings": {}
+    },
+    "image_text_block_AwxpYN": {
+      "type": "image-text-block",
+      "name": "图片文案块",
+      "settings": {
+        "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
+        "title": "We source sustainable business gifts",
+        "description": "We believe that quality can win over quantity. And we thought that a better sourcing and transparency on where and how our promotional products are made would bring back value to this short term game.\n\nThat's why we source only thoughtful gifts options. From high-quality leather goods to eco-friendly products, our team of experts carefully selects each item to ensure that they meet our standards of quality and sustainability. We're proud to propose you a catalogue full of top brands and products, with real values & commitment towards both people and planet.",
+        "image_position": "left",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_text_block_bmaVrQ": {
+      "type": "image-text-block",
+      "name": "图片文案块",
+      "settings": {
+        "image": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
+        "title": "We source sustainable business gifts",
+        "description": "We believe that quality can win over quantity. And we thought that a better sourcing and transparency on where and how our promotional products are made would bring back value to this short term game.\n\nThat's why we source only thoughtful gifts options. From high-quality leather goods to eco-friendly products, our team of experts carefully selects each item to ensure that they meet our standards of quality and sustainability. We're proud to propose you a catalogue full of top brands and products, with real values & commitment towards both people and planet.",
+        "image_position": "right",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_text_block_Jr3xfr": {
+      "type": "image-text-block",
+      "name": "图片文案块",
+      "settings": {
+        "image": "shopify://shop_images/2025.06.28_Preprework4107.jpg",
+        "title": "We source sustainable business gifts",
+        "description": "We source sustainable business giftsWe source sustainable business giftsWe source sustainable business gifts",
+        "image_position": "left",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -85,6 +127,9 @@
     "image_text_pVwzhW",
     "about_us_yVqfQF",
     "index_discover_NdmV7P",
-    "contact_us_XUwgXN"
+    "contact_us_XUwgXN",
+    "image_text_block_AwxpYN",
+    "image_text_block_bmaVrQ",
+    "image_text_block_Jr3xfr"
   ]
 }
