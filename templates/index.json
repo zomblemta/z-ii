@@ -58,6 +58,25 @@
         ]
       }
     },
+    "index_advantages_VRbeHK": {
+      "type": "index-advantages",
+      "name": "Advantages",
+      "settings": {}
+    },
+    "index_as_seen_on_you_QpJBCC": {
+      "type": "index-as-seen-on-you",
+      "name": "As Seen On You",
+      "settings": {
+        "image_1": "shopify://shop_images/2025.06.28_Preprework2205.jpg",
+        "description_1": "Sleeveless pleatedshell top",
+        "image_2": "shopify://shop_images/2025.06.28_Preprework3129.jpg",
+        "description_2": "Sleeveless pleatedshell top",
+        "image_3": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
+        "description_3": "Sleeveless pleatedshell top",
+        "image_4": "shopify://shop_images/2025.06.28_Preprework2226.jpg",
+        "description_4": "Sleeveless pleatedshell top"
+      }
+    },
     "index_discover_xfrBet": {
       "type": "index-discover",
       "blocks": {
@@ -121,6 +140,8 @@
   "order": [
     "hero_banner_swiper_BfbYLG",
     "index_product_list_JHytb3",
+    "index_advantages_VRbeHK",
+    "index_as_seen_on_you_QpJBCC",
     "index_discover_xfrBet",
     "index_services_Yqi7qw",
     "contact_us_jmxKTE"
