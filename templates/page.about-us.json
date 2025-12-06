@@ -71,14 +71,20 @@
       ],
       "name": "Index Discover",
       "settings": {
-        "title": ""
+        "title": "Explore more"
       }
+    },
+    "contact_us_XUwgXN": {
+      "type": "contact-us",
+      "name": "Contact Us Form",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "image_text_pVwzhW",
     "about_us_yVqfQF",
-    "index_discover_NdmV7P"
+    "index_discover_NdmV7P",
+    "contact_us_XUwgXN"
   ]
 }
