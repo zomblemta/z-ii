@@ -85,7 +85,7 @@
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 12px;
 }
 
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
@@ -108,7 +108,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 54px;
   }
 
   .header.page-width,
@@ -323,8 +323,6 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.04rem;
 }
 
@@ -385,21 +383,6 @@ table:not([class]) th {
   opacity: 0.7;
 }
 
-a:empty,
-ul:empty,
-dl:empty,
-div:empty,
-section:empty,
-article:empty,
-p:empty,
-h1:empty,
-h2:empty,
-h3:empty,
-h4:empty,
-h5:empty,
-h6:empty {
-  display: none;
-}
 
 
 .link--text {
@@ -1686,17 +1669,13 @@ details[open] > .share-button__fallback {
 }
 
 input[type='checkbox'] {
-  display: inline-block;
   width: auto;
   margin-right: 0.5rem;
 }
 
 /* Form global */
 
-.form__label {
-  display: block;
-  margin-bottom: 0.6rem;
-}
+
 
 .form__message {
   align-items: center;

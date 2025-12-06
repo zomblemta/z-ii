@@ -9,8 +9,8 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 
-{% assign color_label = 'color,farve,farbe,couleur,cor,color,farve,farbe,couleur,cor,colour' | split: ',' %}
-{% assign size_label = 'size,format,größe,talla,taille,dimension,mărime,dimensione,tamanho,寸法' | split: ',' %}
+{% assign color_label = 'color,farve,farbe,couleur,cor,color,farve,farbe,couleur,cor,colour,颜色' | split: ',' %}
+{% assign size_label = 'size,format,größe,talla,taille,dimension,mărime,dimensione,tamanho,寸法,尺寸' | split: ',' %}
 
 {%- unless product.has_only_default_variant -%}
   <variant-selects
@@ -31,9 +31,9 @@
       {% endfor %}
       
 
-      <fieldset class="js product-form__input product-form__input--pill p-0 flex justify-start gap-x-[25px] w-full items-center  {% if is_color_label %} product-form__input--color {% else %} product-form__input--size {% endif %}">
-        <span class="form__label flex items-center gap-x-1 md:gap-x-2 text-xs md:text-sm font-normal tracking-[1.2px] md:tracking-[1.4px] uppercase text-black">
-          {{ option.name }}:
+      <fieldset class="js bg-[#F4F4F4] py-[17px] flex-col gap-y-[10px] items-start md:flex-row px-[20px] md:px-[30px] rounded-[5px] product-form__input product-form__input--pill flex justify-start gap-x-[25px] w-full  {% if is_color_label %} product-form__input--color {% else %} product-form__input--size {% endif %}">
+        <span class="form__label font-Montaga flex items-center text-nowrap gap-x-1 md:gap-x-2 text-xs md:text-sm font-normal tracking-[1.2px] md:tracking-[1.4px] uppercase text-black">
+          <span class="border border-black rounded-full w-[14px] h-[14px] flex items-center justify-center ">{{ forloop.index }}</span> {{ option.name }}:
           {% if is_color_label %}
             <span data-js-color-name class=" w-max-content text-xs md:text-sm font-normal tracking-[1.2px] md:tracking-[1.4px] uppercase text-black">
               {{ option.selected_value | default: option.values.first }}

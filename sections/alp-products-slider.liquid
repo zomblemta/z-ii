@@ -1,0 +1,277 @@
+{% schema %}
+{
+  "name": "Alp Products Slider",
+  "class": "alp-products-slider-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 24
+    },
+
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Layout",
+      "default": "alp-container",
+      "options": [
+        {
+          "value": "alp-container",
+          "label": "Default"
+        },
+        {
+          "value": "alp-container-fluid",
+          "label": "Fluid container"
+        },
+        {
+          "value": "alp-full-width",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "em"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "em"
+    },
+    {
+      "type": "checkbox",
+      "id": "reset_spacing",
+      "label": "Remove default space between sections",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Collection Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alp Products Slider"
+    }
+  ]
+}
+{% endschema %}
+
+
+{% liquid
+  assign st = section.settings
+  assign container = st.container
+  assign reset_spacing = ''
+  if st.reset_spacing
+    assign reset_spacing = ' remove_spacing'
+  endif
+%}
+
+{% assign should_hide = false %}
+{% if product and product.metafields.custom.look_products_1 != blank %}
+  {% assign title_stripped = st.title | strip %}
+  {% if title_stripped == 'Complete the look' %}
+    {% assign should_hide = true %}
+  {% endif %}
+{% endif %}
+
+{%- capture style -%}
+    --bg-color: {{ st.bg_color }};--text-color: {{ st.text_color }};--padding-top: {{ st.padding_top }};--padding-bottom: {{ st.padding_bottom }};
+{%- endcapture -%}
+
+{% style %}
+  .alp-section.alp-products-slider {
+    padding: 0 0px!important;
+    overflow: hidden;
+  }
+  .alp-products-slider  .alp-block-title h5 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 4.8px;
+  }
+  @media screen and (max-width: 768px) {
+    .alp-products-slider  .alp-block-title h5 {
+      font-size: 16px;
+      letter-spacing: 1.6px;
+    }
+  }
+  .alp-product-feature-image img {
+      height: auto;
+  }
+
+  .product-collection__wrapper.product-collection__wrapper_style_2 {
+      position: relative;
+  }
+
+  .product-collection__s2.d-flex {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      background: #19191960;
+      backdrop-filter: blur(6px);
+      --theme: #ffffff;
+      color: var(--theme);
+      gap: 15px;
+      z-index: 12;
+  }
+
+  .product-collection__s2.d-flex * {
+      color: var(--theme) !important;!i;!;
+  }
+
+  .product-collection__s2.d-flex .product-collection__image {
+      width: clamp(50px,30%,128px);
+  }
+
+  body .product-collection__s2.d-flex .product-collection__button-add-to-cart .btn span {
+      color: var(--theme) !important;
+  }
+  .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value,
+  .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value font{
+      color: #bcbcbc !important;
+  }
+  .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value.active,
+  .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value.active font {
+      color: var(--theme) !important;
+  }
+  @media screen and (max-width: 1024px) {
+    .alp-products-slide-swiper.swiper {
+      overflow: visible;
+    }
+    .product-collection__s2.d-flex {
+      padding: 8px;
+    }.product-collection__wrapper .product-collection__s2.d-flex  .product-collection__control.d-flex.flex-row {
+      display: flex !important;
+    }
+  }
+{% endstyle %}
+
+{% unless should_hide %}
+  {%- if st.product_list != blank -%}
+    <div class="alp-section alp-products-slider {{ reset_spacing }}" style="{{ style }}">
+      <div class="alp-section-container alp-products-slider-container page-width {{ container }}">
+        <div class="alp-block-title">
+          {%- if st.title != blank -%}
+            <h5 class="">
+              {{ st.title | newline_to_br }}
+            </h5>
+          {%- endif -%}
+        </div>
+        {%- if st.product_list != blank -%}
+          <div class="alp-products-slide-swiper swiper" data-blockId="{{ section.id }}">
+            <div class="swiper-wrapper">
+              {%- for product in st.product_list -%}
+                <div class="alp-products-slider-item swiper-slide">
+                  {% render 'card-product',
+                    card_product: product,
+                    image_ratio: 'adapt',
+                    show_secondary_image: true,
+                    show_vendor: true,
+                    show_rating: true,
+                    skip_styles: true
+                  %}
+                </div>
+              {%- endfor -%}
+            </div>
+            {% comment %} {% render 'swiper-pagination', class: 'pagination-products-slider hidden' %} {% endcomment %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endunless %}
+<script type="module">
+  document.addEventListener('DOMContentLoaded', () => {
+    let $autoHeight = true;
+    if (window.innerWidth < 999) {
+      $autoHeight = true;
+    }
+    //
+    let swiperId = '{{ section.id }}';
+    let swiperIdnum = swiperId.replace(/\D/g, '');
+    let swiperVar = 'TheSwiper' + swiperIdnum;
+    swiperVar = new Swiper(`.alp-products-slide-swiper[data-blockId="${swiperId}"]`, {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 8,
+      speed: 600,
+      //freeMode: true,
+      autoHeight: $autoHeight,
+      touchRatio: 0.75,
+      pagination: {
+        el: '.pagination-products-slider',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: `[data-blockId="${swiperId}"] .swiper-button-next`,
+        prevEl: `[data-blockId="${swiperId}"].swiper-button-prev`,
+      },
+      // add breakpoints
+      breakpoints: {
+        1410: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+        1330: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 2.2,
+        },
+        320: {
+          slidesPerView: 1.15,
+          spaceBetween: 8,
+        },
+      },
+    });
+  });
+</script>

@@ -1,0 +1,214 @@
+/* 无限滚动加载指示器样式 */
+.infinite-scroll-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.infinite-scroll-loading .loading-spinner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.infinite-scroll-loading .spinner {
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(var(--color-foreground), 0.1);
+  border-top: 3px solid rgb(var(--color-foreground));
+  border-radius: 50%;
+  animation: infinite-scroll-spin 1s linear infinite;
+}
+
+
+
+@keyframes infinite-scroll-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 产品淡入动画 */
+.infinite-scroll-product-fade-in {
+  animation: infinite-scroll-fade-in 0.6s ease forwards;
+  animation-delay: var(--animation-delay, 0s);
+  opacity: 0;
+}
+
+@keyframes infinite-scroll-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 分页触发元素 */
+.infinite-scroll-trigger {
+  position: absolute;
+  bottom: 200px;
+  height: 1px;
+  width: 100%;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* 隐藏传统分页 */
+.infinite-scroll-enabled .pagination-wrapper {
+  display: none !important;
+}
+
+/* 加载更多按钮样式（备用方案） */
+.infinite-scroll-load-more-btn {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.2rem 2rem;
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.infinite-scroll-load-more-btn:hover {
+  background: rgba(var(--color-button), 0.9);
+  transform: translateY(-1px);
+}
+
+.infinite-scroll-load-more-btn:active {
+  transform: translateY(0);
+}
+
+.infinite-scroll-load-more-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 错误状态样式 */
+.infinite-scroll-error {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: rgba(var(--color-background), 0.8);
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  border-radius: var(--border-radius);
+  color: rgba(var(--color-foreground), 0.7);
+  font-size: 1.4rem;
+}
+
+.infinite-scroll-error button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+}
+
+.infinite-scroll-error button:hover {
+  background: rgba(var(--color-button), 0.9);
+  transform: translateY(-1px);
+}
+
+/* 完成状态样式 */
+.infinite-scroll-complete {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+  color: rgba(var(--color-foreground), 0.6);
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+/* 性能优化 - 减少重绘 */
+.infinite-scroll-loading,
+.infinite-scroll-loading * {
+  will-change: auto;
+}
+
+.infinite-scroll-loading .spinner {
+  will-change: transform;
+}
+
+.infinite-scroll-product-fade-in {
+  will-change: opacity, transform;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 749px) {
+  .infinite-scroll-loading {
+    padding: 1.5rem 0;
+    margin-top: 1.5rem;
+  }
+
+  .infinite-scroll-loading .spinner {
+    width: 32px;
+    height: 32px;
+    border-width: 2px;
+  }
+
+  .infinite-scroll-loading .loading-text {
+    font-size: 1.2rem;
+  }
+
+  .infinite-scroll-load-more-btn {
+    max-width: 300px;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* 深色主题支持 */
+@media (prefers-color-scheme: dark) {
+  .infinite-scroll-loading .spinner {
+    border-color: rgba(255, 255, 255, 0.1);
+    border-top-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .infinite-scroll-loading .loading-text {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+/* 无障碍性支持 */
+.infinite-scroll-loading[aria-hidden="true"] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .infinite-scroll-loading .spinner {
+    animation: none;
+    border: 3px solid rgba(var(--color-foreground), 0.3);
+  }
+  
+  .infinite-scroll-product-fade-in {
+    animation: none;
+  }
+  
+  @keyframes infinite-scroll-fade-in {
+    from,
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

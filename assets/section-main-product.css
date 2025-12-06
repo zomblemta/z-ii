@@ -167,7 +167,6 @@ product-info {
 /* Form Elements */
 .product-form__input {
   flex: 0 0 100%;
-  padding: 0;
   margin: 0 0 1.2rem 0;
   max-width: 44rem;
   min-width: fit-content;
@@ -224,7 +223,7 @@ product-info {
 .product__info-container .product-form,
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
-  margin: 2.5rem 0;
+  margin: 16px 0 24px 0;
 }
 
 .product__text {
@@ -1483,4 +1482,16 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+/* Hide number input spinner buttons */
+quantity-input input[type='number']::-webkit-outer-spin-button,
+quantity-input input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+quantity-input input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }

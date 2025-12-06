@@ -225,18 +225,24 @@
           {%- endif -%}
 
           <!-- 购物车图标 -->
-          <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart  focus-inset" id="cart-icon-bubble">
-            <span class="svg-wrapper">{% render 'icon', icon: 'icon-cart' %}</span>
-            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-            {%- if cart != empty -%}
-              <div class="cart-count-bubble">
-                {%- if cart.item_count < 100 -%}
-                  <span aria-hidden="true">{{ cart.item_count }}</span>
-                {%- endif -%}
-                <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-              </div>
-            {%- endif -%}
-          </a>
+          <div class="header__cart-wrapper" style="position: relative;">
+            <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart  focus-inset" id="cart-icon-bubble">
+              <span class="svg-wrapper">{% render 'icon', icon: 'icon-cart' %}</span>
+              <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+              {%- if cart != empty -%}
+                <div class="cart-count-bubble">
+                  {%- if cart.item_count < 100 -%}
+                    <span aria-hidden="true">{{ cart.item_count }}</span>
+                  {%- endif -%}
+                  <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                </div>
+              {%- endif -%}
+            </a>
+            <!-- Cart Hover Preview (Desktop Only) -->
+            <div class="small-hide medium-hide">
+              {% render 'cart-hover-preview' %}
+            </div>
+          </div>
           <!-- 邮件图标 -->
           <a
             href="{{ routes.root_url }}pages/contact"

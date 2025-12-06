@@ -1,0 +1,38 @@
+<style>
+  .cart-product-price {
+    font-size: 16px;
+  }
+  .cart-product-price-tag {
+    font-size: 10px;
+  }
+  .cart-proudct-compare-price {
+    font-size: 12px;
+  }
+</style>
+
+{% assign show_tag = true %}
+
+{% if show_product_tag == false %}
+  {% assign show_tag = false %}
+{% endif %}
+
+{% assign sale_percent = product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | times: -1 -%}
+
+<div class="flex gap-x-2 items-center ">
+
+
+    <span class="cart-product-price text-base font-normal tracking-[1.6px]  ">
+      {{- product.price | money_without_trailing_zeros -}}
+    </span>
+    {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+      <span class="cart-proudct-compare-price text-[#858585] text-xs tracking-[1.2px] line-through">
+        {{- product.compare_at_price | money_without_trailing_zeros -}}
+      </span>
+    {% endif %}
+
+    {% if sale_percent > 0 %}
+      <span class="text-[10px] md:text-xs tracking-[1.2px] font-normal text-[#858585] ">
+        Save {{ sale_percent }}%
+      </span>
+    {% endif %}
+</div>

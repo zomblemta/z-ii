@@ -76,7 +76,7 @@
 .card .card__inner .card__media {
   overflow: hidden;
   /* Fix for Safari border bug on hover */
-  z-index: 0;
+  z-index: 100;
   border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
 }
 
@@ -346,15 +346,6 @@
   top: calc(var(--border-width) * -1);
 }
 
-.card__heading a::after {
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
 
 .card__heading a:after {
   outline-offset: 0.3rem;

@@ -2,7 +2,7 @@
   .alp-page-container {
     margin: 0 54px;
     margin-top: 40px;
-    overflow: hidden;
+    overflow: visible; /* 改为 visible 让按钮可以显示在外部 */
   }
 
   .alp-index-product-list-title {
@@ -29,7 +29,7 @@
     /* 导航按钮容器 */
     .alp-index-product-list-nav {
       position: relative;
-      overflow: visible;
+      overflow: visible; /* 确保按钮可见 */
     }
 
     .alp-index-product-list-container {
@@ -37,6 +37,7 @@
       display: flex;
       align-items: stretch;
       overflow-x: auto;
+      overflow-y: visible; /* 垂直方向不裁剪 */
       gap: 20px;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
@@ -60,29 +61,38 @@
     .alp-index-product-list-nav-btn {
       background-color: transparent;
       position: absolute;
-      top: 32%;
+      top: 40%;
       width: 50px;
       height: 50px;
       transform: translateY(-50%);
-      display: flex;
+      display: flex !important; /* 强制显示 */
       border: none;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: all 0.3s ease;
-      z-index: 10;
+      z-index: 100; /* 提高z-index确保在最上层 */
+      pointer-events: auto; /* 确保可以点击 */
+      opacity: 1; /* 确保不透明 */
+    }
+
+    .alp-index-product-list-nav-btn svg {
+      display: block;
+      width: 50px;
+      height: 50px;
     }
 
     .alp-index-product-list-nav-btn:hover {
       opacity: 0.8;
+      transform: translateY(-50%) scale(1.05); /* 添加hover效果 */
     }
 
     .alp-index-product-list-nav-btn.prev {
-      left: -46px;
+      left: -60px; /* 稍微调整位置,确保完全可见 */
     }
 
     .alp-index-product-list-nav-btn.next {
-      right: -46px;
+      right: -60px; /* 稍微调整位置,确保完全可见 */
     }
 
     .alp-index-product-list-nav-btn:disabled {
@@ -190,6 +200,45 @@
     margin-bottom: 20px;
   }
 
+  /* 确保卡片容器有正确的高度 */
+  .alp-index-product-list-item .card-wrapper {
+    height: 100%;
+  }
+
+  .alp-index-product-list-item .card,
+  .alp-index-product-list-item .card__inner {
+    height: 100%;
+  }
+
+  /* 强制图片区域显示 */
+  .alp-index-product-list-item .card__inner {
+    position: relative !important;
+  }
+
+  .alp-index-product-list-item .card__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100%;
+    margin: 0 !important; /* 覆盖默认margin */
+  }
+
+  .alp-index-product-list-item .card__media .media {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .alp-index-product-list-item .card__media .media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   .alp-index-product-list-item-title {
     color: #000;
     font-family: Montserrat;
@@ -237,15 +286,22 @@
     <div class="alp-index-product-list-container" product-list-data-scroll-container>
       {% for product in section.settings.product_list %}
         <div class="alp-index-product-list-item">
-          {% render 'card-product',
-            card_product: product,
-            media_aspect_ratio: 'portrait',
-            show_secondary_image: false,
-            show_vendor: false,
-            show_rating: false,
-            lazy_load: true,
-            section_id: section.id
-          %}
+          {% comment %}Debug: {{ product.handle }} - Media: {{ product.featured_media }}{% endcomment %}
+          {% if product != blank %}
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: 'portrait',
+              aspect_ratio: '210/280',
+              show_secondary_image: false,
+              show_vendor: false,
+              show_rating: false,
+              lazy_load: false,
+              show_card_info: false,
+              section_id: section.id
+            %}
+          {% else %}
+            <p style="color: red;">产品未找到</p>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
@@ -259,7 +315,7 @@
   </div>
 
   <!-- 滚动进度条 -->
-  <div class="alp-index-product-list-progress-bar-wrapper">
+  <div class="alp-index-product-list-progress-bar-wrapper mt-[30px]">
     <div class="alp-index-product-list-progress-bar" product-list-data-progress-bar></div>
   </div>
 </div>
@@ -321,17 +377,43 @@
           return;
         }
 
+        // 强制显示按钮
         prevBtn.style.display = 'flex';
         nextBtn.style.display = 'flex';
+        prevBtn.style.visibility = 'visible';
+        nextBtn.style.visibility = 'visible';
+        prevBtn.style.opacity = '1';
+        nextBtn.style.opacity = '1';
 
         const scrollLeft = scrollContainer.scrollLeft;
         const scrollWidth = scrollContainer.scrollWidth;
         const clientWidth = scrollContainer.clientWidth;
         const maxScrollLeft = scrollWidth - clientWidth;
 
+        console.log('Button State:', {
+          scrollLeft,
+          scrollWidth,
+          clientWidth,
+          maxScrollLeft,
+          isScrollable: scrollWidth > clientWidth
+        });
+
         // 更新按钮启用/禁用状态
-        prevBtn.disabled = scrollLeft <= 0;
-        nextBtn.disabled = scrollLeft >= maxScrollLeft - 1; // 使用-1避免浮点数精度问题
+        if (scrollLeft <= 0) {
+          prevBtn.disabled = true;
+          prevBtn.style.opacity = '0.3';
+        } else {
+          prevBtn.disabled = false;
+          prevBtn.style.opacity = '1';
+        }
+
+        if (scrollLeft >= maxScrollLeft - 1) {
+          nextBtn.disabled = true;
+          nextBtn.style.opacity = '0.3';
+        } else {
+          nextBtn.disabled = false;
+          nextBtn.style.opacity = '1';
+        }
       }
 
       // 获取一个item的宽度（包括gap）

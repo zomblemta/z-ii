@@ -82,6 +82,62 @@
 }
 {% endschema %}
 
+<style>
+  /* Alp Collection Filters */
+  .alp-collection-filters {
+    width: 100%;
+  }
+
+  .collections-links-item.filter-item label {
+    display: inline-flex;
+    background: #f2f2f2;
+    height: 30px;
+    padding: 0 8px;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .collections-links-item.filter-item label:hover {
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .collections-links-item.filter-item input[type='checkbox']:checked + span {
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .collections-links-item.filter-item input[type='checkbox']:checked ~ span,
+  .collections-links-item.filter-item label:has(input[type='checkbox']:checked) {
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  /* Infinite scroll / Load more button styles - DISABLED when infinite-scroll.js is active */
+  /* These styles are kept for reference but should not be visible when infinite scroll is enabled */
+
+  @media screen and (max-width: 768px) {
+    .alp-collection-filters {
+      margin-top: 0px;
+    }
+
+    .collections-links-item.filter-item label {
+      font-size: 12px;
+    }
+  }
+</style>
+
 {% liquid
   assign st = section.settings
   assign container = st.container
@@ -106,17 +162,8 @@
 {% endstyle %}
 
 <div class="alp-section alp-collections-links {{ reset_spacing }}" style="{{ style }}">
-  <div class="alp-collections-links-container page-width {{ container }}">
+  <div class="alp-collections-links-container page-width {{ container }} flex flex-col md:flex-row items-start gap-[10px] md:items-center justify-between">
     <div class="alp-collections-links-content">
-      {% comment %}
-        {% for item in st.collection_list %}
-          <div class="collections-links-item">
-            <a href="{{ item.url }}" data-id="{{ item.id }}"
-              ><span>{{ item.title }}</span></a
-            >
-          </div>
-        {% endfor %}
-      {% endcomment %}
       {%- if main_object and main_object.filters -%}
         {%- assign allowed_filters = collection.metafields.custom.filter.value -%}
         {%- for filter in main_object.filters -%}
@@ -148,7 +195,7 @@
                         <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}-alp">
                           <input
                             type="checkbox"
-                            class="d-none"
+                            class="hidden"
                             name="{{ value.param_name }}"
                             value="{{ value.value }}"
                             id="Filter-{{ filter.label | escape }}-{{ forloop.index }}-alp"
@@ -168,6 +215,14 @@
         {%- endfor -%}
       {%- endif -%}
     </div>
+
+      <div
+        class="collection-control__button-sidebar flex items-center cursor-pointer js-popup-button text-[10px] md:text-sm uppercase"
+        data-js-popup-button="sidebar"
+      >
+        <i class="mr-1 ">{% render 'icon', icon: 'icon-filter', class: 'w-[16px] h-[16px] md:w-[20px] md:h-[20px]' %}</i>
+        Show Filters
+      </div>
   </div>
 </div>
 
