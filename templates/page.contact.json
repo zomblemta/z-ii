@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -21,68 +22,18 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image": "shopify://shop_images/355577f1d217d6e124c0536ab8255d120e8b5a1d.jpg"
       }
     },
-    "faq_ycQLR3": {
-      "type": "faq",
-      "blocks": {
-        "category_y4zR7H": {
-          "type": "category",
-          "settings": {
-            "title": "Shipping",
-            "description": ""
-          }
-        },
-        "faq_item_7ymqGa": {
-          "type": "faq_item",
-          "settings": {
-            "parent_category": "Shipping",
-            "question": "test",
-            "answer": "<p>asdasdfasfasfgas</p>"
-          }
-        },
-        "category_Kmq66J": {
-          "type": "category",
-          "settings": {
-            "title": "Return",
-            "description": ""
-          }
-        },
-        "category_wGmntM": {
-          "type": "category",
-          "settings": {
-            "title": "Customization",
-            "description": ""
-          }
-        },
-        "category_txdKJB": {
-          "type": "category",
-          "settings": {
-            "title": "FAQs",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "category_y4zR7H",
-        "faq_item_7ymqGa",
-        "category_Kmq66J",
-        "category_wGmntM",
-        "category_txdKJB"
-      ],
-      "name": "FAQ页面",
-      "settings": {
-        "title": "You have a question?",
-        "subtitle": "We might have the answer."
-      }
+    "contact_us_fMVDyz": {
+      "type": "contact-us",
+      "name": "Contact Us Form",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "form",
-    "faq_ycQLR3"
+    "contact_us_fMVDyz"
   ]
 }
