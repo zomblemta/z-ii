@@ -1,0 +1,124 @@
+<div class="bg-[#282828] w-full flex flex-col md:flex-row gap-5">
+  <div class="w-full text-center ">
+    <h2 class="text-white text-[28px] font-medium  tracking-[2.8px] uppercase">as seen on you</h2>
+    <p class="text-white text-base font-light  tracking-[1.6px] mt-[6px]">Our products in real life.</p>
+  </div>
+  <div class="md:hidden w-full flex px-[14px] flex-col gap-[30px]">
+    <div class="w-full flex justify-start">
+      <div class="w-[240px] h-[320px] rounded-[5px] overflow-hidden relative">
+        <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+          {{ section.settings.description_1 }}
+        </p>
+        {% render 'alp-responsive-image', image: section.settings.image_1 %}
+      </div>
+    </div>
+
+    <div class="w-full flex justify-end">
+      <div class="w-[240px] h-[320px] rounded-[5px] overflow-hidden relative">
+        <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+          {{ section.settings.description_2 }}
+        </p>
+        {% render 'alp-responsive-image', image: section.settings.image_1 %}
+      </div>
+    </div>
+
+    <div class="w-full flex justify-start">
+      <div class="w-[240px] h-[320px] rounded-[5px] overflow-hidden relative">
+        <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+          {{ section.settings.description_3 }}
+        </p>
+        {% render 'alp-responsive-image', image: section.settings.image_1 %}
+      </div>
+    </div>
+
+    <div class="w-full flex justify-end">
+      <div class="w-[240px] h-[320px] rounded-[5px] overflow-hidden relative">
+        <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+          {{ section.settings.description_4 }}
+        </p>
+        {% render 'alp-responsive-image', image: section.settings.image_1 %}
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden md:block w-full px-[80px] -mt-[80px] relative">
+    <div class="absolute h-[360px] w-[270px] rounded-[5px] overflow-hidden left-0 top-0">
+      <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+        {{ section.settings.description_1 }}
+      </p>
+      {% render 'alp-responsive-image', image: section.settings.image_1 %}
+    </div>
+    <div class="absolute h-[360px] w-[270px] rounded-[5px] overflow-hidden left-[28%] bottom-0">
+      <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+        {{ section.settings.description_2 }}
+      </p>
+      {% render 'alp-responsive-image', image: section.settings.image_2 %}
+    </div>
+    <div class="absolute h-[360px] w-[270px] rounded-[5px] overflow-hidden left-[56%] top-1/2">
+      <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+        {{ section.settings.description_3 }}
+      </p>
+      {% render 'alp-responsive-image', image: section.settings.image_3 %}
+    </div>
+    <div class="absolute h-[360px] w-[270px] rounded-[5px] overflow-hidden right-0 bottom-[20%]">
+      <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+        {{ section.settings.description_4 }}
+      </p>
+      {% render 'alp-responsive-image', image: section.settings.image_4 %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Index As Seen On You",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "description_1",
+      "label": "Description 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "description_2",
+      "label": "Description 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "description_3",
+      "label": "Description 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image 4"
+    },
+    {
+      "type": "text",
+      "id": "description_4",
+      "label": "Description 4"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "As Seen On You"
+    }
+  ]
+}
+{% endschema %}
