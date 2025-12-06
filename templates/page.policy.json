@@ -11,13 +11,87 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "faq_NPjEgC": {
+      "type": "faq",
+      "blocks": {
+        "category_EJYnC4": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping",
+            "description": "<p>了解我们的配送政策和时效</p>"
+          }
+        },
+        "faq_item_Cc8nW3": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": "USA",
+            "answer": "<p>美国境内配送说明...</p>"
+          }
+        },
+        "faq_item_PNxqJE": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": "International",
+            "answer": "<p>国际配送说明...</p>"
+          }
+        },
+        "category_bMUYyU": {
+          "type": "category",
+          "settings": {
+            "title": "Return",
+            "description": "<p>查看退换货政策和流程</p>"
+          }
+        },
+        "faq_item_44w8ni": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Return",
+            "question": "How to Make a Return",
+            "answer": "<p>退货流程说明...</p>"
+          }
+        },
+        "category_qMFpgj": {
+          "type": "category",
+          "settings": {
+            "title": "FAQs",
+            "description": ""
+          }
+        },
+        "faq_item_8RNGGr": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "FAQs",
+            "question": "常见问题1",
+            "answer": "<p>答案内容...</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_EJYnC4",
+        "faq_item_Cc8nW3",
+        "faq_item_PNxqJE",
+        "category_bMUYyU",
+        "faq_item_44w8ni",
+        "category_qMFpgj",
+        "faq_item_8RNGGr"
+      ],
+      "name": "FAQ页面",
+      "settings": {
+        "title": "You have a question?",
+        "subtitle": "We might have the answer."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "faq_NPjEgC"
   ]
 }
