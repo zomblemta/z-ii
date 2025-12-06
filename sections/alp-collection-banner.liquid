@@ -1,0 +1,192 @@
+{% schema %}
+{
+  "name": "Alp Collection Banner",
+  "class": "alp-base-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Section"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "Collections",
+      "limit": 24
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Layout",
+      "default": "alp-container",
+      "options": [
+        {
+          "value": "alp-container",
+          "label": "Default"
+        },
+        {
+          "value": "alp-container-fluid",
+          "label": "Fluid container"
+        },
+        {
+          "value": "alp-full-width",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "em"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "em"
+    },
+    {
+      "type": "checkbox",
+      "id": "reset_spacing",
+      "label": "Remove default space between sections",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alp Collection Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% liquid
+  assign st = section.settings
+  assign container = st.container
+  assign reset_spacing = ''
+  if st.reset_spacing
+    assign reset_spacing = ' remove_spacing'
+  endif
+%}
+
+{%- capture style -%}
+    --bg-color: {{ st.bg_color }};--text-color: {{ st.text_color }};--padding-top: {{ st.padding_top }};--padding-bottom: {{ st.padding_bottom }};
+{%- endcapture -%}
+
+{% style %}
+  .alp-collection-banner {
+    margin-top: 58px;
+    margin-bottom: 10px;
+  }
+  .alp-collection-banner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .alp-collection-banner-title h2 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .alp-collection-banner-description p {
+    color: #787878;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .alp-collection-banner-title h2 {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      margin-bottom: 6px;
+    }
+    .alp-collection-banner-description p {
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .collection-banner-item a {
+    display: inline-flex;
+    padding: 0.2em 0;
+  }
+  @media (min-width: 1025px) {
+    .alp-collection-banner-container {
+      gap: 16px;
+    }
+    .alp-collection-banner {
+      margin-top: 94px;
+      margin-bottom: 30px;
+    }
+    .alp-collection-banner-content {
+      flex-basis: 25%;
+    }
+
+    .alp-collection-banner-description {
+      flex: 1;
+    }
+  }
+{% endstyle %}
+
+<div class=" alp-collection-banner {{ reset_spacing }}" style="{{ style }}">
+  <div class="alp-collection-banner-container page-width {{ container }}">
+    <div class="alp-collection-banner-title">
+      <h2>{{ st.title }}</h2>
+    </div>
+    
+    <div class="alp-collection-banner-description">
+      {{ st.description }}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let location_path = window.location.pathname;
+    let collections_links = document.querySelectorAll('.collection-banner-item a');
+    collections_links.forEach((link) => {
+      if (link.getAttribute('href') === location_path) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>

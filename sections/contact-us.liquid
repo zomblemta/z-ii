@@ -1,14 +1,14 @@
 <div class="flex flex-col gap-[30px] mx-[15px]  md:mx-[53px]">
   <div class="w-full flex flex-col md:flex-row md:gap-[30px]">
-    <div class="px-[13px] py-[18px] md:px-[20px] bg-[#E7E7E7] rounded-[5px]">
+    <div class="px-[13px] py-[18px] md:px-[20px] bg-[#E7E7E7] rounded-[5px] flex-1">
       <h3 class="m-0 text-[30px] font-Montaga leading-[32px] font-normal">Subscribe,</h3>
       <p class="m-0 text-xl font-normal md:text-2xl font-Montaga leading-[32px]">
         and get access to exclusive news, sneak peaks on new launches.
       </p>
-      {%- form 'customer', id: 'ContactFooter', class: ' ' -%}
+      {%- form 'customer', id: 'ContactFooter', class: 'w-full ' -%}
         <input type="hidden" name="contact[tags]" value="newsletter">
-        <div class="newsletter-form__field-wrapper">
-          <div class="field">
+        <div class="newsletter-form__field-wrapper w-full">
+          <div class="field w-full">
             <input
               id="NewsletterForm--{{ section.id }}"
               type="email"
@@ -29,9 +29,9 @@
               placeholder="{{ 'newsletter.label' | t }}"
               required
             >
-            <label class="field__label" for="NewsletterForm--{{ section.id }}">
+            {% comment %} <label class="field__label" for="NewsletterForm--{{ section.id }}">
               {{ 'newsletter.label' | t }}
-            </label>
+            </label> {% endcomment %}
           </div>
           <button
             type="submit"
@@ -68,7 +68,7 @@
       {%- endform -%}
     </div>
 
-    <div class="w-full md:w-[318px] flex justify-between items-center bg-[#BABABA] rounded-[5px] ">
+    <div class="w-full md:w-[318px] flex justify-center items-center bg-[#BABABA] rounded-[5px] ">
       <div>
         <h3 class="m-0 text-[24px] md:text-[32px] font-Montaga uppercase font-normal">Contact Us</h3>
         <div>
@@ -82,8 +82,8 @@
       </div>
     </div>
   </div>
-  <div class="w-full flex flex-col md:flex-row gap-[24px] md:gap-[55px] px-[13px] py-[22px] md:px-[20px] md:py-[30px]">
-    <div>
+  <div class="w-full flex bg-[#E7E7E7] rounded-[5px] flex-col md:flex-row gap-[24px] md:gap-[55px] px-[13px] py-[22px] md:px-[20px] md:py-[30px]">
+    <div class="md:w-[1/2] flex-1">
       <h3 class="m-0 text-[30px] md:text-[40px] font-Montaga  font-normal">Frequently asked questions</h3>
       <p class="m-0 text-xl font-normal font-Montaga leading-[24px]">
         Need some help? Browse through our summary of the most frequently asked questions about shipping, returns,
@@ -95,7 +95,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-[12px]">
+    <div class="md:w-[1/2] flex-1 flex flex-col gap-[12px]">
       <div class="bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light  flex justify-between items-center">
         What if I would like a product that is not in your catalog?
         {% render 'icon', icon: 'icon-plus' %}

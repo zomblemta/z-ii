@@ -1,0 +1,225 @@
+{% schema %}
+{
+  "name": "Alp Collections Links",
+  "class": "alp-base-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Section"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "Collections",
+      "limit": 24
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Layout",
+      "default": "alp-container",
+      "options": [
+        {
+          "value": "alp-container",
+          "label": "Default"
+        },
+        {
+          "value": "alp-container-fluid",
+          "label": "Fluid container"
+        },
+        {
+          "value": "alp-full-width",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "em"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "em"
+    },
+    {
+      "type": "checkbox",
+      "id": "reset_spacing",
+      "label": "Remove default space between sections",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alp Collections Links"
+    }
+  ]
+}
+{% endschema %}
+
+{% liquid
+  assign st = section.settings
+  assign container = st.container
+  assign reset_spacing = ''
+  if st.reset_spacing
+    assign reset_spacing = ' remove_spacing'
+  endif
+
+  # Get main collection object
+  if collection
+    assign main_object = collection
+  elsif search
+    assign main_object = search
+  endif
+%}
+
+{%- capture style -%}
+    --bg-color: {{ st.bg_color }};--text-color: {{ st.text_color }};--padding-top: {{ st.padding_top }};--padding-bottom: {{ st.padding_bottom }};
+{%- endcapture -%}
+
+{% style %}
+{% endstyle %}
+
+<div class="alp-section alp-collections-links {{ reset_spacing }}" style="{{ style }}">
+  <div class="alp-collections-links-container page-width {{ container }}">
+    <div class="alp-collections-links-content">
+      {% comment %}
+        {% for item in st.collection_list %}
+          <div class="collections-links-item">
+            <a href="{{ item.url }}" data-id="{{ item.id }}"
+              ><span>{{ item.title }}</span></a
+            >
+          </div>
+        {% endfor %}
+      {% endcomment %}
+      {%- if main_object and main_object.filters -%}
+        {%- assign allowed_filters = collection.metafields.custom.filter.value -%}
+        {%- for filter in main_object.filters -%}
+          {%- if filter.type == 'list' and filter.param_name == 'filter.p.product_type' -%}
+            <div class="alp-collection-filters">
+              <collection-filters-form class="collection-filters">
+                <form id="AlpCollectionFiltersForm" class="collection-filters__form m-0">
+                  {%- for value in filter.values -%}
+                    {%- assign show_filter = false -%}
+                    {%- if allowed_filters == blank -%}
+                      {%- if value.count > 0 or value.active -%}
+                        {%- assign show_filter = true -%}
+                      {%- endif -%}
+                    {%- else -%}
+                      {%- comment -%} Loop through allowed_filters array and check each value {%- endcomment -%}
+                      {%- for allowed_filter in allowed_filters -%}
+                        {%- assign trimmed_filter = allowed_filter | strip -%}
+                        {%- assign trimmed_label = value.label | strip -%}
+                        {%- if trimmed_filter == trimmed_label -%}
+                          {%- if value.count > 0 or value.active -%}
+                            {%- assign show_filter = true -%}
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endif -%}
+
+                    {%- if show_filter -%}
+                      <div class="collections-links-item filter-item">
+                        <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}-alp">
+                          <input
+                            type="checkbox"
+                            class="d-none"
+                            name="{{ value.param_name }}"
+                            value="{{ value.value }}"
+                            id="Filter-{{ filter.label | escape }}-{{ forloop.index }}-alp"
+                            {% if value.active %}
+                              checked
+                            {% endif %}
+                          >
+                          <span>{{ value.label | escape }}</span>
+                        </label>
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </form>
+              </collection-filters-form>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Highlight active collection link
+    let location_path = window.location.pathname;
+    let collections_links = document.querySelectorAll('.alp-collections-links-content .collections-links-item a');
+    collections_links.forEach((link) => {
+      if (link.getAttribute('href') === location_path) {
+        link.classList.add('active');
+      }
+    });
+
+    // Handle filter checkboxes
+    const filterForm = document.getElementById('AlpCollectionFiltersForm');
+    if (filterForm) {
+      const filterCheckboxes = filterForm.querySelectorAll('input[type="checkbox"]');
+
+      filterCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', (event) => {
+          event.preventDefault();
+
+          // Build URL with current filters
+          const formData = new FormData(filterForm);
+          const searchParams = new URLSearchParams();
+
+          // Get all checked checkboxes
+          const checkedBoxes = filterForm.querySelectorAll('input[type="checkbox"]:checked');
+          checkedBoxes.forEach((box) => {
+            searchParams.append(box.name, box.value);
+          });
+
+          // Navigate to filtered URL
+          const queryString = searchParams.toString();
+          if (queryString) {
+            window.location.href = `${window.location.pathname}?${queryString}`;
+          } else {
+            window.location.href = window.location.pathname;
+          }
+        });
+      });
+    }
+  });
+
+  // Define collection-filters-form custom element if not already defined
+  if (!customElements.get('collection-filters-form')) {
+    class CollectionFiltersForm extends HTMLElement {
+      constructor() {
+        super();
+      }
+    }
+    customElements.define('collection-filters-form', CollectionFiltersForm);
+  }
+</script>

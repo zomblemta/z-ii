@@ -1,9 +1,9 @@
 <style>
   .alp-page-container {
-  margin: 0 54px;
-  margin-top: 40px;
-  overflow: hidden;
-}
+    margin: 0 54px;
+    margin-top: 40px;
+    overflow: hidden;
+  }
 
   .alp-index-product-list-title {
     display: flex;
@@ -101,7 +101,7 @@
   /* 移动端样式 - 滑动容器显示1个多 */
   @media screen and (max-width: 786px) {
     .alp-page-container {
-      margin: 0 ;
+      margin: 0;
     }
     .alp-index-product-list-title-icon {
       width: 10px;
@@ -225,44 +225,42 @@
   }
 </style>
 
-<div>
-  <div class="alp-index-product-list alp-page-container">
-    {% if section.settings.title != blank %}
-      <a href="{{ section.settings.url }}">
+<div class="alp-index-product-list alp-page-container">
+  {% if section.settings.title != blank %}
+    <a href="{{ section.settings.url }}">
       <div class="alp-index-product-list-title">
         {{ section.settings.title }}
       </div>
-      </a>
-    {% endif %}
-    <div class="alp-index-product-list-nav">
-      <div class="alp-index-product-list-container" product-list-data-scroll-container>
-        {% for product in section.settings.product_list %}
-          <div class="alp-index-product-list-item">
-            {% render 'card-product',
-              card_product: product,
-              media_aspect_ratio: 'portrait',
-              show_secondary_image: false,
-              show_vendor: false,
-              show_rating: false,
-              lazy_load: true,
-              section_id: section.id
-            %}
-          </div>
-        {% endfor %}
-      </div>
-      <!-- PC端导航按钮 -->
-      <span class="alp-index-product-list-nav-btn prev" product-list-data-nav-prev aria-label="Previous">
-        {% render 'icon', icon: 'icon-arrow-prev' %}
-      </span>
-      <span class="alp-index-product-list-nav-btn next" product-list-data-nav-next aria-label="Next">
-        {% render 'icon', icon: 'icon-arrow-next' %}
-      </span>
+    </a>
+  {% endif %}
+  <div class="alp-index-product-list-nav">
+    <div class="alp-index-product-list-container" product-list-data-scroll-container>
+      {% for product in section.settings.product_list %}
+        <div class="alp-index-product-list-item">
+          {% render 'card-product',
+            card_product: product,
+            media_aspect_ratio: 'portrait',
+            show_secondary_image: false,
+            show_vendor: false,
+            show_rating: false,
+            lazy_load: true,
+            section_id: section.id
+          %}
+        </div>
+      {% endfor %}
     </div>
+    <!-- PC端导航按钮 -->
+    <span class="alp-index-product-list-nav-btn prev" product-list-data-nav-prev aria-label="Previous">
+      {% render 'icon', icon: 'icon-arrow-prev' %}
+    </span>
+    <span class="alp-index-product-list-nav-btn next" product-list-data-nav-next aria-label="Next">
+      {% render 'icon', icon: 'icon-arrow-next' %}
+    </span>
+  </div>
 
-    <!-- 滚动进度条 -->
-    <div class="alp-index-product-list-progress-bar-wrapper">
-      <div class="alp-index-product-list-progress-bar" product-list-data-progress-bar></div>
-    </div>
+  <!-- 滚动进度条 -->
+  <div class="alp-index-product-list-progress-bar-wrapper">
+    <div class="alp-index-product-list-progress-bar" product-list-data-progress-bar></div>
   </div>
 </div>
 

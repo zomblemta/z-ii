@@ -5,6 +5,13 @@
   .hero-banner-wrapper {
     height: calc(100vh - 142px);
   }
+
+  @media (max-width: 768px) {
+    .hero-swiper-wrapper,
+    .swiper-slide {
+      height: calc(100vh - 279px)!important;
+    }
+  }
   
   /* 分页器容器位置 */
   .swiper-pagination {
@@ -12,6 +19,8 @@
     left: 20px !important;
     width: auto !important;
     text-align: left !important;
+    height: 10px!important;
+    display: flex;
   }
   
   /* 分页器小圆点样式 */
@@ -47,10 +56,10 @@
   <div class="hero-banner-wrapper">
     <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
       <!-- 左侧内容区 -->
-      <div class="hero-content w-full h-full bg-[#333] flex justify-center items-center  py-[30px] lg:p-0 md:w-1/2  ">
+      <div class="hero-content max-h-[178px] md:max-h-full w-full h-full bg-[#333] flex justify-center items-center  py-[30px] lg:p-0 md:w-1/2  ">
         <div class="content-wrapper max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
           <div class="flex flex-col  gap-[30px]  md:gap-[60px]">
-            <h1 class="text-[32px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
+            <h1 class="text-[32px] leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
               {{ section.settings.title | default: '“ Studio Precision for Strong Labels. ”' }}
             </h1>
 
@@ -91,7 +100,7 @@
                         | escape
                       }}
                     </div>
-                    <div class="absolute left-[20px] bottom-[44px] flex flex-col justify-center items-center">
+                    <div class="absolute left-[20px] bottom-[44px] md:bottom-[70px] flex flex-col justify-center items-center">
                       <h2 class="text-white text-sm tracking-[1.4px] font-light md:text-2xl md:tracking-[2px]">
                         {{ block.settings.title }}
                       </h2>
@@ -123,7 +132,7 @@
           }
         : false,
       speed: 1000,
-      effect: 'fade',
+      // effect: 'fade',
       fadeEffect: {
         crossFade: true,
       },
