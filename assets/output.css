@@ -439,6 +439,9 @@
   .mt-\[16px\] {
     margin-top: 16px;
   }
+  .mt-\[20px\] {
+    margin-top: 20px;
+  }
   .mt-\[24px\] {
     margin-top: 24px;
   }
@@ -552,6 +555,9 @@
   }
   .table {
     display: table;
+  }
+  .aspect-1\/1 {
+    aspect-ratio: 1/1;
   }
   .aspect-3\/4 {
     aspect-ratio: 3/4;
@@ -1284,6 +1290,9 @@
   .py-\[10px\] {
     padding-block: 10px;
   }
+  .py-\[12px\] {
+    padding-block: 12px;
+  }
   .py-\[17px\] {
     padding-block: 17px;
   }
@@ -1299,6 +1308,9 @@
   .py-\[22px\] {
     padding-block: 22px;
   }
+  .py-\[28px\] {
+    padding-block: 28px;
+  }
   .py-\[30px\] {
     padding-block: 30px;
   }
@@ -1313,6 +1325,12 @@
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-\[28px\] {
+    padding-top: 28px;
+  }
+  .pt-\[30px\] {
+    padding-top: 30px;
   }
   .pr-\[28px\] {
     padding-right: 28px;
@@ -1792,6 +1810,11 @@
       margin-top: 30px;
     }
   }
+  .md\:mt-\[60px\] {
+    @media (width >= 48rem) {
+      margin-top: 60px;
+    }
+  }
   .md\:mt-\[70px\] {
     @media (width >= 48rem) {
       margin-top: 70px;
@@ -2155,6 +2178,11 @@
   .md\:px-\[30px\] {
     @media (width >= 48rem) {
       padding-inline: 30px;
+    }
+  }
+  .md\:px-\[50px\] {
+    @media (width >= 48rem) {
+      padding-inline: 50px;
     }
   }
   .md\:px-\[53px\] {

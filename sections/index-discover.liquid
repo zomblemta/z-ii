@@ -1,24 +1,27 @@
 <div class="w-full px-[15px] md:px-[53px] mt-[30px] mb-[45px] flex flex-col gap-[30px] md:gap-[42px]">
-  <h3 class="m-0 text-xl font-medium leading-normal uppercase tracking-[2px]">
+  <h3 class="m-0 text-xl font-semibold leading-normal uppercase tracking-[2px]">
     {{ section.settings.title }}
   </h3>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[36px]">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[36px] ">
     {% for block in section.blocks %}
-      <div class="flex flex-col  ">
+      <div class="flex flex-col  {% if section.settings.image_style == 'style-2' %} relative {% endif %}">
         {% render 'alp-responsive-image',
           image: block.settings.image,
           image_mobile: block.settings.image,
           alt: block.settings.title,
-          class: 'aspect-[430/573] md:aspect-1/1'
+          class: 
+            section.settings.image_style == 'style-1' 
+            | append: ' aspect-[430/573] md:aspect-1/1' 
+            | default: ' aspect-1/1 md:aspect-1/1'
         %}
-
-        <span class="text-lg font-normal font-Montaga leading-[18px] uppercase mt-[12px] md:mt-[30px]">
-          {{ block.settings.title }}
-        </span>
-        <span class="text-xs font-light leading-[16px] mt-[6px] md:mt-[20px]">
-          {{ block.settings.description }}
-        </span>
+        <div class="flex flex-col {% if section.settings.image_style == 'style-2' %} absolute top-0 left-0 w-full h-full flex items-center justify-center {% endif %}">
+          <span class="text-lg font-normal font-Montaga leading-[18px] uppercase mt-[12px] md:mt-[30px]">
+            {{ block.settings.title }}
+          </span>
+          <span class="text-xs font-light leading-[16px] mt-[6px] md:mt-[20px]">
+            {{ block.settings.description }}
+          </span>
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -60,6 +63,21 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "image_style",
+      "label": "Image Position",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "Style 1"
+        },
+        {
+          "value": "style-2",
+          "label": "Style 2"
+        }
+      ]
     }
   ],
   "presets": [

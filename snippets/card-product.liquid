@@ -126,7 +126,9 @@
         {%- endif -%}
         <div class="card__content">
           <a href="{{ card_product.url }}" class="absolute inset-0 z-[100000]"></a>
+        </div>
 
+{% comment %} 
           <div class="card__information">
             <h3
               class="card__heading"
@@ -143,7 +145,7 @@
                 {{ card_product.title | escape }}
               </a>
             </h3>
-          </div>
+          </div> {% endcomment %}
           {% comment %}
             <div class="card__badge {{ settings.badge_position }}">
               {%- if card_product.available == false -%}
@@ -163,11 +165,10 @@
               {%- endif -%}
             </div>
           {% endcomment %}
-        </div>
       </div>
       {% if show_card_info == true or show_card_info == null %}
-        <div class="card__content">
-          {% comment %} <div class="card__information">
+        <div class="card__content mt-[20px]">
+           <div class="card__information">
             <h3
               class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %} flex items-start gap-x-[16px] justify-between"
               {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -318,7 +319,7 @@
                 {% endif %}
               {%- endif -%}
             </div>
-          </div> {% endcomment %}
+          </div>
           {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
           {% if quick_add == 'standard' %}
             <div class="quick-add no-js-hidden">
@@ -579,7 +580,7 @@
               </div>
             {% endif %}
           {% endif %}
-          <div class="card__badge {{ settings.badge_position }}">
+          {% comment %} <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
               <span
                 id="Badge-{{ section_id }}-{{ card_product.id }}"
@@ -595,7 +596,7 @@
                 {{- 'products.product.on_sale' | t -}}
               </span>
             {%- endif -%}
-          </div>
+          </div> {% endcomment %}
         </div>
       {% endif %}
     </div>
