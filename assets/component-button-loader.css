@@ -1,0 +1,93 @@
+/* 按钮Loading动画样式 */
+
+.button-loader {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.loader-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+  animation: dot-bounce 1.4s infinite ease-in-out both;
+}
+
+.loader-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dot-bounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 按钮loading状态 */
+.product-form__submit.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+/* 确保按钮文本和loader之间的切换流畅 */
+.product-form__submit .button-text,
+.product-form__submit .button-loader {
+  transition: opacity 0.2s ease;
+}
+
+.product-form__submit .button-text.hidden,
+.product-form__submit .button-loader.hidden {
+  display: none;
+}
+
+/* 桌面端更大的点 */
+@media screen and (min-width: 750px) {
+  .loader-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .button-loader {
+    gap: 8px;
+  }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  .loader-dot {
+    background-color: currentColor;
+    opacity: 1;
+  }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .loader-dot {
+    animation: dot-pulse 2s infinite ease-in-out;
+  }
+  
+  @keyframes dot-pulse {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+

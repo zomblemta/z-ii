@@ -119,22 +119,33 @@
 
 {% style %}
   .alp-section.alp-products-slider {
+
     padding: 0 0px!important;
     overflow: hidden;
   }
   .alp-products-slider  .alp-block-title h5 {
     color: #000;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 4.8px;
+text-align: center;
+font-family: Montserrat;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 3.6px;
+text-transform: uppercase;
+margin-bottom: 42px;
   }
   @media screen and (max-width: 768px) {
     .alp-products-slider  .alp-block-title h5 {
-      font-size: 16px;
-      letter-spacing: 1.6px;
+      color: #000;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-bottom: 30px;
     }
   }
   .alp-product-feature-image img {
@@ -192,7 +203,7 @@
 
 {% unless should_hide %}
   {%- if st.product_list != blank -%}
-    <div class="alp-section alp-products-slider {{ reset_spacing }}" style="{{ style }}">
+    <div class="alp-section my-[30px] md:my-[70px] alp-products-slider {{ reset_spacing }}" style="{{ style }}">
       <div class="alp-section-container alp-products-slider-container page-width {{ container }}">
         <div class="alp-block-title">
           {%- if st.title != blank -%}

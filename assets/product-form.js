@@ -25,7 +25,12 @@ if (!customElements.get('product-form')) {
 
         this.submitButton.setAttribute('aria-disabled', true);
         this.submitButton.classList.add('loading');
-        this.querySelector('.loading__spinner').classList.remove('hidden');
+        
+        // 使用新的loading动画
+        const buttonText = this.submitButton.querySelector('.button-text');
+        const buttonLoader = this.submitButton.querySelector('.button-loader');
+        if (buttonText) buttonText.classList.add('hidden');
+        if (buttonLoader) buttonLoader.classList.remove('hidden');
 
         const config = fetchConfig('javascript');
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
@@ -103,7 +108,12 @@ if (!customElements.get('product-form')) {
             this.submitButton.classList.remove('loading');
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
-            this.querySelector('.loading__spinner').classList.add('hidden');
+            
+            // 恢复按钮文本
+            const buttonText = this.submitButton.querySelector('.button-text');
+            const buttonLoader = this.submitButton.querySelector('.button-loader');
+            if (buttonText) buttonText.classList.remove('hidden');
+            if (buttonLoader) buttonLoader.classList.add('hidden');
 
             CartPerformance.measureFromEvent("add:user-action", evt);
           });
