@@ -5,7 +5,7 @@
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 
-<footer class="footer mt-[115px] bg-black section-{{ section.id }}-padding">
+<footer class="footer  bg-black section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -27,6 +27,115 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
+      <div class="w-full bg-[#F7F7F7] py-[36px] pb-[85px] mt-[70px] hidden md:block">
+        <div class="w-[1200px] mx-auto flex justify-between items-center">
+          {%- if section.blocks.size > 0 -%}
+            <div
+              class="footer__blocks-wrapper  flex  gap-x-[60px]"
+            >
+              {%- for block in section.blocks -%}
+                <div
+                  class="footer-block w-max-content"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {%- if block.settings.heading != blank -%}
+                    <h2 class="m-0 text-base tracking-[1.6px] uppercase font-normal mb-[30px]">
+                      {{- block.settings.heading -}}
+                    </h2>
+                  {%- endif -%}
+
+                  {%- case block.type -%}
+                    {%- when '@app' -%}
+                      {% render block %}
+                    {%- when 'text' -%}
+                      <div class="">
+                        {{ block.settings.subtext }}
+                      </div>
+                    {%- when 'link_list' -%}
+                      {%- if block.settings.menu != blank -%}
+                        <ul class=" flex flex-col gap-y-[14px] list-unstyled">
+                          {%- for link in block.settings.menu.links -%}
+                            <li class="">
+                              <a
+                                href="{{ link.url }}"
+                                class="block h-[17px] text-sm text-[#818181] no-underline tracking-[1.4px] uppercase font-normal"
+                              >
+                                {{ link.title | escape }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    {%- when 'brand_information' -%}
+                      <div class="footer-block__brand-info">
+                        {%- if settings.brand_image != blank -%}
+                          {%- assign brand_image_height = settings.brand_image_width
+                            | divided_by: settings.brand_image.aspect_ratio
+                          -%}
+                          <div
+                            class="footer-block__image-wrapper"
+                            style="max-width: min(100%, {{ settings.brand_image_width }}px);"
+                          >
+                            {{
+                              settings.brand_image
+                              | image_url: width: 1100
+                              | image_tag:
+                                loading: 'lazy',
+                                widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                                height: brand_image_height,
+                                width: settings.brand_image_width
+                            }}
+                          </div>
+                        {%- endif -%}
+                        {%- if settings.brand_headline != blank -%}
+                          <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
+                        {%- endif -%}
+                        {%- if settings.brand_description != blank -%}
+                          <div class="rte">{{ settings.brand_description }}</div>
+                        {%- endif -%}
+                        {%- if block.settings.show_social and has_social_icons -%}
+                          {%- render 'social-icons', class: 'footer__list-social' -%}
+                        {%- endif -%}
+                      </div>
+                    {%- when 'image' -%}
+                      <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                        {%- if block.settings.image != blank -%}
+                          {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                          <div
+                            class="footer-block__image-wrapper"
+                            style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                          >
+                            <img
+                              srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
+                              src="{{ block.settings.image | image_url: width: 760 }}"
+                              alt="{{ block.settings.image.alt | escape }}"
+                              loading="lazy"
+                              width="{{ block.settings.image.width }}"
+                              height="{{ block.settings.image.height }}"
+                            >
+                          </div>
+                        {%- else -%}
+                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        {%- endif -%}
+                      </div>
+                  {%- endcase -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+          <button
+            type="button"
+            id="back-to-top"
+            class="text-sm  tracking-[1.4px] text-black uppercase font-normal flex items-center gap-x-[8px] cursor-pointer hover:opacity-80  duration-200 border-none bg-transparent p-0"
+          >
+            Back to Top <span class="bg-[#E9E9E9] block rounded-[5px] p-1">{% render 'icon', icon: 'icon-back-to-top' %}</span>
+          </button>
+        </div>
+      </div>
+
       {% comment %}
         <div class="footer__content-top page-width">
           {%- if section.blocks.size > 0 -%}
@@ -230,21 +339,6 @@
     {%- endunless -%}
   {%- endif -%}
 
-  {% if section.settings.mobile_bottom_menu != blank %}
-    <div class="w-full  bg-black md:flex hidden items-center   ">
-      <div class="mx-auto w-[1200px] h-5 flex items-center  gap-x-[13px] md:gap-x-[127px]">
-      {% for link in section.settings.mobile_bottom_menu.links %}
-        <a
-          class="text-[10px]  text-white tracking-[1.4px] no-underline hover:underline  font-light uppercase"
-          href="{{ link.url }}"
-        >
-          {{- link.title -}}
-        </a>
-      {% endfor %}
-      </div>
-    </div>
-  {% endif %}
-
   <div
     class="footer__content-bottom  flex flex-col md:flex-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -262,7 +356,9 @@
               {%- if policy != blank -%}
                 <li>
                   <small class="copyright__content"
-                    ><a href="{{ policy.url }}" class="text-white ml-[13px] text-[10px] font-light uppercase">{{ policy.title | escape }}</a></small
+                    ><a href="{{ policy.url }}" class="text-white ml-[13px] text-[10px] font-light uppercase">
+                      {{- policy.title | escape -}}
+                    </a></small
                   >
                 </li>
               {%- endif -%}
@@ -304,6 +400,24 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.getElementById('back-to-top');
+
+    if (backToTopButton) {
+      backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      });
+    }
+
+  
+  });
+</script>
+
 
 {% schema %}
 {
@@ -532,3 +646,4 @@
   }
 }
 {% endschema %}
+

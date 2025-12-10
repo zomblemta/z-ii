@@ -410,6 +410,9 @@
   .mt-\[60px\] {
     margin-top: 60px;
   }
+  .mt-\[70px\] {
+    margin-top: 70px;
+  }
   .mt-\[115px\] {
     margin-top: 115px;
   }
@@ -562,6 +565,9 @@
   }
   .h-\[16px\] {
     height: 16px;
+  }
+  .h-\[17px\] {
+    height: 17px;
   }
   .h-\[20px\] {
     height: 20px;
@@ -871,6 +877,9 @@
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
   }
+  .gap-x-\[8px\] {
+    column-gap: 8px;
+  }
   .gap-x-\[10px\] {
     column-gap: 10px;
   }
@@ -889,14 +898,23 @@
   .gap-x-\[25px\] {
     column-gap: 25px;
   }
+  .gap-x-\[60px\] {
+    column-gap: 60px;
+  }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
   }
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
   }
   .gap-y-\[10px\] {
     row-gap: 10px;
+  }
+  .gap-y-\[14px\] {
+    row-gap: 14px;
   }
   .gap-y-\[20px\] {
     row-gap: 20px;
@@ -1029,6 +1047,9 @@
   .bg-\[\#F5F5F5\] {
     background-color: #F5F5F5;
   }
+  .bg-\[\#F7F7F7\] {
+    background-color: #F7F7F7;
+  }
   .bg-\[\#e0e0e0\] {
     background-color: #e0e0e0;
   }
@@ -1143,6 +1164,9 @@
   .px-\[26px\] {
     padding-inline: 26px;
   }
+  .px-\[27px\] {
+    padding-inline: 27px;
+  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -1206,6 +1230,15 @@
   .py-\[30px\] {
     padding-block: 30px;
   }
+  .py-\[36px\] {
+    padding-block: 36px;
+  }
+  .py-\[38px\] {
+    padding-block: 38px;
+  }
+  .py-\[40px\] {
+    padding-block: 40px;
+  }
   .pt-0 {
     padding-top: calc(var(--spacing) * 0);
   }
@@ -1218,6 +1251,9 @@
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
+  .pt-\[40px\] {
+    padding-top: 40px;
+  }
   .pr-\[28px\] {
     padding-right: 28px;
   }
@@ -1229,6 +1265,9 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-\[85px\] {
+    padding-bottom: 85px;
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
@@ -1406,6 +1445,9 @@
   }
   .text-\[\#787878\] {
     color: #787878;
+  }
+  .text-\[\#818181\] {
+    color: #818181;
   }
   .text-\[\#858585\] {
     color: #858585;
@@ -2021,6 +2063,11 @@
   .md\:bg-\[\#F4F4F4\] {
     @media (width >= 48rem) {
       background-color: #F4F4F4;
+    }
+  }
+  .md\:bg-\[\#F7F7F7\] {
+    @media (width >= 48rem) {
+      background-color: #F7F7F7;
     }
   }
   .md\:bg-white {
