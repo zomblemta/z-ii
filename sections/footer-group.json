@@ -13,6 +13,26 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_QUtJNX": {
+          "type": "link_list",
+          "settings": {
+            "heading": "test2",
+            "menu": "footer"
+          }
+        },
+        "link_list_wnfCL3": {
+          "type": "link_list",
+          "settings": {
+            "heading": "test1",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_QUtJNX",
+        "link_list_wnfCL3"
+      ],
       "settings": {
         "mobile_bottom_menu": "customer-account-main-menu",
         "color_scheme": "scheme-1",
