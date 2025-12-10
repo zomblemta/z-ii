@@ -125,7 +125,7 @@
           </div>
         {%- endif -%}
         <div class="card__content">
-          <a href="{{ card_product.url }}" class="absolute inset-0 z-[100000]"></a>
+          <a href="{{ card_product.url }}" class="absolute inset-0 z-10"></a>
         </div>
 
 {% comment %} 
@@ -183,12 +183,23 @@
               >
                 {{ card_product.title | escape }}
               </a>
-              <span
-                class="shrink-0 cursor-pointer h-[20px] leading-none flex items-center quick-add-trigger"
-              
+              <button
+                type="button"
+                class="card-quick-add-btn shrink-0 cursor-pointer h-[20px] leading-none flex items-center border-none bg-transparent p-0 hover:opacity-70 transition-opacity relative z-20"
+                data-product-id="{{ card_product.id }}"
+                data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+                data-product-title="{{ card_product.title | escape }}"
+                aria-label="Add {{ card_product.title | escape }} to cart"
               >
-                {%- render 'icon', icon: 'icon-collect-white' -%}
-              </span>
+                <span class="quick-add-icon">
+                  {%- render 'icon', icon: 'icon-add-to-cart' -%}
+                </span>
+                <span class="quick-add-loader hidden">
+                  <span class="loader-dot"></span>
+                  <span class="loader-dot"></span>
+                  <span class="loader-dot"></span>
+                </span>
+              </button>
             </h3>
             <div class="card-information">
               {% comment %} {%- if show_vendor -%}
@@ -655,3 +666,149 @@
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  // 产品卡片快速加购功能
+  (function() {
+    function initCardQuickAdd() {
+      // 使用事件委托处理所有快速加购按钮
+      document.body.addEventListener('click', function(e) {
+        const button = e.target.closest('.card-quick-add-btn');
+        if (!button) return;
+        
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // 如果正在处理，则忽略
+        if (button.disabled) return;
+        
+        const variantId = button.getAttribute('data-variant-id');
+        const quickAddIcon = button.querySelector('.quick-add-icon');
+        const quickAddLoader = button.querySelector('.quick-add-loader');
+        
+        // 禁用按钮
+        button.disabled = true;
+        button.style.opacity = '0.6';
+        
+        // 显示loading
+        if (quickAddIcon) quickAddIcon.classList.add('hidden');
+        if (quickAddLoader) quickAddLoader.classList.remove('hidden');
+        
+        // 准备数据
+        const formData = new FormData();
+        formData.append('id', variantId);
+        formData.append('quantity', 1);
+        
+        // 如果有cart drawer，添加sections参数
+        const cartDrawer = document.querySelector('cart-drawer');
+        if (cartDrawer) {
+          formData.append('sections', 'cart-drawer,cart-icon-bubble');
+          formData.append('sections_url', window.location.pathname);
+        }
+        
+        // 获取正确的路由
+        const cartAddUrl = window.Shopify?.routes?.root 
+          ? window.Shopify.routes.root + 'cart/add.js'
+          : '/cart/add.js';
+        
+        // 发送请求
+        fetch(cartAddUrl, {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          // 更新购物车显示
+          if (cartDrawer && data.sections) {
+            // 更新cart drawer内容
+            const cartDrawerContainer = document.querySelector('#CartDrawer');
+            if (cartDrawerContainer && data.sections['cart-drawer']) {
+              const parser = new DOMParser();
+              const html = parser.parseFromString(data.sections['cart-drawer'], 'text/html');
+              const newContent = html.querySelector('.shopify-section');
+              if (newContent) {
+                cartDrawerContainer.innerHTML = newContent.innerHTML;
+              }
+            }
+            
+            // 更新购物车图标
+            const cartIconBubble = document.querySelector('#cart-icon-bubble');
+            if (cartIconBubble && data.sections['cart-icon-bubble']) {
+              const parser = new DOMParser();
+              const html = parser.parseFromString(data.sections['cart-icon-bubble'], 'text/html');
+              const newIcon = html.querySelector('.shopify-section');
+              if (newIcon) {
+                cartIconBubble.innerHTML = newIcon.innerHTML;
+              }
+            }
+          }
+          
+          // 更新购物车数量
+          const cartUrl = window.Shopify?.routes?.root 
+            ? window.Shopify.routes.root + 'cart.js'
+            : '/cart.js';
+            
+          fetch(cartUrl)
+            .then(response => response.json())
+            .then(cart => {
+              // 更新购物车数量显示
+              const cartCountElements = document.querySelectorAll('.cart-count-bubble span[aria-hidden="true"]');
+              cartCountElements.forEach(el => {
+                if (cart.item_count < 100) {
+                  el.textContent = cart.item_count;
+                }
+              });
+              
+              // 显示购物车气泡
+              const cartBubbles = document.querySelectorAll('.cart-count-bubble');
+              cartBubbles.forEach(bubble => {
+                if (cart.item_count > 0) {
+                  bubble.style.display = 'flex';
+                } else {
+                  bubble.style.display = 'none';
+                }
+              });
+            });
+          
+          // 显示成功反馈 - 改变按钮颜色短暂时间
+          button.style.backgroundColor = '#4ade80';
+          button.style.transition = 'background-color 0.3s ease';
+          setTimeout(() => {
+            button.style.backgroundColor = '';
+          }, 600);
+        })
+        .catch(error => {
+          console.error('Error adding product to cart:', error);
+          // 显示错误反馈 - 改变按钮颜色
+          button.style.backgroundColor = '#f87171';
+          button.style.transition = 'background-color 0.3s ease';
+          setTimeout(() => {
+            button.style.backgroundColor = '';
+          }, 600);
+        })
+        .finally(() => {
+          // 恢复按钮状态
+          setTimeout(() => {
+            button.disabled = false;
+            button.style.opacity = '';
+            
+            if (quickAddIcon) quickAddIcon.classList.remove('hidden');
+            if (quickAddLoader) quickAddLoader.classList.add('hidden');
+          }, 600);
+        });
+      }, true); // 使用捕获阶段
+    }
+    
+    // 确保DOM加载完成后初始化
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCardQuickAdd);
+    } else {
+      initCardQuickAdd();
+    }
+  })();
+</script>
+
+

@@ -119,83 +119,135 @@
 
 {% style %}
   .alp-section.alp-products-slider {
-
     padding: 0 0px!important;
     overflow: hidden;
   }
+  
+  /* 确保产品卡片图片正确显示 - 修复高度问题 */
+  .alp-products-slider .card {
+    display: block;
+  }
+  
+  .alp-products-slider .card__inner {
+    position: relative;
+    width: 100%;
+  }
+  
+  .alp-products-slider .card__inner.ratio {
+    display: block;
+    padding-bottom: var(--ratio-percent);
+  }
+  
+  .alp-products-slider .card__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .alp-products-slider .card__media .media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .alp-products-slider .card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .alp-products-slider-item .card-wrapper {
+    height: 100%;
+  }
+  
+  /* 确保有最小高度 */
+  .alp-products-slider .swiper-slide {
+    height: auto;
+  }
+  
   .alp-products-slider  .alp-block-title h5 {
     color: #000;
-text-align: center;
-font-family: Montserrat;
-font-size: 36px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 3.6px;
-text-transform: uppercase;
-margin-bottom: 42px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    margin-bottom: 42px;
   }
+  
   @media screen and (max-width: 768px) {
     .alp-products-slider  .alp-block-title h5 {
       color: #000;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 2px;
-text-transform: uppercase;
-margin-bottom: 30px;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
     }
   }
+  
   .alp-product-feature-image img {
-      height: auto;
+    height: auto;
   }
 
   .product-collection__wrapper.product-collection__wrapper_style_2 {
-      position: relative;
+    position: relative;
   }
 
   .product-collection__s2.d-flex {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 15px;
-      background: #19191960;
-      backdrop-filter: blur(6px);
-      --theme: #ffffff;
-      color: var(--theme);
-      gap: 15px;
-      z-index: 12;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: #19191960;
+    backdrop-filter: blur(6px);
+    --theme: #ffffff;
+    color: var(--theme);
+    gap: 15px;
+    z-index: 12;
   }
 
   .product-collection__s2.d-flex * {
-      color: var(--theme) !important;!i;!;
+    color: var(--theme) !important;
   }
 
   .product-collection__s2.d-flex .product-collection__image {
-      width: clamp(50px,30%,128px);
+    width: clamp(50px,30%,128px);
   }
 
   body .product-collection__s2.d-flex .product-collection__button-add-to-cart .btn span {
-      color: var(--theme) !important;
+    color: var(--theme) !important;
   }
+  
   .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value,
   .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value font{
-      color: #bcbcbc !important;
+    color: #bcbcbc !important;
   }
+  
   .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value.active,
   .product-collection__s2.d-flex .product-options.product-options--type-collection .product-options__value.active font {
-      color: var(--theme) !important;
+    color: var(--theme) !important;
   }
+  
   @media screen and (max-width: 1024px) {
     .alp-products-slide-swiper.swiper {
       overflow: visible;
     }
     .product-collection__s2.d-flex {
       padding: 8px;
-    }.product-collection__wrapper .product-collection__s2.d-flex  .product-collection__control.d-flex.flex-row {
+    }
+    .product-collection__wrapper .product-collection__s2.d-flex  .product-collection__control.d-flex.flex-row {
       display: flex !important;
     }
   }
@@ -219,10 +271,11 @@ margin-bottom: 30px;
                 <div class="alp-products-slider-item swiper-slide">
                   {% render 'card-product',
                     card_product: product,
-                    image_ratio: 'adapt',
+                    media_aspect_ratio: 'adapt',
                     show_secondary_image: true,
-                    show_vendor: true,
-                    show_rating: true,
+                    show_vendor: false,
+                    show_rating: false,
+                    lazy_load: false,
                     skip_styles: true
                   %}
                 </div>

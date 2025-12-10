@@ -39,20 +39,63 @@
 }
 
 /* 按钮loading状态 */
-.product-form__submit.loading {
+.product-form__submit.loading,
+.buy-sample-btn.loading,
+.card-quick-add-btn.loading {
   position: relative;
   pointer-events: none;
 }
 
 /* 确保按钮文本和loader之间的切换流畅 */
 .product-form__submit .button-text,
-.product-form__submit .button-loader {
+.product-form__submit .button-loader,
+.buy-sample-btn .button-text,
+.buy-sample-btn .button-loader,
+.card-quick-add-btn .quick-add-icon,
+.card-quick-add-btn .quick-add-loader {
   transition: opacity 0.2s ease;
 }
 
 .product-form__submit .button-text.hidden,
-.product-form__submit .button-loader.hidden {
+.product-form__submit .button-loader.hidden,
+.buy-sample-btn .button-text.hidden,
+.buy-sample-btn .button-loader.hidden,
+.card-quick-add-btn .quick-add-icon.hidden,
+.card-quick-add-btn .quick-add-loader.hidden {
   display: none;
+}
+
+/* Buy Sample 按钮特殊样式 */
+.buy-sample-btn {
+  border: none;
+  outline: none;
+}
+
+.buy-sample-btn .loader-dot {
+  width: 4px;
+  height: 4px;
+}
+
+.buy-sample-btn .button-loader {
+  gap: 3px;
+}
+
+/* 产品卡片快速加购按钮样式 */
+.card-quick-add-btn {
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.card-quick-add-btn .quick-add-loader {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.card-quick-add-btn .quick-add-loader .loader-dot {
+  width: 3px;
+  height: 3px;
 }
 
 /* 桌面端更大的点 */
@@ -64,6 +107,24 @@
   
   .button-loader {
     gap: 8px;
+  }
+  
+  .buy-sample-btn .loader-dot {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .buy-sample-btn .button-loader {
+    gap: 4px;
+  }
+  
+  .card-quick-add-btn .quick-add-loader .loader-dot {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .card-quick-add-btn .quick-add-loader {
+    gap: 3px;
   }
 }
 
@@ -90,4 +151,5 @@
     }
   }
 }
+
 

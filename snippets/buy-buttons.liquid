@@ -75,7 +75,7 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit uppercase text-lg md:text-xl flex items-center justify-center gap-[10px] rounded-[5px] md:h-[100px] py-2  md:gap-[16px] bg-black text-white button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit uppercase w-full text-lg md:text-xl flex items-center justify-center gap-[10px] rounded-[5px] md:h-[100px] py-2  md:gap-[16px] bg-black text-white button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
