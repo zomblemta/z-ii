@@ -230,6 +230,21 @@
     {%- endunless -%}
   {%- endif -%}
 
+  {% if section.settings.mobile_bottom_menu != blank %}
+    <div class="w-full  bg-black md:flex hidden items-center   ">
+      <div class="mx-auto w-[1200px] h-5 flex items-center  gap-x-[13px] md:gap-x-[127px]">
+      {% for link in section.settings.mobile_bottom_menu.links %}
+        <a
+          class="text-[10px]  text-white tracking-[1.4px] no-underline hover:underline  font-light uppercase"
+          href="{{ link.url }}"
+        >
+          {{- link.title -}}
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
   <div
     class="footer__content-bottom  flex flex-col md:flex-row {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -393,6 +408,11 @@
     }
   ],
   "settings": [
+    {
+      "type": "link_list",
+      "id": "mobile_bottom_menu",
+      "label": "Mobile Bottom Menu"
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",

@@ -665,6 +665,9 @@
   .w-\[580px\] {
     width: 580px;
   }
+  .w-\[1200px\] {
+    width: 1200px;
+  }
   .w-full {
     width: 100%;
   }
@@ -870,6 +873,9 @@
   }
   .gap-x-\[10px\] {
     column-gap: 10px;
+  }
+  .gap-x-\[13px\] {
+    column-gap: 13px;
   }
   .gap-x-\[14px\] {
     column-gap: 14px;
@@ -1440,6 +1446,9 @@
   .line-through {
     text-decoration-line: line-through;
   }
+  .no-underline {
+    text-decoration-line: none;
+  }
   .underline {
     text-decoration-line: underline;
   }
@@ -1585,6 +1594,13 @@
     &:hover {
       @media (hover: hover) {
         text-decoration-line: none;
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
       }
     }
   }
@@ -1735,6 +1751,11 @@
   .md\:block {
     @media (width >= 48rem) {
       display: block;
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
     }
   }
   .md\:hidden {
@@ -1980,6 +2001,11 @@
   .md\:gap-x-\[40px\] {
     @media (width >= 48rem) {
       column-gap: 40px;
+    }
+  }
+  .md\:gap-x-\[127px\] {
+    @media (width >= 48rem) {
+      column-gap: 127px;
     }
   }
   .md\:gap-y-\[40px\] {
