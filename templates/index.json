@@ -89,7 +89,9 @@
         },
         "brand_3gWryf": {
           "type": "brand",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/logo1.png"
+          }
         },
         "brand_Nd7tLn": {
           "type": "brand",
