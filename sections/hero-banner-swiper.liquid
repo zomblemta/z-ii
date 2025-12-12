@@ -51,6 +51,32 @@
       height: 100%;
     }
   }
+
+  /* PC端轮播图左右区域光标样式 */
+  @media (min-width: 1024px) {
+    .hero-swiper-wrapper {
+      position: relative;
+    }
+
+    .swiper-nav-area {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .swiper-nav-area.nav-left {
+      left: 0;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="1"/><path d="M24 12 L16 20 L24 28" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>') 20 20, w-resize;
+    }
+
+    .swiper-nav-area.nav-right {
+      right: 0;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="1"/><path d="M16 12 L24 20 L16 28" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>') 20 20, e-resize;
+    }
+  }
 </style>
 
 <section
@@ -118,6 +144,10 @@
           <!-- 分页器 -->
             <div class="swiper-pagination "></div>
         </div>
+        
+        <!-- PC端导航区域 -->
+        <div class="swiper-nav-area nav-left hidden lg:block" data-nav="prev"></div>
+        <div class="swiper-nav-area nav-right hidden lg:block" data-nav="next"></div>
       </div>
     </div>
   </div>
@@ -145,6 +175,19 @@
         el: '.heroSwiper-{{ section.id }} .swiper-pagination',
         clickable: true,
       },
+    });
+
+    // PC端左右导航区域点击事件
+    const navAreas = document.querySelectorAll('.hero-swiper-wrapper .swiper-nav-area');
+    navAreas.forEach(function(area) {
+      area.addEventListener('click', function() {
+        const nav = this.getAttribute('data-nav');
+        if (nav === 'prev') {
+          swiper.slidePrev();
+        } else if (nav === 'next') {
+          swiper.slideNext();
+        }
+      });
     });
   });
 </script>

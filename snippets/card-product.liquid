@@ -69,14 +69,17 @@
         style="--ratio-percent: {% if fixed_ratio_percent %}{{ fixed_ratio_percent }}{% else %}{{ 1 | divided_by: ratio | times: 100 }}%{% endif %};"
       >
         {%- if card_product.featured_media -%}
-          <div class="card__media relative {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
-            {% if card_product.metafields.custom.product_tag != blank %}
-              <div class="card-product-tag absolute top-[5px] left-[5px] z-10 md:top-[10px] md:left-[10px] bg-white rounded-[3px] text-black py-1 px-1.5 text-[8px] md:text-xs ">
-                {{ card_product.metafields.custom.product_tag }}
-              </div>
-            {% endif %}
-            <div class="media  media--transparent media--hover-effect{% if collection_enforce_ratio %} mx-auto w-full h-auto {% endif %}">
-           
+            <div class="card__media relative {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+              {% if card_product.metafields.custom.product_tag.value.size > 0 %}
+                <div class="card-product-tags-wrapper absolute top-[5px] left-[5px] z-10 md:top-[10px] md:left-[10px] flex flex-wrap gap-1 md:gap-2 max-w-[calc(100%-10px)] md:max-w-[calc(100%-20px)]">
+                  {% for tag in card_product.metafields.custom.product_tag.value %}
+                    <div class="card-product-tag bg-white rounded-[3px] text-black py-1 px-1.5 text-[8px] md:text-xs whitespace-nowrap">
+                      {{ tag }}
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            <div class="media  media--transparent media--hover-effect{% if collection_enforce_ratio %} mx-auto w-full h-full {% endif %}">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
@@ -91,17 +94,17 @@
                 src="{{ card_product.featured_media | image_url: width: 533 }}"
                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                 alt="{{ card_product.featured_media.alt | escape }}"
-                class="motion-reduce{% if collection_enforce_ratio %} object-cover w-full h-full{% endif %}"
+                class="card-product-image-primary motion-reduce{% if collection_enforce_ratio %} object-cover w-full h-full{% endif %}"
                 {% unless lazy_load == false %}
                   loading="lazy"
                 {% endunless %}
                 width="{{ card_product.featured_media.width }}"
                 height="{{ card_product.featured_media.height }}"
               >
-           
+
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
-              {%- if card_product.media[1] != null and show_secondary_image -%}
+              {%- if card_product.media[1] != null -%}
                 <img
                   srcset="
                     {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
@@ -115,7 +118,7 @@
                   src="{{ card_product.media[1] | image_url: width: 533 }}"
                   sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                   alt="{{ card_product.media[1].alt | escape }}"
-                  class="motion-reduce{% if collection_enforce_ratio %} object-cover w-full h-full{% endif %}"
+                  class="card-product-image-secondary motion-reduce{% if collection_enforce_ratio %} object-cover w-full h-full{% endif %}"
                   loading="lazy"
                   width="{{ card_product.media[1].width }}"
                   height="{{ card_product.media[1].height }}"
@@ -124,11 +127,13 @@
             </div>
           </div>
         {%- endif -%}
-        <div class="card__content">
-          <a href="{{ card_product.url }}" class="absolute inset-0 z-10"></a>
-        </div>
+        {% comment %}
+          <div class="card__content">
+            <a href="{{ card_product.url }}" class="absolute inset-0 z-10"></a>
+          </div>
+        {% endcomment %}
 
-{% comment %} 
+        {% comment %}
           <div class="card__information">
             <h3
               class="card__heading"
@@ -145,30 +150,31 @@
                 {{ card_product.title | escape }}
               </a>
             </h3>
-          </div> {% endcomment %}
-          {% comment %}
-            <div class="card__badge {{ settings.badge_position }}">
-              {%- if card_product.available == false -%}
-                <span
-                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
-                  class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-                >
-                  {{- 'products.product.sold_out' | t -}}
-                </span>
-              {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-                <span
-                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
-                  class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-                >
-                  {{- 'products.product.on_sale' | t -}}
-                </span>
-              {%- endif -%}
-            </div>
-          {% endcomment %}
+          </div>
+        {% endcomment %}
+        {% comment %}
+          <div class="card__badge {{ settings.badge_position }}">
+            {%- if card_product.available == false -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+              >
+                {{- 'products.product.sold_out' | t -}}
+              </span>
+            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                {{- 'products.product.on_sale' | t -}}
+              </span>
+            {%- endif -%}
+          </div>
+        {% endcomment %}
       </div>
       {% if show_card_info == true or show_card_info == null %}
         <div class="card__content mt-[20px]">
-           <div class="card__information">
+          <div class="card__information">
             <h3
               class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %} flex items-start gap-x-[16px] justify-between"
               {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -202,10 +208,12 @@
               </button>
             </h3>
             <div class="card-information">
-              {% comment %} {%- if show_vendor -%}
-                <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-                <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
-              {%- endif -%} {% endcomment %}
+              {% comment %}
+                {%- if show_vendor -%}
+                  <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+                  <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+                {%- endif -%}
+              {% endcomment %}
 
               {% comment %} <span class="caption-large light">{{ block.settings.description | escape }}</span> {% endcomment %}
 
@@ -591,23 +599,25 @@
               </div>
             {% endif %}
           {% endif %}
-          {% comment %} <div class="card__badge {{ settings.badge_position }}">
-            {%- if card_product.available == false -%}
-              <span
-                id="Badge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-              >
-                {{- 'products.product.sold_out' | t -}}
-              </span>
-            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-              <span
-                id="Badge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-              >
-                {{- 'products.product.on_sale' | t -}}
-              </span>
-            {%- endif -%}
-          </div> {% endcomment %}
+          {% comment %}
+            <div class="card__badge {{ settings.badge_position }}">
+              {%- if card_product.available == false -%}
+                <span
+                  id="Badge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+                >
+                  {{- 'products.product.sold_out' | t -}}
+                </span>
+              {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+                <span
+                  id="Badge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                >
+                  {{- 'products.product.on_sale' | t -}}
+                </span>
+              {%- endif -%}
+            </div>
+          {% endcomment %}
         </div>
       {% endif %}
     </div>
@@ -655,10 +665,12 @@
             </a>
           </h3>
           <div class="card-information">
-            {% comment %} {%- if show_vendor -%}
-              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
-            {%- endif -%} {% endcomment %}
+            {% comment %}
+              {%- if show_vendor -%}
+                <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+                <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
+              {%- endif -%}
+            {% endcomment %}
             {% render 'price', placeholder: placeholder, show_compare_at_price: true %}
           </div>
         </div>
@@ -667,141 +679,175 @@
   </div>
 {%- endif -%}
 
+<style>
+  /* 产品图片切换效果 */
+  .card__media .media {
+    position: relative;
+  }
+
+  .card-product-image-primary {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+
+  .card-product-image-secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .card-wrapper:hover .card-product-image-primary {
+    opacity: 0;
+  }
+
+  .card-wrapper:hover .card-product-image-secondary {
+    opacity: 1;
+  }
+</style>
+
 <script>
   // 产品卡片快速加购功能
-  (function() {
+  (function () {
     function initCardQuickAdd() {
       // 使用事件委托处理所有快速加购按钮
-      document.body.addEventListener('click', function(e) {
-        const button = e.target.closest('.card-quick-add-btn');
-        if (!button) return;
-        
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // 如果正在处理，则忽略
-        if (button.disabled) return;
-        
-        const variantId = button.getAttribute('data-variant-id');
-        const quickAddIcon = button.querySelector('.quick-add-icon');
-        const quickAddLoader = button.querySelector('.quick-add-loader');
-        
-        // 禁用按钮
-        button.disabled = true;
-        button.style.opacity = '0.6';
-        
-        // 显示loading
-        if (quickAddIcon) quickAddIcon.classList.add('hidden');
-        if (quickAddLoader) quickAddLoader.classList.remove('hidden');
-        
-        // 准备数据
-        const formData = new FormData();
-        formData.append('id', variantId);
-        formData.append('quantity', 1);
-        
-        // 如果有cart drawer，添加sections参数
-        const cartDrawer = document.querySelector('cart-drawer');
-        if (cartDrawer) {
-          formData.append('sections', 'cart-drawer,cart-icon-bubble');
-          formData.append('sections_url', window.location.pathname);
-        }
-        
-        // 获取正确的路由
-        const cartAddUrl = window.Shopify?.routes?.root 
-          ? window.Shopify.routes.root + 'cart/add.js'
-          : '/cart/add.js';
-        
-        // 发送请求
-        fetch(cartAddUrl, {
-          method: 'POST',
-          headers: {
-            'X-Requested-With': 'XMLHttpRequest'
-          },
-          body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-          // 更新购物车显示
-          if (cartDrawer && data.sections) {
-            // 更新cart drawer内容
-            const cartDrawerContainer = document.querySelector('#CartDrawer');
-            if (cartDrawerContainer && data.sections['cart-drawer']) {
-              const parser = new DOMParser();
-              const html = parser.parseFromString(data.sections['cart-drawer'], 'text/html');
-              const newContent = html.querySelector('.shopify-section');
-              if (newContent) {
-                cartDrawerContainer.innerHTML = newContent.innerHTML;
-              }
-            }
-            
-            // 更新购物车图标
-            const cartIconBubble = document.querySelector('#cart-icon-bubble');
-            if (cartIconBubble && data.sections['cart-icon-bubble']) {
-              const parser = new DOMParser();
-              const html = parser.parseFromString(data.sections['cart-icon-bubble'], 'text/html');
-              const newIcon = html.querySelector('.shopify-section');
-              if (newIcon) {
-                cartIconBubble.innerHTML = newIcon.innerHTML;
-              }
-            }
+      document.body.addEventListener(
+        'click',
+        function (e) {
+          const button = e.target.closest('.card-quick-add-btn');
+          if (!button) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+
+          // 如果正在处理，则忽略
+          if (button.disabled) return;
+
+          const variantId = button.getAttribute('data-variant-id');
+          const quickAddIcon = button.querySelector('.quick-add-icon');
+          const quickAddLoader = button.querySelector('.quick-add-loader');
+
+          // 禁用按钮
+          button.disabled = true;
+          button.style.opacity = '0.6';
+
+          // 显示loading
+          if (quickAddIcon) quickAddIcon.classList.add('hidden');
+          if (quickAddLoader) quickAddLoader.classList.remove('hidden');
+
+          // 准备数据
+          const formData = new FormData();
+          formData.append('id', variantId);
+          formData.append('quantity', 1);
+
+          // 如果有cart drawer，添加sections参数
+          const cartDrawer = document.querySelector('cart-drawer');
+          if (cartDrawer) {
+            formData.append('sections', 'cart-drawer,cart-icon-bubble');
+            formData.append('sections_url', window.location.pathname);
           }
-          
-          // 更新购物车数量
-          const cartUrl = window.Shopify?.routes?.root 
-            ? window.Shopify.routes.root + 'cart.js'
-            : '/cart.js';
-            
-          fetch(cartUrl)
-            .then(response => response.json())
-            .then(cart => {
-              // 更新购物车数量显示
-              const cartCountElements = document.querySelectorAll('.cart-count-bubble span[aria-hidden="true"]');
-              cartCountElements.forEach(el => {
-                if (cart.item_count < 100) {
-                  el.textContent = cart.item_count;
+
+          // 获取正确的路由
+          const cartAddUrl = window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart/add.js' : '/cart/add.js';
+
+          // 发送请求
+          fetch(cartAddUrl, {
+            method: 'POST',
+            headers: {
+              'X-Requested-With': 'XMLHttpRequest',
+            },
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // 更新购物车显示
+              if (cartDrawer && data.sections) {
+                // 更新cart drawer内容
+                const cartDrawerContainer = document.querySelector('#CartDrawer');
+                if (cartDrawerContainer && data.sections['cart-drawer']) {
+                  const parser = new DOMParser();
+                  const html = parser.parseFromString(data.sections['cart-drawer'], 'text/html');
+                  const newContent = html.querySelector('.shopify-section');
+                  if (newContent) {
+                    cartDrawerContainer.innerHTML = newContent.innerHTML;
+                  }
                 }
-              });
-              
-              // 显示购物车气泡
-              const cartBubbles = document.querySelectorAll('.cart-count-bubble');
-              cartBubbles.forEach(bubble => {
-                if (cart.item_count > 0) {
-                  bubble.style.display = 'flex';
-                } else {
-                  bubble.style.display = 'none';
+
+                // 更新购物车图标
+                const cartIconBubble = document.querySelector('#cart-icon-bubble');
+                if (cartIconBubble && data.sections['cart-icon-bubble']) {
+                  const parser = new DOMParser();
+                  const html = parser.parseFromString(data.sections['cart-icon-bubble'], 'text/html');
+                  const newIcon = html.querySelector('.shopify-section');
+                  if (newIcon) {
+                    cartIconBubble.innerHTML = newIcon.innerHTML;
+                  }
                 }
-              });
+              }
+
+              // 更新购物车数量
+              const cartUrl = window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart.js' : '/cart.js';
+
+              fetch(cartUrl)
+                .then((response) => response.json())
+                .then((cart) => {
+                  // 更新购物车数量显示
+                  const cartCountElements = document.querySelectorAll('.cart-count-bubble span[aria-hidden="true"]');
+                  cartCountElements.forEach((el) => {
+                    if (cart.item_count < 100) {
+                      el.textContent = cart.item_count;
+                    }
+                  });
+
+                  // 显示购物车气泡
+                  const cartBubbles = document.querySelectorAll('.cart-count-bubble');
+                  cartBubbles.forEach((bubble) => {
+                    if (cart.item_count > 0) {
+                      bubble.style.display = 'flex';
+                    } else {
+                      bubble.style.display = 'none';
+                    }
+                  });
+                });
+
+              // 显示成功反馈 - 改变按钮颜色短暂时间
+              button.style.backgroundColor = '#4ade80';
+              button.style.transition = 'background-color 0.3s ease';
+              setTimeout(() => {
+                button.style.backgroundColor = '';
+              }, 600);
+            })
+            .catch((error) => {
+              console.error('Error adding product to cart:', error);
+              // 显示错误反馈 - 改变按钮颜色
+              button.style.backgroundColor = '#f87171';
+              button.style.transition = 'background-color 0.3s ease';
+              setTimeout(() => {
+                button.style.backgroundColor = '';
+              }, 600);
+            })
+            .finally(() => {
+              // 恢复按钮状态
+              setTimeout(() => {
+                button.disabled = false;
+                button.style.opacity = '';
+
+                if (quickAddIcon) quickAddIcon.classList.remove('hidden');
+                if (quickAddLoader) quickAddLoader.classList.add('hidden');
+              }, 600);
             });
-          
-          // 显示成功反馈 - 改变按钮颜色短暂时间
-          button.style.backgroundColor = '#4ade80';
-          button.style.transition = 'background-color 0.3s ease';
-          setTimeout(() => {
-            button.style.backgroundColor = '';
-          }, 600);
-        })
-        .catch(error => {
-          console.error('Error adding product to cart:', error);
-          // 显示错误反馈 - 改变按钮颜色
-          button.style.backgroundColor = '#f87171';
-          button.style.transition = 'background-color 0.3s ease';
-          setTimeout(() => {
-            button.style.backgroundColor = '';
-          }, 600);
-        })
-        .finally(() => {
-          // 恢复按钮状态
-          setTimeout(() => {
-            button.disabled = false;
-            button.style.opacity = '';
-            
-            if (quickAddIcon) quickAddIcon.classList.remove('hidden');
-            if (quickAddLoader) quickAddLoader.classList.add('hidden');
-          }, 600);
-        });
-      }, true); // 使用捕获阶段
+        },
+        true
+      ); // 使用捕获阶段
     }
-    
+
     // 确保DOM加载完成后初始化
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initCardQuickAdd);
@@ -810,5 +856,3 @@
     }
   })();
 </script>
-
-

@@ -1,0 +1,103 @@
+<style>
+  .brand-marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: marquee-scroll 30s linear infinite;
+    width: fit-content;
+  }
+
+  @media (min-width: 768px) {
+    .brand-wrapper {
+      gap: 80px;
+    }
+  }
+
+  .brand-item {
+    flex-shrink: 0;
+    min-width: 120px;
+  }
+
+  @media (min-width: 768px) {
+    .brand-item {
+      min-width: 200px;
+    }
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* 鼠标悬停时暂停动画 */
+  .brand-marquee-container:hover .brand-wrapper {
+    animation-play-state: paused;
+  }
+</style>
+
+<div class="brand-marquee-container mt-[20px] md:mt-[40px] px-[14px] md:mx-[53px]">
+  <div class="brand-wrapper">
+    <!-- 第一组品牌logo -->
+    {% for block in section.blocks %}
+      <div class="brand-item h-[30px] md:h-[78px]">
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
+      </div>
+    {% endfor %}
+    <!-- 复制第二组品牌logo以实现无缝循环 -->
+    {% for block in section.blocks %}
+      <div class="brand-item h-[30px] md:h-[78px]">
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class=" mt-[20px] md:mt-[40px]">
+    <p class="text-[26px] md:text-[72px] md:leading-[72px] font-Montaga font-normal leading-[32px] mb-[30px] md:mb-[70px]">
+      “Edited to essence,<br>
+      made to endure.<br>
+      Minimal design with assured delivery for modern boutiques and online labels. ”
+    </p>
+  </div>
+  <a class="button-black block mt-[20px] md:mt-[40px]" href="{{ section.settings.link }}"> View all products </a>
+</div>
+
+{% schema %}
+{
+  "name": "Index Partner Brand",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Li nk"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Index Partner Brand"
+    }
+  ]
+}
+{% endschema %}

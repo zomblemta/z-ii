@@ -12,9 +12,6 @@
 
 {% assign show_tag = true %}
 
-{% if show_product_tag == false %}
-  {% assign show_tag = false %}
-{% endif %}
 
 {% assign sale_percent = product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | times: -1 -%}
 
