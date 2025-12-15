@@ -1,3 +1,18 @@
+<style>
+  .discover-image-wrapper {
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .discover-image-wrapper img {
+    transition: transform 0.5s ease;
+  }
+
+  .discover-image-wrapper:hover img {
+    transform: scale(1.1);
+  }
+</style>
+
 <div class="w-full px-[15px] md:px-[53px] mt-[30px] mb-[45px] flex flex-col gap-[30px] md:gap-[42px]">
   <h3 class="m-0 text-xl font-semibold leading-normal uppercase tracking-[2px]">
     {{ section.settings.title }}
@@ -5,15 +20,17 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[36px] ">
     {% for block in section.blocks %}
       <div class="flex flex-col  {% if section.settings.image_style == 'style-2' %} relative {% endif %}">
-        {% render 'alp-responsive-image',
-          image: block.settings.image,
-          image_mobile: block.settings.image,
-          alt: block.settings.title,
-          class: 
-            section.settings.image_style == 'style-1' 
-            | append: ' aspect-[430/573] md:aspect-1/1' 
-            | default: ' aspect-1/1 md:aspect-1/1'
-        %}
+        <div class="discover-image-wrapper">
+          {% render 'alp-responsive-image',
+            image: block.settings.image,
+            image_mobile: block.settings.image,
+            alt: block.settings.title,
+            class: 
+              section.settings.image_style == 'style-1' 
+              | append: ' aspect-[430/573] md:aspect-1/1' 
+              | default: ' aspect-1/1 md:aspect-1/1'
+          %}
+        </div>
         <div class="flex flex-col {% if section.settings.image_style == 'style-2' %} absolute top-0 left-0 w-full h-full flex items-center justify-center {% endif %}">
           <span class="text-lg font-normal font-Montaga leading-[18px] uppercase mt-[12px] md:mt-[30px]">
             {{ block.settings.title }}

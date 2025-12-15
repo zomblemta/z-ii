@@ -35,7 +35,7 @@
           </div>
           <button
             type="submit"
-            class="rounded-[5px] bg-black text-white text-base font-normal tracking-[1.6px] uppercase w-full h-[40px] flex justify-center items-center mt-[16px]"
+            class="rounded-[5px] bg-black text-white hover:bg-white hover:text-black transition-all duration-300 text-base font-normal tracking-[1.6px] uppercase w-full h-[40px] flex justify-center items-center mt-[16px]"
             name="commit"
             id="Subscribe"
             aria-label="{{ 'newsletter.button_label' | t }}"
@@ -96,13 +96,68 @@
     </div>
 
     <div class="md:w-[1/2] flex-1 flex flex-col gap-[12px]">
-      <div class="bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light  flex justify-between items-center">
-        What if I would like a product that is not in your catalog?
-        {% render 'icon', icon: 'icon-plus' %}
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
+          <span>What if I would like a product that is not in your catalog?</span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
+        </div>
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          If you're looking for a product that's not in our catalog, please contact us directly. We're always happy to discuss custom orders and special requests. You can reach us via email at business@Z-II.com or through our WhatsApp.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
+          <span>What are your shipping options?</span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
+        </div>
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          We offer various shipping options including standard and express delivery. Shipping times and costs vary depending on your location.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
+          <span>Do you offer samples?</span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
+        </div>
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          Yes, we offer samples for most of our products. Please contact us for more information about sample availability and pricing.
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(function(item) {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+      
+      question.addEventListener('click', function() {
+        // 切换答案的显示/隐藏
+        answer.classList.toggle('hidden');
+        
+        // 旋转图标（加号变成减号的效果）
+        if (answer.classList.contains('hidden')) {
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {

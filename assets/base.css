@@ -3739,9 +3739,19 @@ details-disclosure > details {
   line-height: normal;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  width: max-content;
+  border-radius: 5px;
+  border: 1px solid #000;
 }
 
 .button-black:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .button-black {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
 }
