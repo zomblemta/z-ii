@@ -213,6 +213,21 @@
         "text_content": "“ Quiet Essentials\n  for\n  Modern Brands. ”"
       }
     },
+    "index_product_list_QiYtmn": {
+      "type": "index-product-list",
+      "name": "Alp Index Product List",
+      "settings": {
+        "url": "shopify://collections/spring",
+        "title": "NEW ARRIVALS",
+        "product_list": [
+          "angora-wool-blend-relaxed-v-neck-sweater",
+          "asymmetric-wrap-collar-shirt",
+          "bias-cut-check-long-skirt",
+          "boucle-tweed-mini-skirt",
+          "cashmere-silk-fine-gauge-long-sleeve"
+        ]
+      }
+    },
     "contact_us_jmxKTE": {
       "type": "contact-us",
       "name": "Contact Us Form",
@@ -227,6 +242,7 @@
     "index_as_seen_on_you_QpJBCC",
     "index_discover_xfrBet",
     "index_services_Yqi7qw",
+    "index_product_list_QiYtmn",
     "contact_us_jmxKTE"
   ]
 }
