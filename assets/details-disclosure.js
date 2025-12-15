@@ -36,6 +36,10 @@ class HeaderMenu extends DetailsDisclosure {
   constructor() {
     super();
     this.header = document.querySelector('.header-wrapper');
+
+    /* Hover 打开/关闭 mega menu（仅桌面端） */
+    this.addEventListener('mouseenter', this.onMouseEnter.bind(this));
+    this.addEventListener('mouseleave', this.onMouseLeave.bind(this));
   }
 
   onToggle() {
@@ -47,6 +51,23 @@ class HeaderMenu extends DetailsDisclosure {
       '--header-bottom-position-desktop',
       `${Math.floor(this.header.getBoundingClientRect().bottom)}px`
     );
+  }
+
+  isDesktop() {
+    return window.matchMedia('(min-width: 990px)').matches;
+  }
+
+  onMouseEnter() {
+    if (!this.isDesktop()) return;
+    if (!this.mainDetailsToggle.hasAttribute('open')) {
+      this.mainDetailsToggle.setAttribute('open', '');
+      this.mainDetailsToggle.querySelector('summary').setAttribute('aria-expanded', true);
+    }
+  }
+
+  onMouseLeave() {
+    if (!this.isDesktop()) return;
+    this.close();
   }
 }
 

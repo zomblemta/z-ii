@@ -29,9 +29,11 @@
               placeholder="{{ 'newsletter.label' | t }}"
               required
             >
-            {% comment %} <label class="field__label" for="NewsletterForm--{{ section.id }}">
-              {{ 'newsletter.label' | t }}
-            </label> {% endcomment %}
+            {% comment %}
+              <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                {{ 'newsletter.label' | t }}
+              </label>
+            {% endcomment %}
           </div>
           <button
             type="submit"
@@ -67,20 +69,22 @@
         {%- endif -%}
       {%- endform -%}
     </div>
-
-    <div class="w-full md:w-[318px] flex justify-center items-center bg-[#BABABA] rounded-[5px] ">
-      <div>
-        <h3 class="m-0 text-[24px] md:text-[32px] font-Montaga uppercase font-normal">Contact Us</h3>
+    {% assign contact_url = pages['contact-us'].url %}
+    <a href="{{ contact_url }}">
+      <div class="w-full md:w-[318px] flex justify-center items-center bg-[#BABABA] rounded-[5px] hover:opacity-80 transition-all duration-300 cursor-pointer">
         <div>
-          <p class="m-0 text-sm font-light font-Montaga leading-[24px]">
-            Email: <a href="mailto:business@Z-II.com" class="underline text-black font-medium">business@Z-II.com</a>
-            <br>
-            Telephone: <a class="underline text-black font-medium">+86 186 8887 3388</a> <br>
-            Whatsapp: <a class="underline text-black font-medium">+86 186 8887 3388</a>
-          </p>
+          <h3 class="m-0 text-[24px] md:text-[32px] font-Montaga uppercase font-normal">Contact Us</h3>
+          <div>
+            <p class="m-0 text-sm font-light font-Montaga leading-[24px]">
+              Email: <a href="mailto:business@Z-II.com" class="underline text-black font-medium">business@Z-II.com</a>
+              <br>
+              Telephone: <a class="underline text-black font-medium">+86 186 8887 3388</a> <br>
+              Whatsapp: <a class="underline text-black font-medium">+86 186 8887 3388</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="w-full flex bg-[#E7E7E7] rounded-[5px] flex-col md:flex-row gap-[24px] md:gap-[55px] px-[13px] py-[22px] md:px-[20px] md:py-[30px]">
     <div class="md:w-[1/2] flex-1">
@@ -104,10 +108,12 @@
           </span>
         </div>
         <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
-          If you're looking for a product that's not in our catalog, please contact us directly. We're always happy to discuss custom orders and special requests. You can reach us via email at business@Z-II.com or through our WhatsApp.
+          If you're looking for a product that's not in our catalog, please contact us directly. We're always happy to
+          discuss custom orders and special requests. You can reach us via email at business@Z-II.com or through our
+          WhatsApp.
         </div>
       </div>
-      
+
       <div class="faq-item">
         <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
           <span>What are your shipping options?</span>
@@ -116,10 +122,11 @@
           </span>
         </div>
         <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
-          We offer various shipping options including standard and express delivery. Shipping times and costs vary depending on your location.
+          We offer various shipping options including standard and express delivery. Shipping times and costs vary
+          depending on your location.
         </div>
       </div>
-      
+
       <div class="faq-item">
         <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
           <span>Do you offer samples?</span>
@@ -128,7 +135,8 @@
           </span>
         </div>
         <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
-          Yes, we offer samples for most of our products. Please contact us for more information about sample availability and pricing.
+          Yes, we offer samples for most of our products. Please contact us for more information about sample
+          availability and pricing.
         </div>
       </div>
     </div>
@@ -136,18 +144,18 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(function(item) {
+
+    faqItems.forEach(function (item) {
       const question = item.querySelector('.faq-question');
       const answer = item.querySelector('.faq-answer');
       const icon = item.querySelector('.faq-icon');
-      
-      question.addEventListener('click', function() {
+
+      question.addEventListener('click', function () {
         // 切换答案的显示/隐藏
         answer.classList.toggle('hidden');
-        
+
         // 旋转图标（加号变成减号的效果）
         if (answer.classList.contains('hidden')) {
           icon.style.transform = 'rotate(0deg)';

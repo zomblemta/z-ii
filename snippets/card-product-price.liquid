@@ -19,9 +19,9 @@
 
 
     <span class="cart-product-price text-base font-normal tracking-[1.6px]  ">
-      {{- product.price | money_without_trailing_zeros -}}
+      From {{ ' ' }} {{- product.price | money_without_trailing_zeros -}}
     </span>
-    {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+    {% comment %} {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
       <span class="cart-proudct-compare-price text-[#858585] text-xs tracking-[1.2px] line-through">
         {{- product.compare_at_price | money_without_trailing_zeros -}}
       </span>
@@ -31,5 +31,5 @@
       <span class="text-[10px] md:text-xs tracking-[1.2px] font-normal text-[#858585] ">
         Save {{ sale_percent }}%
       </span>
-    {% endif %}
+    {% endif %} {% endcomment %}
 </div>

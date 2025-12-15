@@ -289,11 +289,11 @@
 
 <div class="alp-index-product-list alp-page-container">
   {% if section.settings.title != blank %}
-    <a href="{{ section.settings.url }}">
-      <div class="alp-index-product-list-title">
+    <div class="alp-index-product-list-title">
+      <a href="{{ section.settings.url }}">
         {{ section.settings.title }}
-      </div>
-    </a>
+      </a>
+    </div>
   {% endif %}
   <div class="alp-index-product-list-nav">
     <div class="alp-index-product-list-container" product-list-data-scroll-container>
@@ -407,7 +407,7 @@
           scrollWidth,
           clientWidth,
           maxScrollLeft,
-          isScrollable: scrollWidth > clientWidth
+          isScrollable: scrollWidth > clientWidth,
         });
 
         // 更新按钮启用/禁用状态
