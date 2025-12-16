@@ -20,6 +20,223 @@
     "faq_NPjEgC": {
       "type": "faq",
       "blocks": {
+        "category_yKtJEt": {
+          "type": "category",
+          "settings": {
+            "title": "Ordering",
+            "description": "<p>了解我们的订购流程</p>"
+          }
+        },
+        "faq_item_gdVY3q": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Ordering",
+            "question": "How do I place an order?",
+            "answer": "<p>Select color, size, and quantity on the product page to see the updated price. Proceed to checkout, enter billing & shipping details, and pay by bank transfer or credit card (Visa, MasterCard, American Express, or UnionPay). You’ll receive status updates, and our team is available via chat, email, or phone throughout.</p>"
+          }
+        },
+        "faq_item_NLQcbU": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Ordering",
+            "question": "What services do you offer?",
+            "answer": "<p>We offer three primary options:<br/>· <strong>Full Custom Development (OEM):</strong> Build garments from scratch based on your design and specifications.<br/>· <strong>Blank Customization (Private Label):</strong> Modify our premium core styles—relabeling, size adjustments, printing, and more.<br/>· <strong>Blank In-Stock Purchasing (At-Once):</strong> Access high-quality in-stock styles, ready to ship.</p>"
+          }
+        },
+        "faq_item_a3JXMM": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Ordering",
+            "question": "What is the minimum order quantity (MOQ)?",
+            "answer": "<p>You can find the MOQ on each product page. If the MOQ is a challenge, please contact us—we may be able to suggest suitable alternatives.</p>"
+          }
+        },
+        "faq_item_NMUirM": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Ordering",
+            "question": " Can I review products before placing a bulk order?",
+            "answer": "<p>Yes. Most products support <strong>sample purchase</strong>. Select “Buy Sample” on the product page to receive a sample, so you can evaluate fabric, fit, and finishing before placing a bulk order.</p>"
+          }
+        },
+        "category_TN6KxJ": {
+          "type": "category",
+          "settings": {
+            "title": "Pricing",
+            "description": "<p>了解我们的定价</p>"
+          }
+        },
+        "faq_item_mwmYLp": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Pricing",
+            "question": "Do you offer bulk discounts?",
+            "answer": "<p>Yes. Our pricing is tiered—higher quantities receive lower unit prices. If you plan to order a significantly larger volume, contact us for an additional quotation.</p>"
+          }
+        },
+        "faq_item_t6i9VU": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Pricing",
+            "question": "What is your average response time?",
+            "answer": "<p>We typically respond within <strong>24 hours</strong> after receiving your request.</p>"
+          }
+        },
+        "category_WPaVFW": {
+          "type": "category",
+          "settings": {
+            "title": "Customization",
+            "description": "<p>了解我们的定制</p>"
+          }
+        },
+        "faq_item_aANKY8": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Customization",
+            "question": "Are all your products customizable?",
+            "answer": "<p>Yes. All of our products can be customized to your requirements.Yes. All of our products can be customized to your requirements.</p>"
+          }
+        },
+        "faq_item_Bpjjjh": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Customization",
+            "question": "What colors are available?",
+            "answer": "<p>All available color options are listed on each product page. If you can’t find the color you need, contact us to discuss possibilities.</p>"
+          }
+        },
+        "faq_item_k7MpT8": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Customization",
+            "question": "Can I apply multiple customizations to one product?",
+            "answer": "<p>It depends on the product. Many styles support multiple customization options and placements. Please check the product page for available methods/positions, or contact us for confirmation.</p>"
+          }
+        },
+        "faq_item_Pg3gpc": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Customization",
+            "question": "What file formats do you need for my logo?",
+            "answer": "<p>We accept <strong>.ai, .eps, and .pdf</strong> files. Your logo must be <strong>vector artwork</strong> to ensure production quality.</p>"
+          }
+        },
+        "faq_item_7Umeaf": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Customization",
+            "question": " Can I review a digital proof before production?",
+            "answer": "<p>Yes. Our production team will send a digital proof covering all product details and customization placements. We start production only after you approve it.</p>"
+          }
+        },
+        "faq_item_YWTXHd": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Customization",
+            "question": " Can the production timeline be shortened?",
+            "answer": "<p>Lead times vary by product, customization technique, and season. Please refer to the lead-time notes on our website and contact us if you need an expedited option.</p>"
+          }
+        },
+        "category_YcMQHq": {
+          "type": "category",
+          "settings": {
+            "title": "Samples",
+            "description": ""
+          }
+        },
+        "faq_item_gJHhXQ": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Samples",
+            "question": "How do I order a sample?",
+            "answer": "<p>Go to the product page and click <strong>“Buy Sample.”</strong> Choose the variant, add it to cart, and complete checkout.</p>"
+          }
+        },
+        "faq_item_9HWXXD": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Samples",
+            "question": "How long does it take to receive samples?",
+            "answer": "<p>Samples typically take <strong>about 6 business days</strong>, depending on stock availability. If all items are in stock, delivery may be as fast as <strong>3 business days</strong>. If some/all items are out of stock, it will take longer. Contact us for rush requests.</p>"
+          }
+        },
+        "category_EaMara": {
+          "type": "category",
+          "settings": {
+            "title": "Product",
+            "description": ""
+          }
+        },
+        "faq_item_hPLDkx": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Product",
+            "question": " Do you have a size chart?",
+            "answer": "<p>Each product page lists the available sizes. If you can’t find the size you need, please contact us.</p>"
+          }
+        },
+        "faq_item_hVRdew": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Product",
+            "question": "Can I provide my own tech pack, patterns, or samples?",
+            "answer": "<p>Yes. You may provide your tech pack and samples. However, for consistency and quality control, we generally prefer to develop patterns in-house.</p>"
+          }
+        },
+        "category_4UXQzY": {
+          "type": "category",
+          "settings": {
+            "title": "Payment",
+            "description": "<p>How to pay?</p>"
+          }
+        },
+        "faq_item_P7nq3f": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Payment",
+            "question": "What payment methods do you accept?",
+            "answer": "<p>You may pay by credit card or bank transfer (wire/ACH).<br/></p>"
+          }
+        },
+        "faq_item_3VjAfQ": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Payment",
+            "question": "When do I need to pay?",
+            "answer": "<p>Samples require full prepayment (online payment or bank transfer). For custom orders, we start production after receiving a <strong>50% deposit</strong>, and we deliver after receiving the full balance.</p>"
+          }
+        },
+        "faq_item_CibTBC": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Payment",
+            "question": "Do I have to pay the full amount immediately?",
+            "answer": "<p>No. Our policy is: <strong>50% deposit to start production; balance due before delivery/shipment.</strong></p>"
+          }
+        },
+        "category_qedeKJ": {
+          "type": "category",
+          "settings": {
+            "title": "After Sales",
+            "description": ""
+          }
+        },
+        "faq_item_zTpQ9P": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "After Sales",
+            "question": "How can I check my order status?",
+            "answer": "<p><strong>You can view your order status anytime under “Orders” in your account. If you can’t view it, please contact our customer service or production team.</strong></p>"
+          }
+        },
+        "faq_item_fw9W8J": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "After Sales",
+            "question": "What is your complaint handling process?",
+            "answer": "<p>Once we receive a complaint, our team will investigate promptly to understand the situation and improve service. We aim to respond within <strong>24–48 hours</strong> and work toward a solution acceptable to all parties.</p>"
+          }
+        },
         "category_EJYnC4": {
           "type": "category",
           "settings": {
@@ -31,31 +248,55 @@
           "type": "faq_item",
           "settings": {
             "parent_category": "Shipping",
-            "question": "USA",
-            "answer": "<p>美国境内配送说明...</p>"
+            "question": "What shipping methods do you offer?",
+            "answer": "<p>We ship via express couriers such as <strong>FedEx, UPS, DHL, TNT</strong> (door-to-door in <strong>2–5 days</strong>) or postal services (<strong>15–30 days</strong>), depending on destination. Shipping cost is calculated based on weight, destination, and the method selected.</p>"
           }
         },
-        "faq_item_PNxqJE": {
+        "faq_item_fBLzFm": {
           "type": "faq_item",
           "settings": {
             "parent_category": "Shipping",
-            "question": "",
-            "answer": "<p>国际配送说明...</p>"
+            "question": "Do you offer free shipping?",
+            "answer": "<p>We do not offer free shipping. Shipping is paid by the customer. We collect an estimated shipping fee upfront—USD 25 (standard) or USD 45 (express)—and then reconcile the difference (refund/charge) based on the final cost. <strong>If you choose local pickup, no shipping fee applies.</strong></p>"
+          }
+        },
+        "faq_item_LBGWB7": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": "Where do you ship to?",
+            "answer": "<p>We ship to most countries worldwide. We will confirm availability for your destination. If you need multiple delivery addresses, we can support that as well.</p>"
+          }
+        },
+        "faq_item_eXGrXt": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": "How long does delivery take after shipment?",
+            "answer": "<p>Typically <strong>3–5 business days</strong> after dispatch. Expedited service may arrive in <strong>1–2 business days</strong> (subject to carrier availability).</p>"
+          }
+        },
+        "faq_item_RKnX8U": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Shipping",
+            "question": " Do you offer drop shipping?",
+            "answer": "<p>Yes. We can ship directly to your specified address(es) worldwide. We can also assist with export documentation, HS code classification, and customs-clearance coordination. Duties/taxes handling will be confirmed per shipment and destination as agreed.</p>"
           }
         },
         "category_bMUYyU": {
           "type": "category",
           "settings": {
             "title": "Return",
-            "description": "<p>查看退换货政策和流程</p>"
+            "description": "<p>How to Make a Return</p>"
           }
         },
         "faq_item_44w8ni": {
           "type": "faq_item",
           "settings": {
             "parent_category": "Return",
-            "question": "How to Make a Return",
-            "answer": "<p>退货流程说明...</p>"
+            "question": "Scope",
+            "answer": "<p>This policy applies only to: </p><p>(a) items with <strong>manufacturing defects</strong>; </p><p>(b) items with <strong>customization errors</strong>. This policy does <strong>not</strong> apply to samples. Outside of these cases, Z-II STUDIOS does not accept returns.</p>"
           }
         },
         "category_qMFpgj": {
@@ -75,9 +316,40 @@
         }
       },
       "block_order": [
+        "category_yKtJEt",
+        "faq_item_gdVY3q",
+        "faq_item_NLQcbU",
+        "faq_item_a3JXMM",
+        "faq_item_NMUirM",
+        "category_TN6KxJ",
+        "faq_item_mwmYLp",
+        "faq_item_t6i9VU",
+        "category_WPaVFW",
+        "faq_item_aANKY8",
+        "faq_item_Bpjjjh",
+        "faq_item_k7MpT8",
+        "faq_item_Pg3gpc",
+        "faq_item_7Umeaf",
+        "faq_item_YWTXHd",
+        "category_YcMQHq",
+        "faq_item_gJHhXQ",
+        "faq_item_9HWXXD",
+        "category_EaMara",
+        "faq_item_hPLDkx",
+        "faq_item_hVRdew",
+        "category_4UXQzY",
+        "faq_item_P7nq3f",
+        "faq_item_3VjAfQ",
+        "faq_item_CibTBC",
+        "category_qedeKJ",
+        "faq_item_zTpQ9P",
+        "faq_item_fw9W8J",
         "category_EJYnC4",
         "faq_item_Cc8nW3",
-        "faq_item_PNxqJE",
+        "faq_item_fBLzFm",
+        "faq_item_LBGWB7",
+        "faq_item_eXGrXt",
+        "faq_item_RKnX8U",
         "category_bMUYyU",
         "faq_item_44w8ni",
         "category_qMFpgj",
