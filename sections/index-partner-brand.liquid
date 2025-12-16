@@ -42,11 +42,11 @@
 
 </style>
 
-<div class="brand-marquee-container mt-[20px] md:mt-[40px] px-[14px] md:mx-[53px]">
+<div class="brand-marquee-container mt-[10px]  px-[14px] md:mx-[53px]">
   <div class="brand-wrapper">
     <!-- 第一组品牌logo -->
     {% for block in section.blocks %}
-      <div class="brand-item h-[30px] md:h-[78px]">
+      <div class="brand-item h-[30px] md:h-[60px]">
         {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
       </div>
     {% endfor %}

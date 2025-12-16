@@ -49,6 +49,7 @@
       position: relative;
       left: 50%;
       transform: translateX(-50%);
+      overflow: visible;
     }
     
     .product-gallery-main .swiper-slide {
@@ -58,6 +59,12 @@
     .product-gallery-thumbs {
       margin-top: 1rem;
       padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .product-gallery-thumbs .swiper-wrapper {
+      margin: 0;
     }
     
     .product-gallery-thumbs .swiper-slide {
@@ -70,6 +77,49 @@
     .product-gallery-thumbs .swiper-slide-thumb-active {
       opacity: 1;
       border: 2px solid rgb(var(--color-foreground));
+    }
+    
+    .product-gallery-thumbs .swiper-button-next,
+    .product-gallery-thumbs .swiper-button-prev {
+      width: 32px;
+      height: 32px;
+      margin-top: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    
+    .product-gallery-thumbs .swiper-button-next:hover,
+    .product-gallery-thumbs .swiper-button-prev:hover {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .product-gallery-thumbs .swiper-button-next::after,
+    .product-gallery-thumbs .swiper-button-prev::after {
+      font-size: 14px;
+      font-weight: bold;
+      color: rgb(var(--color-foreground));
+    }
+    
+    .product-gallery-thumbs .swiper-button-next {
+      right: 16px;
+      margin-right: 0;
+    }
+    
+    .product-gallery-thumbs .swiper-button-prev {
+      left: 16px;
+      margin-left: 0;
+    }
+    
+    .product-gallery-thumbs .swiper-button-disabled {
+      opacity: 0.35;
+      cursor: auto;
+      pointer-events: none;
     }
     
     .product-gallery-main .swiper-pagination {
@@ -241,6 +291,9 @@
           {%- endunless -%}
         {%- endfor -%}
       </div>
+      <!-- 缩略图导航按钮 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
   
@@ -274,12 +327,22 @@
       slidesPerView: 6,
       freeMode: true,
       watchSlidesProgress: true,
+      navigation: {
+        nextEl: '#productGalleryThumbs-{{ section.id }} .swiper-button-next',
+        prevEl: '#productGalleryThumbs-{{ section.id }} .swiper-button-prev',
+      },
       breakpoints: {
         0: {
           slidesPerView: 0,
+          navigation: {
+            enabled: false,
+          }
         },
         750: {
           slidesPerView: 6,
+          navigation: {
+            enabled: true,
+          }
         }
       }
     });

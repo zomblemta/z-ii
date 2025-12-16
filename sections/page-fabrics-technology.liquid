@@ -1,0 +1,71 @@
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <h1 class="w-full text-center text-2xl md:text-4xl uppercase font-semibold">
+    {% render 'icon', icon: 'icon-fabrics' %} Fabrics
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    {% for block in section.blocks %}
+      <div class="col-span-1">
+        <h2 class="text-2xl font-bold">{{ block.settings.title }}</h2>
+        <p class="text-sm">{{ block.settings.description }}</p>
+    <div class="relative group">
+      <!-- 第一张图片：默认显示，hover 时淡出 -->
+      <img
+        src="{{ block.settings.image | image_url: width: 'master' }}"
+        alt="{{ block.settings.title }}"
+        class="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+        width="{{ block.settings.image.width }}"
+        height="{{ block.settings.image.height }}"
+      >
+      <!-- 第二张图片：默认隐藏，hover 第一张（容器）时淡入 -->
+      <img
+        src="{{ block.settings.image_2 | image_url: width: 'master' }}"
+        alt="{{ block.settings.title }}"
+        class="w-full h-auto absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+        width="{{ block.settings.image_2.width }}"
+        height="{{ block.settings.image_2.height }}"
+      >
+    </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fabrics Technology",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "fabric-item",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

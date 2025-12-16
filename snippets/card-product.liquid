@@ -69,6 +69,7 @@
         style="--ratio-percent: {% if fixed_ratio_percent %}{{ fixed_ratio_percent }}{% else %}{{ 1 | divided_by: ratio | times: 100 }}%{% endif %};"
       >
         {%- if card_product.featured_media -%}
+          <a class="" href="{{ card_product.url }}">
             <div class="card__media relative {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
               {% if card_product.metafields.custom.product_tag.value.size > 0 %}
                 <div class="card-product-tags-wrapper absolute top-[5px] left-[5px] z-10 md:top-[10px] md:left-[10px] flex flex-wrap gap-1 md:gap-2 max-w-[calc(100%-10px)] md:max-w-[calc(100%-20px)]">
@@ -126,6 +127,7 @@
               {%- endif -%}
             </div>
           </div>
+          </a>
         {%- endif -%}
         {% comment %}
           <div class="card__content">
