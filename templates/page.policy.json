@@ -39,7 +39,7 @@
           "type": "faq_item",
           "settings": {
             "parent_category": "Shipping",
-            "question": "International",
+            "question": "",
             "answer": "<p>国际配送说明...</p>"
           }
         },
@@ -70,7 +70,7 @@
           "settings": {
             "parent_category": "FAQs",
             "question": "常见问题1",
-            "answer": "<p>答案内容...</p>"
+            "answer": ""
           }
         }
       },
