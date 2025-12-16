@@ -58,6 +58,7 @@
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 20px;
+    margin-top: 115px;
   }
 
   .footer__content-bottom-wrapper {
@@ -455,7 +456,6 @@
 
 
 .policies li a {
-  padding: 0.6rem 0;
   display: block;
 }
 
