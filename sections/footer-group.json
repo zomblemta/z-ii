@@ -17,14 +17,14 @@
         "link_list_QUtJNX": {
           "type": "link_list",
           "settings": {
-            "heading": "test2",
+            "heading": "Client Service",
             "menu": "footer"
           }
         },
         "link_list_wnfCL3": {
           "type": "link_list",
           "settings": {
-            "heading": "test1",
+            "heading": "the company",
             "menu": "footer"
           }
         }
