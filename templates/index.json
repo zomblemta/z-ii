@@ -169,7 +169,7 @@
           "type": "discover",
           "settings": {
             "image": "shopify://shop_images/2025.11.22_Pre_preworks0365_1.jpg",
-            "title": "Spot Products",
+            "title": "Best Seller",
             "description": "Items currently available for immediate sale.",
             "url": "shopify://collections/test"
           }
