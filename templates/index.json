@@ -177,7 +177,7 @@
         "discover_kViqXX": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework4566.jpg",
+            "image": "shopify://shop_images/2025.11.22_Pre_preworks5552.jpg",
             "title": "Suit collection",
             "description": "Items currently available for immediate sale.",
             "url": ""
@@ -198,6 +198,7 @@
         "discover_kViqXX",
         "discover_MNCxp4"
       ],
+      "custom_css": [],
       "name": "Index Discover",
       "settings": {
         "title": "Discover",
