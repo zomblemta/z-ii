@@ -178,7 +178,7 @@
           "type": "discover",
           "settings": {
             "image": "shopify://shop_images/2898c441-ea0c-4936-a49d-3a04ab08b5aa_1.png",
-            "title": "Suit collection",
+            "title": "Blazer Collection",
             "description": "Items currently available for immediate sale.",
             "url": ""
           }
@@ -187,8 +187,8 @@
           "type": "discover",
           "settings": {
             "image": "shopify://shop_images/2025.06.28_Preprework1740_1.jpg",
-            "title": "FW2025 Collection",
-            "description": "Brand 2025 fall/winter product collection.",
+            "title": "SS’26 Pre-order",
+            "description": "New arrivals, available to reserve.",
             "url": ""
           }
         },
