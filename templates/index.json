@@ -128,7 +128,7 @@
       "name": "Alp Index Product List",
       "settings": {
         "url": "shopify://collections",
-        "title": "BEST SELLERS",
+        "title": "IN STOCK",
         "product_list": [
           "asymmetric-wrap-collar-shirt",
           "cashmere-silk-fine-gauge-long-sleeve",
