@@ -168,7 +168,7 @@
                     settings.logo
                     | image_url: width: 600
                     | image_tag:
-                      class: 'header__heading-logo motion-reduce',
+                      class: 'header__heading-logo motion-reduce hidden md:block',
                       widths: widths,
                       height: logo_height,
                       width: settings.logo_width,
@@ -176,7 +176,11 @@
                       sizes: sizes,
                       preload: true
                   }}
+                  <span class="block md:hidden">
+                    {% render 'icon', icon: 'icon-mobile-logo' %}
+                  </span>
                 </div>
+              
               {%- else -%}
                 <span class="h2">{{ shop.name }}</span>
               {%- endif -%}

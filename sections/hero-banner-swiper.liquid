@@ -9,7 +9,7 @@
   @media (max-width: 768px) {
     .hero-swiper-wrapper,
     .swiper-slide {
-      height: calc(100vh - 339px)!important;
+      /* height: calc(100vh - 339px)!important; */
     }
 
   .hero-banner-wrapper {
@@ -86,23 +86,23 @@
   <div class="hero-banner-wrapper">
     <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
       <!-- 左侧内容区 -->
-      <div class="hero-content max-h-[178px] md:max-h-full w-full h-full bg-[#333] flex justify-center items-center  py-[30px] lg:p-0 lg:w-1/2  ">
+      <div class="hero-content md:max-h-full w-full h-full bg-[#333] flex justify-center items-center  py-[40px] lg:p-0 lg:w-1/2  ">
         <div class="content-wrapper max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
           <div class="flex flex-col  gap-[30px]  md:gap-[60px]">
             <h1 class="text-[32px] leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
               {{ section.settings.title | default: '“ Studio Precision for Strong Labels. ”' }}
             </h1>
 
-            <div class="flex gap-[24px] w-full justify-center items-center">
+            <div class="flex gap-[24px] w-full justify-start items-center mt-[30px] md:mt-0 px-[26px] md:px-0">
               <a
                 href="{{ section.settings.shop_now_link }}"
-                class="text-white text-xs md:text-xl tracking-[1.2px] md:tracking-[2px] bg-black py-[8px] px-[17px] md:py-[12px] md:px-[20px] uppercase border border-black rounded-[5px] hover:bg-white hover:text-black"
+                class="text-white text-xs md:text-xl tracking-[1.2px] text-nowrap md:tracking-[2px] bg-black py-[8px] px-[16px] md:py-[12px] md:px-[20px]  border border-black rounded-[5px] hover:bg-white hover:text-black"
               >
-                Shop Now
+                Shop all products
               </a>
               <a
                 href="{{ section.settings.talk_to_our_team_link }}"
-                class="text-black text-xs md:text-xl tracking-[1.2px] md:tracking-[2px] bg-white py-[8px] px-[17px] md:py-[12px] md:px-[20px] uppercase border border-white rounded-[5px] hover:border-black"
+                class="text-black text-xs md:text-xl tracking-[1.2px] text-nowrap md:tracking-[2px] bg-white py-[8px] px-[16px] md:py-[12px] md:px-[20px]  border border-white rounded-[5px] hover:border-black"
               >
                 Talk to our team
               </a>
@@ -112,7 +112,7 @@
       </div>
 
       <!-- 右侧轮播区 -->
-      <div class="hero-swiper-wrapper w-full h-full lg:w-1/2  ">
+      <div class="hero-swiper-wrapper w-full h-[142px] md:h-full lg:w-1/2  ">
         <div class="swiper heroSwiper-{{ section.id }} overflow-hidden h-full">
           <div class="swiper-wrapper h-full">
             {%- for block in section.blocks -%}

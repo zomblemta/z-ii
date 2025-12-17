@@ -1451,5 +1451,16 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "page",
+        "id": "product_info_size_guide_page_content",
+        "label": "Product info size guide page content",
+        "info": "Product info size guide page content"
+      },
+    ]
   }
 ]

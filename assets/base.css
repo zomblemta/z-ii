@@ -3544,7 +3544,7 @@ details-disclosure > details {
 
 .header__top-row {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
 }
 

@@ -20,7 +20,7 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[36px] ">
     {% for block in section.blocks %}
       <a href="{{ block.settings.url }}">
-        <div class="flex flex-col  {% if section.settings.image_style == 'style-2' %} relative {% endif %}">
+        <div class="flex flex-col  transition-transform duration-350ms ease-out origin-center {% if section.settings.image_style == 'style-2' %} relative {% endif %}">
           <div class="discover-image-wrapper">
             {%
               render 'alp-responsive-image',
