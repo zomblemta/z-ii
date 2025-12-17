@@ -12,32 +12,32 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
+        "slide_yzHmBm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/z_banner4.jpg",
+            "title": "CREATE YOUR EDIT.<br>\nCUT. SAMPLE. PRODUCE."
+          }
+        },
         "slide_gUi7BK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/355577f1d217d6e124c0536ab8255d120e8b5a1d.jpg",
+            "image": "shopify://shop_images/2025.11.22_Pre_preworks0370.jpg",
             "title": "FW’2025<br>\nNEW ARRIVALS"
           }
         },
         "slide_Afcimb": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
-            "title": ""
-          }
-        },
-        "slide_yzHmBm": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
-            "title": ""
+            "image": "shopify://shop_images/s1.jpg",
+            "title": "CURATED PATTERNS.<br>\nReady-to-ship · Ready-to-make.."
           }
         }
       },
       "block_order": [
+        "slide_yzHmBm",
         "slide_gUi7BK",
-        "slide_Afcimb",
-        "slide_yzHmBm"
+        "slide_Afcimb"
       ],
       "name": "首页轮播Banner",
       "settings": {}
@@ -127,8 +127,8 @@
       "type": "index-product-list",
       "name": "Alp Index Product List",
       "settings": {
-        "url": "shopify://collections",
-        "title": "BEST SELLERS",
+        "url": "shopify://collections/frontpage",
+        "title": "IN STOCK",
         "product_list": [
           "asymmetric-wrap-collar-shirt",
           "cashmere-silk-fine-gauge-long-sleeve",
@@ -168,8 +168,8 @@
         "discover_Pbre3X": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework3621.jpg",
-            "title": "Spot ProductS",
+            "image": "shopify://shop_images/2025.11.22_Pre_preworks0365_1.jpg",
+            "title": "Best Sellers",
             "description": "Items currently available for immediate sale.",
             "url": "shopify://collections/test"
           }
@@ -177,8 +177,8 @@
         "discover_kViqXX": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework4566.jpg",
-            "title": "Suit collection",
+            "image": "shopify://shop_images/2898c441-ea0c-4936-a49d-3a04ab08b5aa_1.png",
+            "title": "Blazer Collection",
             "description": "Items currently available for immediate sale.",
             "url": ""
           }
@@ -186,9 +186,17 @@
         "discover_MNCxp4": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework1230.jpg",
-            "title": "FW2025 Collection",
-            "description": "Brand 2025 fall/winter product collection.",
+            "image": "shopify://shop_images/2025.06.28_Preprework1740_1.jpg",
+            "title": "SS’26 Pre-order",
+            "description": "New arrivals, available to reserve.",
+            "url": ""
+          }
+        },
+        "discover_4TxCNh": {
+          "type": "discover",
+          "settings": {
+            "title": "",
+            "description": "",
             "url": ""
           }
         }
@@ -196,8 +204,10 @@
       "block_order": [
         "discover_Pbre3X",
         "discover_kViqXX",
-        "discover_MNCxp4"
+        "discover_MNCxp4",
+        "discover_4TxCNh"
       ],
+      "custom_css": [],
       "name": "Index Discover",
       "settings": {
         "title": "Discover",
@@ -208,8 +218,8 @@
       "type": "index-services",
       "name": "Index Services",
       "settings": {
-        "image": "shopify://shop_images/2025.06.28_Preprework2008.jpg",
-        "image_mobile": "shopify://shop_images/2025.06.28_Preprework4107.jpg",
+        "image": "shopify://shop_images/z_banner5.jpg",
+        "image_mobile": "shopify://shop_images/z_banner5.jpg",
         "title": "Services",
         "description": "Bespoke development for your brand built to spec.",
         "button_label": "Learn More",
@@ -222,7 +232,7 @@
       "name": "Alp Index Product List",
       "settings": {
         "url": "shopify://collections/spring",
-        "title": "NEW ARRIVALS",
+        "title": "NEW IN",
         "product_list": [
           "angora-wool-blend-relaxed-v-neck-sweater",
           "asymmetric-wrap-collar-shirt",
