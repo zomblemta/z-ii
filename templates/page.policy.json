@@ -295,8 +295,8 @@
           "type": "faq_item",
           "settings": {
             "parent_category": "Return",
-            "question": "Scope",
-            "answer": "<p>This policy applies only to: </p><p>(a) items with <strong>manufacturing defects</strong>; </p><p>(b) items with <strong>customization errors</strong>. This policy does <strong>not</strong> apply to samples. Outside of these cases, Z-II STUDIOS does not accept returns.</p>"
+            "question": "What is your return policy?",
+            "answer": "<h2><strong>Return Policy</strong></h2><h3><strong>1) In-Stock Return Policy</strong></h3><p><strong>I. Scope</strong><br/>This policy applies only to:<br/>(a) items with <strong>manufacturing defects</strong>; and/or<br/>(b) items with <strong>customization errors</strong> attributable to Z-II STUDIOS.<br/>This policy <strong>does not apply to samples</strong>. Outside of the above cases, Z-II STUDIOS does not accept returns.</p><p><strong>II. Claim Window</strong><br/>Return claims must be submitted within <strong>7 days</strong> of delivery, based on the carrier’s confirmed delivery date. Claims submitted after 7 days will not be accepted.</p><p><strong>III. How to Submit a Claim</strong><br/>Claims must be submitted <strong>by email</strong> to Z-II STUDIOS. Phone discussions are welcome; however, <strong>only email submissions</strong> are considered valid under this policy.<br/>We will issue an official written decision by email. If your email was sent within 7 days but was incorrectly filtered as spam on our side, eligibility remains. If the customer used an incorrect or undeliverable email address, eligibility does not apply.</p><p><strong>IV. One Claim Per Item</strong><br/>Each item is eligible for <strong>one</strong> claim under this policy.</p><p><strong>V. Verification & Return for Inspection</strong><br/>Z-II STUDIOS reserves the right to verify eligibility. If requested, the customer must return the item for inspection. If the item cannot be returned when requested, the claim will not be eligible under this policy.</p><p><strong>VI. Return Conditions</strong><br/>Returned items must be <strong>unused</strong>, in <strong>original packaging</strong>, with <strong>all tags</strong> attached, protective sleeves (if applicable), and any accessories included.</p><p><strong>VII. Approved Resolutions (Choose One)</strong><br/>Upon approval, the customer may choose one of the following:<br/>i) <strong>Store Credit (Preferred):</strong> Credit toward a future order, equal to the amount paid for the defective/incorrect item(s).<br/>ii) <strong>Replacement:</strong> Replacement with a newly produced item. Z-II STUDIOS covers the production and shipping costs for the replacement.<br/>iii) <strong>Refund:</strong> Refund of the amount paid for the defective/incorrect item(s). Refunds are available only when the refundable amount is <strong>equal to or greater than USD 500 or 20% of the total order amount (whichever is lower)</strong>.</p><p></p><p></p><h3><strong>2) Samples</strong></h3><p><strong>i. Returning Samples</strong><br/>A management fee applies to cover shipping, processing, and related costs. Z-II STUDIOS will provide a return label by email; the customer is responsible for returning the parcel. Z-II STUDIOS is not responsible for any damage during transit.</p><p><strong>ii. Keeping Samples / Applying to a Bulk Order</strong><br/>If the customer keeps the samples and proceeds with a bulk order, we can retrieve the samples for customization and ship them together with the bulk order. A management fee applies. Z-II STUDIOS is not responsible for any damage during transit.</p><p></p><p><strong>Didn’t find your answer?</strong><br/>Please email <strong>info@ziistudios.com</strong>. We aim to reply within <strong>one business day</strong>.</p>"
           }
         },
         "category_qMFpgj": {
@@ -310,8 +310,8 @@
           "type": "faq_item",
           "settings": {
             "parent_category": "FAQs",
-            "question": "常见问题1",
-            "answer": ""
+            "question": "Didn’t find your answer?",
+            "answer": "<p>Please email <strong>info@ziistudios.com</strong>. We aim to reply within <strong>one business day</strong>.</p>"
           }
         }
       },
