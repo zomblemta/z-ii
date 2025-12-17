@@ -168,7 +168,7 @@
         "discover_Pbre3X": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.11.22_Pre_preworks0365.jpg",
+            "image": "shopify://shop_images/2025.11.22_Pre_preworks0365_1.jpg",
             "title": "Spot Products",
             "description": "Items currently available for immediate sale.",
             "url": "shopify://collections/test"
@@ -177,7 +177,7 @@
         "discover_kViqXX": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2898c441-ea0c-4936-a49d-3a04ab08b5aa_42d5162f-9838-43d6-8edd-05572a26ec4f.png",
+            "image": "shopify://shop_images/2898c441-ea0c-4936-a49d-3a04ab08b5aa_1.png",
             "title": "Suit collection",
             "description": "Items currently available for immediate sale.",
             "url": ""
@@ -186,9 +186,17 @@
         "discover_MNCxp4": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework1740_d29cfe4e-d82e-49ea-a2e7-feb731faec84.jpg",
+            "image": "shopify://shop_images/2025.06.28_Preprework1740_1.jpg",
             "title": "FW2025 Collection",
             "description": "Brand 2025 fall/winter product collection.",
+            "url": ""
+          }
+        },
+        "discover_4TxCNh": {
+          "type": "discover",
+          "settings": {
+            "title": "",
+            "description": "",
             "url": ""
           }
         }
@@ -196,7 +204,8 @@
       "block_order": [
         "discover_Pbre3X",
         "discover_kViqXX",
-        "discover_MNCxp4"
+        "discover_MNCxp4",
+        "discover_4TxCNh"
       ],
       "custom_css": [],
       "name": "Index Discover",
