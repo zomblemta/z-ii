@@ -12,18 +12,18 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
-        "slide_gUi7BK": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/2025.11.22_Pre_preworks0105.jpg",
-            "title": "FW’2025<br>\nNEW ARRIVALS"
-          }
-        },
         "slide_Afcimb": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/s1.jpg",
             "title": ""
+          }
+        },
+        "slide_gUi7BK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2025.11.22_Pre_preworks0105.jpg",
+            "title": "FW’2025<br>\nNEW ARRIVALS"
           }
         },
         "slide_yzHmBm": {
@@ -35,8 +35,8 @@
         }
       },
       "block_order": [
-        "slide_gUi7BK",
         "slide_Afcimb",
+        "slide_gUi7BK",
         "slide_yzHmBm"
       ],
       "name": "首页轮播Banner",
