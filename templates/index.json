@@ -26,22 +26,10 @@
             "title": ""
           }
         },
-        "slide_F4iLH4": {
-          "type": "slide",
-          "settings": {
-            "title": ""
-          }
-        },
         "slide_yzHmBm": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/z_banner4.jpg",
-            "title": ""
-          }
-        },
-        "slide_MNUUbX": {
-          "type": "slide",
-          "settings": {
             "title": ""
           }
         }
@@ -49,9 +37,7 @@
       "block_order": [
         "slide_gUi7BK",
         "slide_Afcimb",
-        "slide_F4iLH4",
-        "slide_yzHmBm",
-        "slide_MNUUbX"
+        "slide_yzHmBm"
       ],
       "name": "首页轮播Banner",
       "settings": {}
