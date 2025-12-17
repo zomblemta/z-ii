@@ -2,6 +2,9 @@
   .discover-image-wrapper {
     overflow: hidden;
     border-radius: 5px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: discoverFadeUp 0.7s ease-out forwards;
   }
 
   .discover-image-wrapper img {
@@ -11,10 +14,21 @@
   .discover-image-wrapper:hover img {
     transform: scale(1.1);
   }
+
+  @keyframes discoverFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
 
 <div class="w-full px-[15px] md:px-[53px] mt-[30px] mb-[45px] flex flex-col gap-[30px] md:gap-[42px]">
-  <h3 class="m-0 text-xl font-semibold leading-normal uppercase tracking-[2px]">
+  <h3 class="m-0 text-xl md:text-5xl font-semibold leading-normal uppercase tracking-[2px]">
     {{ section.settings.title }}
   </h3>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[36px] ">
@@ -34,7 +48,7 @@
             %}
           </div>
           <div class="flex flex-col {% if section.settings.image_style == 'style-2' %} absolute top-0 left-0 w-full h-full flex items-center justify-center {% endif %}">
-            <span class="text-lg font-normal font-Montaga leading-[18px] uppercase mt-[12px] md:mt-[30px]">
+            <span class="text-lg font-normal md:text-2xl font-Montaga leading-[18px] uppercase mt-[12px] md:mt-[30px]">
               {{ block.settings.title }}
             </span>
             <span class="text-xs font-light leading-[16px] mt-[6px] md:mt-[20px]">
