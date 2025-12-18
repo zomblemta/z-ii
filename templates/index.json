@@ -273,6 +273,27 @@
     "contact_us_jmxKTE": {
       "type": "contact-us",
       "blocks": {
+        "faq_8TdnRD": {
+          "type": "faq",
+          "settings": {
+            "question": "3",
+            "answer": "3"
+          }
+        },
+        "faq_zzN66i": {
+          "type": "faq",
+          "settings": {
+            "question": "4",
+            "answer": "4"
+          }
+        },
+        "faq_TNfUMz": {
+          "type": "faq",
+          "settings": {
+            "question": "test2",
+            "answer": "Answer2"
+          }
+        },
         "faq_KhTEDN": {
           "type": "faq",
           "settings": {
@@ -282,6 +303,9 @@
         }
       },
       "block_order": [
+        "faq_8TdnRD",
+        "faq_zzN66i",
+        "faq_TNfUMz",
         "faq_KhTEDN"
       ],
       "name": "Contact Us Form",
