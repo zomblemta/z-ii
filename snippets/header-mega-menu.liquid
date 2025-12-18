@@ -158,6 +158,9 @@
     document.addEventListener('DOMContentLoaded', function() {
       const menuLinks = document.querySelectorAll('.mega-menu__link[data-image-url]');
       
+      // 为每个菜单容器存储当前请求的标识
+      const pendingRequests = new Map();
+      
       menuLinks.forEach(function(link) {
         link.addEventListener('mouseenter', function() {
           const imageUrl = this.getAttribute('data-image-url');
@@ -174,12 +177,33 @@
           const existingPicture = imageContainer.querySelector('picture');
           if (!existingPicture) return;
           
+          // 生成当前请求的唯一标识
+          const requestId = Date.now() + Math.random();
+          pendingRequests.set(menuIndex, requestId);
+          
+          // 清除容器中所有未完成的图片（除了当前显示的）
+          const allPictures = imageContainer.querySelectorAll('picture');
+          allPictures.forEach(function(pic) {
+            if (pic !== existingPicture && pic.style.position === 'absolute') {
+              pic.remove();
+            }
+          });
+          
           // 预加载图片
           const img = new Image();
           img.onload = function() {
+            // 检查这个请求是否仍然是最新的
+            if (pendingRequests.get(menuIndex) !== requestId) {
+              return; // 如果已经有更新的请求，忽略这个
+            }
+            
+            // 再次检查容器中是否还有当前显示的图片
+            const currentPicture = imageContainer.querySelector('picture:not([style*="position: absolute"])');
+            if (!currentPicture) return;
+            
             // 创建新的 picture 元素
             const newPicture = document.createElement('picture');
-            const existingStyle = existingPicture.getAttribute('style') || '';
+            const existingStyle = currentPicture.getAttribute('style') || '';
             newPicture.setAttribute('style', existingStyle + ' position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.3s ease;');
             
             const newSource = document.createElement('source');
@@ -188,7 +212,7 @@
             
             const newImg = document.createElement('img');
             newImg.src = imageUrl;
-            const existingImg = existingPicture.querySelector('img');
+            const existingImg = currentPicture.querySelector('img');
             newImg.alt = existingImg ? existingImg.alt : '';
             newImg.loading = 'lazy';
             newImg.width = '100%';
@@ -200,8 +224,8 @@
             newPicture.appendChild(newImg);
             
             // 确保现有图片有过渡效果
-            if (!existingPicture.style.transition) {
-              existingPicture.style.transition = 'opacity 0.3s ease';
+            if (!currentPicture.style.transition) {
+              currentPicture.style.transition = 'opacity 0.3s ease';
             }
             
             // 添加到容器
@@ -209,11 +233,23 @@
             
             // 淡入新图片，淡出旧图片
             requestAnimationFrame(function() {
+              // 再次检查请求是否仍然有效
+              if (pendingRequests.get(menuIndex) !== requestId) {
+                newPicture.remove();
+                return;
+              }
+              
               newPicture.style.opacity = '1';
-              existingPicture.style.opacity = '0';
+              currentPicture.style.opacity = '0';
               setTimeout(function() {
-                if (existingPicture.parentNode) {
-                  existingPicture.parentNode.removeChild(existingPicture);
+                // 最后一次检查请求是否仍然有效
+                if (pendingRequests.get(menuIndex) !== requestId) {
+                  newPicture.remove();
+                  return;
+                }
+                
+                if (currentPicture.parentNode) {
+                  currentPicture.parentNode.removeChild(currentPicture);
                 }
                 // 将新图片从 absolute 定位改为正常定位
                 newPicture.style.position = '';
