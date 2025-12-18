@@ -629,6 +629,9 @@
   .aspect-\[479\.65\/281\.79\] {
     aspect-ratio: 479.65/281.79;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
@@ -945,6 +948,9 @@
   .gap-\[14px\] {
     gap: 14px;
   }
+  .gap-\[15px\] {
+    gap: 15px;
+  }
   .gap-\[16px\] {
     gap: 16px;
   }
@@ -1080,6 +1086,10 @@
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
+  }
+  .rounded-b-\[5px\] {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
   .border {
     border-style: var(--tw-border-style);
@@ -1386,6 +1396,9 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-\[30px\] {
+    padding-bottom: 30px;
   }
   .pb-\[85px\] {
     padding-bottom: 85px;
@@ -1752,6 +1765,16 @@
       line-height: var(--tw-leading, var(--text-xs--line-height));
     }
   }
+  .hover\:scale-105 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 105%;
+        --tw-scale-y: 105%;
+        --tw-scale-z: 105%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:border-black {
     &:hover {
       @media (hover: hover) {
@@ -1940,6 +1963,11 @@
       margin-inline: 53px;
     }
   }
+  .md\:my-\[50px\] {
+    @media (width >= 48rem) {
+      margin-block: 50px;
+    }
+  }
   .md\:my-\[70px\] {
     @media (width >= 48rem) {
       margin-block: 70px;
@@ -2008,6 +2036,11 @@
   .md\:mb-\[50px\] {
     @media (width >= 48rem) {
       margin-bottom: 50px;
+    }
+  }
+  .md\:mb-\[60px\] {
+    @media (width >= 48rem) {
+      margin-bottom: 60px;
     }
   }
   .md\:mb-\[70px\] {
@@ -2113,6 +2146,21 @@
   .md\:max-h-full {
     @media (width >= 48rem) {
       max-height: 100%;
+    }
+  }
+  .md\:min-h-\[124px\] {
+    @media (width >= 48rem) {
+      min-height: 124px;
+    }
+  }
+  .md\:min-h-\[156\.8px\] {
+    @media (width >= 48rem) {
+      min-height: 156.8px;
+    }
+  }
+  .md\:min-h-\[156px\] {
+    @media (width >= 48rem) {
+      min-height: 156px;
     }
   }
   .md\:w-1\/2 {
@@ -2254,6 +2302,11 @@
   .md\:gap-\[16px\] {
     @media (width >= 48rem) {
       gap: 16px;
+    }
+  }
+  .md\:gap-\[27px\] {
+    @media (width >= 48rem) {
+      gap: 27px;
     }
   }
   .md\:gap-\[28px\] {
@@ -2443,6 +2496,11 @@
   .md\:pr-\[20px\] {
     @media (width >= 48rem) {
       padding-right: 20px;
+    }
+  }
+  .md\:pb-\[60px\] {
+    @media (width >= 48rem) {
+      padding-bottom: 60px;
     }
   }
   .md\:text-left {
@@ -2984,6 +3042,21 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -3048,6 +3121,9 @@
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
     }
   }
 }
