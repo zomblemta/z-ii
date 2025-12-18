@@ -356,6 +356,9 @@
   .col-start-8 {
     grid-column-start: 8;
   }
+  .col-end-0 {
+    grid-column-end: 0;
+  }
   .col-end-5 {
     grid-column-end: 5;
   }
@@ -368,11 +371,17 @@
   .col-end-8 {
     grid-column-end: 8;
   }
+  .col-end-10 {
+    grid-column-end: 10;
+  }
   .col-end-11 {
     grid-column-end: 11;
   }
   .col-end-12 {
     grid-column-end: 12;
+  }
+  .col-end-110 {
+    grid-column-end: 110;
   }
   .container {
     width: 100%;
@@ -460,6 +469,9 @@
   }
   .mt-50 {
     margin-top: calc(var(--spacing) * 50);
+  }
+  .mt-72 {
+    margin-top: calc(var(--spacing) * 72);
   }
   .mt-96 {
     margin-top: calc(var(--spacing) * 96);

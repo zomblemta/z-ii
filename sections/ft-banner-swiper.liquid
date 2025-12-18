@@ -1,0 +1,233 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{%- comment -%} {{ 'hero-banner-swiper.css' | asset_url | stylesheet_tag }} {%- endcomment -%}
+<style>
+  .hero-swiper-wrapper,
+  .hero-banner-wrapper {
+    height: calc(100vh - 232px);
+  }
+
+  @media (max-width: 768px) {
+    .hero-swiper-wrapper,
+    .swiper-slide {
+      height: calc(100vh - 410px) !important;
+    }
+
+    .hero-banner-wrapper {
+      height: 100%;
+    }
+  }
+
+  /* 分页器容器位置 */
+  .swiper-pagination {
+    bottom: 20px !important;
+    left: 20px !important;
+    width: auto !important;
+    text-align: left !important;
+    height: 10px !important;
+    display: flex;
+  }
+
+  /* 分页器小圆点样式 */
+  .swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 1 !important;
+    border-radius: 3px !important;
+    transition: width 0.3s ease !important;
+  }
+
+  /* 激活状态的小圆点 */
+  .swiper-pagination-bullet-active {
+    width: 30px !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  @media (min-width: 768px) {
+    .hero-banner-container {
+      height: 100%;
+    }
+    .hero-content {
+      height: 100%;
+    }
+  }
+
+  /* PC端轮播图左右区域光标样式 */
+  @media (min-width: 1024px) {
+    .hero-swiper-wrapper {
+      position: relative;
+    }
+
+    .swiper-nav-area {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .swiper-nav-area.nav-left {
+      left: 0;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="1"/><path d="M24 12 L16 20 L24 28" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+          20 20,
+        w-resize;
+    }
+
+    .swiper-nav-area.nav-right {
+      right: 0;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="1"/><path d="M16 12 L24 20 L16 28" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+          20 20,
+        e-resize;
+    }
+  }
+</style>
+
+<section
+  id="HeroBanner-{{ section.id }}"
+  class="hero-banner-section "
+>
+  <div class="hero-banner-wrapper">
+    <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
+      <!-- 左侧内容区 -->
+      <div
+        style="background-color: {{ section.settings.section_background_color }};"
+        class="hero-content md:max-h-full w-full h-full flex justify-center items-center  py-[40px] lg:p-0 lg:w-1/2  "
+      >
+        <div class="content-wrapper max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+          <div class="flex flex-col  gap-[30px]  md:gap-[60px]">
+            <h1 class="text-[32px] leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
+              {{ section.settings.title | default: 'Fabrics and Technology' }}
+            </h1>
+            <p class="text-white text-left text-base font-light">{{ section.settings.description | default: 'The fabrics and technology we can offer.' }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧轮播区 -->
+      <div class="hero-swiper-wrapper w-full h-[142px] md:h-full lg:w-1/2  ">
+        <div class="swiper heroSwiper-{{ section.id }} overflow-hidden h-full">
+          <div class="swiper-wrapper h-full">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'slide' -%}
+                <div class="swiper-slide" {{ block.shopify_attributes }}>
+                  {%- if block.settings.image != blank -%}
+                    {% if forloop.first %}
+                      <a href="#fabric">
+                    {% else %}
+                      <a href="#technology">
+                    {% endif %}
+                    <div class=" relative h-full w-full">
+                      {{
+                        block.settings.image
+                        | image_url: width: 1200
+                        | image_tag:
+                          loading: 'eager',
+                          class: 'w-full h-full object-cover',
+                          alt: block.settings.image.alt
+                        | escape
+                      }}
+                    </div>
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+
+          <!-- 分页器 -->
+          <div class="swiper-pagination "></div>
+        </div>
+
+        <!-- PC端导航区域 -->
+        <div class="swiper-nav-area nav-left hidden lg:block" data-nav="prev"></div>
+        <div class="swiper-nav-area nav-right hidden lg:block" data-nav="next"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.heroSwiper-{{ section.id }}', {
+      loop: true,
+      autoplay: true
+        ? {
+            delay: 3000,
+            disableOnInteraction: false,
+          }
+        : false,
+      speed: 1000,
+      // effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+
+      pagination: {
+        el: '.heroSwiper-{{ section.id }} .swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    // PC端左右导航区域点击事件
+    const navAreas = document.querySelectorAll('.hero-swiper-wrapper .swiper-nav-area');
+    navAreas.forEach(function (area) {
+      area.addEventListener('click', function () {
+        const nav = this.getAttribute('data-nav');
+        if (nav === 'prev') {
+          swiper.slidePrev();
+        } else if (nav === 'next') {
+          swiper.slideNext();
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "首页轮播Banner",
+  "tag": "section",
+  "class": "section hero-banner-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "背景颜色",
+      "default": "#000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "轮播图片",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "fabric technology Banner",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -121,7 +121,7 @@
   </div>
 
   <div class="hidden md:grid grid-cols-12  gap-12 h-full  mx-[80px] -mt-[30px] z-10   relative">
-    <div class=" col-span-4 relative">
+    <div class=" col-span-3 relative">
       <a href="{{ section.settings.image_1_url }}">
         <div class="relative  rounded-[5px] image-container overflow-hidden">
           <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
@@ -131,17 +131,7 @@
         </div>
       </a>
     </div>
-    <div class="col-start-8 relative col-end-12 mt-28">
-      <a href="{{ section.settings.image_3_url }}">
-        <div class="relative  rounded-[5px] image-container overflow-hidden">
-          <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
-            {{ section.settings.description_3 }}
-          </p>
-          {% render 'alp-responsive-image', image: section.settings.image_3 %}
-        </div>
-      </a>
-    </div>
-    <div class=" col-start-4 relative col-end-8 ">
+    <div class=" col-start-4 relative col-end-7 mt-72 ">
       <a href="{{ section.settings.image_2_url }}">
         <div class="relative  rounded-[5px] image-container overflow-hidden">
           <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
@@ -151,8 +141,19 @@
         </div>
       </a>
     </div>
+    <div class="col-start-8 relative col-end-11 mt-28">
+      <a href="{{ section.settings.image_3_url }}">
+        <div class="relative  rounded-[5px] image-container overflow-hidden">
+          <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+            {{ section.settings.description_3 }}
+          </p>
+          {% render 'alp-responsive-image', image: section.settings.image_3 %}
+        </div>
+      </a>
+    </div>
+
   
-    <div class="col-start-2  relative col-end-6  mt-24 ">
+    <div class="col-start-2  relative col-end-5  mt-24 ">
       <a href="{{ section.settings.image_4_url }}">
         <div class="relative  rounded-[5px] image-container overflow-hidden">
           <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
@@ -163,7 +164,7 @@
       </a>
     </div>
 
-    <div class="col-start-7  relative col-end-11  mt-48 ">
+    <div class="col-start-7  relative col-end-10  mt-48 ">
       <a href="{{ section.settings.image_5_url }}">
         <div class="relative  rounded-[5px] image-container overflow-hidden">
           <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
