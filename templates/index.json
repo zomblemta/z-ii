@@ -272,6 +272,18 @@
     },
     "contact_us_jmxKTE": {
       "type": "contact-us",
+      "blocks": {
+        "faq_KhTEDN": {
+          "type": "faq",
+          "settings": {
+            "question": "test1",
+            "answer": "Answer1"
+          }
+        }
+      },
+      "block_order": [
+        "faq_KhTEDN"
+      ],
       "name": "Contact Us Form",
       "settings": {}
     }
