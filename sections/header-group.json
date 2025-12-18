@@ -55,6 +55,13 @@
     "header": {
       "type": "header",
       "blocks": {
+        "link_image_WULjnp": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/z_banner4.jpg",
+            "link": "shopify://collections/test"
+          }
+        },
         "link_image_bcKzqN": {
           "type": "link_image",
           "settings": {
@@ -64,6 +71,7 @@
         }
       },
       "block_order": [
+        "link_image_WULjnp",
         "link_image_bcKzqN"
       ],
       "settings": {
