@@ -58,7 +58,8 @@
         "link_image_7JrTR7": {
           "type": "link_image",
           "settings": {
-            "link": ""
+            "image": "shopify://shop_images/Blazer.jpg",
+            "link": "shopify://collections/summer"
           }
         },
         "link_image_bcKzqN": {
