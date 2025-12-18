@@ -1,33 +1,37 @@
 <style>
   .discover-image-wrapper {
+    position: relative;
+    width: 100%;
     overflow: hidden;
-    border-radius: 5px;
-    opacity: 0;
-    transform: translateY(16px);
-    animation: discoverFadeUp 0.7s ease-out forwards;
   }
-
   .discover-image-wrapper img {
-    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+
+    /* 初始位置：向下偏移并透明 */
+    transform: translateY(30px);
+    opacity: 0;
+
+    /* 应用动画 */
+    animation: fadeUpIn 1s ease-out forwards;
+
+    /* 延迟动画（可选） */
+    animation-delay: 0.3s;
   }
 
-  .discover-image-wrapper:hover img {
-    transform: scale(1.1);
-  }
-
-  @keyframes discoverFadeUp {
-    from {
+  @keyframes fadeUpIn {
+    0% {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(30px);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateY(0);
     }
   }
 </style>
 
-<div class="w-full px-[15px] md:px-[53px] mt-[30px] mb-[45px] flex flex-col gap-[30px] md:gap-[42px]">
+<div class="w-full px-[15px] md:px-[53px] mt-[30px]  flex flex-col gap-[30px] md:gap-[42px]">
   <h3 class="m-0 text-xl md:text-5xl font-semibold leading-normal uppercase tracking-[2px]">
     {{ section.settings.title }}
   </h3>

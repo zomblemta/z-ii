@@ -803,6 +803,12 @@
   .list-none {
     list-style-type: none;
   }
+  .columns-2 {
+    columns: 2;
+  }
+  .break-inside-avoid {
+    break-inside: avoid;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1881,6 +1887,11 @@
   .md\:mt-\[40px\] {
     @media (width >= 48rem) {
       margin-top: 40px;
+    }
+  }
+  .md\:mt-\[50px\] {
+    @media (width >= 48rem) {
+      margin-top: 50px;
     }
   }
   .md\:mt-\[60px\] {

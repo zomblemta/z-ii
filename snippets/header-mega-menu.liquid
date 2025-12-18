@@ -2,7 +2,7 @@
   Renders a megamenu for the header.
 
   Usage:
-  {% render 'header-mega-menu' %}
+  {% render 'header-mega-menu', section: section %}
 {% endcomment %}
 
 <nav class="header__inline-menu">
@@ -29,22 +29,60 @@
                 class="mega-menu__content flex  color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-              <div class="w-1/2 aspect-720/440 overflow-hidden">
-                {% render 'alp-responsive-image', image: section.settings.desktop_mega_menu_image, class: 'w-full h-full object-cover' %}
+              <div class="w-1/2 aspect-720/440 overflow-hidden mega-menu-image-container" data-menu-index="{{ forloop.index }}" style="position: relative;">
+                {%- liquid
+                  assign default_image = section.settings.desktop_mega_menu_image
+                  assign first_link_image = null
+                  for block in section.blocks
+                    if block.type == 'link_image'
+                      for childlink in link.links
+                        if block.settings.link == childlink.url
+                          assign first_link_image = block.settings.image
+                          break
+                        endif
+                      endfor
+                      if first_link_image != null
+                        break
+                      endif
+                    endif
+                  endfor
+                  if first_link_image == null
+                    assign first_link_image = default_image
+                  endif
+                -%}
+                {%- if first_link_image != blank -%}
+                  {% render 'alp-responsive-image', image: first_link_image, class: 'mega-menu-image w-full h-full object-cover' %}
+                {%- else -%}
+                  {% render 'alp-responsive-image', image: default_image, class: 'mega-menu-image w-full h-full object-cover' %}
+                {%- endif -%}
               </div>
+              <div class=" aspect-720/440 p-8 ">
+                 <span class="block mb-[16px] text-sm text-[#BABABA]">Categories:</span>
                 <ul
-                  class="mega-menu__list p-8 flex flex-col gap-[16px] {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  class="mega-menu__list columns-2 gap-[16px] {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
-                <li class="text-sm text-[#BABABA]">
-                  Categories:
-                </li>
+              
                   {%- for childlink in link.links -%}
-                    <li class="flex ">
+                    {%- liquid
+                      assign link_image = null
+                      for block in section.blocks
+                        if block.type == 'link_image' and block.settings.link == childlink.url
+                          assign link_image = block.settings.image
+                          break
+                        endif
+                      endfor
+                      if link_image == null
+                        assign link_image = section.settings.desktop_mega_menu_image
+                      endif
+                    -%}
+                    <li class="flex break-inside-avoid mb-[16px]">
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
                         class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                        data-menu-index="{{ forloop.parentloop.index }}"
+                        data-image-url="{% if link_image != blank %}{{ link_image | image_url: width: 1440 }}{% endif %}"
                         {% if childlink.current %}
                           aria-current="page"
                         {% endif %}
@@ -54,11 +92,25 @@
                       {%- if childlink.links != blank -%}
                         <ul class="list-unstyled" role="list">
                           {%- for grandchildlink in childlink.links -%}
+                            {%- liquid
+                              assign grandchild_image = null
+                              for block in section.blocks
+                                if block.type == 'link_image' and block.settings.link == grandchildlink.url
+                                  assign grandchild_image = block.settings.image
+                                  break
+                                endif
+                              endfor
+                              if grandchild_image == null
+                                assign grandchild_image = section.settings.desktop_mega_menu_image
+                              endif
+                            -%}
                             <li>
                               <a
                                 id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
                                 href="{{ grandchildlink.url }}"
                                 class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                data-menu-index="{{ forloop.parentloop.parentloop.index }}"
+                                data-image-url="{% if grandchild_image != blank %}{{ grandchild_image | image_url: width: 1440 }}{% endif %}"
                                 {% if grandchildlink.current %}
                                   aria-current="page"
                                 {% endif %}
@@ -73,6 +125,8 @@
                   {%- endfor -%}
                 </ul>
               </div>
+              </div>
+
             </details>
           </header-menu>
         {%- else -%}
@@ -97,3 +151,80 @@
     {%- endfor -%}
   </ul>
 </nav>
+
+<script>
+  (function() {
+    // 处理 mega menu 图片悬停切换
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuLinks = document.querySelectorAll('.mega-menu__link[data-image-url]');
+      
+      menuLinks.forEach(function(link) {
+        link.addEventListener('mouseenter', function() {
+          const imageUrl = this.getAttribute('data-image-url');
+          const menuIndex = this.getAttribute('data-menu-index');
+          
+          if (!imageUrl || !menuIndex) return;
+          
+          const imageContainer = document.querySelector(
+            `.mega-menu-image-container[data-menu-index="${menuIndex}"]`
+          );
+          
+          if (!imageContainer) return;
+          
+          const existingPicture = imageContainer.querySelector('picture');
+          if (!existingPicture) return;
+          
+          // 预加载图片
+          const img = new Image();
+          img.onload = function() {
+            // 创建新的 picture 元素
+            const newPicture = document.createElement('picture');
+            const existingStyle = existingPicture.getAttribute('style') || '';
+            newPicture.setAttribute('style', existingStyle + ' position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.3s ease;');
+            
+            const newSource = document.createElement('source');
+            newSource.srcset = imageUrl;
+            newSource.setAttribute('media', '(min-width: 768px)');
+            
+            const newImg = document.createElement('img');
+            newImg.src = imageUrl;
+            const existingImg = existingPicture.querySelector('img');
+            newImg.alt = existingImg ? existingImg.alt : '';
+            newImg.loading = 'lazy';
+            newImg.width = '100%';
+            newImg.height = 'auto';
+            newImg.style.cssText = 'max-width: 100%; object-fit: cover; width: 100%; height: 100%;';
+            newImg.className = 'mega-menu-image w-full h-full object-cover';
+            
+            newPicture.appendChild(newSource);
+            newPicture.appendChild(newImg);
+            
+            // 确保现有图片有过渡效果
+            if (!existingPicture.style.transition) {
+              existingPicture.style.transition = 'opacity 0.3s ease';
+            }
+            
+            // 添加到容器
+            imageContainer.appendChild(newPicture);
+            
+            // 淡入新图片，淡出旧图片
+            requestAnimationFrame(function() {
+              newPicture.style.opacity = '1';
+              existingPicture.style.opacity = '0';
+              setTimeout(function() {
+                if (existingPicture.parentNode) {
+                  existingPicture.parentNode.removeChild(existingPicture);
+                }
+                // 将新图片从 absolute 定位改为正常定位
+                newPicture.style.position = '';
+                newPicture.style.top = '';
+                newPicture.style.left = '';
+              }, 300);
+            });
+          };
+          img.src = imageUrl;
+        });
+      });
+    });
+  })();
+</script>

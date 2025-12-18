@@ -202,7 +202,7 @@
                   if section.settings.menu_type_desktop == 'dropdown'
                     render 'header-dropdown-menu'
                   elsif section.settings.menu_type_desktop != 'drawer'
-                    render 'header-mega-menu'
+                    render 'header-mega-menu', section: section
                   endif
                 endif
               %}
@@ -648,6 +648,22 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "link_image",
+      "name": "Link Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
     }
   ]
 }
