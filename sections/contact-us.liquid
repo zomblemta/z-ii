@@ -76,7 +76,7 @@
           <h3 class="m-0 text-[24px] md:text-[32px] font-Montaga uppercase font-normal">Contact Us</h3>
           <div>
             <p class="m-0 text-sm font-light font-Montaga leading-[24px]">
-              Email: <a href="mailto:business@Z-II.com" class="underline text-black font-medium">business@Z-II.com</a>
+              Email: <a href="mailto:info@ziistudios.com" class="underline text-black font-medium">info@ziistudios.com</a>
               <br>
               Telephone: <a class="underline text-black font-medium">+86 186 8887 3388</a> <br>
               Whatsapp: <a class="underline text-black font-medium">+86 186 8887 3388</a>
@@ -89,7 +89,7 @@
   <div class="w-full flex bg-[#E7E7E7] rounded-[5px] flex-col md:flex-row gap-[24px] md:gap-[55px] px-[13px] py-[22px] md:px-[20px] md:py-[30px]">
     <div class="md:w-[1/2] flex-1">
       <h3 class="m-0 text-[30px] md:text-[40px] font-Montaga  font-normal">Frequently asked questions</h3>
-      <p class="m-0 text-xl font-normal font-Montaga leading-[24px]">
+      <p class="m-0 text-base md:text-xl font-normal font-Montaga leading-[24px]">
         Need some help? Browse through our summary of the most frequently asked questions about shipping, returns,
         samples, sourcing, pricing, and many more.
       </p>
@@ -100,45 +100,19 @@
     </div>
 
     <div class="md:w-[1/2] flex-1 flex flex-col gap-[12px]">
-      <div class="faq-item">
-        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
-          <span>What if I would like a product that is not in your catalog?</span>
-          <span class="faq-icon transition-transform duration-300">
-            {% render 'icon', icon: 'icon-plus' %}
-          </span>
+      {%- for block in section.blocks -%}
+        <div class="faq-item">
+          <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
+            <span>{{ block.settings.question }}</span>
+            <span class="faq-icon transition-transform duration-300">
+              {% render 'icon', icon: 'icon-plus' %}
+            </span>
+          </div>
+          <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+            {{ block.settings.answer }}
+          </div>
         </div>
-        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
-          If you're looking for a product that's not in our catalog, please contact us directly. We're always happy to
-          discuss custom orders and special requests. You can reach us via email at business@Z-II.com or through our
-          WhatsApp.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
-          <span>What are your shipping options?</span>
-          <span class="faq-icon transition-transform duration-300">
-            {% render 'icon', icon: 'icon-plus' %}
-          </span>
-        </div>
-        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
-          We offer various shipping options including standard and express delivery. Shipping times and costs vary
-          depending on your location.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[6px] text-xs font-light flex justify-between items-center cursor-pointer">
-          <span>Do you offer samples?</span>
-          <span class="faq-icon transition-transform duration-300">
-            {% render 'icon', icon: 'icon-plus' %}
-          </span>
-        </div>
-        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
-          Yes, we offer samples for most of our products. Please contact us for more information about sample
-          availability and pricing.
-        </div>
-      </div>
+      {%- endfor -%}
     </div>
   </div>
 </div>
@@ -170,6 +144,25 @@
 {% schema %}
 {
   "name": "Contact Us Form",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "text",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Contact Us Form"

@@ -27,7 +27,11 @@
 
   @media (min-width: 768px) {
     .brand-item {
-      min-width: 140px;
+      height: 60px;
+    }
+    .brand-item img {
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -39,8 +43,6 @@
       transform: translateX(-50%);
     }
   }
-
-
 </style>
 
 <div class="brand-marquee-container mt-[10px]  px-[14px] md:px-[53px]">
@@ -48,25 +50,25 @@
     <!-- 第一组品牌logo -->
     {% for block in section.blocks %}
       <div class="brand-item h-[30px] md:h-[60px]">
-        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-cover' %}
       </div>
     {% endfor %}
     <!-- 复制第二组品牌logo以实现无缝循环 -->
     {% for block in section.blocks %}
       <div class="brand-item h-[30px] md:h-[78px]">
-        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-cover' %}
       </div>
     {% endfor %}
   </div>
 
-  <div class=" mt-[20px] md:mt-[40px]">
-    <p class="text-[26px] text-black md:text-[64px] md:leading-[72px] font-Montaga font-normal leading-[32px] ">
-      Edited to essence,<br>
-      made to endure.<br>
-      Minimal design with assured delivery for modern boutiques and online labels.
-    </p>
+  <div class=" mt-[30px] md:mt-[40px]">
+    <h2 class="text-[26px] relative text-black md:text-[64px] md:leading-[72px] font-Montaga font-normal leading-[32px]  ">
+      <span>
+       {{ section.settings.title }}
+      </span>
+      <a class="button-black block mt-4 md:inline-flex  md:absolute md:bottom-2.5 md:ml-5 " href="{{ section.settings.link }}"> View all products </a>
+    </h2>
   </div>
-  <a class="button-black block mt-[20px] md:mt-[40px]" href="{{ section.settings.link }}"> View all products </a>
 </div>
 
 {% schema %}
@@ -77,6 +79,12 @@
       "type": "url",
       "id": "link",
       "label": "Li nk"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Edited to essence made to endure. Minimal design with assured delivery for modern boutiques and online labels."
     }
   ],
   "blocks": [

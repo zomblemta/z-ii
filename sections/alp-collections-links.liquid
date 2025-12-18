@@ -162,15 +162,15 @@
 {% endstyle %}
 
 <div class="alp-section alp-collections-links {{ reset_spacing }}" style="{{ style }}">
-  <div class="alp-collections-links-container page-width {{ container }} flex flex-col md:flex-row items-start gap-[10px] md:items-center justify-between">
+  <div class="alp-collections-links-container page-width {{ container }} w-full flex flex-col md:flex-row items-start gap-[10px] md:items-center justify-between">
     <div class="alp-collections-links-content">
       {%- if main_object and main_object.filters -%}
         {%- assign allowed_filters = collection.metafields.custom.filter.value -%}
         {%- for filter in main_object.filters -%}
           {%- if filter.type == 'list' and filter.param_name == 'filter.p.product_type' -%}
-            <div class="alp-collection-filters">
+            <div class="alp-collection-filters w-full ">
               <collection-filters-form class="collection-filters">
-                <form id="AlpCollectionFiltersForm" class="collection-filters__form m-0">
+                <form id="AlpCollectionFiltersForm" class="collection-filters__form m-0  w-full flex items-center gap-[10px]">
                   {%- for value in filter.values -%}
                     {%- assign show_filter = false -%}
                     {%- if allowed_filters == blank -%}

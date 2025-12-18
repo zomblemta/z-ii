@@ -56,7 +56,8 @@
 </style>
 
 <div
-  class="bg-[#282828] relative w-full  py-[28px] md:pt-[70px] flex flex-col gap-5"
+  style="background-color: {{ section.settings.section_background_color }};"
+  class=" relative w-full  py-[28px] md:pt-[70px] flex flex-col gap-5"
   id="asSeenOnYouSection-{{ section.id }}"
 >
   <div class="w-full text-center sticky top-[110px] md:top-[170px] z-1">
@@ -107,10 +108,20 @@
         </div>
       </a>
     </div>
+    <div class="w-full flex justify-start">
+      <a href="{{ section.settings.image_5_url }}">
+        <div class="w-[240px] h-[320px] rounded-[5px] overflow-hidden relative">
+          <p class="text-white text-base absolute bottom-10 left-0 w-full text-center px-[14px]">
+            {{ section.settings.description_5 }}
+          </p>
+          {% render 'alp-responsive-image', image: section.settings.image_5 %}
+        </div>
+      </a>
+    </div>
   </div>
 
   <div class="hidden md:grid grid-cols-12  gap-12 h-full  mx-[80px] -mt-[30px] z-10   relative">
-    <div class=" col-span-3 relative">
+    <div class=" col-span-4 relative">
       <a href="{{ section.settings.image_1_url }}">
         <div class="relative  rounded-[5px] image-container overflow-hidden">
           <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
@@ -120,17 +131,7 @@
         </div>
       </a>
     </div>
-    <div class=" col-start-4 relative col-end-7 mt-96">
-      <a href="{{ section.settings.image_2_url }}">
-        <div class="relative  rounded-[5px] image-container overflow-hidden">
-          <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
-            {{ section.settings.description_2 }}
-          </p>
-          {% render 'alp-responsive-image', image: section.settings.image_2 %}
-        </div>
-      </a>
-    </div>
-    <div class="col-start-8 relative col-end-11 mt-28">
+    <div class="col-start-8 relative col-end-12 mt-28">
       <a href="{{ section.settings.image_3_url }}">
         <div class="relative  rounded-[5px] image-container overflow-hidden">
           <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
@@ -140,13 +141,35 @@
         </div>
       </a>
     </div>
-    <div class="col-start-2  relative col-end-5  mt-40 ">
+    <div class=" col-start-4 relative col-end-8 ">
+      <a href="{{ section.settings.image_2_url }}">
+        <div class="relative  rounded-[5px] image-container overflow-hidden">
+          <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+            {{ section.settings.description_2 }}
+          </p>
+          {% render 'alp-responsive-image', image: section.settings.image_2 %}
+        </div>
+      </a>
+    </div>
+  
+    <div class="col-start-2  relative col-end-6  mt-24 ">
       <a href="{{ section.settings.image_4_url }}">
         <div class="relative  rounded-[5px] image-container overflow-hidden">
           <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
             {{ section.settings.description_4 }}
           </p>
           {% render 'alp-responsive-image', image: section.settings.image_4 %}
+        </div>
+      </a>
+    </div>
+
+    <div class="col-start-7  relative col-end-11  mt-36 ">
+      <a href="{{ section.settings.image_5_url }}">
+        <div class="relative  rounded-[5px] image-container overflow-hidden">
+          <p class="text-white text-base absolute bottom-10 left-0 w-full text-center">
+            {{ section.settings.description_5 }}
+          </p>
+          {% render 'alp-responsive-image', image: section.settings.image_5 %}
         </div>
       </a>
     </div>
@@ -212,6 +235,12 @@
   "name": "Index As Seen On You",
   "settings": [
     {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section Background Color",
+      "default": "#282828"
+    },
+    {
       "type": "image_picker",
       "id": "image_1",
       "label": "Image 1"
@@ -270,7 +299,23 @@
       "type": "url",
       "id": "image_4_url",
       "label": "Image 4 URL"
-    }
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image 5"
+    },
+    {
+      "type": "text",
+      "id": "description_5",
+      "label": "Description 5"
+    },
+    {
+      "type": "url",
+      "id": "image_5_url",
+      "label": "Image 5 URL"
+    },
+      
   ],
 
   "presets": [

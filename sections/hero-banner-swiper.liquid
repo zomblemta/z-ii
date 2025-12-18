@@ -6,7 +6,9 @@
     height: calc(100vh - 232px);
   }
 
+ 
   @media (max-width: 768px) {
+
     .hero-swiper-wrapper,
     .swiper-slide {
       height: calc(100vh - 410px)!important;
@@ -52,6 +54,33 @@
     }
   }
 
+  /* 动态生成每个 block 的标题和描述样式 */
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'slide' -%}
+      /* Block {{ block.id }} - 移动端样式 */
+      .hero-title-{{ block.id }} {
+        font-size: {{ block.settings.mobile_title_text_size }}px;
+        color: {{ block.settings.title_color }};
+      }
+      
+      .hero-description-{{ block.id }} {
+        font-size: {{ block.settings.mobile_description_text_size }}px;
+        color: {{ block.settings.description_color }};
+      }
+      
+      /* Block {{ block.id }} - PC端样式 */
+      @media (min-width: 768px) {
+        .hero-title-{{ block.id }} {
+          font-size: {{ block.settings.title_text_size }}px;
+        }
+        
+        .hero-description-{{ block.id }} {
+          font-size: {{ block.settings.description_text_size }}px;
+        }
+      }
+    {%- endif -%}
+  {%- endfor -%}
+
   /* PC端轮播图左右区域光标样式 */
   @media (min-width: 1024px) {
     .hero-swiper-wrapper {
@@ -86,7 +115,7 @@
   <div class="hero-banner-wrapper">
     <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
       <!-- 左侧内容区 -->
-      <div class="hero-content md:max-h-full w-full h-full bg-[#333] flex justify-center items-center  py-[40px] lg:p-0 lg:w-1/2  ">
+      <div style="background-color: {{ section.settings.section_background_color }};" class="hero-content md:max-h-full w-full h-full flex justify-center items-center  py-[40px] lg:p-0 lg:w-1/2  ">
         <div class="content-wrapper max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
           <div class="flex flex-col  gap-[30px]  md:gap-[60px]">
             <h1 class="text-[32px] leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
@@ -131,9 +160,12 @@
                       }}
                     </div>
                     <div class="absolute left-[20px] bottom-[44px] md:bottom-[70px] flex flex-col justify-center items-center">
-                      <h2 class="text-white text-sm tracking-[1.4px] font-light md:text-2xl md:tracking-[2px]">
+                      <h2 class="hero-banner-title hero-title-{{ block.id }} tracking-[1.4px] font-light md:tracking-[2px]">
                         {{ block.settings.title }}
                       </h2>
+                      <p class="hero-banner-description hero-description-{{ block.id }} tracking-[1.4px] font-light md:tracking-[2px]">
+                        {{ block.settings.description }}
+                      </p>
                     </div>
                   {%- endif -%}
                 </div>
@@ -200,7 +232,14 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "背景颜色",
+      "default": "#333"
+    }
+  ],
   "blocks": [
     {
       "type": "slide",
@@ -215,6 +254,63 @@
           "type": "html",
           "id": "title",
           "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "描述"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "标题颜色",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
+          "id": "description_color",
+          "label": "描述颜色",
+          "default": "#fff"
+        },
+        {
+          "type": "range",
+          "id": "title_text_size",
+          "label": "标题文字大小",
+          "default": 24,
+          "min": 16,
+          "max": 32,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "mobile_title_text_size",
+          "label": "移动端标题文字大小",
+          "default": 16,
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "description_text_size",
+          "label": "描述文字大小",
+          "default": 16,
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "mobile_description_text_size",
+          "label": "移动端描述文字大小",
+          "default": 12,
+          "min": 10,
+          "max": 20,
+          "step": 1,
+          "unit": "px"
         }
       ]
     }
