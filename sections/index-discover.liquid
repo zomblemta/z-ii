@@ -1,33 +1,23 @@
 <style>
-  .discover-image-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  .discover-image-wrapper img {
-    width: 100%;
-    height: 100%;
-
-    /* 初始位置：向下偏移并透明 */
-    transform: translateY(30px);
+  .discover-image-item {
     opacity: 0;
-
-    /* 应用动画 */
-    animation: fadeUpIn 1s ease-out forwards;
-
-    /* 延迟动画（可选） */
-    animation-delay: 0.3s;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 
-  @keyframes fadeUpIn {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .discover-image-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .style-1 {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .style-1:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.9;
   }
 </style>
 
@@ -38,8 +28,7 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[36px] ">
     {% for block in section.blocks %}
       <a href="{{ block.settings.url }}">
-        <div class="flex flex-col  transition-transform duration-350ms ease-out origin-center {% if section.settings.image_style == 'style-2' %} relative {% endif %}">
-          <div class="discover-image-wrapper">
+        <div class="flex flex-col  overflow-hidden discover-image-item {% if section.settings.image_style == 'style-2' %} relative {% endif %}">
             {%
               render 'alp-responsive-image',
               image: block.settings.image,
@@ -48,9 +37,8 @@
               class:
               section.settings.image_style == 'style-1'
               | append: ' aspect-[430/573] md:aspect-1/1'
-              | default: ' aspect-1/1 md:aspect-1/1'
+              | default: ' aspect-1/1 md:aspect-1/1 '
             %}
-          </div>
           <div class="flex flex-col {% if section.settings.image_style == 'style-2' %} absolute top-0 left-0 w-full h-full flex items-center justify-center {% endif %}">
             <span class="text-lg font-normal md:text-2xl font-Montaga leading-[18px] uppercase mt-[12px] md:mt-[30px]">
               {{ block.settings.title }}
@@ -64,6 +52,50 @@
     {% endfor %}
   </div>
 </div>
+
+<script>
+  (function() {
+    // 使用立即执行函数限制作用域
+    const sectionId = 'discover-section-{{ section.id }}';
+    
+    // 等待 DOM 加载完成
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initIntersectionObserver);
+    } else {
+      initIntersectionObserver();
+    }
+
+    function initIntersectionObserver() {
+      const imageItems = document.querySelectorAll('.discover-image-item');
+      
+      if (imageItems.length === 0) {
+        return;
+      }
+
+      // 创建 Intersection Observer
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          // 当元素进入视口时
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // 动画完成后，停止观察该元素（可选，节省性能）
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        // 当元素 20% 进入视口时触发
+        threshold: 0.2,
+        // 提前 50px 开始触发（可选）
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      // 开始观察所有图片元素
+      imageItems.forEach(function(item) {
+        observer.observe(item);
+      });
+    }
+  })();
+</script>
 
 {% schema %}
 {

@@ -152,7 +152,7 @@
 
       <div class="header__top-row w-full">
         <!-- Logo -->
-        <div class="w-max-content flex  items-center justify-center gap-[30px] ml-[14px] md:ml-0">
+        <div class="w-max-content flex  items-center justify-center gap-[30px] ml-[6px] md:ml-0">
           <div class="header__logo">
             {%- if request.page_type == 'index' -%}
               <h1 class="header__heading">
@@ -176,8 +176,8 @@
                       sizes: sizes,
                       preload: true
                   }}
-                  <span class="block md:hidden h-[20px]">
-                   {{ section.settings.mobile_logo | image_url: width: 600 | image_tag: class: 'header__heading-logo motion-reduce hidden md:block h-[20px]' }}
+                  <span class="block md:hidden h-[20px] w-[90px]">
+                   {{ section.settings.mobile_logo | image_url: width: 600 | image_tag: class: 'header__heading-logo motion-reduce block h-[20px]' }}
                   </span>
                 </div>
               

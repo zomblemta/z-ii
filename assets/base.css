@@ -2330,6 +2330,11 @@ input[type="checkbox"] {
   height: auto;
   max-width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .header__heading-logo  {
+    width: 90px;
+  }
+}
 
 .header__heading-logo-wrapper {
   width: 100%;
