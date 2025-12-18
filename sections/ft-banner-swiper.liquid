@@ -3,7 +3,7 @@
 <style>
   .hero-swiper-wrapper,
   .hero-banner-wrapper {
-    height: calc(100vh - 232px);
+    height: calc(100vh - 136px);
   }
 
   @media (max-width: 768px) {
@@ -20,7 +20,8 @@
   /* 分页器容器位置 */
   .swiper-pagination {
     bottom: 20px !important;
-    left: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     width: auto !important;
     text-align: left !important;
     height: 10px !important;
@@ -39,7 +40,7 @@
 
   /* 激活状态的小圆点 */
   .swiper-pagination-bullet-active {
-    width: 30px !important;
+    width: 50px !important;
     background-color: rgba(255, 255, 255, 0.6) !important;
   }
 
@@ -57,29 +58,6 @@
     .hero-swiper-wrapper {
       position: relative;
     }
-
-    .swiper-nav-area {
-      position: absolute;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      z-index: 10;
-      cursor: pointer;
-    }
-
-    .swiper-nav-area.nav-left {
-      left: 0;
-      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="1"/><path d="M24 12 L16 20 L24 28" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>')
-          20 20,
-        w-resize;
-    }
-
-    .swiper-nav-area.nav-right {
-      right: 0;
-      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="1"/><path d="M16 12 L24 20 L16 28" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>')
-          20 20,
-        e-resize;
-    }
   }
 </style>
 
@@ -87,25 +65,27 @@
   id="HeroBanner-{{ section.id }}"
   class="hero-banner-section "
 >
-  <div class="hero-banner-wrapper">
+  <div class="hero-banner-wrapper flex flex-col md:flex-row">
     <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
       <!-- 左侧内容区 -->
       <div
         style="background-color: {{ section.settings.section_background_color }};"
-        class="hero-content md:max-h-full w-full h-full flex justify-center items-center  py-[40px] lg:p-0 lg:w-1/2  "
+        class="hero-content md:max-h-full w-full h-full flex justify-center items-center order-2 md:order-1  py-[40px] lg:p-0 md:w-1/2  "
       >
-        <div class="content-wrapper max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-          <div class="flex flex-col  gap-[30px]  md:gap-[60px]">
-            <h1 class="text-[32px] leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white text-left  px-[26px] md:px-0 ">
-              {{ section.settings.title | default: 'Fabrics and Technology' }}
-            </h1>
-            <p class="text-white text-left text-base font-light">{{ section.settings.description | default: 'The fabrics and technology we can offer.' }}</p>
+        <div class="content-wrapper mx-auto md:mx-0 text-center md:text-left w-full max-w-full flex justify-center items-center">
+          <div class="flex flex-col items-center gap-[16px] px-[26px] md:gap-[60px] md:px-0 md:max-w-[50%] mx-auto md:mx-0 ">
+              <h1 class="text-[30px] text-nowrap md:text-wrap leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white   md:mx-0 ">
+                {{ section.settings.title | default: 'Fabrics and Technology' }}
+              </h1>
+              <p class="text-white text-left text-base font-light w-full ">
+                {{ section.settings.description | default: 'The fabrics and technology we can offer.' }}
+              </p>
           </div>
         </div>
       </div>
 
       <!-- 右侧轮播区 -->
-      <div class="hero-swiper-wrapper w-full h-[142px] md:h-full lg:w-1/2  ">
+      <div class="hero-swiper-wrapper w-full h-[142px] md:h-full lg:w-1/2 order-1 md:order-2 ">
         <div class="swiper heroSwiper-{{ section.id }} overflow-hidden h-full">
           <div class="swiper-wrapper h-full">
             {%- for block in section.blocks -%}
@@ -138,10 +118,6 @@
           <!-- 分页器 -->
           <div class="swiper-pagination "></div>
         </div>
-
-        <!-- PC端导航区域 -->
-        <div class="swiper-nav-area nav-left hidden lg:block" data-nav="prev"></div>
-        <div class="swiper-nav-area nav-right hidden lg:block" data-nav="next"></div>
       </div>
     </div>
   </div>
@@ -169,19 +145,6 @@
         el: '.heroSwiper-{{ section.id }} .swiper-pagination',
         clickable: true,
       },
-    });
-
-    // PC端左右导航区域点击事件
-    const navAreas = document.querySelectorAll('.hero-swiper-wrapper .swiper-nav-area');
-    navAreas.forEach(function (area) {
-      area.addEventListener('click', function () {
-        const nav = this.getAttribute('data-nav');
-        if (nav === 'prev') {
-          swiper.slidePrev();
-        } else if (nav === 'next') {
-          swiper.slideNext();
-        }
-      });
     });
   });
 </script>
