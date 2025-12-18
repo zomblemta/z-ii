@@ -55,13 +55,45 @@
             "image": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png",
             "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
           }
+        },
+        "technology_item_JzqQUQ": {
+          "type": "technology-item",
+          "settings": {
+            "title": "DTF Printing",
+            "image": "shopify://shop_images/source_image.png"
+          }
+        },
+        "technology_item_bcC8mF": {
+          "type": "technology-item",
+          "settings": {
+            "title": "DTG Printing",
+            "image": "shopify://shop_images/6252d923f6ca7d7f66e3379093c695f5de4c07db.png"
+          }
+        },
+        "technology_item_naDLBQ": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Puff Printing",
+            "image": "shopify://shop_images/source_image.png"
+          }
+        },
+        "technology_item_4e6Mgg": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Puff Printing",
+            "image": "shopify://shop_images/6252d923f6ca7d7f66e3379093c695f5de4c07db.png"
+          }
         }
       },
       "block_order": [
         "fabric_item_73URBK",
         "fabric_item_aP8cLH",
         "fabric_item_dr4CJG",
-        "fabric_item_Kybedn"
+        "fabric_item_Kybedn",
+        "technology_item_JzqQUQ",
+        "technology_item_bcC8mF",
+        "technology_item_naDLBQ",
+        "technology_item_4e6Mgg"
       ],
       "name": "Fabrics Technology",
       "settings": {}
