@@ -16,21 +16,42 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/z_banner4.jpg",
-            "title": "CREATE YOUR EDIT.<br>\nCUT. SAMPLE. PRODUCE."
+            "title": "CREATE YOUR EDIT.<br>\nCUT. SAMPLE. PRODUCE.",
+            "description": "",
+            "title_color": "#ffffff",
+            "description_color": "#ffffff",
+            "title_text_size": 24,
+            "mobile_title_text_size": 16,
+            "description_text_size": 16,
+            "mobile_description_text_size": 12
           }
         },
         "slide_gUi7BK": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/2025.11.22_Pre_preworks0370.jpg",
-            "title": "FW’2025<br>\nNEW ARRIVALS"
+            "title": "FW’2025<br>\nNEW ARRIVALS",
+            "description": "",
+            "title_color": "#ffffff",
+            "description_color": "#ffffff",
+            "title_text_size": 24,
+            "mobile_title_text_size": 16,
+            "description_text_size": 16,
+            "mobile_description_text_size": 12
           }
         },
         "slide_Afcimb": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/s1.jpg",
-            "title": "CURATED PATTERNS.<br>\nReady-to-ship · Ready-to-make.."
+            "title": "CURATED PATTERNS.<br>\nReady-to-ship · Ready-to-make..",
+            "description": "",
+            "title_color": "#ffffff",
+            "description_color": "#ffffff",
+            "title_text_size": 24,
+            "mobile_title_text_size": 16,
+            "description_text_size": 16,
+            "mobile_description_text_size": 12
           }
         }
       },
@@ -40,7 +61,9 @@
         "slide_Afcimb"
       ],
       "name": "首页轮播Banner",
-      "settings": {}
+      "settings": {
+        "section_background_color": "#333333"
+      }
     },
     "index_partner_brand_cP7z4k": {
       "type": "index-partner-brand",
@@ -120,7 +143,8 @@
       ],
       "name": "Index Partner Brand",
       "settings": {
-        "link": "shopify://collections"
+        "link": "shopify://collections",
+        "title": "Edited to essence made to endure. Minimal design with assured delivery for modern boutiques and online labels."
       }
     },
     "index_product_list_JHytb3": {
@@ -148,6 +172,7 @@
       "type": "index-as-seen-on-you",
       "name": "As Seen On You",
       "settings": {
+        "section_background_color": "#282828",
         "image_1": "shopify://shop_images/2025.06.28_Preprework2205.jpg",
         "description_1": "Sleeveless pleatedshell top",
         "image_1_url": "",
@@ -159,7 +184,10 @@
         "image_3_url": "",
         "image_4": "shopify://shop_images/2025.06.28_Preprework2226.jpg",
         "description_4": "Sleeveless pleatedshell top",
-        "image_4_url": ""
+        "image_4_url": "",
+        "image_5": "shopify://shop_images/2025.06.28_Preprework4103.jpg",
+        "description_5": "test",
+        "image_5_url": "shopify://products/draped-neck-long-sleeve-top"
       }
     },
     "index_discover_xfrBet": {
