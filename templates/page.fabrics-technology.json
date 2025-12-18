@@ -17,6 +17,31 @@
         "padding_bottom": 28
       }
     },
+    "ft_banner_swiper_8xHLzE": {
+      "type": "ft-banner-swiper",
+      "blocks": {
+        "slide_dw9BmB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/039166c2bbf9f53b4d2f21dbe054443193c8d2a9.png"
+          }
+        },
+        "slide_jWp8hy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/source_image.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_dw9BmB",
+        "slide_jWp8hy"
+      ],
+      "name": "fabric technology Banner",
+      "settings": {
+        "section_background_color": "#000"
+      }
+    },
     "page_fabrics_technology_iWA36J": {
       "type": "page-fabrics-technology",
       "blocks": {
@@ -101,6 +126,7 @@
   },
   "order": [
     "main",
+    "ft_banner_swiper_8xHLzE",
     "page_fabrics_technology_iWA36J"
   ]
 }
