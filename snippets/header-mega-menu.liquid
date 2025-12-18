@@ -31,7 +31,7 @@
               >
               <div class="w-1/2 aspect-720/440 overflow-hidden mega-menu-image-container" data-menu-index="{{ forloop.index }}" style="position: relative;">
                 {%- liquid
-                  assign default_image = section.settings.desktop_mega_menu_image
+                  assign first_link_image = section.settings.desktop_mega_menu_image
                   assign first_link_image = null
                   for block in section.blocks
                     if block.type == 'link_image'

@@ -177,7 +177,7 @@
                       preload: true
                   }}
                   <span class="block md:hidden">
-                    {% render 'icon', icon: 'icon-mobile-logo' %}
+                   {{ section.settings.mobile_logo | image_url: width: 600 | image_tag: class: 'header__heading-logo motion-reduce hidden md:block' }}
                   </span>
                 </div>
               
@@ -463,6 +463,11 @@
   "class": "section-header",
   "max_blocks": 3,
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "mobile_logo",
+      "label": "Mobile Logo"
+    },
     {
       "type": "image_picker",
       "id": "desktop_mega_menu_image",
