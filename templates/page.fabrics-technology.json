@@ -11,13 +11,64 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "page_fabrics_technology_iWA36J": {
+      "type": "page-fabrics-technology",
+      "blocks": {
+        "fabric_item_73URBK": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Acrylic Fabric",
+            "description": "Acrylic fabric is soft, lightweight, and durable, making it perfect for cozy sweaters and blankets.",
+            "image": "shopify://shop_images/039166c2bbf9f53b4d2f21dbe054443193c8d2a9.png",
+            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+          }
+        },
+        "fabric_item_aP8cLH": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Cotton Tshirt",
+            "description": "100% Cotton, different thickness from 180-400gsm",
+            "image": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png",
+            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+          }
+        },
+        "fabric_item_dr4CJG": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Fleece Fabric",
+            "description": "Fleece fabric is soft, warm, and cozy, providing excellent insulation for jackets, blankets, and cold-weather accessories.",
+            "image": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png",
+            "image_2": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png"
+          }
+        },
+        "fabric_item_Kybedn": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Terry Fabric",
+            "description": "Cotton or polyester blend, different thickness from 200gsm-500gsm,use for hoodies , tshirts, loungewear",
+            "image": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png",
+            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+          }
+        }
+      },
+      "block_order": [
+        "fabric_item_73URBK",
+        "fabric_item_aP8cLH",
+        "fabric_item_dr4CJG",
+        "fabric_item_Kybedn"
+      ],
+      "name": "Fabrics Technology",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "page_fabrics_technology_iWA36J"
   ]
 }
