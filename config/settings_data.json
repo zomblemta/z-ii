@@ -127,6 +127,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "product_info_size_guide_page_content": "size-guide",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
