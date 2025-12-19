@@ -55,6 +55,13 @@
     "header": {
       "type": "header",
       "blocks": {
+        "link_image_cxGKiP": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/bag.jpg",
+            "link": "shopify://collections/accessories-bags"
+          }
+        },
         "link_image_7JrTR7": {
           "type": "link_image",
           "settings": {
@@ -78,6 +85,7 @@
         }
       },
       "block_order": [
+        "link_image_cxGKiP",
         "link_image_7JrTR7",
         "link_image_bcKzqN",
         "link_image_WULjnp"
