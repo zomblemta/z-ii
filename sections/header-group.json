@@ -55,6 +55,13 @@
     "header": {
       "type": "header",
       "blocks": {
+        "link_image_Dbindc": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/Dress_Skirts.jpg",
+            "link": "shopify://collections/dress-skirts"
+          }
+        },
         "link_image_KxLaVi": {
           "type": "link_image",
           "settings": {
@@ -99,6 +106,7 @@
         }
       },
       "block_order": [
+        "link_image_Dbindc",
         "link_image_KxLaVi",
         "link_image_JzPpLB",
         "link_image_cxGKiP",
