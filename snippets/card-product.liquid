@@ -191,7 +191,7 @@
               >
                 {{ card_product.title | escape }}
               </a>
-              <button
+              {% comment %} <button
                 type="button"
                 class="card-quick-add-btn shrink-0 cursor-pointer h-[20px] leading-none flex items-center border-none bg-transparent p-0 hover:opacity-70 transition-opacity "
                 data-product-id="{{ card_product.id }}"
@@ -207,7 +207,7 @@
                   <span class="loader-dot"></span>
                   <span class="loader-dot"></span>
                 </span>
-              </button>
+              </button> {% endcomment %}
             </h3>
             <div class="card-information">
               {% comment %}

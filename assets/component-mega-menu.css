@@ -49,9 +49,8 @@
 
 .header--top-center .mega-menu__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 0;
 }
 
 .header--top-center .mega-menu__list > li {

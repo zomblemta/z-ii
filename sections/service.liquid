@@ -69,13 +69,13 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <div class="lg:hidden overflow-x-auto pb-4 -mx-4 px-4">
-        <div class="flex gap-2 min-w-max">
+      <div class="lg:hidden overflow-x-auto pb-4 px-4 max-w-full">
+        <div class="flex gap-2 min-w-max max-w-full">
           {%- for block in section.blocks -%}
             {%- if block.type == 'service_item' -%}
               <a 
                 href="#service-{{ block.id }}"
-                class="service-nav-item-mobile text-[10px] shrink-0 px-1.5 py-1  bg-[#F2F2F2] rounded-[2px]  transition-colors duration-300"
+                class="service-nav-item-mobile text-[10px] shrink-0 px-1.5 py-1  bg-[#F2F2F2] rounded-[2px]  transition-colors duration-300 whitespace-nowrap"
                 data-target="service-{{ block.id }}"
               >
                 {{ block.settings.title | default: 'Service Title' }}

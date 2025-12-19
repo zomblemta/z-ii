@@ -66,26 +66,26 @@
   class="hero-banner-section "
 >
   <div class="hero-banner-wrapper flex flex-col md:flex-row">
-    <div class="hero-banner-container flex flex-col lg:flex-row items-center  ">
+    <div class="hero-banner-container flex flex-col lg:flex-row items-center  w-full ">
       <!-- 左侧内容区 -->
       <div
         style="background-color: {{ section.settings.section_background_color }};"
-        class="hero-content md:max-h-full w-full h-full flex justify-center items-center order-2 md:order-1  py-[40px] lg:p-0 md:w-1/2  "
+        class="hero-content shrink-0 md:max-h-full w-1/2 h-full flex justify-center items-center order-2 md:order-1  py-[40px] lg:p-0  "
       >
-        <div class="content-wrapper mx-auto md:mx-0 text-center md:text-left w-full max-w-full flex justify-center items-center">
-          <div class="flex flex-col items-center gap-[16px] px-[26px] md:gap-[60px] md:px-0 md:max-w-[50%] mx-auto md:mx-0 ">
-              <h1 class="text-[30px] text-nowrap md:text-wrap leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white   md:mx-0 ">
+       <div class="content-wrapper w-max-content text-center md:text-left  flex justify-center items-center">
+          <div class="flex flex-col  text-center  items-center gap-[16px] px-[26px] md:gap-[60px]  w-full justify-center ">
+              <h1 class="text-[30px]   text-nowrap md:text-wrap leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white   md:mx-0 ">
                 {{ section.settings.title | default: 'Fabrics and Technology' }}
               </h1>
-              <p class="text-white text-left text-base font-light w-full ">
+              <p class="text-white  text-base font-light w-full ">
                 {{ section.settings.description | default: 'The fabrics and technology we can offer.' }}
               </p>
           </div>
-        </div>
+        </div> 
       </div>
 
       <!-- 右侧轮播区 -->
-      <div class="hero-swiper-wrapper w-full h-[142px] md:h-full lg:w-1/2 order-1 md:order-2 ">
+    <div class="hero-swiper-wrapper w-full h-[142px] md:h-full md:w-1/2 order-1 md:order-2 ">
         <div class="swiper heroSwiper-{{ section.id }} overflow-hidden h-full">
           <div class="swiper-wrapper h-full">
             {%- for block in section.blocks -%}
@@ -118,7 +118,7 @@
           <!-- 分页器 -->
           <div class="swiper-pagination "></div>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
 </section>
