@@ -55,6 +55,13 @@
     "header": {
       "type": "header",
       "blocks": {
+        "link_image_KxLaVi": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/IN_STOCK.jpg",
+            "link": "shopify://collections/frontpage"
+          }
+        },
         "link_image_JzPpLB": {
           "type": "link_image",
           "settings": {
@@ -92,6 +99,7 @@
         }
       },
       "block_order": [
+        "link_image_KxLaVi",
         "link_image_JzPpLB",
         "link_image_cxGKiP",
         "link_image_7JrTR7",
