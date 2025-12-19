@@ -62,7 +62,7 @@
       ],
       "name": "首页轮播Banner",
       "settings": {
-        "section_background_color": "#333333"
+        "section_background_color": "#b3c5ce"
       }
     },
     "index_partner_brand_cP7z4k": {
@@ -172,19 +172,19 @@
       "type": "index-as-seen-on-you",
       "name": "As Seen On You",
       "settings": {
-        "section_background_color": "#282828",
+        "section_background_color": "#b3c5ce",
         "image_1": "shopify://shop_images/2025.06.28_Preprework2205.jpg",
         "description_1": "Sleeveless pleatedshell top",
-        "image_1_url": "",
+        "image_1_url": "shopify://products/bias-cut-check-long-skirt",
         "image_2": "shopify://shop_images/2025.06.28_Preprework3129.jpg",
         "description_2": "Sleeveless pleatedshell top",
-        "image_2_url": "",
+        "image_2_url": "shopify://products/ribbed-wool-lyocell-relaxed-knit",
         "image_3": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
         "description_3": "Sleeveless pleatedshell top",
         "image_3_url": "",
         "image_4": "shopify://shop_images/2025.06.28_Preprework2226.jpg",
         "description_4": "Sleeveless pleatedshell top",
-        "image_4_url": "",
+        "image_4_url": "shopify://products/angora-wool-blend-relaxed-v-neck-sweater",
         "image_5": "shopify://shop_images/2025.06.28_Preprework4103.jpg",
         "description_5": "test",
         "image_5_url": "shopify://products/draped-neck-long-sleeve-top"

@@ -55,24 +55,32 @@
     "header": {
       "type": "header",
       "blocks": {
-        "link_image_WULjnp": {
+        "link_image_7JrTR7": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/z_banner4.jpg",
-            "link": "shopify://collections/test"
+            "image": "shopify://shop_images/Blazer.jpg",
+            "link": "shopify://collections/summer"
           }
         },
         "link_image_bcKzqN": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/z_banner5.jpg",
+            "image": "shopify://shop_images/Top.jpg",
             "link": "shopify://collections/tops"
+          }
+        },
+        "link_image_WULjnp": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/Bottoms.jpg",
+            "link": "shopify://collections/test"
           }
         }
       },
       "block_order": [
-        "link_image_WULjnp",
-        "link_image_bcKzqN"
+        "link_image_7JrTR7",
+        "link_image_bcKzqN",
+        "link_image_WULjnp"
       ],
       "settings": {
         "mobile_logo": "shopify://shop_images/mobile-logo.png",
