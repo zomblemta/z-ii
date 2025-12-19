@@ -62,7 +62,7 @@
       ],
       "name": "首页轮播Banner",
       "settings": {
-        "section_background_color": "#333333"
+        "section_background_color": "#b3c5ce"
       }
     },
     "index_partner_brand_cP7z4k": {
@@ -172,7 +172,7 @@
       "type": "index-as-seen-on-you",
       "name": "As Seen On You",
       "settings": {
-        "section_background_color": "#282828",
+        "section_background_color": "#b3c5ce",
         "image_1": "shopify://shop_images/2025.06.28_Preprework2205.jpg",
         "description_1": "Sleeveless pleatedshell top",
         "image_1_url": "shopify://products/bias-cut-check-long-skirt",
