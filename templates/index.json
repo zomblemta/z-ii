@@ -251,7 +251,7 @@
         "title": "Services",
         "description": "Bespoke development for your brand built to spec.",
         "button_label": "Learn More",
-        "button_url": "shopify://collections",
+        "button_url": "shopify://pages/services",
         "text_content": "“ Quiet Essentials\n  for\n  Modern Brands. ”"
       }
     },
