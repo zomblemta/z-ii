@@ -27,6 +27,7 @@
     },
     "contact_us_fMVDyz": {
       "type": "contact-us",
+      "custom_css": [],
       "name": "Contact Us Form",
       "settings": {}
     }
