@@ -16,8 +16,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/z_banner4.jpg",
-            "title": "CREATE YOUR EDIT.<br>\nCUT. SAMPLE. PRODUCE.",
-            "description": "",
+            "title": "CREATE YOUR EDIT.<br>",
+            "description": "CUT. SAMPLE. PRODUCE.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
