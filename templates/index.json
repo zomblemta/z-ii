@@ -12,6 +12,20 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
+        "slide_nECWVe": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Z_II-08.jpg",
+            "title": "CURATED EDIT",
+            "description": "Minimal styles, crafted for your brand.",
+            "title_color": "#ffffff",
+            "description_color": "#ffffff",
+            "title_text_size": 24,
+            "mobile_title_text_size": 16,
+            "description_text_size": 16,
+            "mobile_description_text_size": 12
+          }
+        },
         "slide_yzHmBm": {
           "type": "slide",
           "settings": {
@@ -56,6 +70,7 @@
         }
       },
       "block_order": [
+        "slide_nECWVe",
         "slide_yzHmBm",
         "slide_gUi7BK",
         "slide_Afcimb"
