@@ -63,8 +63,8 @@
       "name": "首页轮播Banner",
       "settings": {
         "section_background_color": "#b3c5ce",
-        "shop_now_link": "",
-        "talk_to_our_team_link": ""
+        "shop_now_link": "shopify://collections",
+        "talk_to_our_team_link": "shopify://pages/contact-us"
       }
     },
     "index_partner_brand_cP7z4k": {
