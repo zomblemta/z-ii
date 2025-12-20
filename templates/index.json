@@ -44,8 +44,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/s1.jpg",
-            "title": "CURATED PATTERNS.<br>\nReady-to-ship · Ready-to-make..",
-            "description": "",
+            "title": "CURATED PATTERNS.<br>",
+            "description": "Ready-to-ship · Ready-to-make.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
