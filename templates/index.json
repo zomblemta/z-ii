@@ -62,7 +62,9 @@
       ],
       "name": "首页轮播Banner",
       "settings": {
-        "section_background_color": "#b3c5ce"
+        "section_background_color": "#b3c5ce",
+        "shop_now_link": "",
+        "talk_to_our_team_link": ""
       }
     },
     "index_partner_brand_cP7z4k": {
@@ -198,7 +200,7 @@
           "settings": {
             "image": "shopify://shop_images/2025.11.22_Pre_preworks0365_1.jpg",
             "title": "Best Sellers",
-            "description": "Items currently available for immediate sale.",
+            "description": "Discover our most-requested styles—proven sell-through, In-Stock or MTO.",
             "url": "shopify://collections/test"
           }
         },
@@ -216,8 +218,8 @@
           "settings": {
             "image": "shopify://shop_images/2025.06.28_Preprework1740_1.jpg",
             "title": "SS’26 Pre-order",
-            "description": "New arrivals, available to reserve.",
-            "url": ""
+            "description": "SS26 is ready—pre-order early to secure your seasonal stock.",
+            "url": "shopify://collections/spring"
           }
         },
         "discover_4TxCNh": {
