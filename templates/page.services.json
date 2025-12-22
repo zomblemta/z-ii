@@ -20,7 +20,7 @@
     "service_UxiADA": {
       "type": "service",
       "blocks": {
-        "service_item_VYULML": {
+        "service_item_43CLhc": {
           "type": "service_item",
           "settings": {
             "title": "Private Label",
@@ -37,14 +37,14 @@
         "service_item_C7aJ37": {
           "type": "service_item",
           "settings": {
-            "title": "Custom Logo Printing",
+            "title": "Blank Stock Wholesale",
             "image": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
             "image_position": "right",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
-            "step_5": "",
+            "step_1": "What you get\n：<br>Ready styles with consistent fits across: Tops / Bottoms / Dresses / Blazers / Knitwear / Coats",
+            "step_2": "MOQ & dispatch:<br>\n<br>\n·From 1 pc\n<br>\n·Ship now or dispatch in 48–72h (subject to stock)",
+            "step_3": "Ordering steps:<br>\n·Select styles & size run → send qty + ship-to for freight → confirm invoice → dispatch",
+            "step_4": "Shipping options：<br>\n·Courier for small orders (DHL/FedEx/UPS/TNT)<br>\n·Sea freight for large volume (by weight/pcs)",
+            "step_5": "Strengths：\n<br>·Wide selection, fast turnaround, suitable for quick restocks<br>\n·Supports small-batch global shipping",
             "step_6": ""
           }
         },
@@ -75,13 +75,41 @@
             "step_5": "",
             "step_6": ""
           }
+        },
+        "service_item_TEgVQW": {
+          "type": "service_item",
+          "settings": {
+            "title": "Service Title",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "",
+            "step_5": "",
+            "step_6": ""
+          }
+        },
+        "service_item_98hm7r": {
+          "type": "service_item",
+          "settings": {
+            "title": "Service Title",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
+            "step_4": "",
+            "step_5": "",
+            "step_6": ""
+          }
         }
       },
       "block_order": [
-        "service_item_VYULML",
+        "service_item_43CLhc",
         "service_item_C7aJ37",
         "service_item_tmE6Y9",
-        "service_item_PiRJcx"
+        "service_item_PiRJcx",
+        "service_item_TEgVQW",
+        "service_item_98hm7r"
       ],
       "name": "Service",
       "settings": {
