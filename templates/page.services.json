@@ -120,7 +120,7 @@
         "cta_subtitle": "Launch exclusive customized services",
         "cta_background_image": "shopify://shop_images/d23fb419d3bf6e290e6a42364c80d4c7ef57cfde.jpg",
         "cta_button_text": "LEARN MORE",
-        "cta_button_link": ""
+        "cta_button_link": "shopify://pages/contact-us"
       }
     }
   },
