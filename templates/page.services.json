@@ -51,15 +51,15 @@
         "service_item_tmE6Y9": {
           "type": "service_item",
           "settings": {
-            "title": "Design Clothing for Startups",
+            "title": "OEM / ODM (Concept → Garment)",
             "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
             "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "Let us know the quantity you need and wait for our quote.",
-            "step_5": "Let us know the quantity you need and wait for our quote.",
-            "step_6": ""
+            "step_1": "Best for<br>\n·Startups, exclusive patterns, unique fabric/trim solutions<br>\n·Brands needing full development + controlled QC",
+            "step_2": "Core deliverables<br>\n·Design direction / tech pack support<br>\n·Patternmaking + grading (S/M/L or custom size set)<br>\n·Samples (Proto → Fit → PP)<br>\n·Bulk production + packing + export documents",
+            "step_3": "Development workflow:<br>\nProject scoping → materials plan → pattern & sampling → pricing/MOQ/lead time + PPM → bulk + QC → shipment",
+            "step_4": "What we need from you：<br>\n\n·Tech pack or reference images/sample + measurement specs<br>\n\n·Target price, MOQ expectation, delivery window<br>\n\n·Colorways + size range + branding/pack requirements<br>",
+            "step_5": "Typical timing (reference)：<br>\n\n·Sampling: ~5–7 days<br days after materials confirmed by style>",
+            "step_6": "Terms & QC：<br>\n\n·Shipping terms: FOB / CIF / DAP / DDP (as agreed)\n\n·QC: inline checks + AQL final"
           }
         },
         "service_item_PiRJcx": {
