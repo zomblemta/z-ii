@@ -23,15 +23,15 @@
         "service_item_VYULML": {
           "type": "service_item",
           "settings": {
-            "title": "Blank Plain Wholesale",
+            "title": "Private Label",
             "image": "shopify://shop_images/ef04387bac58a3d1f61513b305f9affd9d4a7ddd.png",
             "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "Let us know the quantity you need and wait for our quote.",
-            "step_5": "Let us know the quantity you need and wait for our quote.",
-            "step_6": ""
+            "step_1": "Best for：\n·Boutiques, fast drops, small-batch testing\n·Brands that want quick branding without full development",
+            "step_2": "What you can customize：\n·Logo/graphics: embroidery, screen print, heat transfer, heat-seal patch, digital print\n·Relabeling: main label / care label / size label\n·Packaging: hangtags, barcode stickers, polybags, cartons, shipping marks\n·Minor updates: color change, small trims/fit adjustments (by feasibility)",
+            "step_3": "MOQ & lead time (reference)：\n·Logo/processing: typically 50–100+ pcs (by technique)\n·Sampling: ~5–7 days\n·Bulk: scheduled after sample approval + material confirmation",
+            "step_4": "Workflow：\n·Pick style + size run → confirm customization plan → artwork review → sample → bulk → QC → ship",
+            "step_5": "What we need from you：\n·Vector artwork (AI/EPS/PDF) + placement + size (cm)\n·Color info (Pantone/print color) + technique preference\n·Quantity per color/size + target delivery date",
+            "step_6": "Deliverables：\n·Customization mockup / placement confirmation\n\n·Approved sample (if required)\n\n·Bulk production with branding + packing as agreed"
           }
         },
         "service_item_C7aJ37": {
