@@ -89,20 +89,6 @@
             "step_5": "",
             "step_6": ""
           }
-        },
-        "service_item_98hm7r": {
-          "type": "service_item",
-          "settings": {
-            "title": "Service Title",
-            "image": "shopify://shop_images/z_banner6.jpg",
-            "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
-            "step_5": "",
-            "step_6": ""
-          }
         }
       },
       "block_order": [
@@ -110,8 +96,7 @@
         "service_item_C7aJ37",
         "service_item_tmE6Y9",
         "service_item_PiRJcx",
-        "service_item_TEgVQW",
-        "service_item_98hm7r"
+        "service_item_TEgVQW"
       ],
       "name": "Service",
       "settings": {
