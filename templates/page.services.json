@@ -79,12 +79,13 @@
         "service_item_TEgVQW": {
           "type": "service_item",
           "settings": {
-            "title": "Service Title",
+            "title": "Common Specs & Commitments",
+            "image": "shopify://shop_images/z_banner6.jpg",
             "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
+            "step_1": "Minimum Order Quantity (MOQ)：\n<br>\n·In-stock: from 1 piece\n<br>\n·Customization / OEM: typically 50+ pcs (final MOQ may vary by fabric availability, techniques, and complexity)",
+            "step_2": "Lead Time Reference：\n<br>\n·Sampling: 5–7 business days\n<br>\n·Bulk production: 15–20 business days after materials & details are confirmed (may vary by project scope)",
+            "step_3": "Compliance & Documents：\n<br>\n·Can provide Commercial Invoice (CI) / Packing List (PL) / HS Code\n<br>\n·Can support compliance labels & markings as required",
+            "step_4": "Quality & Delivery：\n<br>\n·OTIF (On-Time In-Full) delivery targets\n<br>\n·Trackable, measurable production performance including First-Pass Yield (initial inspection pass rate)",
             "step_5": "",
             "step_6": ""
           }
@@ -93,6 +94,7 @@
           "type": "service_item",
           "settings": {
             "title": "Service Title",
+            "image": "shopify://shop_images/z_banner6.jpg",
             "image_position": "left",
             "step_1": "Please contact our customer service team first and let them know the style you need.",
             "step_2": "Let us know the quantity you need and wait for our quote.",
