@@ -55,13 +55,6 @@
     "header": {
       "type": "header",
       "blocks": {
-        "link_image_7JrTR7": {
-          "type": "link_image",
-          "settings": {
-            "image": "shopify://shop_images/Blazer.jpg",
-            "link": "shopify://collections/summer"
-          }
-        },
         "link_image_bcKzqN": {
           "type": "link_image",
           "settings": {
@@ -75,12 +68,51 @@
             "image": "shopify://shop_images/Bottoms.jpg",
             "link": "shopify://collections/test"
           }
+        },
+        "link_image_Dbindc": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/C-II4.jpg",
+            "link": "shopify://collections/dress-skirts"
+          }
+        },
+        "link_image_JzPpLB": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/Coat_Outwear.jpg",
+            "link": "shopify://collections/outwear"
+          }
+        },
+        "link_image_7JrTR7": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/Blazer.jpg",
+            "link": "shopify://collections/summer"
+          }
+        },
+        "link_image_cxGKiP": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/bag.jpg",
+            "link": "shopify://collections/accessories-bags"
+          }
+        },
+        "link_image_KxLaVi": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/IN_STOCK.jpg",
+            "link": "shopify://collections/frontpage"
+          }
         }
       },
       "block_order": [
-        "link_image_7JrTR7",
         "link_image_bcKzqN",
-        "link_image_WULjnp"
+        "link_image_WULjnp",
+        "link_image_Dbindc",
+        "link_image_JzPpLB",
+        "link_image_7JrTR7",
+        "link_image_cxGKiP",
+        "link_image_KxLaVi"
       ],
       "settings": {
         "mobile_logo": "shopify://shop_images/mobile-logo.png",

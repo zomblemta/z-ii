@@ -12,12 +12,26 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
+        "slide_nECWVe": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2bc424a2-646f-44c0-9538-eb30565996c2.png",
+            "title": "CURATED EDIT",
+            "description": "Minimal styles, crafted for your brand.",
+            "title_color": "#ffffff",
+            "description_color": "#ffffff",
+            "title_text_size": 24,
+            "mobile_title_text_size": 16,
+            "description_text_size": 16,
+            "mobile_description_text_size": 12
+          }
+        },
         "slide_yzHmBm": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/z_banner4.jpg",
-            "title": "CREATE YOUR EDIT.<br>\nCUT. SAMPLE. PRODUCE.",
-            "description": "",
+            "title": "CREATE YOUR EDIT.<br>",
+            "description": "CUT. SAMPLE. PRODUCE.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -44,8 +58,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/s1.jpg",
-            "title": "CURATED PATTERNS.<br>\nReady-to-ship · Ready-to-make..",
-            "description": "",
+            "title": "CURATED PATTERNS.<br>",
+            "description": "Ready-to-ship · Ready-to-make.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -56,90 +70,58 @@
         }
       },
       "block_order": [
+        "slide_nECWVe",
         "slide_yzHmBm",
         "slide_gUi7BK",
         "slide_Afcimb"
       ],
       "name": "首页轮播Banner",
       "settings": {
-        "section_background_color": "#b3c5ce"
+        "section_background_color": "#b3c5ce",
+        "shop_now_link": "shopify://collections",
+        "talk_to_our_team_link": "shopify://pages/contact-us"
       }
     },
     "index_partner_brand_cP7z4k": {
       "type": "index-partner-brand",
       "blocks": {
-        "brand_KFRQD9": {
+        "brand_3jjEjm": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_UCBb9C": {
+        "brand_QwXUYm": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_cKGfPJ": {
+        "brand_KebbVf": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_N4QLNR": {
+        "brand_6hFQ6F": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_8xNVbc": {
+        "brand_9FiUjV": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_rEHRa4": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_TfjefF": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_3gWryf": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_Nd7tLn": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_WUdMqz": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         }
       },
       "block_order": [
-        "brand_KFRQD9",
-        "brand_UCBb9C",
-        "brand_cKGfPJ",
-        "brand_N4QLNR",
-        "brand_8xNVbc",
-        "brand_rEHRa4",
-        "brand_TfjefF",
-        "brand_3gWryf",
-        "brand_Nd7tLn",
-        "brand_WUdMqz"
+        "brand_3jjEjm",
+        "brand_QwXUYm",
+        "brand_KebbVf",
+        "brand_6hFQ6F",
+        "brand_9FiUjV"
       ],
       "name": "Index Partner Brand",
       "settings": {
@@ -151,8 +133,8 @@
       "type": "index-product-list",
       "name": "Alp Index Product List",
       "settings": {
-        "url": "shopify://collections/frontpage",
-        "title": "IN STOCK",
+        "url": "shopify://collections/best-sellers",
+        "title": "Best sellers",
         "product_list": [
           "asymmetric-wrap-collar-shirt",
           "cashmere-silk-fine-gauge-long-sleeve",
@@ -197,8 +179,8 @@
           "type": "discover",
           "settings": {
             "image": "shopify://shop_images/2025.11.22_Pre_preworks0365_1.jpg",
-            "title": "Best Sellers",
-            "description": "Items currently available for immediate sale.",
+            "title": "In Stock",
+            "description": "Ready to ship—orders from 1 piece, dispatched in 1–3 business days.",
             "url": "shopify://collections/test"
           }
         },
@@ -207,7 +189,7 @@
           "settings": {
             "image": "shopify://shop_images/2898c441-ea0c-4936-a49d-3a04ab08b5aa_1.png",
             "title": "Blazer Collection",
-            "description": "Items currently available for immediate sale.",
+            "description": "Clean tailoring, sharp proportions—blazers for modern brands.",
             "url": ""
           }
         },
@@ -216,8 +198,8 @@
           "settings": {
             "image": "shopify://shop_images/2025.06.28_Preprework1740_1.jpg",
             "title": "SS’26 Pre-order",
-            "description": "New arrivals, available to reserve.",
-            "url": ""
+            "description": "SS26 is ready—pre-order early to secure your seasonal stock.",
+            "url": "shopify://collections/spring"
           }
         },
         "discover_4TxCNh": {
@@ -251,7 +233,7 @@
         "title": "Services",
         "description": "Bespoke development for your brand built to spec.",
         "button_label": "Learn More",
-        "button_url": "shopify://collections",
+        "button_url": "shopify://pages/services",
         "text_content": "“ Quiet Essentials\n  for\n  Modern Brands. ”"
       }
     },

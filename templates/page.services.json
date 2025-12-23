@@ -20,68 +20,83 @@
     "service_UxiADA": {
       "type": "service",
       "blocks": {
-        "service_item_VYULML": {
+        "service_item_43CLhc": {
           "type": "service_item",
           "settings": {
-            "title": "Blank Plain Wholesale",
+            "title": "Private Label",
             "image": "shopify://shop_images/ef04387bac58a3d1f61513b305f9affd9d4a7ddd.png",
             "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "Let us know the quantity you need and wait for our quote.",
-            "step_5": "Let us know the quantity you need and wait for our quote.",
-            "step_6": ""
+            "step_1": "Best for：<br>\n·Boutiques, fast drops, small-batch testing<br>\n·Brands that want quick branding without full development",
+            "step_2": "What you can customize：<br>\n·Logo/graphics: embroidery, screen print, heat transfer, heat-seal patch, digital print\n·Relabeling: main label / care label / size label<br>\n·Packaging: hangtags, barcode stickers, polybags, cartons, shipping marks<br>\n·Minor updates: color change, small trims/fit adjustments (by feasibility)",
+            "step_3": "MOQ & lead time (reference)：<br>\n·Logo/processing: typically 50–100+ pcs (by technique)<br>\n·Sampling: ~5–7 days<br>\n·Bulk: scheduled after sample approval + material confirmation",
+            "step_4": "Workflow：<br>\n·Pick style + size run → confirm customization plan → artwork review → sample → bulk → QC → ship",
+            "step_5": "What we need from you：<br>\n·Vector artwork (AI/EPS/PDF) + placement + size (cm)<br>\n·Color info (Pantone/print color) + technique preference<br>\n·Quantity per color/size + target delivery date",
+            "step_6": "Deliverables：<br>\n·Customization mockup / placement confirmation<br>\n·Approved sample (if required)<br>\n·Bulk production with branding + packing as agreed"
           }
         },
         "service_item_C7aJ37": {
           "type": "service_item",
           "settings": {
-            "title": "Custom Logo Printing",
+            "title": "Blank Stock Wholesale",
             "image": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
             "image_position": "right",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
-            "step_5": "",
+            "step_1": "What you get\n：<br>Ready styles with consistent fits across: Tops / Bottoms / Dresses / Blazers / Knitwear / Coats",
+            "step_2": "MOQ & dispatch:<br>\n<br>\n·From 1 pc\n<br>\n·Ship now or dispatch in 48–72h (subject to stock)",
+            "step_3": "Ordering steps:<br>\n·Select styles & size run → send qty + ship-to for freight → confirm invoice → dispatch",
+            "step_4": "Shipping options：<br>\n·Courier for small orders (DHL/FedEx/UPS/TNT)<br>\n·Sea freight for large volume (by weight/pcs)",
+            "step_5": "Strengths：\n<br>·Wide selection, fast turnaround, suitable for quick restocks<br>\n·Supports small-batch global shipping",
             "step_6": ""
           }
         },
         "service_item_tmE6Y9": {
           "type": "service_item",
           "settings": {
-            "title": "Design Clothing for Startups",
+            "title": "OEM / ODM (Concept → Garment)",
             "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
             "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "Let us know the quantity you need and wait for our quote.",
-            "step_5": "Let us know the quantity you need and wait for our quote.",
-            "step_6": ""
+            "step_1": "Best for<br>\n·Startups, exclusive patterns, unique fabric/trim solutions<br>\n·Brands needing full development + controlled QC",
+            "step_2": "Core deliverables<br>\n·Design direction / tech pack support<br>\n·Patternmaking + grading (S/M/L or custom size set)<br>\n·Samples (Proto → Fit → PP)<br>\n·Bulk production + packing + export documents",
+            "step_3": "Development workflow:<br>\n·Project scoping → materials plan → pattern & sampling → pricing/MOQ/lead time + PPM → bulk + QC → shipment",
+            "step_4": "What we need from you：<br>\n\n·Tech pack or reference images/sample + measurement specs<br>\n\n·Target price, MOQ expectation, delivery window<br>\n\n·Colorways + size range + branding/pack requirements<br>",
+            "step_5": "Typical timing (reference)：<br>\n\n·Sampling: ~5–7 days<br days after materials confirmed by style>",
+            "step_6": "Terms & QC：<br>\n\n·Shipping terms: FOB / CIF / DAP / DDP (as agreed)\n\n·QC: inline checks + AQL final"
           }
         },
         "service_item_PiRJcx": {
           "type": "service_item",
           "settings": {
-            "title": "Replace Your Brand Labels",
+            "title": "Standard Production Workflow",
             "image": "shopify://shop_images/b09d24d4a4736f331a012030227147fe3beff4cc.png",
             "image_position": "right",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "Please contact our customer service team first and let them know the style you need.",
+            "step_1": "Design consulting：<br>\n\n·Confirm details: color, trims, proportions, pockets, accessories, labels, finishes",
+            "step_2": "Fabric & trim sourcing：<br>\n·Source to target price; stock-first for speed; low-MOQ development if needed",
+            "step_3": "Pattern & samples：<br>\n\n·3D/CAD pattern → adjustments → grading → first sample + PD check",
+            "step_4": "Cutting & sewing：\n<br>\n·Fabric inspection/pre-shrink → precise cutting → line assembly → initial QC",
+            "step_5": "Special finishes：\n<br>\n·Wash/dye, digital/screen print, heat transfer, embroidery",
+            "step_6": "Labels / hardware / packaging：\n<br>\n·Labels, trims/hardware, barcode & packing plan"
+          }
+        },
+        "service_item_TEgVQW": {
+          "type": "service_item",
+          "settings": {
+            "title": "Common Specs & Commitments",
+            "image": "shopify://shop_images/z_banner6.jpg",
+            "image_position": "left",
+            "step_1": "Minimum Order Quantity (MOQ)：\n<br>\n·In-stock: from 1 piece\n<br>\n·Customization / OEM: typically 50+ pcs (final MOQ may vary by fabric availability, techniques, and complexity)",
+            "step_2": "Lead Time Reference：\n<br>\n·Sampling: 5–7 business days\n<br>\n·Bulk production: 15–20 business days after materials & details are confirmed (may vary by project scope)",
+            "step_3": "Compliance & Documents：\n<br>\n·Can provide Commercial Invoice (CI) / Packing List (PL) / HS Code\n<br>\n·Can support compliance labels & markings as required",
+            "step_4": "Quality & Delivery：\n<br>\n·OTIF (On-Time In-Full) delivery targets\n<br>\n·Trackable, measurable production performance including First-Pass Yield (initial inspection pass rate)",
             "step_5": "",
             "step_6": ""
           }
         }
       },
       "block_order": [
-        "service_item_VYULML",
+        "service_item_43CLhc",
         "service_item_C7aJ37",
         "service_item_tmE6Y9",
-        "service_item_PiRJcx"
+        "service_item_PiRJcx",
+        "service_item_TEgVQW"
       ],
       "name": "Service",
       "settings": {
@@ -92,7 +107,7 @@
         "cta_subtitle": "Launch exclusive customized services",
         "cta_background_image": "shopify://shop_images/d23fb419d3bf6e290e6a42364c80d4c7ef57cfde.jpg",
         "cta_button_text": "LEARN MORE",
-        "cta_button_link": ""
+        "cta_button_link": "shopify://pages/contact-us"
       }
     }
   },

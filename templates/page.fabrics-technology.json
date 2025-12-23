@@ -23,13 +23,13 @@
         "slide_dw9BmB": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/039166c2bbf9f53b4d2f21dbe054443193c8d2a9.png"
+            "image": "shopify://shop_images/Z_II2.jpg"
           }
         },
         "slide_jWp8hy": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/source_image.png"
+            "image": "shopify://shop_images/Z_II1.jpg"
           }
         }
       },
@@ -39,7 +39,7 @@
       ],
       "name": "fabric technology Banner",
       "settings": {
-        "section_background_color": "#000"
+        "section_background_color": "#b3c5ce"
       }
     },
     "page_fabrics_technology_iWA36J": {
