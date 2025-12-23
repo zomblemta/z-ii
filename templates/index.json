@@ -85,43 +85,29 @@
     "index_partner_brand_cP7z4k": {
       "type": "index-partner-brand",
       "blocks": {
-        "brand_3jjEjm": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/Z_II_logo.png"
-          }
-        },
-        "brand_QwXUYm": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/Z_II_logo.png"
-          }
-        },
-        "brand_KebbVf": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/Z_II_logo.png"
-          }
-        },
         "brand_6hFQ6F": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/Z_II_logo.png"
+            "image": "shopify://shop_images/mobile-logo.png"
           }
         },
-        "brand_9FiUjV": {
+        "brand_HXbibT": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/Z_II_logo.png"
+            "image": "shopify://shop_images/mobile-logo.png"
+          }
+        },
+        "brand_WM7dRQ": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/mobile-logo.png"
           }
         }
       },
       "block_order": [
-        "brand_3jjEjm",
-        "brand_QwXUYm",
-        "brand_KebbVf",
         "brand_6hFQ6F",
-        "brand_9FiUjV"
+        "brand_HXbibT",
+        "brand_WM7dRQ"
       ],
       "name": "Index Partner Brand",
       "settings": {
