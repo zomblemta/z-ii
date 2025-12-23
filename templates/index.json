@@ -85,78 +85,43 @@
     "index_partner_brand_cP7z4k": {
       "type": "index-partner-brand",
       "blocks": {
-        "brand_KFRQD9": {
+        "brand_3jjEjm": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_UCBb9C": {
+        "brand_QwXUYm": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_cKGfPJ": {
+        "brand_KebbVf": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_N4QLNR": {
+        "brand_6hFQ6F": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         },
-        "brand_8xNVbc": {
+        "brand_9FiUjV": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_rEHRa4": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_TfjefF": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_3gWryf": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_Nd7tLn": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
-          }
-        },
-        "brand_WUdMqz": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/logo1.png"
+            "image": "shopify://shop_images/Z_II_logo.png"
           }
         }
       },
       "block_order": [
-        "brand_KFRQD9",
-        "brand_UCBb9C",
-        "brand_cKGfPJ",
-        "brand_N4QLNR",
-        "brand_8xNVbc",
-        "brand_rEHRa4",
-        "brand_TfjefF",
-        "brand_3gWryf",
-        "brand_Nd7tLn",
-        "brand_WUdMqz"
+        "brand_3jjEjm",
+        "brand_QwXUYm",
+        "brand_KebbVf",
+        "brand_6hFQ6F",
+        "brand_9FiUjV"
       ],
       "name": "Index Partner Brand",
       "settings": {
