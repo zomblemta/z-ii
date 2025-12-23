@@ -2328,11 +2328,11 @@ input[type="checkbox"] {
 
 .header__heading-logo {
   height: auto;
-  max-width: 100%;
 }
 @media screen and (max-width: 768px) {
   .header__heading-logo  {
-    width: 90px;
+    width: 120px;
+    height: auto;
   }
 }
 

@@ -94,9 +94,9 @@
         samples, sourcing, pricing, and many more.
       </p>
 
-      <div class="w-full mt-[24px] md:w-[151px] h-[40px] bg-black text-white text-base flex justify-center items-center rounded-[5px]">
+      <a href="{{ section.settings.faq_url }}" class="w-full mt-[24px] md:w-[151px] h-[40px] bg-black text-white text-base flex justify-center items-center rounded-[5px]">
         View More
-      </div>
+      </a>
     </div>
 
     <div class="md:w-[1/2] flex-1 grid grid-cols-1  gap-[12px]">
@@ -144,7 +144,14 @@
 {% schema %}
 {
   "name": "Contact Us Form",
-  "settings": [],
+  "settings": [
+    {
+      "type": "url",
+      "id": "faq_url",
+      "label": "FAQ URL"
+    }
+   
+  ],
   "blocks": [
     {
       "type": "faq",
