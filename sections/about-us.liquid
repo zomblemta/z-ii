@@ -6,21 +6,11 @@
   </p>
 
   <div class="flex flex-col  gap-[10px] md:gap-[30px] text-center">
-    <div class="bg-[#D9D9D9] font-Montaga w-full py-[12px] px-[14px] md:h-[100px] flex items-center justify-center text-base md:text-[36px] ">
-      We offer worldwide delivery services.
-    </div>
-    <div class="bg-[#D9D9D9]  font-Montaga w-full py-[12px] px-[14px] md:h-[100px] flex items-center justify-center text-base md:text-[36px] ">
-      We have the strictest quality control.
-    </div>
-    <div class="bg-[#D9D9D9]  font-Montaga w-full py-[12px] px-[14px] md:h-[100px] flex items-center justify-center text-base md:text-[36px] ">
-      We have factories audited to meet SMETA or BSCI standards.
-    </div>
-    <div class="bg-[#D9D9D9]  font-Montaga w-full py-[12px] px-[14px] md:h-[100px] flex items-center justify-center text-base md:text-[36px] ">
-      We have the most exclusive designs and a wide variety of styles.
-    </div>
-    <div class="bg-[#D9D9D9]  font-Montaga w-full py-[12px] px-[14px] md:h-[100px] flex items-center justify-center text-base md:text-[36px] ">
-      We offer high-quality exclusive custom services.
-    </div>
+    {% for block in section.blocks %}
+      <div class="bg-[#D9D9D9] font-Montaga w-full py-[12px] px-[14px] md:h-[100px] flex items-center justify-center text-base md:text-[36px] ">
+        {{ block.settings.description }}
+      </div>
+    {% endfor %}
   </div>
 </div>
 
@@ -28,6 +18,20 @@
 {
   "name": "About Us",
   "settings": [],
+  "blocks": [
+    {
+      "type": "about_us_item",
+      "name": "About Us Item",
+      "settings": [
+      
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],  
   "presets": [
     {
       "name": "About Us"

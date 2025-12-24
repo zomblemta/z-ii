@@ -548,6 +548,9 @@
   .aspect-720\/440 {
     aspect-ratio: 720/440;
   }
+  .aspect-720\/540 {
+    aspect-ratio: 720/540;
+  }
   .aspect-921\/541 {
     aspect-ratio: 921/541;
   }
@@ -559,6 +562,9 @@
   }
   .aspect-\[479\.65\/281\.79\] {
     aspect-ratio: 479.65/281.79;
+  }
+  .aspect-\[921\/541\] {
+    aspect-ratio: 921/541;
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
@@ -673,15 +679,6 @@
   }
   .w-\[80\%\] {
     width: 80%;
-  }
-  .w-\[90px\] {
-    width: 90px;
-  }
-  .w-\[100px\] {
-    width: 100px;
-  }
-  .w-\[110px\] {
-    width: 110px;
   }
   .w-\[120px\] {
     width: 120px;
@@ -1971,6 +1968,11 @@
       aspect-ratio: 266/397;
     }
   }
+  .md\:aspect-720\/540 {
+    @media (width >= 48rem) {
+      aspect-ratio: 720/540;
+    }
+  }
   .md\:aspect-720\/622 {
     @media (width >= 48rem) {
       aspect-ratio: 720/622;
@@ -2205,11 +2207,6 @@
   .md\:gap-\[40px\] {
     @media (width >= 48rem) {
       gap: 40px;
-    }
-  }
-  .md\:gap-\[42px\] {
-    @media (width >= 48rem) {
-      gap: 42px;
     }
   }
   .md\:gap-\[55px\] {

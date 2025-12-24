@@ -76,7 +76,8 @@
           <h3 class="m-0 text-[24px] md:text-[32px] font-Montaga uppercase font-normal">Contact Us</h3>
           <div>
             <p class="m-0 text-sm font-light font-Montaga leading-[24px]">
-              Email: <a href="mailto:info@ziistudios.com" class="underline text-black font-medium">info@ziistudios.com</a>
+              Email:
+              <a href="mailto:info@ziistudios.com" class="underline text-black font-medium">info@ziistudios.com</a>
               <br>
               Telephone: <a class="underline text-black font-medium">+86 186 8887 3388</a> <br>
               Whatsapp: <a class="underline text-black font-medium">+86 186 8887 3388</a>
@@ -94,25 +95,79 @@
         samples, sourcing, pricing, and many more.
       </p>
 
-      <a href="{{ section.settings.faq_url }}" class="w-full mt-[24px] md:w-[151px] h-[40px] bg-black text-white text-base flex justify-center items-center rounded-[5px]">
+      <a
+        href="{{ section.settings.faq_url }}"
+        class="w-full mt-[24px] md:w-[151px] h-[40px] bg-black text-white text-base flex justify-center items-center rounded-[5px]"
+      >
         View More
       </a>
     </div>
 
     <div class="md:w-[1/2] flex-1 grid grid-cols-1  gap-[12px]">
-      {%- for block in section.blocks -%}
-        <div class="faq-item">
-          <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[10px] text-xs md:text-base font-light flex justify-between items-center cursor-pointer">
-            <span>{{ block.settings.question }}</span>
-            <span class="faq-icon transition-transform duration-300">
-              {% render 'icon', icon: 'icon-plus' %}
-            </span>
-          </div>
-          <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
-            {{ block.settings.answer }}
-          </div>
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[10px] text-xs md:text-base font-light flex justify-between items-center cursor-pointer">
+          <span> What is the minimum order quantity (MOQ)? </span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
         </div>
-      {%- endfor -%}
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          You can find the MOQ on each product page. If the MOQ is a challenge, please contact us—we may be able to
+          suggest suitable alternatives.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[10px] text-xs md:text-base font-light flex justify-between items-center cursor-pointer">
+          <span> What is the minimum order quantity (MOQ)? </span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
+        </div>
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          You can find the MOQ on each product page. If the MOQ is a challenge, please contact us—we may be able to
+          suggest suitable alternatives.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[10px] text-xs md:text-base font-light flex justify-between items-center cursor-pointer">
+          <span> Can I review a digital proof before production? </span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
+        </div>
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          Yes. Our production team will send a digital proof covering all product details and customization placements.
+          We start production only after you approve it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[10px] text-xs md:text-base font-light flex justify-between items-center cursor-pointer">
+          <span> Can the production timeline be shortened? </span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
+        </div>
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          Lead times vary by product, customization technique, and season. Please refer to the lead-time notes on our
+          website and contact us if you need an expedited option.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question bg-[#F2F2F2] rounded-[5px] px-[12px] py-[10px] text-xs md:text-base font-light flex justify-between items-center cursor-pointer">
+          <span> Where do you ship? </span>
+          <span class="faq-icon transition-transform duration-300">
+            {% render 'icon', icon: 'icon-plus' %}
+          </span>
+        </div>
+        <div class="faq-answer hidden mt-[12px] px-[12px] text-xs font-light leading-[18px]">
+          We ship to most countries worldwide. We will confirm availability for your destination. If you need multiple
+          delivery addresses, we can support that as well.
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -150,7 +205,6 @@
       "id": "faq_url",
       "label": "FAQ URL"
     }
-   
   ],
   "blocks": [
     {

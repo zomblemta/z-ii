@@ -8,8 +8,8 @@
         </div>
       {%- endif -%}
       {%- if section.settings.desktop_image != blank -%}
-        <div class="hidden md:block aspect-921/541 overflow-hidden">
-        {% render 'alp-responsive-image' , image: section.settings.desktop_image, width: 921, height: 541 %}
+        <div class="hidden md:block aspect-375/281 md:aspect-720/540 overflow-hidden">
+        {% render 'alp-responsive-image' , image: section.settings.desktop_image, width: 921, height: 541 , class: 'w-full h-full object-cover' %}
         </div>
       {%- endif -%}
      

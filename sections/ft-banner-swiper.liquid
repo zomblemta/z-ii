@@ -72,42 +72,39 @@
         style="background-color: {{ section.settings.section_background_color }};"
         class="hero-content shrink-0 md:max-h-full w-1/2 h-full flex justify-center items-center order-2 md:order-1  py-[40px] lg:p-0  "
       >
-       <div class="content-wrapper w-max-content text-center md:text-left  flex justify-center items-center">
+        <div class="content-wrapper w-max-content text-center md:text-left  flex justify-center items-center">
           <div class="flex flex-col  text-center  items-center gap-[16px] px-[26px] md:gap-[60px]  w-full justify-center ">
-              <h1 class="text-[30px]   text-nowrap md:text-wrap leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white   md:mx-0 ">
-                {{ section.settings.title | default: 'Fabrics and Technology' }}
-              </h1>
-              <p class="text-white  text-base font-light w-full ">
-                {{ section.settings.description | default: 'The fabrics and technology we can offer.' }}
-              </p>
+            <h1 class="text-[30px]   text-nowrap md:text-wrap leading-[28px] md:leading-[64px] font-Montaga md:text-[64px] text-white   md:mx-0 ">
+              {{ section.settings.title | default: 'Fabrics and Technology' }}
+            </h1>
+            <p class="text-white  text-base font-light w-full ">
+              {{ section.settings.description | default: 'The fabrics and technology we can offer.' }}
+            </p>
           </div>
-        </div> 
+        </div>
       </div>
 
       <!-- 右侧轮播区 -->
-    <div class="hero-swiper-wrapper w-full h-[142px] md:h-full md:w-1/2 order-1 md:order-2 ">
+      <div class="hero-swiper-wrapper w-full h-[142px] md:h-full md:w-1/2 order-1 md:order-2 ">
         <div class="swiper heroSwiper-{{ section.id }} overflow-hidden h-full">
           <div class="swiper-wrapper h-full">
             {%- for block in section.blocks -%}
               {%- if block.type == 'slide' -%}
                 <div class="swiper-slide" {{ block.shopify_attributes }}>
                   {%- if block.settings.image != blank -%}
-                    {% if forloop.first %}
-                      <a href="#fabric">
-                    {% else %}
-                      <a href="#technology">
-                    {% endif %}
-                    <div class=" relative h-full w-full">
-                      {{
-                        block.settings.image
-                        | image_url: width: 1200
-                        | image_tag:
-                          loading: 'eager',
-                          class: 'w-full h-full object-cover',
-                          alt: block.settings.image.alt
-                        | escape
-                      }}
-                    </div>
+                    {% assign jump_to = block.settings.jump_to %}
+                    <a href="{% if jump_to == 'fabric' %}#fabric{% else %}#technology{% endif %}">
+                      <div class="relative h-full w-full">
+                        {{
+                          block.settings.image
+                          | image_url: width: 1200
+                          | image_tag:
+                            loading: 'eager',
+                            class: 'w-full h-full object-cover',
+                            alt: block.settings.image.alt
+                          | escape
+                        }}
+                      </div>
                     </a>
                   {%- endif -%}
                 </div>
@@ -118,7 +115,7 @@
           <!-- 分页器 -->
           <div class="swiper-pagination "></div>
         </div>
-      </div> 
+      </div>
     </div>
   </div>
 </section>
@@ -169,12 +166,27 @@
     {
       "type": "slide",
       "name": "轮播图片",
-      "limit": 2,
+      "limit": 4,
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
           "label": "图片"
+        },
+        {
+          "type": "select",
+          "id": "jump_to",
+          "label": "跳转链接",
+          "options": [
+            {
+              "value": "fabric",
+              "label": "fabric"
+            },
+            {
+              "value": "technology",
+              "label": "technology"
+            }
+          ]
         }
       ]
     }
