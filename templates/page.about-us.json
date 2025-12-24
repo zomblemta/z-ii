@@ -78,7 +78,9 @@
     "contact_us_XUwgXN": {
       "type": "contact-us",
       "name": "Contact Us Form",
-      "settings": {}
+      "settings": {
+        "faq_url": ""
+      }
     },
     "image_text_block_AwxpYN": {
       "type": "image-text-block",
@@ -90,7 +92,7 @@
         "image_position": "left",
         "full_width": true,
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 100,
         "padding_bottom": 0
       }
     },
