@@ -86,10 +86,12 @@
                   </div>
 
                   <div class="flex items-center gap-[12px] md:gap-[16px]">
-                    {% comment %} <div class="w-[26px] h-[26px] md:w-[36px] md:h-[36px] bg-[#E7E7E7] rounded-[5px] flex items-center justify-center">
-                      {% render 'icon', icon: 'icon-collect', class: 'md:w-[36px] md:h-[36px] ' %}
-                    </div> {% endcomment %}
-                    <button 
+                    {% comment %}
+                      <div class="w-[26px] h-[26px] md:w-[36px] md:h-[36px] bg-[#E7E7E7] rounded-[5px] flex items-center justify-center">
+                        {% render 'icon', icon: 'icon-collect', class: 'md:w-[36px] md:h-[36px] ' %}
+                      </div>
+                    {% endcomment %}
+                    <button
                       type="button"
                       class="buy-sample-btn text-xs md:text-base text-nowrap font-light bg-[#E7E7E7] rounded-[5px] flex items-center gap-[6px] px-[8px] h-[26px] md:h-[36px] w-max-content cursor-pointer hover:bg-[#D7D7D7] transition-colors"
                       data-product-id="{{ product.id }}"
@@ -278,7 +280,6 @@
                       aria-labelledby="quantity-label-{{ section.id }}"
                     >
                       <span aria-hidden="true">{{ 'products.product.quantity.label' | t }}:</span>
-                     
                     </label>
                     <div class="price-per-item__container">
                       <quantity-input
@@ -495,7 +496,9 @@
                     class="hidden w-full mx-[4px] md:w-[200px] absolute top-0 -translate-y-full m-0 text-sm font-light font-Montaga leading-[24px] bg-white p-4  shadow-lg z-10"
                   >
                     Email:
-                    <a href="mailto:info@ziistudios.com" class="underline text-black font-medium">info@ziistudios.com</a>
+                    <a href="mailto:info@ziistudios.com" class="underline text-black font-medium"
+                      >info@ziistudios.com</a
+                    >
                     <br>
                     Telephone: <a class="underline text-black font-medium">+86 186 8887 3388</a> <br>
                     Whatsapp: <a class="underline text-black font-medium">+86 186 8887 3388</a>
@@ -548,6 +551,9 @@
                   })();
                 </script>
 
+                {% render 'product-details', product: product %}
+                {% render 'product-size-fit', product: product %}
+
                 <div class="mt-[16px] md:mt-[30px] relative">
                   <p
                     id="delivery-time-popup"
@@ -580,30 +586,30 @@
 
                       // 点击页面其他地方时隐藏交付时间信息
                       document.addEventListener('click', function (event) {
-                        if (
-                          !deliveryPopup.contains(event.target) &&
-                          !deliveryTrigger.contains(event.target)
-                        ) {
+                        if (!deliveryPopup.contains(event.target) && !deliveryTrigger.contains(event.target)) {
                           deliveryPopup.classList.add('hidden');
                         }
                       });
                     })();
                   </script>
+
                   <div class="flex items-center justify-between text-sm md:text-xl font-medium  mt-[12px] ">
                     <p>
                       <span class="text-[#BABABA]">Price per unit:</span>
                       <span class="text-black">{{ product.selected_or_first_available_variant.price | money }}</span>
                     </p>
-                    {% comment %} <p>
-                      <span class="text-[#BABABA]">Total: </span>
-                      <span class="text-black">
-                        {{-
-                          product.selected_or_first_available_variant.price
-                          | times: product.selected_or_first_available_variant.quantity_rule.min
-                          | money
-                        -}}
-                      </span>
-                    </p> {% endcomment %}
+                    {% comment %}
+                      <p>
+                        <span class="text-[#BABABA]">Total: </span>
+                        <span class="text-black">
+                          {{-
+                            product.selected_or_first_available_variant.price
+                            | times: product.selected_or_first_available_variant.quantity_rule.min
+                            | money
+                          -}}
+                        </span>
+                      </p>
+                    {% endcomment %}
                   </div>
                 </div>
                 {%- render 'buy-buttons',
@@ -2399,104 +2405,101 @@
 
 <script>
   // Buy Sample 按钮功能
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const buySampleBtn = document.querySelector('.buy-sample-btn');
-    
+
     if (buySampleBtn) {
-      buySampleBtn.addEventListener('click', function(e) {
+      buySampleBtn.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         const button = this;
         const variantId = button.getAttribute('data-variant-id');
         const buttonText = button.querySelector('.button-text');
         const buttonLoader = button.querySelector('.button-loader');
         const cartIcon = button.querySelector('.svg-wrapper');
-        
+
         // 禁用按钮
         button.disabled = true;
         button.style.pointerEvents = 'none';
-        
+
         // 显示loading
         if (buttonText) buttonText.classList.add('hidden');
         if (buttonLoader) buttonLoader.classList.remove('hidden');
         if (cartIcon) cartIcon.classList.add('hidden');
-        
+
         // 准备数据
         const formData = new FormData();
         formData.append('id', variantId);
         formData.append('quantity', 1);
-        
+
         // 如果有cart drawer，添加sections参数
         const cartDrawer = document.querySelector('cart-drawer');
         if (cartDrawer) {
           formData.append('sections', 'cart-drawer,cart-icon-bubble');
           formData.append('sections_url', window.location.pathname);
         }
-        
+
         // 发送请求
         fetch(window.Shopify.routes.root + 'cart/add.js', {
           method: 'POST',
           headers: {
-            'X-Requested-With': 'XMLHttpRequest'
+            'X-Requested-With': 'XMLHttpRequest',
           },
-          body: formData
+          body: formData,
         })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Sample added to cart:', data);
-          
-          // 更新购物车显示
-          if (cartDrawer && data.sections) {
-            // 更新cart drawer内容
-            const cartDrawerContainer = document.querySelector('#CartDrawer');
-            if (cartDrawerContainer && data.sections['cart-drawer']) {
-              const parser = new DOMParser();
-              const html = parser.parseFromString(data.sections['cart-drawer'], 'text/html');
-              const newContent = html.querySelector('.shopify-section');
-              if (newContent) {
-                cartDrawerContainer.innerHTML = newContent.innerHTML;
-              }
-            }
-            
-            // 更新购物车图标
-            const cartIconBubble = document.querySelector('#cart-icon-bubble');
-            if (cartIconBubble && data.sections['cart-icon-bubble']) {
-              const parser = new DOMParser();
-              const html = parser.parseFromString(data.sections['cart-icon-bubble'], 'text/html');
-              const newIcon = html.querySelector('.shopify-section');
-              if (newIcon) {
-                cartIconBubble.innerHTML = newIcon.innerHTML;
-              }
-            }
-          } else {
-            // 如果没有cart drawer，重新加载购物车数据
-            fetch(window.Shopify.routes.root + 'cart.js')
-              .then(response => response.json())
-              .then(cart => {
-                // 更新购物车数量显示
-                const cartCount = document.querySelector('.cart-count-bubble span');
-                if (cartCount) {
-                  cartCount.textContent = cart.item_count;
+          .then((response) => response.json())
+          .then((data) => {
+            console.log('Sample added to cart:', data);
+
+            // 更新购物车显示
+            if (cartDrawer && data.sections) {
+              // 更新cart drawer内容
+              const cartDrawerContainer = document.querySelector('#CartDrawer');
+              if (cartDrawerContainer && data.sections['cart-drawer']) {
+                const parser = new DOMParser();
+                const html = parser.parseFromString(data.sections['cart-drawer'], 'text/html');
+                const newContent = html.querySelector('.shopify-section');
+                if (newContent) {
+                  cartDrawerContainer.innerHTML = newContent.innerHTML;
                 }
-              });
-          }
-          
-          
-        })
-        .catch(error => {
-          console.error('Error adding sample to cart:', error);
-        })
-        .finally(() => {
-          // 恢复按钮状态
-          button.disabled = false;
-          button.style.pointerEvents = '';
-          
-          if (buttonText) buttonText.classList.remove('hidden');
-          if (buttonLoader) buttonLoader.classList.add('hidden');
-          if (cartIcon) cartIcon.classList.remove('hidden');
-        });
+              }
+
+              // 更新购物车图标
+              const cartIconBubble = document.querySelector('#cart-icon-bubble');
+              if (cartIconBubble && data.sections['cart-icon-bubble']) {
+                const parser = new DOMParser();
+                const html = parser.parseFromString(data.sections['cart-icon-bubble'], 'text/html');
+                const newIcon = html.querySelector('.shopify-section');
+                if (newIcon) {
+                  cartIconBubble.innerHTML = newIcon.innerHTML;
+                }
+              }
+            } else {
+              // 如果没有cart drawer，重新加载购物车数据
+              fetch(window.Shopify.routes.root + 'cart.js')
+                .then((response) => response.json())
+                .then((cart) => {
+                  // 更新购物车数量显示
+                  const cartCount = document.querySelector('.cart-count-bubble span');
+                  if (cartCount) {
+                    cartCount.textContent = cart.item_count;
+                  }
+                });
+            }
+          })
+          .catch((error) => {
+            console.error('Error adding sample to cart:', error);
+          })
+          .finally(() => {
+            // 恢复按钮状态
+            button.disabled = false;
+            button.style.pointerEvents = '';
+
+            if (buttonText) buttonText.classList.remove('hidden');
+            if (buttonLoader) buttonLoader.classList.add('hidden');
+            if (cartIcon) cartIcon.classList.remove('hidden');
+          });
       });
     }
   });
 </script>
-

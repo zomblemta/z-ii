@@ -1,0 +1,53 @@
+<style>
+  /* 箭头图标旋转动画 */
+  .arrow-icon-rotate {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+  }
+
+  .rotate-360 {
+    transform: rotate(360deg);
+  }
+
+
+</style>
+
+<div class="mt-4  bg-[#F2F2F2] overflow-hidden">
+  <div
+    id="details"
+    class="w-full flex justify-between items-center px-3   flex-row  text-sm  tracking-[1.4px] bg-[#F2F2F2] h-9 text-left pl-4"
+  >
+    <span class="uppercase">Product Details</span>
+    <span class="arrow-icon-rotate">
+      {% render 'icon', icon: 'icon-arrow' %}
+    </span>
+  </div>
+
+  <div class="hidden px-4 py-5 bg-[#F2F2F2] text-xs  font-normal tracking-[1.2px]" id="details-content">
+    {{ product.description }}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let open = false;
+    let btnId = 'details';
+    let contentId = 'details-content';
+
+    let btn = document.querySelector('#' + btnId);
+    let content = document.querySelector('#' + contentId);
+    let arrowIcon = btn.querySelector('.arrow-icon-rotate');
+
+    if (btn && content) {
+      btn.addEventListener('click', function () {
+        content.classList.toggle('hidden');
+
+        arrowIcon.classList.toggle('rotate-360');
+      });
+    }
+  });
+</script>
