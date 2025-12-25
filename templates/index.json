@@ -85,36 +85,29 @@
     "index_partner_brand_cP7z4k": {
       "type": "index-partner-brand",
       "blocks": {
+        "brand_B8UQpk": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/zii_banner2.png"
+          }
+        },
+        "brand_TM6rX4": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/zii_banner2.png"
+          }
+        },
         "brand_yYfGBD": {
           "type": "brand",
           "settings": {
             "image": "shopify://shop_images/Dior_Logo_svg.png"
           }
-        },
-        "brand_6hFQ6F": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/mobile-logo.png"
-          }
-        },
-        "brand_HXbibT": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/mobile-logo.png"
-          }
-        },
-        "brand_WM7dRQ": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/mobile-logo.png"
-          }
         }
       },
       "block_order": [
-        "brand_yYfGBD",
-        "brand_6hFQ6F",
-        "brand_HXbibT",
-        "brand_WM7dRQ"
+        "brand_B8UQpk",
+        "brand_TM6rX4",
+        "brand_yYfGBD"
       ],
       "name": "Index Partner Brand",
       "settings": {
