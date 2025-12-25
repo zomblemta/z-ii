@@ -211,7 +211,7 @@
           "settings": {
             "parent_category": "Payment",
             "question": "What payment methods do you accept?",
-            "answer": "<p>You may pay by credit card or bank transfer (wire/ACH).<br/></p>"
+            "answer": "<p>We offer various secure payment options through Shopify Payment, including:</p><p>Credit Cards: Visa, MasterCard, American Express</p><p>·PayPal</p><p>·Apple Pay</p><p>·Google Pay</p><p>·Shop Pay</p>"
           }
         },
         "faq_item_3VjAfQ": {
