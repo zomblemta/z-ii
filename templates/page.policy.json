@@ -63,7 +63,7 @@
           "type": "category",
           "settings": {
             "title": "Pricing",
-            "description": "<p>了解我们的定价</p>"
+            "description": "<p>Learn about our pricing</p>"
           }
         },
         "faq_item_mwmYLp": {
@@ -86,7 +86,7 @@
           "type": "category",
           "settings": {
             "title": "Customization",
-            "description": "<p>了解我们的定制</p>"
+            "description": "<p>Learn about our customization options</p>"
           }
         },
         "faq_item_aANKY8": {
@@ -141,7 +141,7 @@
           "type": "category",
           "settings": {
             "title": "Samples",
-            "description": ""
+            "description": "<p>Learn about our samples</p>"
           }
         },
         "faq_item_gJHhXQ": {
