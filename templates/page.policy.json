@@ -164,7 +164,7 @@
           "type": "category",
           "settings": {
             "title": "Product",
-            "description": ""
+            "description": "<p>Learn about our products</p>"
           }
         },
         "faq_item_hPLDkx": {
@@ -218,7 +218,7 @@
           "type": "category",
           "settings": {
             "title": "After Sales",
-            "description": ""
+            "description": "<p>Learn about our after-sales service</p>"
           }
         },
         "faq_item_zTpQ9P": {
