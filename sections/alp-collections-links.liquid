@@ -161,6 +161,11 @@
 {% style %}
 {% endstyle %}
 
+<!-- 引入侧边栏样式和脚本 -->
+{{ 'component-collection-sidebar-popup.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'collection-sidebar-popup.js' | asset_url }}" defer="defer"></script>
+
 <div class="alp-section alp-collections-links {{ reset_spacing }}" style="{{ style }}">
   <div class="alp-collections-links-container page-width {{ container }} w-full flex flex-col md:flex-row items-start gap-[10px] md:items-center justify-between max-w-full overflow-x-scroll">
     <div class="alp-collections-links-content">
@@ -216,15 +221,19 @@
       {%- endif -%}
     </div>
 
-      <div
-        class="collection-control__button-sidebar flex items-center cursor-pointer js-popup-button text-[10px] md:text-sm uppercase"
-        data-js-popup-button="sidebar"
+      <button
+        type="button"
+        class="collection-control__button-sidebar flex items-center cursor-pointer text-[10px] md:text-sm uppercase"
+        data-alp-sidebar-popup-trigger
       >
         <i class="mr-1 ">{% render 'icon', icon: 'icon-filter', class: 'w-[16px] h-[16px] md:w-[20px] md:h-[20px]' %}</i>
         Show Filters
-      </div>
+      </button>
   </div>
 </div>
+
+<!-- 引入侧边栏弹出框 -->
+{% render 'alp-collection-sidebar', results: main_object, main_object: main_object %}
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
