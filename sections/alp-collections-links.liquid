@@ -162,7 +162,7 @@
 {% endstyle %}
 
 <div class="alp-section alp-collections-links {{ reset_spacing }}" style="{{ style }}">
-  <div class="alp-collections-links-container page-width {{ container }} w-full flex flex-col md:flex-row items-start gap-[10px] md:items-center justify-between">
+  <div class="alp-collections-links-container page-width {{ container }} w-full flex flex-col md:flex-row items-start gap-[10px] md:items-center justify-between max-w-full overflow-x-scroll">
     <div class="alp-collections-links-content">
       {%- if main_object and main_object.filters -%}
         {%- assign allowed_filters = collection.metafields.custom.filter.value -%}

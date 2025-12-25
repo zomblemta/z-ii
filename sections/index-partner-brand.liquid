@@ -21,17 +21,18 @@
 
   .brand-item {
     flex-shrink: 0;
-    min-width: 120px;
-    width: 120px;
+    width: auto;
+  }
+
+  .brand-item img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
   }
 
   @media (min-width: 768px) {
     .brand-item {
       height: 60px;
-    }
-    .brand-item img {
-      height: 100%;
-      object-fit: contain;
     }
   }
 
@@ -50,13 +51,13 @@
     <!-- 第一组品牌logo -->
     {% for block in section.blocks %}
       <div class="brand-item h-[30px] md:h-[60px]">
-        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'h-full w-auto object-contain' %}
       </div>
     {% endfor %}
     <!-- 复制第二组品牌logo以实现无缝循环 -->
     {% for block in section.blocks %}
       <div class="brand-item h-[30px] md:h-[60px]">
-        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'h-full w-auto object-contain' %}
       </div>
     {% endfor %}
   </div>

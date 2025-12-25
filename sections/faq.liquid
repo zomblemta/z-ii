@@ -112,7 +112,7 @@
   .faq-category__content {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 20px;
   }
 
   .faq-item__header {
@@ -224,6 +224,11 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     position: relative;
+    scroll-behavior: smooth;
+  }
+  
+  .faq-mobile-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .faq-mobile-nav__list {
@@ -477,7 +482,10 @@
   function scrollToCategory(categoryId, button, isMobile) {
     const category = document.getElementById(categoryId);
     if (category) {
-      const offset = isMobile ? 60 : 100;
+      // 暂时禁用滚动监听，避免冲突
+      isUserScrolling = false;
+      
+      const offset = isMobile ? 80 : 120;
       const categoryTop = category.getBoundingClientRect().top + window.pageYOffset - offset;
 
       window.scrollTo({
@@ -486,52 +494,76 @@
       });
 
       // 更新导航活动状态
-      const parentNav = button.closest('.faq-nav, .faq-mobile-nav__list');
-      const navItems = parentNav.querySelectorAll('.faq-nav__item, .faq-mobile-nav__item');
-      navItems.forEach((item) => item.classList.remove('active'));
-      button.classList.add('active');
+      updateActiveNav(categoryId, isMobile);
+      
+      // 500ms后重新启用滚动监听
+      setTimeout(() => {
+        isUserScrolling = true;
+      }, 500);
     }
   }
 
-  // 滚动监听，自动更新活动导航项
+  // 滚动监听，自动更新活动导航项（优化版）
   let scrollTimeout;
   let isUserScrolling = true;
 
-  window.addEventListener('scroll', function () {
-    if (!isUserScrolling) return;
+  window.addEventListener(
+    'scroll',
+    function () {
+      if (!isUserScrolling) return;
 
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(function () {
-      const categories = document.querySelectorAll('.faq-category');
-      let currentCategory = null;
-      const isMobile = window.innerWidth < 768;
-      const offset = isMobile ? 80 : 120;
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function () {
+        const categories = document.querySelectorAll('.faq-category');
+        if (categories.length === 0) return;
 
-      // 找到当前视口中的分类
-      categories.forEach((category) => {
-        const rect = category.getBoundingClientRect();
-        if (rect.top <= offset && rect.bottom > offset) {
-          currentCategory = category.id;
-        }
-      });
+        const isMobile = window.innerWidth < 768;
+        const offset = isMobile ? 100 : 150;
 
-      // 如果没有找到，使用第一个进入视口的
-      if (!currentCategory) {
+        let maxVisibleCategory = null;
+        let maxVisibleArea = 0;
+
+        // 找到视口中可见面积最大的分类
         categories.forEach((category) => {
           const rect = category.getBoundingClientRect();
-          if (rect.top > 0 && rect.top < window.innerHeight / 2) {
-            if (!currentCategory) {
-              currentCategory = category.id;
-            }
+          const viewportHeight = window.innerHeight;
+
+          // 计算分类在视口中的可见高度
+          const visibleTop = Math.max(rect.top, offset);
+          const visibleBottom = Math.min(rect.bottom, viewportHeight);
+          const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+
+          // 如果这个分类的可见面积更大，则选中它
+          if (visibleHeight > maxVisibleArea) {
+            maxVisibleArea = visibleHeight;
+            maxVisibleCategory = category.id;
           }
         });
-      }
 
-      if (currentCategory) {
-        updateActiveNav(currentCategory, isMobile);
-      }
-    }, 100);
-  });
+        // 如果没有找到可见的分类，检查是否在页面顶部或底部
+        if (!maxVisibleCategory) {
+          // 检查页面顶部
+          const firstCategory = categories[0];
+          const firstRect = firstCategory.getBoundingClientRect();
+          if (firstRect.top > offset) {
+            maxVisibleCategory = firstCategory.id;
+          }
+
+          // 检查页面底部
+          const lastCategory = categories[categories.length - 1];
+          const lastRect = lastCategory.getBoundingClientRect();
+          if (lastRect.bottom < window.innerHeight && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 10) {
+            maxVisibleCategory = lastCategory.id;
+          }
+        }
+
+        if (maxVisibleCategory) {
+          updateActiveNav(maxVisibleCategory, isMobile);
+        }
+      }, 50); // 减少延迟，使响应更快
+    },
+    { passive: true }
+  );
 
   // 更新导航活动状态
   function updateActiveNav(categoryId, isMobile) {
@@ -547,12 +579,23 @@
 
     // 更新移动端导航
     const mobileNavItems = document.querySelectorAll('.faq-mobile-nav__item');
+    const mobileNav = document.querySelector('.faq-mobile-nav');
+    
     mobileNavItems.forEach((item) => {
       if (item.getAttribute('data-category') === categoryId) {
         item.classList.add('active');
-        // 移动端导航自动滚动到当前项
-        if (isMobile) {
-          item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        
+        // 移动端导航自动滚动到当前项（居中显示）
+        if (isMobile && mobileNav) {
+          const itemLeft = item.offsetLeft;
+          const itemWidth = item.offsetWidth;
+          const navWidth = mobileNav.offsetWidth;
+          const scrollLeft = itemLeft - navWidth / 2 + itemWidth / 2;
+          
+          mobileNav.scrollTo({
+            left: scrollLeft,
+            behavior: 'smooth'
+          });
         }
       } else {
         item.classList.remove('active');
