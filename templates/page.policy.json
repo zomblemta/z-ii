@@ -191,6 +191,14 @@
             "answer": "<p>Yes. You may provide your tech pack and samples. However, for consistency and quality control, we generally prefer to develop patterns in-house.</p>"
           }
         },
+        "faq_item_69Jxfa": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Product",
+            "question": "What is the lead time?",
+            "answer": "<p>· <strong>In-stock items:</strong> ship within <strong>1–3 business days</strong> after ordering.<br/>· <strong>Custom items:</strong> standard production lead time is <strong>10–15 business days</strong>, depending on order quantity. Please contact us to confirm your timeline.</p>"
+          }
+        },
         "category_4UXQzY": {
           "type": "category",
           "settings": {
@@ -346,6 +354,7 @@
         "category_EaMara",
         "faq_item_hPLDkx",
         "faq_item_hVRdew",
+        "faq_item_69Jxfa",
         "category_4UXQzY",
         "faq_item_P7nq3f",
         "faq_item_3VjAfQ",
