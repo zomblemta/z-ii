@@ -160,7 +160,9 @@
         "faq_XVG4zT"
       ],
       "name": "Contact Us Form",
-      "settings": {}
+      "settings": {
+        "faq_url": "shopify://pages/policy"
+      }
     }
   },
   "order": [
