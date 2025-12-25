@@ -31,7 +31,7 @@
     }
     .brand-item img {
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 
@@ -50,13 +50,13 @@
     <!-- 第一组品牌logo -->
     {% for block in section.blocks %}
       <div class="brand-item h-[30px] md:h-[60px]">
-        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-cover' %}
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
       </div>
     {% endfor %}
     <!-- 复制第二组品牌logo以实现无缝循环 -->
     {% for block in section.blocks %}
-      <div class="brand-item h-[30px] md:h-[78px]">
-        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-cover' %}
+      <div class="brand-item h-[30px] md:h-[60px]">
+        {% render 'alp-responsive-image', image: block.settings.image, class: 'w-full h-full object-contain' %}
       </div>
     {% endfor %}
   </div>
