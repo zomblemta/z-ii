@@ -156,6 +156,24 @@
   .header__menu-link-inline span {
     display: inline-block;
   }
+
+  /* 隐藏菜单弹出框的滚动条 */
+  .mega-menu__content,
+  .mega-menu__content *,
+  .mega-menu__list,
+  .mega-menu__list * {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+  }
+  
+  .mega-menu__content::-webkit-scrollbar,
+  .mega-menu__content *::-webkit-scrollbar,
+  .mega-menu__list::-webkit-scrollbar,
+  .mega-menu__list *::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari and Opera */
+    width: 0 !important;
+    height: 0 !important;
+  }
 </style>
 
 <script>
