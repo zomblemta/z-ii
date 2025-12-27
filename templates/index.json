@@ -122,12 +122,13 @@
         "url": "shopify://collections/best-sellers",
         "title": "Best sellers",
         "product_list": [
-          "asymmetric-wrap-collar-shirt",
-          "cashmere-silk-fine-gauge-long-sleeve",
-          "draped-neck-long-sleeve-top",
-          "glen-check-wool-blend-double-breasted-blazer",
-          "plant-fiber-blend-relaxed-long-sleeve-shirt",
-          "ribbed-wool-lyocell-relaxed-knit"
+          "noel-hooded-wool-scarf-cardigan",
+          "cadence-striped-knit",
+          "contour-cocoon-wool-blend-trousers",
+          "contrast-leather-shearling",
+          "convertible-wool-shearling",
+          "denim-micro-flare-pants",
+          "drift-cashmere-wool-robe-coat"
         ]
       }
     },
@@ -141,12 +142,12 @@
       "name": "As Seen On You",
       "settings": {
         "section_background_color": "#b3c5ce",
-        "image_1": "shopify://shop_images/2025.06.28_Preprework2205.jpg",
+        "image_1": "shopify://shop_images/2025.11.22Prepreworks0105.jpg",
         "description_1": "Sleeveless pleatedshell top",
-        "image_1_url": "angora-wool-blend-relaxed-v-neck-sweater",
-        "image_2": "shopify://shop_images/2025.06.28_Preprework3129.jpg",
+        "image_1_url": "halo-hand-crochet-wool-hoodie",
+        "image_2": "shopify://shop_images/2025.11.22Prepreworks0565.jpg",
         "description_2": "Sleeveless pleatedshell top",
-        "image_2_url": "",
+        "image_2_url": "rhombe-yak-shawl",
         "image_3": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
         "description_3": "Sleeveless pleatedshell top",
         "image_3_url": "asymmetric-wrap-collar-shirt",
