@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_A4iUQM": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
         "announcement_Ed4YJ8": {
           "type": "announcement",
           "settings": {
@@ -37,6 +44,7 @@
         }
       },
       "block_order": [
+        "announcement_A4iUQM",
         "announcement_Ed4YJ8",
         "announcement_cqUXnU",
         "announcement-bar-0"
@@ -55,6 +63,13 @@
     "header": {
       "type": "header",
       "blocks": {
+        "link_image_DccULn": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework3860_d634967b-3f25-4fb9-a554-ff5b69736d51.jpg",
+            "link": ""
+          }
+        },
         "link_image_bcKzqN": {
           "type": "link_image",
           "settings": {
@@ -106,6 +121,7 @@
         }
       },
       "block_order": [
+        "link_image_DccULn",
         "link_image_bcKzqN",
         "link_image_WULjnp",
         "link_image_Dbindc",
