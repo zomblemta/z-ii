@@ -84,31 +84,6 @@
     },
     "index_partner_brand_cP7z4k": {
       "type": "index-partner-brand",
-      "blocks": {
-        "brand_B8UQpk": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/zii_banner2.png"
-          }
-        },
-        "brand_TM6rX4": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/zii_banner2.png"
-          }
-        },
-        "brand_yYfGBD": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/Dior_Logo_svg.png"
-          }
-        }
-      },
-      "block_order": [
-        "brand_B8UQpk",
-        "brand_TM6rX4",
-        "brand_yYfGBD"
-      ],
       "name": "Index Partner Brand",
       "settings": {
         "link": "shopify://collections",
