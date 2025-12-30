@@ -23,13 +23,15 @@
         "slide_dw9BmB": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Z_II2.jpg"
+            "image": "shopify://shop_images/fabrics.jpg",
+            "jump_to": "fabric"
           }
         },
         "slide_jWp8hy": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Z_II1.jpg"
+            "image": "shopify://shop_images/Z_II1.jpg",
+            "jump_to": "fabric"
           }
         }
       },
