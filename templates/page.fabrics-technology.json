@@ -27,17 +27,17 @@
             "jump_to": "fabric"
           }
         },
-        "slide_jWp8hy": {
+        "slide_PQRmAq": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Z_II1.jpg",
-            "jump_to": "fabric"
+            "image": "shopify://shop_images/Tech1.jpg",
+            "jump_to": "technology"
           }
         }
       },
       "block_order": [
         "slide_dw9BmB",
-        "slide_jWp8hy"
+        "slide_PQRmAq"
       ],
       "name": "fabric technology Banner",
       "settings": {
