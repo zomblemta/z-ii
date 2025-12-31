@@ -47,13 +47,6 @@
     "page_fabrics_technology_iWA36J": {
       "type": "page-fabrics-technology",
       "blocks": {
-        "fabric_item_ppxgje": {
-          "type": "fabric-item",
-          "settings": {
-            "title": "",
-            "description": ""
-          }
-        },
         "fabric_item_73URBK": {
           "type": "fabric-item",
           "settings": {
@@ -120,7 +113,6 @@
         }
       },
       "block_order": [
-        "fabric_item_ppxgje",
         "fabric_item_73URBK",
         "fabric_item_aP8cLH",
         "fabric_item_dr4CJG",
