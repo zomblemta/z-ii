@@ -63,6 +63,8 @@ product-info {
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
     width: 50%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
