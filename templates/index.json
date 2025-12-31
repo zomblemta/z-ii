@@ -43,7 +43,7 @@
         "slide_gUi7BK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2025.11.22_Pre_preworks0370.jpg",
+            "image": "shopify://shop_images/jhb.jpg",
             "title": "FW’2025<br>\nNEW ARRIVALS",
             "description": "",
             "title_color": "#ffffff",
@@ -84,31 +84,6 @@
     },
     "index_partner_brand_cP7z4k": {
       "type": "index-partner-brand",
-      "blocks": {
-        "brand_B8UQpk": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/zii_banner2.png"
-          }
-        },
-        "brand_TM6rX4": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/zii_banner2.png"
-          }
-        },
-        "brand_yYfGBD": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/Dior_Logo_svg.png"
-          }
-        }
-      },
-      "block_order": [
-        "brand_B8UQpk",
-        "brand_TM6rX4",
-        "brand_yYfGBD"
-      ],
       "name": "Index Partner Brand",
       "settings": {
         "link": "shopify://collections",
@@ -122,12 +97,13 @@
         "url": "shopify://collections/best-sellers",
         "title": "Best sellers",
         "product_list": [
-          "asymmetric-wrap-collar-shirt",
-          "cashmere-silk-fine-gauge-long-sleeve",
-          "draped-neck-long-sleeve-top",
-          "glen-check-wool-blend-double-breasted-blazer",
-          "plant-fiber-blend-relaxed-long-sleeve-shirt",
-          "ribbed-wool-lyocell-relaxed-knit"
+          "noel-hooded-wool-scarf-cardigan",
+          "cadence-striped-knit",
+          "contour-cocoon-wool-blend-trousers",
+          "contrast-leather-shearling",
+          "convertible-wool-shearling",
+          "denim-micro-flare-pants",
+          "drift-cashmere-wool-robe-coat"
         ]
       }
     },
@@ -141,21 +117,21 @@
       "name": "As Seen On You",
       "settings": {
         "section_background_color": "#b3c5ce",
-        "image_1": "shopify://shop_images/2025.06.28_Preprework2205.jpg",
+        "image_1": "shopify://shop_images/2025.11.22Prepreworks0105.jpg",
         "description_1": "Sleeveless pleatedshell top",
-        "image_1_url": "angora-wool-blend-relaxed-v-neck-sweater",
-        "image_2": "shopify://shop_images/2025.06.28_Preprework3129.jpg",
-        "description_2": "Sleeveless pleatedshell top",
-        "image_2_url": "",
-        "image_3": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
+        "image_1_url": "halo-hand-crochet-wool-hoodie",
+        "image_2": "shopify://shop_images/2025.11.22Prepreworks0565.jpg",
+        "description_2": "FW'25",
+        "image_2_url": "rhombe-yak-shawl",
+        "image_3": "shopify://shop_images/2025.11.22Prepreworks2783.jpg",
         "description_3": "Sleeveless pleatedshell top",
-        "image_3_url": "asymmetric-wrap-collar-shirt",
-        "image_4": "shopify://shop_images/2025.06.28_Preprework2226.jpg",
+        "image_3_url": "cadence-striped-knit",
+        "image_4": "shopify://shop_images/2025.06.28_Preprework2014_1c3ca637-0912-4dcd-8572-fc1ab668f097.jpg",
         "description_4": "Sleeveless pleatedshell top",
-        "image_4_url": "cashmere-silk-fine-gauge-long-sleeve",
-        "image_5": "shopify://shop_images/2025.06.28_Preprework4103.jpg",
+        "image_4_url": "bias-cut-check-long-skirt",
+        "image_5": "shopify://shop_images/2025.11.22Prepreworks2685.jpg",
         "description_5": "test",
-        "image_5_url": "draped-neck-long-sleeve-top"
+        "image_5_url": "haven-wool-yak-winter-trousers"
       }
     },
     "index_discover_xfrBet": {
@@ -182,7 +158,7 @@
         "discover_MNCxp4": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework1740_1.jpg",
+            "image": "shopify://shop_images/IN_STOCK_2.jpg",
             "title": "SS’26 Pre-order",
             "description": "SS26 is ready—pre-order early to secure your seasonal stock.",
             "url": "shopify://collections/spring"
@@ -230,11 +206,13 @@
         "url": "shopify://collections/spring",
         "title": "NEW IN",
         "product_list": [
-          "angora-wool-blend-relaxed-v-neck-sweater",
-          "asymmetric-wrap-collar-shirt",
-          "bias-cut-check-long-skirt",
           "boucle-tweed-mini-skirt",
-          "cashmere-silk-fine-gauge-long-sleeve"
+          "denim-micro-flare-pants",
+          "drift-cashmere-wool-robe-coat",
+          "halo-mink-wool-cardigan",
+          "the-sculpted-cable-knit",
+          "tie-waist-wide-leg-pants",
+          "trace-wool-alpaca-a-line-skirt"
         ]
       }
     },

@@ -17,8 +17,8 @@
         "collection_list": [
           "tops"
         ],
-        "description": "<p>Embrace timeless elegance and modern sophistication with refined style.</p>",
-        "bg_color": "#FFFFFF",
+        "description": "<p>SS’26 preorder open—book your new season edit. <strong>Made-to-order · MOQ 50 pcs/style/color.</strong></p>",
+        "bg_color": "#ffffff",
         "text_color": "#000000",
         "container": "alp-container",
         "padding_top": 0,
@@ -31,7 +31,7 @@
       "name": "Alp Collections Links",
       "settings": {
         "title": "Section",
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "text_color": "#000000",
         "collection_list": [
           "tops",
@@ -55,6 +55,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "collection_list": [],
         "products_per_page": 16,
         "columns_desktop": 4,
         "columns_mobile": "2",
@@ -68,6 +69,7 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
+        "enable_infinite_scroll": true,
         "padding_top": 36,
         "padding_bottom": 36
       }

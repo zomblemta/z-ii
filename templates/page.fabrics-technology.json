@@ -23,19 +23,21 @@
         "slide_dw9BmB": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Z_II2.jpg"
+            "image": "shopify://shop_images/fabrics.jpg",
+            "jump_to": "fabric"
           }
         },
-        "slide_jWp8hy": {
+        "slide_PQRmAq": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Z_II1.jpg"
+            "image": "shopify://shop_images/Tech1_c592b1ac-2938-40a0-a7b2-0e46524129e0.jpg",
+            "jump_to": "technology"
           }
         }
       },
       "block_order": [
         "slide_dw9BmB",
-        "slide_jWp8hy"
+        "slide_PQRmAq"
       ],
       "name": "fabric technology Banner",
       "settings": {
@@ -92,7 +94,7 @@
           "type": "technology-item",
           "settings": {
             "title": "DTG Printing",
-            "image": "shopify://shop_images/6252d923f6ca7d7f66e3379093c695f5de4c07db.png"
+            "image": "shopify://shop_images/A15.jpg"
           }
         },
         "technology_item_naDLBQ": {
@@ -102,11 +104,11 @@
             "image": "shopify://shop_images/source_image.png"
           }
         },
-        "technology_item_4e6Mgg": {
+        "technology_item_cwHj6p": {
           "type": "technology-item",
           "settings": {
-            "title": "Puff Printing",
-            "image": "shopify://shop_images/6252d923f6ca7d7f66e3379093c695f5de4c07db.png"
+            "title": "PRINTING",
+            "image": "shopify://shop_images/A12.jpg"
           }
         }
       },
@@ -118,7 +120,7 @@
         "technology_item_JzqQUQ",
         "technology_item_bcC8mF",
         "technology_item_naDLBQ",
-        "technology_item_4e6Mgg"
+        "technology_item_cwHj6p"
       ],
       "name": "Fabrics Technology",
       "settings": {}

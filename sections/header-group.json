@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_A4iUQM": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
         "announcement_Ed4YJ8": {
           "type": "announcement",
           "settings": {
@@ -37,6 +44,7 @@
         }
       },
       "block_order": [
+        "announcement_A4iUQM",
         "announcement_Ed4YJ8",
         "announcement_cqUXnU",
         "announcement-bar-0"
@@ -55,6 +63,13 @@
     "header": {
       "type": "header",
       "blocks": {
+        "link_image_DccULn": {
+          "type": "link_image",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework3860_d634967b-3f25-4fb9-a554-ff5b69736d51.jpg",
+            "link": "shopify://collections/knitwear"
+          }
+        },
         "link_image_bcKzqN": {
           "type": "link_image",
           "settings": {
@@ -65,47 +80,48 @@
         "link_image_WULjnp": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/Bottoms.jpg",
+            "image": "shopify://shop_images/Bottoms_27a8cb52-cfac-4834-b6f2-03a95860bcef.jpg",
             "link": "shopify://collections/test"
           }
         },
         "link_image_Dbindc": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/C-II4.jpg",
+            "image": "shopify://shop_images/Dress_Skirts_c13d5a6d-1525-4029-9eba-aa945b326847.jpg",
             "link": "shopify://collections/dress-skirts"
           }
         },
         "link_image_JzPpLB": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/Coat_Outwear.jpg",
+            "image": "shopify://shop_images/Coat_Outwear_be681e8d-87c8-4fc3-9060-7c570133f39e.jpg",
             "link": "shopify://collections/outwear"
           }
         },
         "link_image_7JrTR7": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/Blazer.jpg",
+            "image": "shopify://shop_images/Blazer_d2f5f629-1794-4e10-826d-d8b05d4469f2.jpg",
             "link": "shopify://collections/summer"
           }
         },
         "link_image_cxGKiP": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/bag.jpg",
+            "image": "shopify://shop_images/bag_655794e8-b30f-4357-8d72-934db0ae6877.jpg",
             "link": "shopify://collections/accessories-bags"
           }
         },
         "link_image_KxLaVi": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/IN_STOCK.jpg",
+            "image": "shopify://shop_images/IN_STOCK_b5981176-5925-45e9-93d3-1c35f3eb4d27.jpg",
             "link": "shopify://collections/frontpage"
           }
         }
       },
       "block_order": [
+        "link_image_DccULn",
         "link_image_bcKzqN",
         "link_image_WULjnp",
         "link_image_Dbindc",
@@ -116,7 +132,7 @@
       ],
       "settings": {
         "mobile_logo": "shopify://shop_images/mobile-logo.png",
-        "desktop_mega_menu_image": "shopify://shop_images/355577f1d217d6e124c0536ab8255d120e8b5a1d.jpg",
+        "desktop_mega_menu_image": "shopify://shop_images/ZII.jpg",
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "customer-account-main-menu",
