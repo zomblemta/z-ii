@@ -53,43 +53,43 @@
             "title": "Wool",
             "description": "Wool is a natural insulating fibre that keeps you warm while remaining breathable, ideal for tailored coats, suits and everyday knitwear.",
             "image": "shopify://shop_images/Wool.jpg",
-            "image_2": "shopify://shop_images/Wool_2.jpg"
+            "image_2": "shopify://shop_images/Wool_3.jpg"
           }
         },
         "fabric_item_73URBK": {
           "type": "fabric-item",
           "settings": {
-            "title": "Acrylic Fabric",
-            "description": "Acrylic fabric is soft, lightweight, and durable, making it perfect for cozy sweaters and blankets.",
-            "image": "shopify://shop_images/039166c2bbf9f53b4d2f21dbe054443193c8d2a9.png",
-            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+            "title": "Cashmere",
+            "description": "Cashmere is ultra-soft, lightweight and very warm, perfect for premium sweaters, scarves and softly structured coats.",
+            "image": "shopify://shop_images/Cashmere.jpg",
+            "image_2": "shopify://shop_images/Cashmere_3.jpg"
           }
         },
         "fabric_item_aP8cLH": {
           "type": "fabric-item",
           "settings": {
-            "title": "Cotton Tshirt",
-            "description": "100% Cotton, different thickness from 180-400gsm",
-            "image": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png",
-            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+            "title": "Yak wool",
+            "description": "Yak wool offers cashmere-like warmth with a naturally muted look, suited to shawls, sweaters and relaxed winter layering pieces.",
+            "image": "shopify://shop_images/Yak_wool_2.jpg",
+            "image_2": "shopify://shop_images/Yak_wool.jpg"
           }
         },
         "fabric_item_dr4CJG": {
           "type": "fabric-item",
           "settings": {
-            "title": "Fleece Fabric",
-            "description": "Fleece fabric is soft, warm, and cozy, providing excellent insulation for jackets, blankets, and cold-weather accessories.",
-            "image": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png",
-            "image_2": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png"
+            "title": "Alpaca",
+            "description": "Alpaca fibre is light, warm and naturally lofty, making it ideal for statement coats and plush knitwear with visible texture.",
+            "image": "shopify://shop_images/Alpaca.jpg",
+            "image_2": "shopify://shop_images/Alpaca_2.webp"
           }
         },
         "fabric_item_Kybedn": {
           "type": "fabric-item",
           "settings": {
-            "title": "Terry Fabric",
-            "description": "Cotton or polyester blend, different thickness from 200gsm-500gsm,use for hoodies , tshirts, loungewear",
-            "image": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png",
-            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+            "title": "Rabbit Hair",
+            "description": "Rabbit hair is very soft with a fuzzy halo, often blended into sweaters and cardigans for extra comfort and a cosy look.",
+            "image": "shopify://shop_images/Rabbit_hair.jpg",
+            "image_2": "shopify://shop_images/Rabbit_hair_2.jpg"
           }
         },
         "technology_item_JzqQUQ": {
