@@ -47,47 +47,13 @@
     "page_fabrics_technology_iWA36J": {
       "type": "page-fabrics-technology",
       "blocks": {
-        "fabric_item_6gJa7P": {
+        "fabric_item_x8FT8C": {
           "type": "fabric-item",
           "settings": {
-            "title": "",
-            "description": ""
-          }
-        },
-        "fabric_item_pY9eHa": {
-          "type": "fabric-item",
-          "settings": {
-            "title": "Lyocell",
-            "description": "Lyocell is a smooth, breathable cellulosic fibre with elegant drape, perfect for dresses, blouses and soft tailored trousers.",
-            "image": "shopify://shop_images/Lyocell_2.webp",
-            "image_2": "shopify://shop_images/Lyocell.webp"
-          }
-        },
-        "fabric_item_CV49Cd": {
-          "type": "fabric-item",
-          "settings": {
-            "title": "Specialty animal fibres",
-            "description": "Specialty animal fibres refer to premium hairs such as mink, raccoon or yak, used in blends to upgrade softness, warmth and luxury.",
-            "image": "shopify://shop_images/Specialty_animal_fibres.jpg",
-            "image_2": "shopify://shop_images/Specialty_animal_fibres_2.webp"
-          }
-        },
-        "fabric_item_YzQByn": {
-          "type": "fabric-item",
-          "settings": {
-            "title": "Nylon",
-            "description": "Nylon is a strong, lightweight fibre with excellent abrasion resistance, ideal for outerwear, down shells and functional pieces.",
-            "image": "shopify://shop_images/Nylon.jpg",
-            "image_2": "shopify://shop_images/Nylon_2.jpg"
-          }
-        },
-        "fabric_item_t9PUJg": {
-          "type": "fabric-item",
-          "settings": {
-            "title": "Polyester",
-            "description": "Polyester is durable, wrinkle-resistant and quick-drying, widely used for trousers, skirts, outerwear shells and linings.",
-            "image": "shopify://shop_images/Polyester_3.jpg",
-            "image_2": "shopify://shop_images/Polyester_4.webp"
+            "title": "Mohair",
+            "description": "Mohair is a lustrous, lightweight and warm fibre with a soft fuzzy surface, often used in sweaters, cardigans and coats that need airy volume and texture.",
+            "image": "shopify://shop_images/Mohair_2.jpg",
+            "image_2": "shopify://shop_images/Mohair_3.webp"
           }
         },
         "fabric_item_amFnCN": {
@@ -124,6 +90,60 @@
             "description": "Alpaca fibre is light, warm and naturally lofty, making it ideal for statement coats and plush knitwear with visible texture.",
             "image": "shopify://shop_images/Alpaca.jpg",
             "image_2": "shopify://shop_images/Alpaca_2.webp"
+          }
+        },
+        "fabric_item_CV49Cd": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Specialty animal fibres",
+            "description": "Specialty animal fibres refer to premium hairs such as mink, raccoon or yak, used in blends to upgrade softness, warmth and luxury.",
+            "image": "shopify://shop_images/Specialty_animal_fibres.jpg",
+            "image_2": "shopify://shop_images/Specialty_animal_fibres_2.webp"
+          }
+        },
+        "fabric_item_6gJa7P": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Viscose",
+            "description": "Viscose is a wood-pulp-based fibre with a smooth handfeel and fluid drape, widely used for dresses, blouses and skirts that need movement.",
+            "image": "shopify://shop_images/Viscose.jpg",
+            "image_2": "shopify://shop_images/Viscose_2.jpg"
+          }
+        },
+        "fabric_item_tjW4qU": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Acetate",
+            "description": "Acetate offers a smooth, lustrous surface and good drape, suitable for linings, occasion dresses and pieces with a refined, satin-like finish.",
+            "image": "shopify://shop_images/Acetate.jpg",
+            "image_2": "shopify://shop_images/Acetate_2.webp"
+          }
+        },
+        "fabric_item_pY9eHa": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Lyocell",
+            "description": "Lyocell is a smooth, breathable cellulosic fibre with elegant drape, perfect for dresses, blouses and soft tailored trousers.",
+            "image": "shopify://shop_images/Lyocell_2.webp",
+            "image_2": "shopify://shop_images/Lyocell.webp"
+          }
+        },
+        "fabric_item_YzQByn": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Nylon",
+            "description": "Nylon is a strong, lightweight fibre with excellent abrasion resistance, ideal for outerwear, down shells and functional pieces.",
+            "image": "shopify://shop_images/Nylon.jpg",
+            "image_2": "shopify://shop_images/Nylon_2.jpg"
+          }
+        },
+        "fabric_item_t9PUJg": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Polyester",
+            "description": "Polyester is durable, wrinkle-resistant and quick-drying, widely used for trousers, skirts, outerwear shells and linings.",
+            "image": "shopify://shop_images/Polyester_3.jpg",
+            "image_2": "shopify://shop_images/Polyester_4.webp"
           }
         },
         "fabric_item_Kybedn": {
@@ -165,15 +185,17 @@
         }
       },
       "block_order": [
-        "fabric_item_6gJa7P",
-        "fabric_item_pY9eHa",
-        "fabric_item_CV49Cd",
-        "fabric_item_YzQByn",
-        "fabric_item_t9PUJg",
+        "fabric_item_x8FT8C",
         "fabric_item_amFnCN",
         "fabric_item_73URBK",
         "fabric_item_aP8cLH",
         "fabric_item_dr4CJG",
+        "fabric_item_CV49Cd",
+        "fabric_item_6gJa7P",
+        "fabric_item_tjW4qU",
+        "fabric_item_pY9eHa",
+        "fabric_item_YzQByn",
+        "fabric_item_t9PUJg",
         "fabric_item_Kybedn",
         "technology_item_JzqQUQ",
         "technology_item_bcC8mF",
