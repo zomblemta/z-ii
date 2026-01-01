@@ -47,6 +47,22 @@
     "page_fabrics_technology_iWA36J": {
       "type": "page-fabrics-technology",
       "blocks": {
+        "fabric_item_CV49Cd": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Specialty animal fibres",
+            "description": "Specialty animal fibres refer to premium hairs such as mink, raccoon or yak, used in blends to upgrade softness, warmth and luxury.",
+            "image": "shopify://shop_images/Specialty_animal_fibres.jpg",
+            "image_2": "shopify://shop_images/Specialty_animal_fibres_2.webp"
+          }
+        },
+        "fabric_item_6gJa7P": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        },
         "fabric_item_amFnCN": {
           "type": "fabric-item",
           "settings": {
@@ -122,6 +138,8 @@
         }
       },
       "block_order": [
+        "fabric_item_CV49Cd",
+        "fabric_item_6gJa7P",
         "fabric_item_amFnCN",
         "fabric_item_73URBK",
         "fabric_item_aP8cLH",
