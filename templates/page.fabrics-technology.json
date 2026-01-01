@@ -47,6 +47,15 @@
     "page_fabrics_technology_iWA36J": {
       "type": "page-fabrics-technology",
       "blocks": {
+        "fabric_item_amFnCN": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Wool",
+            "description": "Wool is a natural insulating fibre that keeps you warm while remaining breathable, ideal for tailored coats, suits and everyday knitwear.",
+            "image": "shopify://shop_images/Wool.jpg",
+            "image_2": "shopify://shop_images/Wool_2.jpg"
+          }
+        },
         "fabric_item_73URBK": {
           "type": "fabric-item",
           "settings": {
@@ -113,6 +122,7 @@
         }
       },
       "block_order": [
+        "fabric_item_amFnCN",
         "fabric_item_73URBK",
         "fabric_item_aP8cLH",
         "fabric_item_dr4CJG",
