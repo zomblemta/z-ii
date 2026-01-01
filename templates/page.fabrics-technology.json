@@ -47,6 +47,22 @@
     "page_fabrics_technology_iWA36J": {
       "type": "page-fabrics-technology",
       "blocks": {
+        "fabric_item_6gJa7P": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        },
+        "fabric_item_pY9eHa": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Lyocell",
+            "description": "Lyocell is a smooth, breathable cellulosic fibre with elegant drape, perfect for dresses, blouses and soft tailored trousers.",
+            "image": "shopify://shop_images/Lyocell_2.webp",
+            "image_2": "shopify://shop_images/Lyocell.webp"
+          }
+        },
         "fabric_item_CV49Cd": {
           "type": "fabric-item",
           "settings": {
@@ -56,11 +72,22 @@
             "image_2": "shopify://shop_images/Specialty_animal_fibres_2.webp"
           }
         },
-        "fabric_item_6gJa7P": {
+        "fabric_item_YzQByn": {
           "type": "fabric-item",
           "settings": {
-            "title": "",
-            "description": ""
+            "title": "Nylon",
+            "description": "Nylon is a strong, lightweight fibre with excellent abrasion resistance, ideal for outerwear, down shells and functional pieces.",
+            "image": "shopify://shop_images/Nylon.jpg",
+            "image_2": "shopify://shop_images/Nylon_2.jpg"
+          }
+        },
+        "fabric_item_t9PUJg": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Polyester",
+            "description": "Polyester is durable, wrinkle-resistant and quick-drying, widely used for trousers, skirts, outerwear shells and linings.",
+            "image": "shopify://shop_images/Polyester_3.jpg",
+            "image_2": "shopify://shop_images/Polyester_4.webp"
           }
         },
         "fabric_item_amFnCN": {
@@ -138,8 +165,11 @@
         }
       },
       "block_order": [
-        "fabric_item_CV49Cd",
         "fabric_item_6gJa7P",
+        "fabric_item_pY9eHa",
+        "fabric_item_CV49Cd",
+        "fabric_item_YzQByn",
+        "fabric_item_t9PUJg",
         "fabric_item_amFnCN",
         "fabric_item_73URBK",
         "fabric_item_aP8cLH",
