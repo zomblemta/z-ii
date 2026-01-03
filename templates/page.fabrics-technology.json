@@ -179,15 +179,76 @@
         "technology_item_naDLBQ": {
           "type": "technology-item",
           "settings": {
-            "title": "Puff Printing",
-            "image": "shopify://shop_images/source_image.png"
+            "title": "Denim twill weaving & washing",
+            "image": "shopify://shop_images/Denim_twill_weaving_washing.jpg"
           }
         },
         "technology_item_cwHj6p": {
           "type": "technology-item",
           "settings": {
-            "title": "PRINTING",
-            "image": "shopify://shop_images/A12.jpg"
+            "title": "Cable knit",
+            "image": "shopify://shop_images/Knitcable.jpg"
+          }
+        },
+        "technology_item_36H4GP": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Crochet",
+            "image": "shopify://shop_images/Crochet.jpg"
+          }
+        },
+        "technology_item_xLXLYm": {
+          "type": "technology-item",
+          "settings": {
+            "title": "embroidery",
+            "image": "shopify://shop_images/embroidery.jpg"
+          }
+        },
+        "technology_item_PUxBBG": {
+          "type": "technology-item",
+          "settings": {
+            "title": "glen check weaving",
+            "image": "shopify://shop_images/glen_check_weaving.jpg"
+          }
+        },
+        "technology_item_TjBTAA": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Fully-fashioned knitwear",
+            "image": "shopify://shop_images/Fully-fashioned_knitwear2.jpg"
+          }
+        },
+        "technology_item_GGgVMd": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Genuine leather trim",
+            "image": "shopify://shop_images/Genuine_leather_trim_Leather_paneling.jpg"
+          }
+        },
+        "technology_item_raXQB7": {
+          "type": "technology-item",
+          "settings": {
+            "title": "mélange yarn",
+            "image": "shopify://shop_images/Marl_melange_yarn.jpg"
+          }
+        },
+        "technology_item_RDp3rq": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Striped knit",
+            "image": "shopify://shop_images/Striped_knit.jpg"
+          }
+        },
+        "technology_item_cpFf8V": {
+          "type": "technology-item",
+          "settings": {
+            "title": ""
+          }
+        },
+        "technology_item_mnWtWz": {
+          "type": "technology-item",
+          "settings": {
+            "title": ""
           }
         }
       },
@@ -208,7 +269,16 @@
         "technology_item_JzqQUQ",
         "technology_item_bcC8mF",
         "technology_item_naDLBQ",
-        "technology_item_cwHj6p"
+        "technology_item_cwHj6p",
+        "technology_item_36H4GP",
+        "technology_item_xLXLYm",
+        "technology_item_PUxBBG",
+        "technology_item_TjBTAA",
+        "technology_item_GGgVMd",
+        "technology_item_raXQB7",
+        "technology_item_RDp3rq",
+        "technology_item_cpFf8V",
+        "technology_item_mnWtWz"
       ],
       "name": "Fabrics Technology",
       "settings": {}
