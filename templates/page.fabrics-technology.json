@@ -252,6 +252,13 @@
             "title": "Hooded construction",
             "image": "shopify://shop_images/Hooded_construction.jpg"
           }
+        },
+        "technology_item_4Bp8QK": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Shawl weaving & fringed edging",
+            "image": "shopify://shop_images/Shawl_weaving_fringed_edging.webp"
+          }
         }
       },
       "block_order": [
@@ -280,7 +287,8 @@
         "technology_item_raXQB7",
         "technology_item_RDp3rq",
         "technology_item_cpFf8V",
-        "technology_item_mnWtWz"
+        "technology_item_mnWtWz",
+        "technology_item_4Bp8QK"
       ],
       "name": "Fabrics Technology",
       "settings": {}
