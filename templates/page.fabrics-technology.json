@@ -242,13 +242,15 @@
         "technology_item_cpFf8V": {
           "type": "technology-item",
           "settings": {
-            "title": ""
+            "title": "Woven tailoring / suiting construction",
+            "image": "shopify://shop_images/Woven_tailoring_suiting_construction.jpg"
           }
         },
         "technology_item_mnWtWz": {
           "type": "technology-item",
           "settings": {
-            "title": ""
+            "title": "Hooded construction",
+            "image": "shopify://shop_images/Hooded_construction.jpg"
           }
         }
       },
