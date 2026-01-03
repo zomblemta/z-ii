@@ -155,18 +155,25 @@
             "image_2": "shopify://shop_images/Rabbit_hair_2.jpg"
           }
         },
+        "technology_item_eFnAwD": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Pleats",
+            "image": "shopify://shop_images/Pleats.jpg"
+          }
+        },
         "technology_item_JzqQUQ": {
           "type": "technology-item",
           "settings": {
-            "title": "DTF Printing",
-            "image": "shopify://shop_images/source_image.png"
+            "title": "Rolled hem / Roll edge",
+            "image": "shopify://shop_images/Rolled_hem_Roll_edge.jpg"
           }
         },
         "technology_item_bcC8mF": {
           "type": "technology-item",
           "settings": {
-            "title": "DTG Printing",
-            "image": "shopify://shop_images/A15.jpg"
+            "title": "Pointelle",
+            "image": "shopify://shop_images/Pointelle.jpg"
           }
         },
         "technology_item_naDLBQ": {
@@ -197,6 +204,7 @@
         "fabric_item_YzQByn",
         "fabric_item_t9PUJg",
         "fabric_item_Kybedn",
+        "technology_item_eFnAwD",
         "technology_item_JzqQUQ",
         "technology_item_bcC8mF",
         "technology_item_naDLBQ",
