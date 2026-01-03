@@ -256,7 +256,7 @@
       ],
       "name": "Contact Us Form",
       "settings": {
-        "faq_url": ""
+        "faq_url": "shopify://pages/policy"
       }
     }
   },
