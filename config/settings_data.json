@@ -159,6 +159,11 @@
         "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": true,
         "settings": {}
+      },
+      "2118589882331710876": {
+        "type": "shopify://apps/essential-trust-badges/blocks/app-embed/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
