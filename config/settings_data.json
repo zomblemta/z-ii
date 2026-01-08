@@ -11,7 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/footer-logo.svg",
     "logo_width": 90,
-    "favicon": "shopify://shop_images/Z_II_2.png",
+    "favicon": "shopify://shop_images/ZII-800_800.png",
     "type_header_font": "montserrat_n4",
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
@@ -157,6 +157,11 @@
       },
       "2200952712151285029": {
         "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": true,
+        "settings": {}
+      },
+      "2118589882331710876": {
+        "type": "shopify://apps/essential-trust-badges/blocks/app-embed/0ff65b25-07e1-408e-950f-f54dd3d1751b",
         "disabled": true,
         "settings": {}
       }

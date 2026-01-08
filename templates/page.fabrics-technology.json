@@ -47,80 +47,248 @@
     "page_fabrics_technology_iWA36J": {
       "type": "page-fabrics-technology",
       "blocks": {
+        "fabric_item_x8FT8C": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Mohair",
+            "description": "Mohair is a lustrous, lightweight and warm fibre with a soft fuzzy surface, often used in sweaters, cardigans and coats that need airy volume and texture.",
+            "image": "shopify://shop_images/Mohair_2.jpg",
+            "image_2": "shopify://shop_images/Mohair_3.webp"
+          }
+        },
+        "fabric_item_amFnCN": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Wool",
+            "description": "Wool is a natural insulating fibre that keeps you warm while remaining breathable, ideal for tailored coats, suits and everyday knitwear.",
+            "image": "shopify://shop_images/Wool.jpg",
+            "image_2": "shopify://shop_images/Wool_3.jpg"
+          }
+        },
         "fabric_item_73URBK": {
           "type": "fabric-item",
           "settings": {
-            "title": "Acrylic Fabric",
-            "description": "Acrylic fabric is soft, lightweight, and durable, making it perfect for cozy sweaters and blankets.",
-            "image": "shopify://shop_images/039166c2bbf9f53b4d2f21dbe054443193c8d2a9.png",
-            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+            "title": "Cashmere",
+            "description": "Cashmere is ultra-soft, lightweight and very warm, perfect for premium sweaters, scarves and softly structured coats.",
+            "image": "shopify://shop_images/Cashmere.jpg",
+            "image_2": "shopify://shop_images/Cashmere_3.jpg"
           }
         },
         "fabric_item_aP8cLH": {
           "type": "fabric-item",
           "settings": {
-            "title": "Cotton Tshirt",
-            "description": "100% Cotton, different thickness from 180-400gsm",
-            "image": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png",
-            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+            "title": "Yak wool",
+            "description": "Yak wool offers cashmere-like warmth with a naturally muted look, suited to shawls, sweaters and relaxed winter layering pieces.",
+            "image": "shopify://shop_images/Yak_wool_2.jpg",
+            "image_2": "shopify://shop_images/Yak_wool.jpg"
           }
         },
         "fabric_item_dr4CJG": {
           "type": "fabric-item",
           "settings": {
-            "title": "Fleece Fabric",
-            "description": "Fleece fabric is soft, warm, and cozy, providing excellent insulation for jackets, blankets, and cold-weather accessories.",
-            "image": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png",
-            "image_2": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png"
+            "title": "Alpaca",
+            "description": "Alpaca fibre is light, warm and naturally lofty, making it ideal for statement coats and plush knitwear with visible texture.",
+            "image": "shopify://shop_images/Alpaca.jpg",
+            "image_2": "shopify://shop_images/Alpaca_2.webp"
+          }
+        },
+        "fabric_item_CV49Cd": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Specialty animal fibres",
+            "description": "Specialty animal fibres refer to premium hairs such as mink, raccoon or yak, used in blends to upgrade softness, warmth and luxury.",
+            "image": "shopify://shop_images/Specialty_animal_fibres.jpg",
+            "image_2": "shopify://shop_images/Specialty_animal_fibres_2.webp"
+          }
+        },
+        "fabric_item_6gJa7P": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Viscose",
+            "description": "Viscose is a wood-pulp-based fibre with a smooth handfeel and fluid drape, widely used for dresses, blouses and skirts that need movement.",
+            "image": "shopify://shop_images/Viscose.jpg",
+            "image_2": "shopify://shop_images/Viscose_2.jpg"
+          }
+        },
+        "fabric_item_tjW4qU": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Acetate",
+            "description": "Acetate offers a smooth, lustrous surface and good drape, suitable for linings, occasion dresses and pieces with a refined, satin-like finish.",
+            "image": "shopify://shop_images/Acetate.jpg",
+            "image_2": "shopify://shop_images/Acetate_2.webp"
+          }
+        },
+        "fabric_item_pY9eHa": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Lyocell",
+            "description": "Lyocell is a smooth, breathable cellulosic fibre with elegant drape, perfect for dresses, blouses and soft tailored trousers.",
+            "image": "shopify://shop_images/Lyocell_2.webp",
+            "image_2": "shopify://shop_images/Lyocell.webp"
+          }
+        },
+        "fabric_item_YzQByn": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Nylon",
+            "description": "Nylon is a strong, lightweight fibre with excellent abrasion resistance, ideal for outerwear, down shells and functional pieces.",
+            "image": "shopify://shop_images/Nylon.jpg",
+            "image_2": "shopify://shop_images/Nylon_2.jpg"
+          }
+        },
+        "fabric_item_t9PUJg": {
+          "type": "fabric-item",
+          "settings": {
+            "title": "Polyester",
+            "description": "Polyester is durable, wrinkle-resistant and quick-drying, widely used for trousers, skirts, outerwear shells and linings.",
+            "image": "shopify://shop_images/Polyester_3.jpg",
+            "image_2": "shopify://shop_images/Polyester_4.webp"
           }
         },
         "fabric_item_Kybedn": {
           "type": "fabric-item",
           "settings": {
-            "title": "Terry Fabric",
-            "description": "Cotton or polyester blend, different thickness from 200gsm-500gsm,use for hoodies , tshirts, loungewear",
-            "image": "shopify://shop_images/bdb89ea5c7fa9bb1730ed50689e91b74e4136694.png",
-            "image_2": "shopify://shop_images/0f54bc23327adbfeaaa5fa221bbc8630343299d1.png"
+            "title": "Rabbit Hair",
+            "description": "Rabbit hair is very soft with a fuzzy halo, often blended into sweaters and cardigans for extra comfort and a cosy look.",
+            "image": "shopify://shop_images/Rabbit_hair.jpg",
+            "image_2": "shopify://shop_images/Rabbit_hair_2.jpg"
+          }
+        },
+        "technology_item_eFnAwD": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Pleats",
+            "image": "shopify://shop_images/Pleats.jpg"
           }
         },
         "technology_item_JzqQUQ": {
           "type": "technology-item",
           "settings": {
-            "title": "DTF Printing",
-            "image": "shopify://shop_images/source_image.png"
+            "title": "Rolled hem / Roll edge",
+            "image": "shopify://shop_images/Rolled_hem_Roll_edge.jpg"
           }
         },
         "technology_item_bcC8mF": {
           "type": "technology-item",
           "settings": {
-            "title": "DTG Printing",
-            "image": "shopify://shop_images/A15.jpg"
+            "title": "Pointelle",
+            "image": "shopify://shop_images/Pointelle.jpg"
           }
         },
         "technology_item_naDLBQ": {
           "type": "technology-item",
           "settings": {
-            "title": "Puff Printing",
-            "image": "shopify://shop_images/source_image.png"
+            "title": "Denim twill weaving & washing",
+            "image": "shopify://shop_images/Denim_twill_weaving_washing.jpg"
           }
         },
         "technology_item_cwHj6p": {
           "type": "technology-item",
           "settings": {
-            "title": "PRINTING",
-            "image": "shopify://shop_images/A12.jpg"
+            "title": "Cable knit",
+            "image": "shopify://shop_images/Knitcable.jpg"
+          }
+        },
+        "technology_item_36H4GP": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Crochet",
+            "image": "shopify://shop_images/Crochet.jpg"
+          }
+        },
+        "technology_item_xLXLYm": {
+          "type": "technology-item",
+          "settings": {
+            "title": "embroidery",
+            "image": "shopify://shop_images/embroidery.jpg"
+          }
+        },
+        "technology_item_PUxBBG": {
+          "type": "technology-item",
+          "settings": {
+            "title": "glen check weaving",
+            "image": "shopify://shop_images/glen_check_weaving.jpg"
+          }
+        },
+        "technology_item_TjBTAA": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Fully-fashioned knitwear",
+            "image": "shopify://shop_images/Fully-fashioned_knitwear2.jpg"
+          }
+        },
+        "technology_item_GGgVMd": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Genuine leather trim",
+            "image": "shopify://shop_images/Genuine_leather_trim_Leather_paneling.jpg"
+          }
+        },
+        "technology_item_raXQB7": {
+          "type": "technology-item",
+          "settings": {
+            "title": "mélange yarn",
+            "image": "shopify://shop_images/Marl_melange_yarn.jpg"
+          }
+        },
+        "technology_item_RDp3rq": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Striped knit",
+            "image": "shopify://shop_images/Striped_knit.jpg"
+          }
+        },
+        "technology_item_cpFf8V": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Woven tailoring / suiting construction",
+            "image": "shopify://shop_images/Woven_tailoring_suiting_construction.jpg"
+          }
+        },
+        "technology_item_mnWtWz": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Hooded construction",
+            "image": "shopify://shop_images/Hooded_construction.jpg"
+          }
+        },
+        "technology_item_4Bp8QK": {
+          "type": "technology-item",
+          "settings": {
+            "title": "Shawl weaving & fringed edging",
+            "image": "shopify://shop_images/Shawl_weaving_fringed_edging.webp"
           }
         }
       },
       "block_order": [
+        "fabric_item_x8FT8C",
+        "fabric_item_amFnCN",
         "fabric_item_73URBK",
         "fabric_item_aP8cLH",
         "fabric_item_dr4CJG",
+        "fabric_item_CV49Cd",
+        "fabric_item_6gJa7P",
+        "fabric_item_tjW4qU",
+        "fabric_item_pY9eHa",
+        "fabric_item_YzQByn",
+        "fabric_item_t9PUJg",
         "fabric_item_Kybedn",
+        "technology_item_eFnAwD",
         "technology_item_JzqQUQ",
         "technology_item_bcC8mF",
         "technology_item_naDLBQ",
-        "technology_item_cwHj6p"
+        "technology_item_cwHj6p",
+        "technology_item_36H4GP",
+        "technology_item_xLXLYm",
+        "technology_item_PUxBBG",
+        "technology_item_TjBTAA",
+        "technology_item_GGgVMd",
+        "technology_item_raXQB7",
+        "technology_item_RDp3rq",
+        "technology_item_cpFf8V",
+        "technology_item_mnWtWz",
+        "technology_item_4Bp8QK"
       ],
       "name": "Fabrics Technology",
       "settings": {}
