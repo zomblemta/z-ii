@@ -86,7 +86,7 @@
         "image_position": "left",
         "full_width": true,
         "color_scheme": "",
-        "padding_top": 100,
+        "padding_top": 60,
         "padding_bottom": 0
       }
     },
@@ -100,8 +100,8 @@
         "image_position": "right",
         "full_width": true,
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "image_text_block_Jr3xfr": {
@@ -115,7 +115,7 @@
         "full_width": true,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 60
       }
     },
     "contact_us_XUwgXN": {
