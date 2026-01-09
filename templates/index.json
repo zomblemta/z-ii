@@ -117,21 +117,21 @@
       "name": "As Seen On You",
       "settings": {
         "section_background_color": "#b3c5ce",
-        "image_1": "shopify://shop_images/2025.11.22Prepreworks0105.jpg",
-        "description_1": "Sleeveless pleatedshell top",
-        "image_1_url": "halo-hand-crochet-wool-hoodie",
+        "image_1": "shopify://shop_images/IMG_0184_HEIC_100_1.jpg",
+        "description_1": "Boutique-style packing, delivered exactly as shown—clean, protected, shelf-ready.",
+        "image_1_url": "",
         "image_2": "shopify://shop_images/IMG_0070.heic",
         "description_2": "FW'25 New in: curated winter sets—ready to sell.",
-        "image_2_url": "",
-        "image_3": "shopify://shop_images/2025.11.22Prepreworks2783.jpg",
-        "description_3": "Sleeveless pleatedshell top",
-        "image_3_url": "cadence-striped-knit",
-        "image_4": "shopify://shop_images/2025.06.28_Preprework2014_1c3ca637-0912-4dcd-8572-fc1ab668f097.jpg",
-        "description_4": "Sleeveless pleatedshell top",
-        "image_4_url": "bias-cut-check-long-skirt",
-        "image_5": "shopify://shop_images/2025.11.22Prepreworks2685.jpg",
-        "description_5": "test",
-        "image_5_url": "haven-wool-yak-winter-trousers"
+        "image_2_url": "outwear",
+        "image_3": "shopify://shop_images/10e77290a45e5604f6b8bfa28cd63dbd_HEIC_107_1.jpg",
+        "description_3": "sharp lines, quiet confidence",
+        "image_3_url": "",
+        "image_4": "shopify://shop_images/IMG_0202_HEIC_105_1.jpg",
+        "description_4": "Made to your size. Private label available.",
+        "image_4_url": "",
+        "image_5": "shopify://shop_images/2025.11.22_Pre_preworks3679.jpg",
+        "description_5": "Contour Cocoon Wool-Blend Trousers",
+        "image_5_url": "contour-cocoon-wool-blend-trousers"
       }
     },
     "index_discover_xfrBet": {
@@ -140,7 +140,7 @@
         "discover_Pbre3X": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.11.22_Pre_preworks0365_1.jpg",
+            "image": "shopify://shop_images/IMG_0209_HEIC_109_1_1_2170db2c-595d-46e8-b01a-ff78f96d333a.jpg",
             "title": "In Stock",
             "description": "Ready to ship—orders from 1 piece, dispatched in 1–3 business days.",
             "url": "shopify://collections/frontpage"
