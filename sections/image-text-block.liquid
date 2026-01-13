@@ -41,8 +41,18 @@
 
         .image-text-block-{{ section.id }} .image-text-block__media,
         .image-text-block-{{ section.id }} .image-text-block__content {
-          flex: 1;
+          flex: 0 0 50%;
           width: 50%;
+          box-sizing: border-box;
+        }
+
+        .image-text-block-{{ section.id }} .image-text-block__media {
+          height: 719px;
+        }
+        .image-text-block-{{ section.id }} .image-text-block__media img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
         }
       }
 
