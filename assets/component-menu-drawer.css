@@ -60,6 +60,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 60px;
   flex: 1;
   overflow-y: auto;
 }
