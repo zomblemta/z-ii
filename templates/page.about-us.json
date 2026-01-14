@@ -21,10 +21,10 @@
       "type": "image-text",
       "name": "Image Text",
       "settings": {
-        "desktop_image": "shopify://shop_images/164caae4c14b34618f01ca0929ac284a_origin_1.jpg",
-        "mobile_image": "shopify://shop_images/z_banner1_fa505c34-dca4-4202-8c93-81cf1b5a6271.jpg",
-        "title": "",
-        "description": "",
+        "desktop_image": "shopify://shop_images/IMG_0454.heic",
+        "mobile_image": "shopify://shop_images/IMG_0454.heic",
+        "title": "Who We Are & What You Get.",
+        "description": "<p>Z-II STUDIOS is a minimalist womenswear wholesale partner for boutiques, online sellers, resellers, and emerging brands. Based in Guangzhou, China and focused on womenswear for <strong>15+ years</strong>, we’ve grown from a two-person studio into a <strong>50+ specialist team</strong>. We operate <strong>three cross-border showrooms in Thirteen Hongs</strong> and support <strong>5,000+ registered brands—from startups to established retailers</strong>. We release <strong>100+ new styles every month</strong>, built at the intersection of minimal design, precise fit, and boutique finishing.</p><p><strong>What you get when you work with us:</strong></p><p><br/><strong>· Consistent quality & fit:</strong> stable sizing, clean finishing, and repeatable hand-feel—so you can sell with confidence, reduce returns, and protect your store reputation.<br/><br/><strong>· In-stock drops + fast restocks:</strong> buy light, test fast, and replenish winners quickly—so you don’t miss selling windows or lose momentum when a style takes off.<br/><br/><strong>· Not generic, curated minimal:</strong> we translate runway proportions into wearable minimal pieces—one clear aesthetic that saves you sourcing time and cuts communication back-and-forth.<br/><br/><strong>·  Store-ready delivery + optional logistics support:</strong> pieces arrive <strong>packed and retail-ready</strong>, so you don’t need to re-pack, source trims, or spend time on relabeling before selling. If needed, we can also help arrange shipping and prepare export paperwork (CI/PL) and HS code info—so your landed cost and timelines are easier to plan.</p>",
         "image_position": "right"
       }
     },
@@ -80,13 +80,27 @@
       "type": "image-text-block",
       "name": "图片文案块",
       "settings": {
-        "image": "shopify://shop_images/f71537e0cd10fbdbd13f30bf6e5bc1a5_origin_1.jpg",
-        "title": "Team & Aesthetic",
-        "description": "Based in Guangzhou, China and focused on womenswear for over 15 years, Z-II STUDIOS has grown from a two-person studio into a team of 50+ specialists. We operate three cross-border showrooms in Thirteen Hongs—one of China’s leading hubs for international womenswear—serving 5,000+ registered brands and releasing 100+ new styles each month.\nOur signature sits at the intersection of minimal design, precise fit, and boutique finishing. The collection architecture and drop cadence are engineered to flexibly support diversified sell-through strategies across boutiques, wholesale, and e-commerce—enabling light inventory with strong brand identity.",
+        "image": "shopify://shop_images/IMG_0510.heic",
+        "title": "Curated Styles, Not Generic",
+        "description": "We don’t build “commodity basics.” Our buyer and design team stay close to the market, translating runway proportions into wearable minimal pieces with boutique finishing—focused on rare-looking, elevated styles that help you stand out. With a stable development rhythm, newness keeps flowing, so you can refresh your assortment fast without spending hours sourcing across dozens of suppliers.",
         "image_position": "left",
         "full_width": true,
         "color_scheme": "",
         "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "image_text_block_GRi8Pj": {
+      "type": "image-text-block",
+      "name": "图片文案块",
+      "settings": {
+        "image": "shopify://shop_images/219A0665_3bb210f3-b3d7-4355-88db-f8c9b5c207fe.jpg",
+        "title": "Consistent Quality & Fit",
+        "description": "Quality and fit aren’t “luck”—they come from standardization. From fabric selection and pattern refinement to finishing details, we follow one consistent control logic so the same style stays stable across drops: more reliable sizing, cleaner workmanship, and a consistent hand-feel. This means fewer after-sales issues and negative reviews, lower return risk, and more confidence when restocking best sellers—protecting repeat orders and brand reputation.",
+        "image_position": "right",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -95,9 +109,9 @@
       "name": "图片文案块",
       "settings": {
         "image": "shopify://shop_images/4_d5f9fb80-649e-4059-9b07-227dc0604d54.jpg",
-        "title": "Supply Model & Quality Governance",
+        "title": "Supply Model",
         "description": "Two complementary tracks balance speed and authorship:\nIn-Stock (Immediates / At-Once / NOS) for immediate availability and rapid market response.\nMade-to-Order (MTO) for private-label edits with sensible MOQs, aligning spend with demand while preserving design intent.\n\nEnd-to-end quality governance includes vetted mills and trims; digital patterning with graded S/M/L size sets; inline QC; and 100% pre-shipment inspection (AQL). For private label, we provide brand/care labels, barcodes, compliant inner/outer packing, and full export documentation (commercial invoice, packing list, HS codes), with optional duty/tax assistance to streamline cross-border fulfillment.\nBeyond capacity, we emphasize clarity—defined milestones, transparent communication, and measurable operations (OTIF—On-Time, In-Full; First-Pass Yield)—to ensure reliable execution and repeatable outcomes.",
-        "image_position": "right",
+        "image_position": "left",
         "full_width": true,
         "color_scheme": "",
         "padding_top": 0,
@@ -109,9 +123,9 @@
       "name": "图片文案块",
       "settings": {
         "image": "shopify://shop_images/2_228b8c19-1122-486c-a122-87610694c89e.jpg",
-        "title": "Quality-First Delivery",
-        "description": "We put quality first. Our partner factories hold ISO certifications and are audited under SMETA and BSCI, each staffed with 100+ skilled operators. Every garment undergoes rigorous inspection, earning consistent recognition for fashion-forward, reliable, and finely constructed quality. With monthly shipments exceeding 100,000 units, we pair abundant capacity with disciplined planning to keep timelines controllable and delivery assured.",
-        "image_position": "left",
+        "title": "Factory Compliance & Capacity",
+        "description": "Our partner factories operate with structured management systems, holding ISO certifications and passing SMETA and BSCI audits. Each facility is staffed with 100+ skilled operators, following standardized processes and multi-point inspections from cutting and sewing to finishing and packing—ensuring consistent quality and clean workmanship.<br>\nWith a monthly shipment volume of 100,000+ pieces, our capacity and disciplined production planning help keep lead times predictable and deliveries on schedule, supporting steady drops and fast replenishment.",
+        "image_position": "right",
         "full_width": true,
         "color_scheme": "",
         "padding_top": 0,
@@ -132,6 +146,7 @@
     "about_us_yVqfQF",
     "index_discover_NdmV7P",
     "image_text_block_AwxpYN",
+    "image_text_block_GRi8Pj",
     "image_text_block_bmaVrQ",
     "image_text_block_Jr3xfr",
     "contact_us_XUwgXN"

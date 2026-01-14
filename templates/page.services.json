@@ -24,7 +24,7 @@
           "type": "service_item",
           "settings": {
             "title": "Private Label",
-            "image": "shopify://shop_images/11_94dedc2e-4007-48ef-9188-cf03cbedd3ed.jpg",
+            "image": "shopify://shop_images/IMG_0240_HEIC_101_1.jpg",
             "image_position": "left",
             "step_1": "Best for：<br>\n· Boutiques, fast drops, small-batch testing<br>\n· Brands that want quick branding without full development",
             "step_2": "What you can customize：<br>\n· Logo/graphics: embroidery, screen print, heat transfer, heat-seal patch, digital print\n· Relabeling: main label / care label / size label<br>\n· Packaging: hangtags, barcode stickers, polybags, cartons, shipping marks<br>\n· Minor updates: color change, small trims/fit adjustments (by feasibility)",
@@ -42,7 +42,7 @@
           "type": "service_item",
           "settings": {
             "title": "Blank Stock Wholesale",
-            "image": "shopify://shop_images/746e2994d10b01afea6f6007757461d0d92ecd2b.png",
+            "image": "shopify://shop_images/11_94dedc2e-4007-48ef-9188-cf03cbedd3ed.jpg",
             "image_position": "right",
             "step_1": "What you get\n：<br>Ready styles with consistent fits across: Tops / Bottoms / Dresses / Blazers / Knitwear / Coats",
             "step_2": "MOQ & dispatch:<br>\n<br>\n·From 1 pc\n<br>\n·Ship now or dispatch in 48–72h (subject to stock)",
@@ -60,7 +60,7 @@
           "type": "service_item",
           "settings": {
             "title": "OEM / ODM (Concept → Garment)",
-            "image": "shopify://shop_images/f381f557b87001784aeab63cdbe7fce9271a3c27.png",
+            "image": "shopify://shop_images/a6766ae16a7ab0db382c45f535ce8e78_origin_1.jpg",
             "image_position": "left",
             "step_1": "Best for<br>\n·Startups, exclusive patterns, unique fabric/trim solutions<br>\n·Brands needing full development + controlled QC",
             "step_2": "Core deliverables<br>\n·Design direction / tech pack support<br>\n·Patternmaking + grading (S/M/L or custom size set)<br>\n·Samples (Proto → Fit → PP)<br>\n·Bulk production + packing + export documents",
@@ -74,30 +74,12 @@
             "step_10": ""
           }
         },
-        "service_item_PiRJcx": {
-          "type": "service_item",
-          "settings": {
-            "title": "Standard Production Workflow",
-            "image": "shopify://shop_images/b09d24d4a4736f331a012030227147fe3beff4cc.png",
-            "image_position": "right",
-            "step_1": "Design consulting：<br>\n\n· Confirm details: color, trims, proportions, pockets, accessories, labels, finishes",
-            "step_2": "Fabric & trim sourcing：<br>\n· Source to target price; stock-first for speed; low-MOQ development if needed",
-            "step_3": "Pattern & samples：<br>\n\n· 3D/CAD pattern → adjustments → grading → first sample + PD check",
-            "step_4": "Cutting & sewing：\n<br>\n· Fabric inspection/pre-shrink → precise cutting → line assembly → initial QC",
-            "step_5": "Special finishes：\n<br>\n· Wash/dye, digital/screen print, heat transfer, embroidery",
-            "step_6": "Labels / hardware / packaging：\n<br>\n· Labels, trims/hardware, barcode & packing plan",
-            "step_7": "Quality assurance\n<br>\n· Incoming / inline / final inspection (AQL)",
-            "step_8": "Packing & logistics\n<br>\n· Pressing & packing → carton marks → courier/sea options",
-            "step_9": "",
-            "step_10": ""
-          }
-        },
         "service_item_TEgVQW": {
           "type": "service_item",
           "settings": {
             "title": "Common Specs & Commitments",
-            "image": "shopify://shop_images/z_banner6.jpg",
-            "image_position": "left",
+            "image": "shopify://shop_images/z_banner4_85e45130-9802-4578-a826-82a470ad576f.jpg",
+            "image_position": "right",
             "step_1": "Minimum Order Quantity (MOQ)：\n<br>\n·In-stock: from 1 piece\n<br>\n·Customization / OEM: typically 50+ pcs (final MOQ may vary by fabric availability, techniques, and complexity)",
             "step_2": "Lead Time Reference：\n<br>\n·Sampling: 5–7 business days\n<br>\n·Bulk production: 12–15 business days after materials & details are confirmed (may vary by project scope)",
             "step_3": "Compliance & Documents：\n<br>\n·Can provide Commercial Invoice (CI) / Packing List (PL) / HS Code\n<br>\n·Can support compliance labels & markings as required",
@@ -115,7 +97,6 @@
         "service_item_43CLhc",
         "service_item_C7aJ37",
         "service_item_tmE6Y9",
-        "service_item_PiRJcx",
         "service_item_TEgVQW"
       ],
       "name": "Service",
