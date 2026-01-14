@@ -121,7 +121,7 @@
     text-transform: uppercase;
     margin-bottom: 0;
   }
-  .alp-collection-banner-description p {
+  .alp-collection-banner-description  {
     color: #787878;
     font-family: Montserrat;
     font-size: 16px;
@@ -138,7 +138,7 @@
       letter-spacing: 1.4px;
       margin-bottom: 6px;
     }
-    .alp-collection-banner-description p {
+    .alp-collection-banner-description  {
       font-size: 10px;
     }
   }
@@ -173,7 +173,7 @@
     </div>
     
     <div class="alp-collection-banner-description">
-      {{ st.description }}
+      {{ collection.metafields.custom.collection_banner_description | default: st.description }}
     </div>
   </div>
 </div>
