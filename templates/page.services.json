@@ -98,7 +98,7 @@
             "title": "Copy & Paste Order Template (WhatsApp)",
             "image": "shopify://shop_images/z_banner4_85e45130-9802-4578-a826-82a470ad576f.jpg",
             "image_position": "right",
-            "step_1": "Copy & paste this to send us your request:\n<br>\n1) Order type: In-stock / Made-to-order / Private label (OEM/ODM)\n<br>\n2) Style links (or screenshots):\n<br>\n·\n<br>\n·\n<br>\n3) Quantity (per color & size):\n<br>\n· Style 1: Color ___ / Size S __, M __, L __\n<br>\n· Style 2: Color ___ / Size S __, M __, L __\n<br>\n· (If one size: Color ___ / Qty __)\n<br>\n4) Branding / customization (choose one):\n<br>\n· No branding (blank)\n<br>\n· Private label: main label + care label\n<br>\n· Hangtag\n<br>\n· Packaging (bag/box)\n<br>\n· Custom changes: color / fabric / measurements / trims (write details)\n<br>\n5) Target date: ____ (desired delivery date)\n<br>\n6) Shipping country & city: ____\n<br>\n7) Preferred shipping method: Courier / Air / Sea (if you’re not sure, we’ll recommend)\n<br>\n8) Your brand / store (optional): ____ (website or Instagram)\n<br>\nWe’ll reply with: MOQ + quote + lead time + shipping options.",
+            "step_1": "Copy & paste this to send us your request:\n<br>\n<br>\n1) Order type: In-stock / Made-to-order / Private label (OEM/ODM)\n<br>\n2) Style links (or screenshots):\n<br>\n·\n<br>\n·\n<br>\n3) Quantity (per color & size):\n<br>\n· Style 1: Color ___ / Size S __, M __, L __\n<br>\n· Style 2: Color ___ / Size S __, M __, L __\n<br>\n· (If one size: Color ___ / Qty __)\n<br>\n4) Branding / customization (choose one):\n<br>\n· No branding (blank)\n<br>\n· Private label: main label + care label\n<br>\n· Hangtag\n<br>\n· Packaging (bag/box)\n<br>\n· Custom changes: color / fabric / measurements / trims (write details)\n<br>\n5) Target date: ____ (desired delivery date)\n<br>\n6) Shipping country & city: ____\n<br>\n7) Preferred shipping method: Courier / Air / Sea (if you’re not sure, we’ll recommend)\n<br>\n8) Your brand / store (optional): ____ (website or Instagram)\n<br>\nWe’ll reply with: MOQ + quote + lead time + shipping options.",
             "step_2": "",
             "step_3": "",
             "step_4": "",
@@ -120,7 +120,7 @@
       ],
       "name": "Service",
       "settings": {
-        "hero_title": "Services — <br>· Private Label,<br> · In-Stock Wholesale, <br>· OEM/ODM Womenswear",
+        "hero_title": "Services — · Private Label, · In-Stock Wholesale, · OEM/ODM Womenswear",
         "hero_subtitle": "Trust us to do the job well for you!",
         "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
         "cta_title": "CONTACT US NOW",
