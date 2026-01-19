@@ -15,7 +15,7 @@
       "settings": {
         "title": "{{ collection.title }}",
         "collection_list": [
-          "tops"
+          "top"
         ],
         "description": "",
         "bg_color": "#ffffff",
@@ -34,8 +34,8 @@
         "bg_color": "#ffffff",
         "text_color": "#000000",
         "collection_list": [
-          "tops",
-          "frontpage"
+          "top",
+          "in-stock"
         ],
         "container": "alp-container",
         "padding_top": 0,
