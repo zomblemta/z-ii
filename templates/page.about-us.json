@@ -109,28 +109,28 @@
         "discover_AeCRg8": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework1520.jpg",
+            "image": "shopify://shop_images/db2fcfe233c01849a41bec622cbbbcb0_afc99432-7cd4-4bc4-8760-9009c27a4c03.jpg",
             "title": "Best Sellers",
-            "description": "",
-            "url": ""
+            "description": "Proven styles with stable fit and repeat demand—ideal for a confident first order.",
+            "url": "shopify://collections/best-sellers"
           }
         },
         "discover_UV8XzN": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework4088.jpg",
-            "title": "Exploremore styles",
-            "description": "",
+            "image": "shopify://shop_images/40051ea3d46a67909ab82513e324953e.jpg",
+            "title": "In-Stock Ready to Ship",
+            "description": "Start with 1 pc, test best-sellers fast, and restock winners without waiting for production.",
             "url": ""
           }
         },
         "discover_PUxEV4": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework4107.jpg",
-            "title": "Exploremore styles",
-            "description": "",
-            "url": ""
+            "image": "shopify://shop_images/IMG_0236.heic",
+            "title": "Services & Supply Modes",
+            "description": "Tell us your model—in-stock wholesale, MTO, or private label. We’ll recommend the fastest, safest path to launch.",
+            "url": "shopify://pages/services"
           }
         }
       },
