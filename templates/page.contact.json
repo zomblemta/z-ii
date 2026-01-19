@@ -22,14 +22,16 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "image": "shopify://shop_images/355577f1d217d6e124c0536ab8255d120e8b5a1d.jpg"
+        "image": "shopify://shop_images/111.jpg"
       }
     },
     "contact_us_fMVDyz": {
       "type": "contact-us",
       "custom_css": [],
       "name": "Contact Us Form",
-      "settings": {}
+      "settings": {
+        "faq_url": ""
+      }
     }
   },
   "order": [

@@ -12,12 +12,12 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
-        "slide_nECWVe": {
+        "slide_Afcimb": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner.jpg",
-            "title": "CURATED EDIT",
-            "description": "Minimal styles, crafted for your brand.",
+            "image": "shopify://shop_images/121b44e2ff045a4b121f7cb2678dca21_2_5bc9e551-5eb1-477b-975d-28b7c1d8843e.jpg",
+            "title": "Minimal Edit, Curated for You.",
+            "description": "Less searching · Faster buying.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -30,8 +30,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/1_9beae0f2-c347-47bd-bd7b-8b000bd685fe.jpg",
-            "title": "CREATE YOUR EDIT.<br>",
-            "description": "CUT. SAMPLE. PRODUCE.",
+            "title": "Consistent Fit. Trusted Quality.",
+            "description": "Source-controlled QC · Details done right.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -43,9 +43,9 @@
         "slide_gUi7BK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/jhb.jpg",
-            "title": "FW’2025<br>\nNEW ARRIVALS",
-            "description": "",
+            "image": "shopify://shop_images/87944c807bf2667aaa2070f58678db4f_2.jpg",
+            "title": "Not Generic. Design-Led.",
+            "description": "More newness · Stronger identity.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -54,12 +54,12 @@
             "mobile_description_text_size": 12
           }
         },
-        "slide_Afcimb": {
+        "slide_nECWVe": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/121b44e2ff045a4b121f7cb2678dca21_2_5bc9e551-5eb1-477b-975d-28b7c1d8843e.jpg",
-            "title": "CURATED PATTERNS.<br>",
-            "description": "Ready-to-ship · Ready-to-make.",
+            "image": "shopify://shop_images/56fab573504bfd9f67f8dc4d2bde419c.jpg",
+            "title": "Start Small. Scale Fast.",
+            "description": "In-stock from 1 piece · Fast restocks.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -70,10 +70,10 @@
         }
       },
       "block_order": [
-        "slide_nECWVe",
+        "slide_Afcimb",
         "slide_yzHmBm",
         "slide_gUi7BK",
-        "slide_Afcimb"
+        "slide_nECWVe"
       ],
       "name": "首页轮播Banner",
       "settings": {
@@ -122,7 +122,7 @@
         "description_1": "Fabric you can trust—drop after drop.",
         "image_1_url": "contrast-leather-shearling",
         "image_2": "shopify://shop_images/IMG_0070.heic",
-        "description_2": "FW'25 New in: curated winter sets—ready to sell.",
+        "description_2": "Curated winter sets—ready to sell.",
         "image_2_url": "outwear",
         "image_3": "shopify://shop_images/3fdbae01eb70545cdd5986563cdca979_HEIC_106_1.jpg",
         "description_3": "sharp lines, quiet confidence",
