@@ -296,7 +296,7 @@
     </div>
   {% endif %}
   <div class="alp-index-product-list-nav">
-    <div class="alp-index-product-list-container" product-list-data-scroll-container>
+    <div class="alp-index-product-list-container" id="product-list-scroll-container-{{ section.id }}" product-list-data-scroll-container>
       {% for product in section.settings.product_list %}
         <div class="alp-index-product-list-item">
           {% comment %}Debug: {{ product.handle }} - Media: {{ product.featured_media }}{% endcomment %}
@@ -318,10 +318,10 @@
       {% endfor %}
     </div>
     <!-- PC端导航按钮 -->
-    <span class="alp-index-product-list-nav-btn prev" product-list-data-nav-prev aria-label="Previous">
+    <span class="alp-index-product-list-nav-btn prev" id="product-list-nav-prev-{{ section.id }}" product-list-data-nav-prev aria-label="Previous">
       {% render 'icon', icon: 'icon-arrow-prev' %}
     </span>
-    <span class="alp-index-product-list-nav-btn next" product-list-data-nav-next aria-label="Next">
+    <span class="alp-index-product-list-nav-btn next" id="product-list-nav-next-{{ section.id }}" product-list-data-nav-next aria-label="Next">
       {% render 'icon', icon: 'icon-arrow-next' %}
     </span>
   </div>
@@ -337,7 +337,7 @@
     'use strict';
 
     function initScrollProgress() {
-      const scrollContainer = document.querySelector('[product-list-data-scroll-container]');
+      const scrollContainer = document.getElementById('product-list-scroll-container-{{ section.id }}');
       const progressBar = document.querySelector('[product-list-data-progress-bar]');
 
       if (!scrollContainer || !progressBar) return;
@@ -370,9 +370,9 @@
     }
 
     function initNavigationButtons() {
-      const scrollContainer = document.querySelector('[product-list-data-scroll-container]');
-      const prevBtn = document.querySelector('[product-list-data-nav-prev]');
-      const nextBtn = document.querySelector('[product-list-data-nav-next]');
+      const scrollContainer = document.getElementById('product-list-scroll-container-{{ section.id }}');
+      const prevBtn = document.getElementById('product-list-nav-prev-{{ section.id }}');
+      const nextBtn = document.getElementById('product-list-nav-next-{{ section.id }}');
 
       if (!scrollContainer || !prevBtn || !nextBtn) return;
 
