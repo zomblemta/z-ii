@@ -66,7 +66,7 @@
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/Bottoms.jpg",
-            "link": "shopify://collections/test"
+            "link": "shopify://collections/bottoms"
           }
         },
         "link_image_Dbindc": {
