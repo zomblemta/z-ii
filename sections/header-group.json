@@ -74,14 +74,14 @@
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/Top.jpg",
-            "link": "shopify://collections/top"
+            "link": "shopify://collections/tops"
           }
         },
         "link_image_WULjnp": {
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/Bottoms_27a8cb52-cfac-4834-b6f2-03a95860bcef.jpg",
-            "link": "shopify://collections/bottoms"
+            "link": "shopify://collections/test"
           }
         },
         "link_image_Dbindc": {
@@ -95,14 +95,14 @@
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/Coat_Outwear_be681e8d-87c8-4fc3-9060-7c570133f39e.jpg",
-            "link": "shopify://collections/coat-outwear"
+            "link": "shopify://collections/outwear"
           }
         },
         "link_image_7JrTR7": {
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/Blazer_d2f5f629-1794-4e10-826d-d8b05d4469f2.jpg",
-            "link": "shopify://collections/blazer"
+            "link": "shopify://collections/summer"
           }
         },
         "link_image_cxGKiP": {
@@ -116,7 +116,7 @@
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/IN_STOCK_b5981176-5925-45e9-93d3-1c35f3eb4d27.jpg",
-            "link": "shopify://collections/in-stock"
+            "link": "shopify://collections/frontpage"
           }
         }
       },

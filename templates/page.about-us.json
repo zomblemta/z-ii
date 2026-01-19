@@ -23,7 +23,7 @@
       "settings": {
         "desktop_image": "shopify://shop_images/IMG_0454.heic",
         "mobile_image": "shopify://shop_images/IMG_0454.heic",
-        "title": "Who We Are & What You Get.",
+        "title": "About Z-II STUDIOS — Minimalist Womenswear Wholesale & Private Label",
         "description": "<p>Z-II STUDIOS is a minimalist womenswear wholesale partner for boutiques, online sellers, resellers, and emerging brands. Based in Guangzhou, China and focused on womenswear for <strong>15+ years</strong>, we’ve grown from a two-person studio into a <strong>50+ specialist team</strong>. We operate <strong>three cross-border showrooms in Thirteen Hongs</strong> and support <strong>5,000+ registered brands—from startups to established retailers</strong>. We release <strong>100+ new styles every month</strong>, built at the intersection of minimal design, precise fit, and boutique finishing.</p><p><strong>What you get when you work with us:</strong></p><p><br/><strong>· Consistent quality & fit:</strong> stable sizing, clean finishing, and repeatable hand-feel—so you can sell with confidence, reduce returns, and protect your store reputation.<br/><br/><strong>· In-stock drops + fast restocks:</strong> buy light, test fast, and replenish winners quickly—so you don’t miss selling windows or lose momentum when a style takes off.<br/><br/><strong>· Not generic, curated minimal:</strong> we translate runway proportions into wearable minimal pieces—one clear aesthetic that saves you sourcing time and cuts communication back-and-forth.<br/><br/><strong>·  Store-ready delivery + optional logistics support:</strong> pieces arrive <strong>packed and retail-ready</strong>, so you don’t need to re-pack, source trims, or spend time on relabeling before selling. If needed, we can also help arrange shipping and prepare export paperwork (CI/PL) and HS code info—so your landed cost and timelines are easier to plan.</p>",
         "image_position": "right"
       }
@@ -32,49 +32,6 @@
       "type": "about-us",
       "name": "About Us",
       "settings": {}
-    },
-    "index_discover_NdmV7P": {
-      "type": "index-discover",
-      "blocks": {
-        "discover_AeCRg8": {
-          "type": "discover",
-          "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework1520.jpg",
-            "title": "Exploremore styles",
-            "description": "",
-            "url": ""
-          }
-        },
-        "discover_UV8XzN": {
-          "type": "discover",
-          "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework4088.jpg",
-            "title": "Exploremore styles",
-            "description": "",
-            "url": ""
-          }
-        },
-        "discover_PUxEV4": {
-          "type": "discover",
-          "settings": {
-            "image": "shopify://shop_images/2025.06.28_Preprework4107.jpg",
-            "title": "Exploremore styles",
-            "description": "",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "discover_AeCRg8",
-        "discover_UV8XzN",
-        "discover_PUxEV4"
-      ],
-      "disabled": true,
-      "name": "Index Discover",
-      "settings": {
-        "title": "Explore more",
-        "image_style": "style-1"
-      }
     },
     "image_text_block_AwxpYN": {
       "type": "image-text-block",
@@ -132,6 +89,48 @@
         "padding_bottom": 60
       }
     },
+    "index_discover_NdmV7P": {
+      "type": "index-discover",
+      "blocks": {
+        "discover_AeCRg8": {
+          "type": "discover",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework1520.jpg",
+            "title": "Best Sellers",
+            "description": "",
+            "url": ""
+          }
+        },
+        "discover_UV8XzN": {
+          "type": "discover",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework4088.jpg",
+            "title": "Exploremore styles",
+            "description": "",
+            "url": ""
+          }
+        },
+        "discover_PUxEV4": {
+          "type": "discover",
+          "settings": {
+            "image": "shopify://shop_images/2025.06.28_Preprework4107.jpg",
+            "title": "Exploremore styles",
+            "description": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "discover_AeCRg8",
+        "discover_UV8XzN",
+        "discover_PUxEV4"
+      ],
+      "name": "Index Discover",
+      "settings": {
+        "title": "Explore more",
+        "image_style": "style-1"
+      }
+    },
     "contact_us_XUwgXN": {
       "type": "contact-us",
       "name": "Contact Us Form",
@@ -144,11 +143,11 @@
     "main",
     "image_text_pVwzhW",
     "about_us_yVqfQF",
-    "index_discover_NdmV7P",
     "image_text_block_AwxpYN",
     "image_text_block_GRi8Pj",
     "image_text_block_bmaVrQ",
     "image_text_block_Jr3xfr",
+    "index_discover_NdmV7P",
     "contact_us_XUwgXN"
   ]
 }
