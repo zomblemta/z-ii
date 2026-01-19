@@ -65,8 +65,8 @@
 
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
-    <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h1 class="h2 center">
+    <div class="template-search__header w-full md:w-[1200px] mx-auto {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <h1 class="h2 ">
         {%- if search.performed -%}
           {{- 'templates.search.title' | t -}}
         {%- else -%}
@@ -102,8 +102,8 @@
               >
               <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
               <input name="options[prefix]" type="hidden" value="last">
-{% comment %} 
-              {%- if settings.predictive_search_enabled -%}
+
+              {% comment %} {%- if settings.predictive_search_enabled -%}
                 <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
                   {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
                 </div>
@@ -113,14 +113,14 @@
 
               <button
                 type="reset"
-                class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                class="reset__button field__button{% if search.terms == blank %} hidden{% endif %} border-none shrink-0"
                 aria-label="{{ 'general.search.reset' | t }}"
               >
                 <span class="svg-wrapper">
                   {{- 'icon-reset.svg' | inline_asset_content -}}
                 </span>
               </button>
-              <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+              <button type="submit" class="search__button field__button border-none" aria-label="{{ 'general.search.search' | t }}">
                 <span class="svg-wrapper">
                   {{- 'icon-search.svg' | inline_asset_content -}}
                 </span>
@@ -210,7 +210,7 @@
       >
         {%- if search.filters != empty -%}
           {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-            <aside
+            {% comment %} <aside
               aria-labelledby="verticalTitle"
               class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
               id="main-search-filters"
@@ -223,10 +223,10 @@
                 filter_type: section.settings.filter_type,
                 paginate: paginate
               %}
-            </aside>
+            </aside> {% endcomment %}
           {%- endif -%}
         {%- endif -%}
-        <div class="product-grid-container" id="ProductGridContainer">
+        <div class="product-grid-container md:w-[1200px] mx-auto" id="ProductGridContainer">
           {%- if search.results.size == 0 and search.filters != empty -%}
             <div
               class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
@@ -247,13 +247,13 @@
             </div>
           {%- else -%}
             <div
-              class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+              class="template-search__results collection{ page-1200"
               id="product-grid"
               data-id="{{ section.id }}"
             >
               <div class="loading-overlay gradient"></div>
               <ul
-                class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[10px] gap-y-5 md:gap-x-[40px] md:gap-y-[40px] product-grid px-0"
                 role="list"
               >
                 {%- assign skip_card_product_styles = false -%}
@@ -264,7 +264,7 @@
                   {%- endif -%}
 
                   <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    class=" w-full {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} list-none"
                     {% if settings.animations_reveal_on_scroll %}
                       data-cascade
                     {% endif %}
@@ -276,6 +276,7 @@
                           card_product: item,
                           media_aspect_ratio: section.settings.image_ratio,
                           image_shape: section.settings.image_shape,
+                          fixed_ratio_percent: '148.148%',
                           show_secondary_image: section.settings.show_secondary_image,
                           show_vendor: section.settings.show_vendor,
                           show_rating: section.settings.show_rating,

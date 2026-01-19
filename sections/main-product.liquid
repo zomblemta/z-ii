@@ -596,7 +596,8 @@
                   <div class="flex items-center justify-between text-sm md:text-xl font-medium  mt-[12px] ">
                     <p>
                       <span class="text-[#BABABA]">Price per unit:</span>
-                      <span class="text-black">{{ product.selected_or_first_available_variant.price | money }}</span>
+                      <span id="variant-price-{{ section.id }}" class="text-black">{{ product.selected_or_first_available_variant.price | money }}</span>
+                      <span id="variant-compare-price-{{ section.id }}" class="text-[#BABABA] line-through"{% unless product.selected_or_first_available_variant.compare_at_price %} style="display:none;"{% endunless %}>{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
                     </p>
                     {% comment %}
                       <p>
@@ -611,6 +612,56 @@
                       </p>
                     {% endcomment %}
                   </div>
+
+                  <script>
+                    (function() {
+                      function updateVariantPrice() {
+                        if (typeof subscribe === 'undefined' || typeof PUB_SUB_EVENTS === 'undefined') {
+                          setTimeout(updateVariantPrice, 50);
+                          return;
+                        }
+
+                        const sectionId = '{{ section.id }}';
+                        const priceEl = document.getElementById('variant-price-' + sectionId);
+                        const compareEl = document.getElementById('variant-compare-price-' + sectionId);
+
+                        subscribe(PUB_SUB_EVENTS.variantChange, function(event) {
+                          if (event.data.sectionId !== sectionId || !event.data.variant) return;
+
+                          const variant = event.data.variant;
+                          
+                          // 格式化价格
+                          if (variant.price != null && priceEl) {
+                            if (window.Shopify && window.Shopify.formatMoney) {
+                              priceEl.textContent = window.Shopify.formatMoney(variant.price);
+                            } else {
+                              priceEl.textContent = '$' + (variant.price / 100).toFixed(2);
+                            }
+                          }
+
+                          // 更新对比价格
+                          if (compareEl) {
+                            if (variant.compare_at_price && variant.compare_at_price > variant.price) {
+                              if (window.Shopify && window.Shopify.formatMoney) {
+                                compareEl.textContent = window.Shopify.formatMoney(variant.compare_at_price);
+                              } else {
+                                compareEl.textContent = '$' + (variant.compare_at_price / 100).toFixed(2);
+                              }
+                              compareEl.style.display = '';
+                            } else {
+                              compareEl.style.display = 'none';
+                            }
+                          }
+                        });
+                      }
+
+                      if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', updateVariantPrice);
+                      } else {
+                        updateVariantPrice();
+                      }
+                    })();
+                  </script>
                 </div>
                 {%- render 'buy-buttons',
                   block: block,

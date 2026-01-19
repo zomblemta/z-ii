@@ -11,16 +11,14 @@
   }
 </style>
 
-{% comment %} {% assign show_tag = true %}
+{% assign show_tag = true %}
 
-{% assign sale_percent = product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | times: -1 -%} {% endcomment %}
+{% assign sale_percent = product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | times: -1 -%} 
 
 <div class="flex gap-x-2 items-center ">
   <span class="cart-product-price text-base font-normal tracking-[1.6px]  ">
-    From {{ ' ' }}
     {{- product.price | money_without_trailing_zeros -}}
   </span>
-  {% comment %}
     {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
       <span class="cart-proudct-compare-price text-[#858585] text-xs tracking-[1.2px] line-through">
         {{- product.compare_at_price | money_without_trailing_zeros -}}
@@ -32,5 +30,4 @@
         Save {{ sale_percent }}%
       </span>
     {% endif %}
-  {% endcomment %}
 </div>
