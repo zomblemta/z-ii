@@ -15,7 +15,7 @@
       "settings": {
         "title": "{{ collection.title }}",
         "collection_list": [
-          "tops"
+          "top"
         ],
         "description": "<p>Embrace timeless elegance and modern sophistication with refined style.</p>",
         "bg_color": "#FFFFFF",
@@ -34,7 +34,7 @@
         "bg_color": "#FFFFFF",
         "text_color": "#000000",
         "collection_list": [
-          "tops",
+          "top",
           "frontpage"
         ],
         "container": "alp-container",
