@@ -74,7 +74,7 @@
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/Top.jpg",
-            "link": "shopify://collections/tops"
+            "link": "shopify://collections/top"
           }
         },
         "link_image_WULjnp": {
