@@ -80,7 +80,7 @@
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/Coat_Outwear.jpg",
-            "link": "shopify://collections/coat-outerwear"
+            "link": "shopify://collections/coat-outwear"
           }
         },
         "link_image_7JrTR7": {
@@ -101,7 +101,7 @@
           "type": "link_image",
           "settings": {
             "image": "shopify://shop_images/IN_STOCK.jpg",
-            "link": "shopify://collections/frontpage"
+            "link": "shopify://collections/in-stock"
           }
         }
       },

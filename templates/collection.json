@@ -35,7 +35,7 @@
         "text_color": "#000000",
         "collection_list": [
           "top",
-          "frontpage"
+          "in-stock"
         ],
         "container": "alp-container",
         "padding_top": 0,
