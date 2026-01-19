@@ -123,7 +123,7 @@
         "image_1_url": "contrast-leather-shearling",
         "image_2": "shopify://shop_images/IMG_0070.heic",
         "description_2": "Curated winter sets—ready to sell.",
-        "image_2_url": "coat-outerwear",
+        "image_2_url": "coat-outwear",
         "image_3": "shopify://shop_images/3fdbae01eb70545cdd5986563cdca979_HEIC_106_1.jpg",
         "description_3": "sharp lines, quiet confidence",
         "image_3_url": "",
@@ -144,7 +144,7 @@
             "image": "shopify://shop_images/IMG_0209_HEIC_109_1_1_2170db2c-595d-46e8-b01a-ff78f96d333a.jpg",
             "title": "In Stock",
             "description": "Ready to ship—orders from 1 piece, dispatched in 1–3 business days.",
-            "url": "shopify://collections/frontpage"
+            "url": "shopify://collections/in-stock"
           }
         },
         "discover_kViqXX": {
