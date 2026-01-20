@@ -103,6 +103,20 @@
         "padding_bottom": 60
       }
     },
+    "image_text_block_wfbAhr": {
+      "type": "image-text-block",
+      "name": "图片文案块",
+      "settings": {
+        "image": "shopify://shop_images/aa76a8e5a2b8a6e77f7e837d1a2fa0eb_248f81fb-3109-4cda-884e-329eade63006.jpg",
+        "title": "Step Ordering Flow",
+        "description": "Step 1 — Send your request\n<br>\n· Send us: style links/tech pack + quantities (per color & size) + target date + ship-to country/city.\n<br><br>\nStep 2 — Confirm plan & quote\n<br>\n· We confirm MOQ, pricing, lead time, and shipping options. For private label/OEM, we align branding details (labels/packaging) and the sampling plan.\n<br><br>\nStep 3 — Produce · QC · Ship\n<br>\n· In-stock orders move to QC → packing → dispatch.\n<br>\n· Made-to-order & OEM follow sample approval → bulk production → final inspection → shipment.",
+        "image_position": "left",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
     "index_discover_NdmV7P": {
       "type": "index-discover",
       "blocks": {
@@ -142,6 +156,7 @@
       "name": "Index Discover",
       "settings": {
         "title": "Explore more",
+        "margin_bottom": 0,
         "image_style": "style-1"
       }
     },
@@ -162,6 +177,7 @@
     "image_text_block_GRi8Pj",
     "image_text_block_bmaVrQ",
     "image_text_block_Jr3xfr",
+    "image_text_block_wfbAhr",
     "index_discover_NdmV7P",
     "contact_us_XUwgXN"
   ]
