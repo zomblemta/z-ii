@@ -156,7 +156,7 @@
       "name": "Index Discover",
       "settings": {
         "title": "Explore more",
-        "margin_bottom": 0,
+        "margin_bottom": 50,
         "image_style": "style-1"
       }
     },
