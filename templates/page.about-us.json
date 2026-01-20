@@ -103,6 +103,20 @@
         "padding_bottom": 60
       }
     },
+    "image_text_block_wfbAhr": {
+      "type": "image-text-block",
+      "name": "图片文案块",
+      "settings": {
+        "image": "shopify://shop_images/84e5b28946b8055194797331f6a7fb80_b7b2fa24-3e3e-4e0a-a051-9966d60adcd3.jpg",
+        "title": "Step Ordering Flow",
+        "description": "Step 1 — Send your request\n<br>\n· Send us: style links/tech pack + quantities (per color & size) + target date + ship-to country/city.\n<br><br>\nStep 2 — Confirm plan & quote\n<br>\n· We confirm MOQ, pricing, lead time, and shipping options. For private label/OEM, we align branding details (labels/packaging) and the sampling plan.\n<br><br>\nStep 3 — Produce · QC · Ship\n<br>\n· In-stock orders move to QC → packing → dispatch.\n<br>\n· Made-to-order & OEM follow sample approval → bulk production → final inspection → shipment.\n<br><br>\nAdd this line at the end:\n<br><br>\nClick the buttons below to contact us.",
+        "image_position": "right",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
     "index_discover_NdmV7P": {
       "type": "index-discover",
       "blocks": {
@@ -127,7 +141,7 @@
         "discover_PUxEV4": {
           "type": "discover",
           "settings": {
-            "image": "shopify://shop_images/Z_II5.jpg",
+            "image": "shopify://shop_images/1_08184130-738d-45c5-9d17-5f40b49b86a0.jpg",
             "title": "Services & Supply Modes",
             "description": "Tell us your model—in-stock wholesale, MTO, or private label. We’ll recommend the fastest, safest path to launch.",
             "url": "shopify://pages/services"
@@ -142,6 +156,7 @@
       "name": "Index Discover",
       "settings": {
         "title": "Explore more",
+        "margin_bottom": 0,
         "image_style": "style-1"
       }
     },
@@ -162,6 +177,7 @@
     "image_text_block_GRi8Pj",
     "image_text_block_bmaVrQ",
     "image_text_block_Jr3xfr",
+    "image_text_block_wfbAhr",
     "index_discover_NdmV7P",
     "contact_us_XUwgXN"
   ]
