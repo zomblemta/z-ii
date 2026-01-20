@@ -21,7 +21,7 @@
   }
 </style>
 
-<div class="w-full px-[15px] md:px-[53px] mt-[30px]  flex flex-col gap-[30px] md:gap-[20px]">
+<div style="margin-bottom: {{ section.settings.margin_bottom }}px;" class="w-full px-[15px] md:px-[53px] mt-[30px]  flex flex-col gap-[30px] md:gap-[20px]">
   <h3 class="m-0 text-2xl md:text-5xl font-semibold leading-normal uppercase tracking-[2px]">
     {{ section.settings.title }}
   </h3>
@@ -133,6 +133,16 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
     },
     {
       "type": "select",
