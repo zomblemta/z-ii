@@ -1,5 +1,19 @@
 .search__input.field__input {
   padding-right: 9.8rem;
+  padding-top: 10px;
+  border: 1px solid #BABABA;
+}
+
+.template-search__search .search  {
+  max-width: 400px;
+}
+
+@media screen and (max-width: 750px) {
+  .search__input.field__input {
+    padding-left: 1rem;
+    padding-top: 0px;
+    font-size: 16px;
+  }
 }
 
 .search__button {
