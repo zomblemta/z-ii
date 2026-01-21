@@ -126,7 +126,7 @@
         "image_2_url": "coat-outwear",
         "image_3": "shopify://shop_images/3fdbae01eb70545cdd5986563cdca979_HEIC_106_1.jpg",
         "description_3": "sharp lines, quiet confidence",
-        "image_3_url": "",
+        "image_3_url": "glen-check-wool-blend-double-breasted-blazer",
         "image_4": "shopify://shop_images/as_seen_on_you5.jpg",
         "description_4": "Made to your size. Private label available.",
         "image_4_url": "shopify://pages/services",
@@ -184,6 +184,7 @@
       "name": "Index Discover",
       "settings": {
         "title": "Discover",
+        "margin_bottom": 0,
         "image_style": "style-1"
       }
     },
