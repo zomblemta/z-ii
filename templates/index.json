@@ -123,16 +123,16 @@
         "image_1_url": "shopify://products/contrast-leather-shearling",
         "image_2": "shopify://shop_images/IMG_0070.heic",
         "description_2": "Curated winter sets—ready to sell.",
-        "image_2_url": "",
+        "image_2_url": "shopify://collections/coat-outerwear",
         "image_3": "shopify://shop_images/3fdbae01eb70545cdd5986563cdca979_HEIC_106_1.jpg",
         "description_3": "sharp lines, quiet confidence",
-        "image_3_url": "",
+        "image_3_url": "shopify://collections/coat-outerwear",
         "image_4": "shopify://shop_images/as_seen_on_you5.jpg",
         "description_4": "Made to your size. Private label available.",
         "image_4_url": "shopify://pages/services",
         "image_5": "shopify://shop_images/IMG_0184_HEIC_100_1.jpg",
         "description_5": "Boutique-style packing,delivered exactly as shown-clean,protected,shelf-ready.",
-        "image_5_url": ""
+        "image_5_url": "shopify://pages/services"
       }
     },
     "index_discover_xfrBet": {
