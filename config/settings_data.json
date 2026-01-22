@@ -169,6 +169,11 @@
         "type": "shopify://apps/hoppy-trust-badges/blocks/trust_badges_icon/6e9703d9-56af-47d9-80bb-0abc8eb8c38b",
         "disabled": false,
         "settings": {}
+      },
+      "15639742860725253803": {
+        "type": "shopify://apps/musbu-wa-chat/blocks/app-embed/267d7a73-494b-4925-ba55-49fe70b0f09e",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
