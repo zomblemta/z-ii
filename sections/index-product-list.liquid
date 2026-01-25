@@ -148,19 +148,15 @@
       -ms-overflow-style: none; /* IE and Edge */
     }
 
-    .alp-index-product-list-item {
-      flex: 0 0 75%;
-      min-width: 75%;
-      display: flex;
-      flex-direction: column;
-      scroll-snap-align: start;
-    }
+  .alp-index-product-list-item {
+    flex: 0 0 50%;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+  }
 
-    .alp-index-product-list-item-image {
-      aspect-ratio: 210/280;
-    }
-
-    .alp-index-product-list-container::-webkit-scrollbar {
+  .alp-index-product-list-container::-webkit-scrollbar {
       display: none; /* Chrome, Safari */
     }
 
@@ -193,13 +189,6 @@
     transition: width 0.3s ease-out;
   }
 
-  .alp-index-product-list-item-image {
-    width: 100%;
-    aspect-ratio: 318/424;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-
   /* 确保卡片容器有正确的高度 */
   .alp-index-product-list-item .card-wrapper {
     height: 100%;
@@ -214,7 +203,6 @@
   }
 
   .alp-index-product-list-item .card__inner {
-    height: auto !important;
     flex-shrink: 0;
   }
 
@@ -304,6 +292,8 @@
             {% render 'card-product',
               card_product: product,
               media_aspect_ratio: 'portrait',
+              fixed_ratio_percent: '148.148%',
+              collection_enforce_ratio: true,
               show_secondary_image: false,
               show_card_info: true,
               show_vendor: false,
@@ -311,8 +301,7 @@
               lazy_load: false,
               section_id: section.id
             %}
-          {% else %}
-            <p style="color: red;">产品未找到</p>
+          
           {% endif %}
         </div>
       {% endfor %}
