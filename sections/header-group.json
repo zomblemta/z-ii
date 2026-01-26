@@ -115,8 +115,8 @@
         "link_image_KxLaVi": {
           "type": "link_image",
           "settings": {
-            "image": "shopify://shop_images/IN_STOCK_b5981176-5925-45e9-93d3-1c35f3eb4d27.jpg",
-            "link": "shopify://collections/frontpage"
+            "image": "shopify://shop_images/21e4ce697248cb1436941322d0a24835_33a576fb-34d5-4aef-8965-38b9138a0bff.jpg",
+            "link": "shopify://collections/in-stock"
           }
         }
       },
