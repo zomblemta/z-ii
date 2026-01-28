@@ -74,11 +74,11 @@
         "service_item_GhGcAy": {
           "type": "service_item",
           "settings": {
-            "title": "Timeline & MOQ",
+            "title": "Timeline & MOQ (Reference)",
             "image_position": "right",
-            "step_1": "Sampling: 5–7 working days (typical)",
-            "step_2": "Bulk production: 15–20 working days after approval (typical)",
-            "step_3": "MOQ: from 50 pcs per style per color (OEM / private label)",
+            "step_1": "<b>In-stock private label:<i> timeline depends on branding requirements + order size</i></b>",
+            "step_2": "OEM/private label:\n<br><br>\n· Sampling: 5–7 working days (typical)\n<br><br>\n· Bulk: 15–20 working days after approval (typical)",
+            "step_3": "MOQ guideline:\n<br><br>\n· In-stock: from 1 piece\n<br><br>\n· OEM/private label: <b>from 50 pcs per style per color</b>",
             "step_4": "",
             "step_5": "",
             "step_6": "",
