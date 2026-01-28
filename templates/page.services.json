@@ -41,7 +41,7 @@
           "type": "service_item",
           "settings": {
             "title": "OEM / ODM",
-            "image_position": "left",
+            "image_position": "right",
             "step_1": "From tech pack to finished goods — we manage end-to-end execution.",
             "step_2": "Development: fabric/trim support, pattern, sampling",
             "step_3": "Production execution via long-term partner factories",
@@ -57,29 +57,12 @@
         "service_item_p3aAWb": {
           "type": "service_item",
           "settings": {
-            "title": "Service Title",
+            "title": "Private Label",
             "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
-            "step_5": "",
-            "step_6": "",
-            "step_7": "",
-            "step_8": "",
-            "step_9": "",
-            "step_10": ""
-          }
-        },
-        "service_item_VKafqN": {
-          "type": "service_item",
-          "settings": {
-            "title": "Service Title",
-            "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
+            "step_1": "Brand-ready details, without operational hassle.",
+            "step_2": "Relabeling: labels, hangtags, packaging (as required)",
+            "step_3": "Size support: S–M–L or custom size sets",
+            "step_4": "Available on in-stock or made-to-order programs",
             "step_5": "",
             "step_6": "",
             "step_7": "",
@@ -92,8 +75,7 @@
       "block_order": [
         "service_item_jDhhUz",
         "service_item_tzeyjX",
-        "service_item_p3aAWb",
-        "service_item_VKafqN"
+        "service_item_p3aAWb"
       ],
       "name": "Service",
       "settings": {
