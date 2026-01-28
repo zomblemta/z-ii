@@ -40,12 +40,12 @@
         "service_item_tzeyjX": {
           "type": "service_item",
           "settings": {
-            "title": "Service Title",
+            "title": "OEM / ODM",
             "image_position": "left",
-            "step_1": "Please contact our customer service team first and let them know the style you need.",
-            "step_2": "Let us know the quantity you need and wait for our quote.",
-            "step_3": "Let us know the quantity you need and wait for our quote.",
-            "step_4": "",
+            "step_1": "From tech pack to finished goods — we manage end-to-end execution.",
+            "step_2": "Development: fabric/trim support, pattern, sampling",
+            "step_3": "Production execution via long-term partner factories",
+            "step_4": "QC + packing + logistics — one streamlined workflow",
             "step_5": "",
             "step_6": "",
             "step_7": "",
