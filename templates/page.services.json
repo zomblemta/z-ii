@@ -20,14 +20,31 @@
     "service_UxiADA": {
       "type": "service",
       "blocks": {
-        "service_item_iVCXnQ": {
+        "service_item_jDhhUz": {
           "type": "service_item",
           "settings": {
-            "title": "Who This Is For",
+            "title": "In-Stock Wholesale",
             "image_position": "left",
-            "step_1": "Boutique buyers building curated drops",
-            "step_2": "Emerging brands developing signature styles",
-            "step_3": "Teams that have a tech pack but don’t want to manage multiple vendors",
+            "step_1": "Low-risk buying. Fast dispatch. Boutique-ready finishing.",
+            "step_2": "MOQ: from 1 piece",
+            "step_3": "Mix styles and sizes across collections",
+            "step_4": "QC check + packing + shipping coordination included",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_tzeyjX": {
+          "type": "service_item",
+          "settings": {
+            "title": "Service Title",
+            "image_position": "left",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
             "step_4": "",
             "step_5": "",
             "step_6": "",
@@ -37,48 +54,14 @@
             "step_10": ""
           }
         },
-        "service_item_GhTbnF": {
+        "service_item_p3aAWb": {
           "type": "service_item",
           "settings": {
-            "title": "What We Deliver (End-to-End)",
-            "image_position": "right",
-            "step_1": "Design review & feasibility check",
-            "step_2": "Fabric & trim sourcing support (or work with your nominated materials)",
-            "step_3": "Patternmaking, grading, sampling",
-            "step_4": "Bulk production execution via long-term partner factories",
-            "step_5": "QC coordination (inline + final), packing, logistics support",
-            "step_6": "",
-            "step_7": "",
-            "step_8": "",
-            "step_9": "",
-            "step_10": ""
-          }
-        },
-        "service_item_czfYgp": {
-          "type": "service_item",
-          "settings": {
-            "title": "Workflow (Concept → Garment)",
+            "title": "Service Title",
             "image_position": "left",
-            "step_1": "Brief: tech pack / sketches / reference images + target qty",
-            "step_2": "Development: materials & construction confirmation",
-            "step_3": "Sampling: prototype sample for fit & finish",
-            "step_4": "Revisions: typically 1–2 rounds",
-            "step_5": "Bulk production: based on approved sample & specs",
-            "step_6": "QC + Shipping: packing + dispatch coordination",
-            "step_7": "",
-            "step_8": "",
-            "step_9": "",
-            "step_10": ""
-          }
-        },
-        "service_item_GhGcAy": {
-          "type": "service_item",
-          "settings": {
-            "title": "Timeline & MOQ",
-            "image_position": "right",
-            "step_1": "Sampling: 5–7 working days (typical)",
-            "step_2": "Bulk production: 15–20 working days after approval (typical)",
-            "step_3": "MOQ: from 50 pcs per style per color (OEM / private label)",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
             "step_4": "",
             "step_5": "",
             "step_6": "",
@@ -88,31 +71,14 @@
             "step_10": ""
           }
         },
-        "service_item_kyeH96": {
+        "service_item_VKafqN": {
           "type": "service_item",
           "settings": {
-            "title": "Sampling Fee (Reference)",
+            "title": "Service Title",
             "image_position": "left",
-            "step_1": "T-shirt / pants / small items: USD 100 / style",
-            "step_2": "Blazer / jacket: USD 150 / style",
-            "step_3": "Long coat / overcoat: USD 200 / style",
-            "step_4": "Sample fee can be credited back when you proceed with bulk production.",
-            "step_5": "",
-            "step_6": "",
-            "step_7": "",
-            "step_8": "",
-            "step_9": "",
-            "step_10": ""
-          }
-        },
-        "service_item_9KweKJ": {
-          "type": "service_item",
-          "settings": {
-            "title": "What We Need From You (Copy-Paste)",
-            "image_position": "right",
-            "step_1": "Reply with: Style refs/tech pack + target market + target price + qty + size run + target date",
-            "step_2": "WhatsApp (1-click): https://wa.me/8618688873388",
-            "step_3": "",
+            "step_1": "Please contact our customer service team first and let them know the style you need.",
+            "step_2": "Let us know the quantity you need and wait for our quote.",
+            "step_3": "Let us know the quantity you need and wait for our quote.",
             "step_4": "",
             "step_5": "",
             "step_6": "",
@@ -124,17 +90,15 @@
         }
       },
       "block_order": [
-        "service_item_iVCXnQ",
-        "service_item_GhTbnF",
-        "service_item_czfYgp",
-        "service_item_GhGcAy",
-        "service_item_kyeH96",
-        "service_item_9KweKJ"
+        "service_item_jDhhUz",
+        "service_item_tzeyjX",
+        "service_item_p3aAWb",
+        "service_item_VKafqN"
       ],
       "name": "Service",
       "settings": {
-        "hero_title": "Z-II STUDIOS — Design & Production Partner",
-        "hero_subtitle": "A Design-led Apparel Product Development & Production Management Partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
+        "hero_title": "Two supply programs. One streamlined execution.",
+        "hero_subtitle": "Z-II STUDIOS is your Design & Production Partner—helping boutiques and brands buy smarter (in-stock) or build better (OEM/ODM), with clear timelines and one point of contact.",
         "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Launch exclusive customized services",
