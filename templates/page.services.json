@@ -41,7 +41,7 @@
           "type": "service_item",
           "settings": {
             "title": "What We Deliver (End-to-End)",
-            "image_position": "left",
+            "image_position": "right",
             "step_1": "Design review & feasibility check",
             "step_2": "Fabric & trim sourcing support (or work with your nominated materials)",
             "step_3": "Patternmaking, grading, sampling",
@@ -75,7 +75,7 @@
           "type": "service_item",
           "settings": {
             "title": "Timeline & MOQ",
-            "image_position": "left",
+            "image_position": "right",
             "step_1": "Sampling: 5–7 working days (typical)",
             "step_2": "Bulk production: 15–20 working days after approval (typical)",
             "step_3": "MOQ: from 50 pcs per style per color (OEM / private label)",
@@ -109,7 +109,7 @@
           "type": "service_item",
           "settings": {
             "title": "What We Need From You (Copy-Paste)",
-            "image_position": "left",
+            "image_position": "right",
             "step_1": "Reply with: Style refs/tech pack + target market + target price + qty + size run + target date",
             "step_2": "WhatsApp (1-click): https://wa.me/8618688873388",
             "step_3": "",
