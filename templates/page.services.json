@@ -20,68 +20,98 @@
     "service_UxiADA": {
       "type": "service",
       "blocks": {
-        "service_item_43CLhc": {
+        "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "Private Label",
-            "image": "shopify://shop_images/IMG_0240_HEIC_101_1.jpg",
+            "title": "Who This Is For",
             "image_position": "left",
-            "step_1": "Best for：<br>\n· Boutiques, fast drops, small-batch testing<br>\n· Brands that want quick branding without full development",
-            "step_2": "What you can customize：<br>\n· Logo/graphics: embroidery, screen print, heat transfer, heat-seal patch, digital print\n· Relabeling: main label / care label / size label<br>\n· Packaging: hangtags, barcode stickers, polybags, cartons, shipping marks<br>\n· Minor updates: color change, small trims/fit adjustments (by feasibility)",
-            "step_3": "MOQ & lead time (reference)：<br>\n· From 50+ pcs/style/color (final by technique & availability)<br>\n· Sampling: 5–7 days<br>\n· Bulk: 15–20 business days after approval & materials confirmed",
-            "step_4": "Workflow：<br>\n· Pick style + size run → confirm customization plan → artwork review → sample → bulk → QC → ship",
-            "step_5": "You send：<br>\n· style links + logo file (AI/PDF) + placement/size (cm) + qty per color/size + target date + ship-to country/city",
-            "step_6": "Notes:<br>\n· Export docs available: CI / PL / HS Code (per shipment)\n<br>\n· Compliance labeling & carton marks can follow your market requirements",
+            "step_1": "Boutique buyers building curated drops",
+            "step_2": "Emerging brands developing signature styles",
+            "step_3": "Teams that have a tech pack but don’t want to manage multiple vendors",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
             "step_7": "",
             "step_8": "",
             "step_9": "",
             "step_10": ""
           }
         },
-        "service_item_C7aJ37": {
+        "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "In-Stock Wholesale",
-            "image": "shopify://shop_images/11_94dedc2e-4007-48ef-9188-cf03cbedd3ed.jpg",
-            "image_position": "right",
-            "step_1": "Best for：<br><br>\n·  Low-risk first orders & style testing (start small, scale winners)<br>\n·  Fast restocks for boutiques (keep shelves fresh without long lead times)<br>\n·  Buyers who need ready-to-ship assortments with flexible quantities",
-            "step_2": "What you can choose / adjust：<br>\n<br>\n·  Color & size mix (build your own size run)<br>\n·  Assortment planning: best sellers / capsules / category-focused edits<br>\n·  Optional add-ons (by availability): basic hangtags / packing preferences / carton marks",
-            "step_3": "MOQ & lead time (reference)：<br>\n<br>\n· MOQ: from 1 pc (in-stock items)<br>\n· Dispatch: 1–3 business days after order confirmed (subject to stock & order volume)<br>\n· Shipping time varies by destination & method (we’ll quote options)",
-            "step_4": "Workflow：<br>\n<br>\n· Select styles → confirm colors/sizes/qty → invoice & shipping option → pick & QC → pack → dispatch",
-            "step_5": "You send：<br>\n<br>\n· Style links (or screenshots)<br>\n· Quantity per color & size (S/M/L or one size)<br>\n· Ship-to country & city + preferred shipping method (courier/air/sea if applicable)",
-            "step_6": "Notes：<br>\n<br>\n· Best for “test & reorder”: start with small quantities, restock fast based on sell-through<br>\n· Export docs available per shipment: CI / PL / HS Code<br>\n· For bulk cartons, shipping marks can follow your requirements (carton label/marking)",
-            "step_7": "",
-            "step_8": "",
-            "step_9": "",
-            "step_10": ""
-          }
-        },
-        "service_item_tmE6Y9": {
-          "type": "service_item",
-          "settings": {
-            "title": "OEM / ODM (Concept → Garment)",
-            "image": "shopify://shop_images/a6766ae16a7ab0db382c45f535ce8e78_origin_1.jpg",
+            "title": "What We Deliver (End-to-End)",
             "image_position": "left",
-            "step_1": "Best for<br><br>\n· Brands needing full development (new patterns, controlled fit, premium finishing)<br>\n· Startups building signature silhouettes with consistent sizing and QC checkpoints<br>\n· Projects requiring fabric/trim sourcing + sampling + bulk production under one workflow",
-            "step_2": "What you can develop / customize：<br><br>\n· Patternmaking & grading: S–M–L or custom size sets<br>\n· Fabric & trims: sourcing to your target budget; shade & handfeel control (by availability)<br>\n· Construction & details: collar/lapel shape, pocket placement, closures, lining, seam finishing<br>\n· Branding: main label / care label / size label, hangtags, packaging, carton marks<br>\n· Finishes (by technique): embroidery, prints, heat transfer, washing, special trims",
-            "step_3": "MOQ & lead time (reference)：<br><br>\n· MOQ: typically 50+ pcs/style/color (final depends on fabric, construction complexity & trims)<br>\n· Sampling: 5–7 working days (after key details & materials confirmed)<br>\n· Bulk: 15–20 working days after sample approval & materials confirmed<br>\n· If custom fabric/trim production is needed, lead time will extend (we confirm before starting)",
-            "step_4": "Workflow：<br><br>\n· Send tech pack / references → confirm measurements & materials → pattern & first sample → fit review (1–2 rounds) → pre-production approval → bulk → inline & final QC → pack → ship",
-            "step_5": "You send：<br><br>\n· Tech pack (preferred) or reference images/sample<br>\n· Measurements/spec (or target size set) + target price range<br>\n· Quantity per color/size + target date<br>\n· Branding requirements: labels/hangtags/packaging + shipping country/city",
-            "step_6": "Notes：<br><br>\n· QC checkpoints: incoming material check + inline inspection + final inspection (AQL aligned by request)<br>\n· Export docs available: CI / PL / HS Code (per shipment)<br>\n· We can follow your market labeling rules (care content/size label placement/carton marks)",
+            "step_1": "Design review & feasibility check",
+            "step_2": "Fabric & trim sourcing support (or work with your nominated materials)",
+            "step_3": "Patternmaking, grading, sampling",
+            "step_4": "Bulk production execution via long-term partner factories",
+            "step_5": "QC coordination (inline + final), packing, logistics support",
+            "step_6": "",
             "step_7": "",
             "step_8": "",
             "step_9": "",
             "step_10": ""
           }
         },
-        "service_item_iJR3dR": {
+        "service_item_czfYgp": {
           "type": "service_item",
           "settings": {
-            "title": "Copy & Paste Order Template (WhatsApp)",
-            "image": "shopify://shop_images/ad4be7924c6034bf8f4428609f0047f7_origin_1_4970e19b-4b3a-4d05-8dcb-2a4448bc2fd8.jpg",
-            "image_position": "right",
-            "step_1": "Copy & paste this to send us your request:\n<br>\n<br>\n1) Order type: In-stock / Made-to-order / Private label (OEM/ODM)\n<br><br>\n2) Style links (or screenshots):\n<br>\n·\n<br>\n·\n<br>\n3) Quantity (per color & size):\n<br><br>\n· Style 1: Color ___ / Size S __, M __, L __\n<br>\n· Style 2: Color ___ / Size S __, M __, L __\n<br>\n· (If one size: Color ___ / Qty __)\n<br><br>\n4) Branding / customization (choose one):\n<br>\n· No branding (blank)\n<br>\n· Private label: main label + care label\n<br>\n· Hangtag\n<br>\n· Packaging (bag/box)\n<br>\n· Custom changes: color / fabric / measurements / trims (write details)\n<br><br>\n5) Target date: ____ (desired delivery date)\n<br><br>\n6) Shipping country & city: ____\n<br><br>\n7) Preferred shipping method: Courier / Air / Sea (if you’re not sure, we’ll recommend)\n<br><br>\n8) Your brand / store (optional): ____ (website or Instagram)\n<br><br>\nWe’ll reply with: MOQ + quote + lead time + shipping options.",
-            "step_2": "",
+            "title": "Workflow (Concept → Garment)",
+            "image_position": "left",
+            "step_1": "Brief: tech pack / sketches / reference images + target qty",
+            "step_2": "Development: materials & construction confirmation",
+            "step_3": "Sampling: prototype sample for fit & finish",
+            "step_4": "Revisions: typically 1–2 rounds",
+            "step_5": "Bulk production: based on approved sample & specs",
+            "step_6": "QC + Shipping: packing + dispatch coordination",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_GhGcAy": {
+          "type": "service_item",
+          "settings": {
+            "title": "Timeline & MOQ",
+            "image_position": "left",
+            "step_1": "Sampling: 5–7 working days (typical)",
+            "step_2": "Bulk production: 15–20 working days after approval (typical)",
+            "step_3": "MOQ: from 50 pcs per style per color (OEM / private label)",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_kyeH96": {
+          "type": "service_item",
+          "settings": {
+            "title": "Sampling Fee (Reference)",
+            "image_position": "left",
+            "step_1": "T-shirt / pants / small items: USD 100 / style",
+            "step_2": "Blazer / jacket: USD 150 / style",
+            "step_3": "Long coat / overcoat: USD 200 / style",
+            "step_4": "Sample fee can be credited back when you proceed with bulk production.",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_9KweKJ": {
+          "type": "service_item",
+          "settings": {
+            "title": "What We Need From You (Copy-Paste)",
+            "image_position": "left",
+            "step_1": "Reply with: Style refs/tech pack + target market + target price + qty + size run + target date",
+            "step_2": "WhatsApp (1-click): https://wa.me/8618688873388",
             "step_3": "",
             "step_4": "",
             "step_5": "",
@@ -94,15 +124,17 @@
         }
       },
       "block_order": [
-        "service_item_43CLhc",
-        "service_item_C7aJ37",
-        "service_item_tmE6Y9",
-        "service_item_iJR3dR"
+        "service_item_iVCXnQ",
+        "service_item_GhTbnF",
+        "service_item_czfYgp",
+        "service_item_GhGcAy",
+        "service_item_kyeH96",
+        "service_item_9KweKJ"
       ],
       "name": "Service",
       "settings": {
-        "hero_title": "Services — · Private Label, · In-Stock Wholesale, · OEM/ODM Womenswear",
-        "hero_subtitle": "Trust us to do the job well for you!",
+        "hero_title": "Z-II STUDIOS — Design & Production Partner",
+        "hero_subtitle": "A Design-led Apparel Product Development & Production Management Partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
         "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Launch exclusive customized services",
