@@ -23,7 +23,7 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "Who this is for",
+            "title": "<b>Who this is for</b><br>",
             "image_position": "left",
             "step_1": "Boutiques creating an own-label capsule<br>",
             "step_2": "Emerging brands needing brand-ready execution<br>",
