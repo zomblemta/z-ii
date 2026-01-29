@@ -23,11 +23,11 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Who this is for</b><br>",
+            "title": "Who this is for",
             "image_position": "left",
-            "step_1": "• Boutiques creating an own-label capsule<br>",
-            "step_2": "• Emerging brands needing brand-ready execution<br>",
-            "step_3": "• Buyers who want consistent labeling, packaging, and repeatable replenishment",
+            "step_1": "Boutiques creating an own-label capsule<br>",
+            "step_2": "Emerging brands needing brand-ready execution<br>",
+            "step_3": "Buyers who want consistent labeling, packaging, and repeatable replenishment",
             "step_4": "",
             "step_5": "",
             "step_6": "",
