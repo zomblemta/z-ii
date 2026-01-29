@@ -57,10 +57,10 @@
         "service_item_czfYgp": {
           "type": "service_item",
           "settings": {
-            "title": "Two Ways to Private Label",
+            "title": "<b>Two ways to Private Label</b><br>",
             "image_position": "left",
-            "step_1": "Option A — Private Label on In-Stock Styles (Fastest)\n<br><br>\n1.Choose styles from our in-stock collections\n<br><br>\n2.Confirm labeling/packaging requirements\n<br><br>\n3.QC + branding application + dispatch coordination\n<br><br>\nBest for: <b>quick drops, low-risk testing, fast replenishment</b>",
-            "step_2": "Option B — Private Label via OEM/ODM (Most Customizable)<br><br>\n\n1.Share your tech pack / references + target qty\n<br><br>\n2.Sampling & approval\n<br><br>\n3.Bulk production + branding execution + QC + shipping<br><br>\n\nBest for:<b> signature styles, long-term programs, tighter control on materials & fit</b>",
+            "step_1": "<b>Option A — Private Label on In-Stock Styles (Fastest)</b><br><br>\n1. Choose styles from our in-stock collections<br><br>\n2. Confirm labeling/packaging requirements<br><br>\n3. QC + branding application + dispatch coordination<br><br>\n<i>Best for:</i> quick drops, low-risk testing, fast replenishment",
+            "step_2": "<b>Option B — Private Label via OEM/ODM (Most Customizable)</b><br><br>\n1. Share your tech pack / references + target qty<br><br>\n2. Sampling & approval<br><br>\n3. Bulk production + branding execution + QC + shipping<br><br>\n<i>Best for:</i> signature styles, long-term programs, tighter control on materials & fit",
             "step_3": "",
             "step_4": "",
             "step_5": "",
