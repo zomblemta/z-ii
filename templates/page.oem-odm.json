@@ -23,7 +23,7 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "Who This Is For",
+            "title": "<b>Who this is for</b><br>",
             "image_position": "left",
             "step_1": "Boutique buyers building curated drops",
             "step_2": "Emerging brands developing signature styles",
@@ -40,7 +40,7 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "What We Deliver (End-to-End)",
+            "title": "<b>What we deliver (End-to-End)</b><br>",
             "image_position": "right",
             "step_1": "Design review & feasibility check",
             "step_2": "Fabric & trim sourcing support (or work with your nominated materials)",
@@ -57,14 +57,14 @@
         "service_item_czfYgp": {
           "type": "service_item",
           "settings": {
-            "title": "Workflow (Concept → Garment)",
+            "title": "<b>Workflow (Concept → Garment)</b><br>",
             "image_position": "left",
-            "step_1": "Brief: tech pack / sketches / reference images + target qty",
-            "step_2": "Development: materials & construction confirmation",
-            "step_3": "Sampling: prototype sample for fit & finish",
-            "step_4": "Revisions: typically 1–2 rounds",
-            "step_5": "Bulk production: based on approved sample & specs",
-            "step_6": "QC + Shipping: packing + dispatch coordination",
+            "step_1": "<b>Brief:</b> tech pack / sketches / reference images + target qty<br>",
+            "step_2": "<b>Development:</b> materials & construction confirmation<br>",
+            "step_3": "<b>Sampling:</b> prototype sample for fit & finish<br>",
+            "step_4": "<b>Revisions:</b> typically <b>1–2 rounds</b><br>",
+            "step_5": "<b>Bulk production:</b> based on approved sample & specs<br>",
+            "step_6": "<b>QC + Shipping:</b> packing + dispatch coordination",
             "step_7": "",
             "step_8": "",
             "step_9": "",
@@ -133,8 +133,8 @@
       ],
       "name": "Service",
       "settings": {
-        "hero_title": "<b>OEM / ODM</b><br>",
-        "hero_subtitle": "Z-II STUDIOS — <b>Design & Production Partner</b><br><br>A <b>design-led</b> apparel product development & production management partner that turns digital designs into <b>boutique-ready goods</b> — with <b>clear milestones</b> and <b>one point of contact</b>.",
+        "hero_title": "OEM / ODM",
+        "hero_subtitle": "Z-II STUDIOS — Design & Production PartnerA design-led apparel product development & production management partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
         "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Launch exclusive customized services",
