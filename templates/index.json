@@ -159,9 +159,9 @@
           "type": "discover",
           "settings": {
             "image": "shopify://shop_images/IN_STOCK_2.jpg",
-            "title": "SS’26 Pre-order",
-            "description": "SS26 is ready—pre-order early to secure your seasonal stock.",
-            "url": "shopify://collections/spring"
+            "title": "OEM/ODM",
+            "description": "From tech pack to finished goods — one streamlined execution.",
+            "url": "shopify://pages/oem-odm"
           }
         },
         "discover_4TxCNh": {
@@ -182,7 +182,7 @@
       "custom_css": [],
       "name": "Index Discover",
       "settings": {
-        "title": "OEM/ODM",
+        "title": "",
         "margin_bottom": 0,
         "image_style": "style-1"
       }
