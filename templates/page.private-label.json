@@ -91,12 +91,12 @@
         "service_item_kyeH96": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we need from you (Copy-Paste)</b><br>",
+            "title": "<b>What we need from you (Copy-Paste)</b>",
             "image_position": "left",
             "step_1": "<b>Program:</b> In-stock private label OR OEM private label<br>",
             "step_2": "<b>Branding assets:</b> logo file + label/hangtag specs (or request our standard templates)<br>",
             "step_3": "<b>Quantities:</b> style links + qty per color/size<br>",
-            "step_4": "<b>Target market + target delivery date:</b> your market + target delivery date<br>",
+            "step_4": "<b>Target market + target delivery date</b>",
             "step_5": "Talk to our team below.",
             "step_6": "",
             "step_7": "",
@@ -116,7 +116,7 @@
       "name": "Service",
       "settings": {
         "hero_title": "Private Label",
-        "hero_subtitle": "Z-II STUDIOS — Design & Production Partner <br>A design-led apparel product development & production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
+        "hero_subtitle": "Z-II STUDIOS — Design & Production Partner A design-led apparel product development & production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
         "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Launch exclusive customized services",
