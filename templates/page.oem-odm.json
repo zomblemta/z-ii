@@ -74,11 +74,11 @@
         "service_item_GhGcAy": {
           "type": "service_item",
           "settings": {
-            "title": "Timeline & MOQ",
+            "title": "<b>Timeline & MOQ</b><br>",
             "image_position": "right",
-            "step_1": "Sampling: 5–7 working days (typical)",
-            "step_2": "Bulk production: 15–20 working days after approval (typical)",
-            "step_3": "MOQ: from 50 pcs per style per color (OEM / private label)",
+            "step_1": "Sampling: <b>5–7 working days</b> (typical)<br>",
+            "step_2": "Bulk production: <b>15–20 working days</b> after approval (typical)<br>",
+            "step_3": "MOQ: from <b>50 pcs per style per color</b> (OEM / private label)",
             "step_4": "",
             "step_5": "",
             "step_6": "",
@@ -91,11 +91,11 @@
         "service_item_kyeH96": {
           "type": "service_item",
           "settings": {
-            "title": "Sampling Fee (Reference)",
+            "title": "<b>Sampling Fee (Reference)</b><br>",
             "image_position": "left",
-            "step_1": "T-shirt / pants / small items: USD 100 / style",
-            "step_2": "Blazer / jacket: USD 150 / style",
-            "step_3": "Long coat / overcoat: USD 200 / style",
+            "step_1": "T-shirt / pants / small items: <b>USD 100 / style</b>",
+            "step_2": "Blazer / jacket: <b>USD 150 / style</b><br>",
+            "step_3": "Long coat / overcoat: <b>USD 200 / style</b><br>",
             "step_4": "Sample fee can be credited back when you proceed with bulk production.",
             "step_5": "",
             "step_6": "",
