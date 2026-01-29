@@ -91,30 +91,13 @@
         "service_item_kyeH96": {
           "type": "service_item",
           "settings": {
-            "title": "Sampling Fee (Reference)",
-            "image_position": "left",
-            "step_1": "T-shirt / pants / small items: USD 100 / style",
-            "step_2": "Blazer / jacket: USD 150 / style",
-            "step_3": "Long coat / overcoat: USD 200 / style",
-            "step_4": "Sample fee can be credited back when you proceed with bulk production.",
-            "step_5": "",
-            "step_6": "",
-            "step_7": "",
-            "step_8": "",
-            "step_9": "",
-            "step_10": ""
-          }
-        },
-        "service_item_9KweKJ": {
-          "type": "service_item",
-          "settings": {
             "title": "What We Need From You (Copy-Paste)",
-            "image_position": "right",
-            "step_1": "Reply with: Style refs/tech pack + target market + target price + qty + size run + target date",
-            "step_2": "WhatsApp (1-click): https://wa.me/8618688873388",
-            "step_3": "",
-            "step_4": "",
-            "step_5": "",
+            "image_position": "left",
+            "step_1": "You only need to provide the following (copy & paste).<br><br><b>\nClick the contact link below to send it to us directly:</b>",
+            "step_2": "Program: In-stock Private Label / OEM Private Label",
+            "step_3": "Brand assets: Logo file + label/hangtag specs (or use our standard templates)",
+            "step_4": "Quantity: Style links + qty per color/size",
+            "step_5": "<b>Market + target delivery date</b>",
             "step_6": "",
             "step_7": "",
             "step_8": "",
@@ -128,8 +111,7 @@
         "service_item_GhTbnF",
         "service_item_czfYgp",
         "service_item_GhGcAy",
-        "service_item_kyeH96",
-        "service_item_9KweKJ"
+        "service_item_kyeH96"
       ],
       "name": "Service",
       "settings": {
