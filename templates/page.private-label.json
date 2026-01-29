@@ -40,7 +40,7 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we offer</b><br>",
+            "title": "What we offer",
             "image_position": "right",
             "step_1": "<b>Relabeling / label application</b> (as required)<br>\n• Main label, size label, care label, hangtag<br>",
             "step_2": "<b>Packaging support</b> (as required)\n<br><br>\n• Polybag, barcode/labeling, carton marking<br>",
@@ -57,10 +57,10 @@
         "service_item_czfYgp": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Two ways to Private Label</b><br>",
+            "title": "Two ways to Private Label",
             "image_position": "left",
-            "step_1": "<b>Option A — Private Label on In-Stock Styles (Fastest)</b><br><br>\n1. Choose styles from our in-stock collections<br><br>\n2. Confirm labeling/packaging requirements<br><br>\n3. QC + branding application + dispatch coordination<br><br>\n<i>Best for:</i> quick drops, low-risk testing, fast replenishment",
-            "step_2": "<b>Option B — Private Label via OEM/ODM (Most Customizable)</b><br><br>\n1. Share your tech pack / references + target qty<br><br>\n2. Sampling & approval<br><br>\n3. Bulk production + branding execution + QC + shipping<br><br>\n<i>Best for:</i> signature styles, long-term programs, tighter control on materials & fit",
+            "step_1": "<b>Option A — Private Label on In-Stock Styles (Fastest)</b><br><br>\n• Choose styles from our in-stock collections<br><br>\n• Confirm labeling/packaging requirements<br><br>\n• QC + branding application + dispatch coordination<br><br>\n<i>Best for:</i> quick drops, low-risk testing, fast replenishment",
+            "step_2": "<b>Option B — Private Label via OEM/ODM (Most Customizable)</b><br><br>\n• Share your tech pack / references + target qty<br><br>\n• Sampling & approval<br><br>\n• Bulk production + branding execution + QC + shipping<br><br>\n<i>Best for:</i> signature styles, long-term programs, tighter control on materials & fit",
             "step_3": "",
             "step_4": "",
             "step_5": "",
