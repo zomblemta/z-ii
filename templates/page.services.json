@@ -40,12 +40,12 @@
         "service_item_tzeyjX": {
           "type": "service_item",
           "settings": {
-            "title": "<b>OEM / ODM</b><br>",
+            "title": "<b>OEM / ODM</b>",
             "image_position": "right",
-            "step_1": "• From tech pack to finished goods — we manage <b>end-to-end execution</b>.<br>",
-            "step_2": "• Development: fabric/trim support, pattern, sampling<br>",
-            "step_3": "• Production execution via long-term partner factories<br>",
-            "step_4": "• QC + packing + logistics — <b>one streamlined workflow</b><br>",
+            "step_1": "From tech pack to finished goods — we manage <b>end-to-end execution</b>.<br>",
+            "step_2": "Development: fabric/trim support, pattern, sampling<br>",
+            "step_3": "Production execution via long-term partner factories<br>",
+            "step_4": "QC + packing + logistics — <b>one streamlined workflow</b><br>",
             "step_5": "",
             "step_6": "",
             "step_7": "",
