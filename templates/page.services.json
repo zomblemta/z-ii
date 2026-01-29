@@ -23,12 +23,12 @@
         "service_item_jDhhUz": {
           "type": "service_item",
           "settings": {
-            "title": "<b>In-Stock Wholesale</b>",
+            "title": "In-Stock Wholesale",
             "image_position": "left",
-            "step_1": "• <b>Low-risk buying</b>. Fast dispatch. Boutique-ready finishing.<br>",
-            "step_2": "• <b>MOQ:</b> from <b>1 piece</b><br>",
-            "step_3": "• Mix styles and sizes across collections<br>",
-            "step_4": "• QC check + packing + shipping coordination included<br>",
+            "step_1": "<b>Low-risk buying</b>. Fast dispatch. Boutique-ready finishing.<br>",
+            "step_2": "<b>MOQ:</b> from <b>1 piece</b><br>",
+            "step_3": "Mix styles and sizes across collections<br>",
+            "step_4": "QC check + packing + shipping coordination included<br>",
             "step_5": "",
             "step_6": "",
             "step_7": "",
