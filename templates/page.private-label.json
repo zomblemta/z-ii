@@ -23,9 +23,9 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "Who This Is For",
+            "title": "<b>Who this is for</b><br>",
             "image_position": "left",
-            "step_1": "Emerging brands needing brand-ready execution",
+            "step_1": "Boutiques, online sellers, and emerging brands who want to launch or expand womenswear with <b>low risk</b>, <b>consistent fit</b>, and <b>reorder-ready quality</b>—without building a full production team.",
             "step_2": "Emerging brands developing signature styles",
             "step_3": "Buyers who want consistent labeling, packaging, and repeatable replenishment",
             "step_4": "",
@@ -40,7 +40,7 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "What We Offer (Branding Support)",
+            "title": "<b>What we offer</b><br>",
             "image_position": "right",
             "step_1": "Relabeling / Label application (as required)\n<br><br>\n· Main label, size label, care label, hangtag",
             "step_2": "Packaging support (as required)\n<br><br>\n· Polybag, barcode/labeling, carton marking",
