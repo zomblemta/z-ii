@@ -57,7 +57,7 @@
         "service_item_czfYgp": {
           "type": "service_item",
           "settings": {
-            "title": "Two ways to Private Label",
+            "title": "<b>Two ways to Private Label</b>",
             "image_position": "left",
             "step_1": "<b>Option A — Private Label on In-Stock Styles (Fastest)</b><br><br>\n• Choose styles from our in-stock collections<br><br>\n• Confirm labeling/packaging requirements<br><br>\n• QC + branding application + dispatch coordination<br><br>\n<i>Best for:</i> quick drops, low-risk testing, fast replenishment",
             "step_2": "<b>Option B — Private Label via OEM/ODM (Most Customizable)</b><br><br>\n• Share your tech pack / references + target qty<br><br>\n• Sampling & approval<br><br>\n• Bulk production + branding execution + QC + shipping<br><br>\n<i>Best for:</i> signature styles, long-term programs, tighter control on materials & fit",
@@ -74,7 +74,7 @@
         "service_item_GhGcAy": {
           "type": "service_item",
           "settings": {
-            "title": "Timeline & MOQ (Reference)",
+            "title": "<b>Timeline & MOQ (Reference)</b>",
             "image_position": "right",
             "step_1": "In-stock private label: timeline depends on branding requirements + order size<br>",
             "step_2": "OEM/private label:<br>\n  — Sampling: <b>5–7 working days</b> (typical)<br>\n  — Bulk: <b>15–20 working days</b> after approval (typical)<br>",
