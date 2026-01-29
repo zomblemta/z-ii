@@ -108,7 +108,7 @@
         "service_item_9KweKJ": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we need from you (Copy-Paste)</b><br>",
+            "title": "What we need from you (Copy-Paste)",
             "image_position": "right",
             "step_1": "<b>Reply with:</b> style refs/tech pack + target market + target price + qty + size run + target date",
             "step_2": "<b>WhatsApp (1-click):</b> https://wa.me/8618688873388\n<br>",
@@ -134,7 +134,7 @@
       "name": "Service",
       "settings": {
         "hero_title": "OEM / ODM",
-        "hero_subtitle": "Z-II STUDIOS — Design & Production PartnerA design-led apparel product development & production management partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
+        "hero_subtitle": "Z-II STUDIOS — Design & Production Partner <br>A design-led apparel product development & production management partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
         "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Launch exclusive customized services",
