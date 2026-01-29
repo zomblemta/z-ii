@@ -57,12 +57,12 @@
         "service_item_p3aAWb": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Private Label</b><br>",
+            "title": "<b>Private Label</b>",
             "image_position": "left",
-            "step_1": "• Brand-ready details, without operational hassle.<br>",
-            "step_2": "• Relabeling: labels, hangtags, packaging (as required)<br>",
-            "step_3": "• Size support: S–M–L or custom size sets<br>",
-            "step_4": "• Available on in-stock or made-to-order programs<br>",
+            "step_1": "Brand-ready details, without operational hassle.<br>",
+            "step_2": "Relabeling: labels, hangtags, packaging (as required)<br>",
+            "step_3": "Size support: S–M–L or custom size sets<br>",
+            "step_4": "Available on in-stock or made-to-order programs<br>",
             "step_5": "",
             "step_6": "",
             "step_7": "",
