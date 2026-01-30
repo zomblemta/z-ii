@@ -92,7 +92,7 @@
         "service_item_kyeH96": {
           "type": "service_item",
           "settings": {
-            "title": "What we need from you (Copy-Paste)",
+            "title": "<b>What we need from you (Copy-Paste)</b>",
             "image_position": "left",
             "step_1": "<b>Program:</b> In-stock private label OR OEM private label<br>",
             "step_2": "<b>Branding assets:</b> logo file + label/hangtag specs (or request our standard templates)<br>",
