@@ -41,7 +41,8 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we deliver (End-to-End)</b><br>",
+            "title": "What we deliver (End-to-End)",
+            "image": "shopify://shop_images/c0dd0ecfce7a74d1c4d8d653be685a26.jpg",
             "image_position": "right",
             "step_1": "Design review & feasibility check",
             "step_2": "Fabric & trim sourcing support (or work with your nominated materials)",
@@ -135,7 +136,7 @@
       "name": "Service",
       "settings": {
         "hero_title": "OEM / ODM",
-        "hero_subtitle": "Z-II STUDIOS — <b>Design & Production Partner</b><br>A design-led apparel product development & production management partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
+        "hero_subtitle": "Z-II STUDIOS — Design & Production PartnerA design-led apparel product development & production management partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
         "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Send your tech pack + target qty — we’ll confirm feasibility & sampling plan.",
