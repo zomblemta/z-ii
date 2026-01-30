@@ -41,7 +41,7 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "What we offer",
+            "title": "<b>What we offer</b>",
             "image_position": "right",
             "step_1": "<b>Relabeling / label application</b> (as required)<br>\n• Main label, size label, care label, hangtag<br>",
             "step_2": "<b>Packaging support</b> (as required)\n<br><br>\n• Polybag, barcode/labeling, carton marking<br>",
