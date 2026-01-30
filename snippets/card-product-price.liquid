@@ -10,14 +10,19 @@
     font-size: 12px;
   }
 </style>
-
 {% assign show_tag = true %}
 
 {% assign sale_percent = product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | times: -1 -%} 
 
 <div class="flex gap-x-2 items-center ">
+  
   <span class="cart-product-price text-base font-normal tracking-[1.6px]  ">
-    {{- product.price | money_without_trailing_zeros -}}
+    {%  assign price = product.price | money_without_trailing_zeros %} 
+    {% if product.price_varies %}
+     {{ 'products.product.price.from_price_html' | t: price: price }}
+    {% else %}
+    {{ price }}
+    {% endif %}
   </span>
     {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
       <span class="cart-proudct-compare-price text-[#858585] text-xs tracking-[1.2px] line-through">

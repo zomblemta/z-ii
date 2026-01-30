@@ -59,14 +59,6 @@
             "answer": "<p>Yes. Most products support <strong>sample purchase</strong>. Select “Buy Sample” on the product page to receive a sample, so you can evaluate fabric, fit, and finishing before placing a bulk order.</p>"
           }
         },
-        "faq_item_iPWXGR": {
-          "type": "faq_item",
-          "settings": {
-            "parent_category": "Ordering",
-            "question": "Can I review products before placing a bulk order?",
-            "answer": "<p>Yes. Most products support <strong>sample purchase</strong>. Select “Buy Sample” on the product page to receive a sample, so you can evaluate fabric, fit, and finishing before placing a bulk order.</p>"
-          }
-        },
         "category_TN6KxJ": {
           "type": "category",
           "settings": {
@@ -102,7 +94,7 @@
           "settings": {
             "parent_category": "Customization",
             "question": "Are all your products customizable?",
-            "answer": "<p>Yes. All of our products can be customized to your requirements.Yes. All of our products can be customized to your requirements.</p>"
+            "answer": "<p>Yes. All of our products can be customized to your requirements.</p>"
           }
         },
         "faq_item_Bpjjjh": {
@@ -196,7 +188,7 @@
           "settings": {
             "parent_category": "Product",
             "question": "What is the lead time?",
-            "answer": "<p>· <strong>In-stock items:</strong> ship within <strong>1–3 business days</strong> after ordering.<br/>· <strong>Custom items:</strong> standard production lead time is <strong>10–15 business days</strong>, depending on order quantity. Please contact us to confirm your timeline.</p>"
+            "answer": "<p>· <strong>In-stock items:</strong> ship within <strong>1–3 business days</strong> after ordering.<br/>· <strong>Custom items:</strong> standard production lead time is <strong>10–15 working days</strong>, depending on order quantity. Please contact us to confirm your timeline.</p>"
           }
         },
         "category_4UXQzY": {
@@ -337,7 +329,6 @@
         "faq_item_NLQcbU",
         "faq_item_a3JXMM",
         "faq_item_NMUirM",
-        "faq_item_iPWXGR",
         "category_TN6KxJ",
         "faq_item_mwmYLp",
         "faq_item_t6i9VU",

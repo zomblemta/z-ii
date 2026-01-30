@@ -1,0 +1,134 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "service_UxiADA": {
+      "type": "service",
+      "blocks": {
+        "service_item_iVCXnQ": {
+          "type": "service_item",
+          "settings": {
+            "title": "<b>Who this is for</b>",
+            "image": "shopify://shop_images/2_6fbf53f2-6aab-461f-8fb5-b9f4d0ea2a26.jpg",
+            "image_position": "left",
+            "step_1": "Boutiques creating an own-label capsule<br>",
+            "step_2": "Emerging brands needing brand-ready execution<br>",
+            "step_3": "Buyers who want consistent labeling, packaging, and repeatable replenishment",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_GhTbnF": {
+          "type": "service_item",
+          "settings": {
+            "title": "<b>What we offer</b>",
+            "image_position": "right",
+            "step_1": "<b>Relabeling / label application</b> (as required)<br>\n• Main label, size label, care label, hangtag<br>",
+            "step_2": "<b>Packaging support</b> (as required)\n<br><br>\n• Polybag, barcode/labeling, carton marking<br>",
+            "step_3": "<b>Brand-ready consistency</b>\n<br><br>\n• Standardized placement, clean finishing, QC checks<br>",
+            "step_4": "<b>Size set support</b>\n<br><br>\n• S–M–L or custom size sets (based on your specs)",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_czfYgp": {
+          "type": "service_item",
+          "settings": {
+            "title": "<b>Two ways to Private Label</b>",
+            "image_position": "left",
+            "step_1": "<b>Option A — Private Label on In-Stock Styles (Fastest)</b><br><br>\n• Choose styles from our in-stock collections<br><br>\n• Confirm labeling/packaging requirements<br><br>\n• QC + branding application + dispatch coordination<br><br>\n<i>Best for:</i> quick drops, low-risk testing, fast replenishment",
+            "step_2": "<b>Option B — Private Label via OEM/ODM (Most Customizable)</b><br><br>\n• Share your tech pack / references + target qty<br><br>\n• Sampling & approval<br><br>\n• Bulk production + branding execution + QC + shipping<br><br>\n<i>Best for:</i> signature styles, long-term programs, tighter control on materials & fit",
+            "step_3": "",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_GhGcAy": {
+          "type": "service_item",
+          "settings": {
+            "title": "<b>Timeline & MOQ (Reference)</b>",
+            "image_position": "right",
+            "step_1": "In-stock private label: timeline depends on branding requirements + order size<br>",
+            "step_2": "OEM/private label:<br>\n  — Sampling: <b>5–7 working days</b> (typical)<br>\n  — Bulk: <b>15–20 working days</b> after approval (typical)<br>",
+            "step_3": "MOQ guideline:<br>\n  — In-stock: from <b>1 piece</b><br>\n  — OEM/private label: from <b>50 pcs per style per color</b>",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_kyeH96": {
+          "type": "service_item",
+          "settings": {
+            "title": "<b>What we need from you (Copy-Paste)</b>",
+            "image_position": "left",
+            "step_1": "<b>Program:</b> In-stock private label OR OEM private label<br>",
+            "step_2": "<b>Branding assets:</b> logo file + label/hangtag specs (or request our standard templates)<br>",
+            "step_3": "<b>Quantities:</b> style links + qty per color/size<br>",
+            "step_4": "<b>Target market + target delivery date</b>",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "service_item_iVCXnQ",
+        "service_item_GhTbnF",
+        "service_item_czfYgp",
+        "service_item_GhGcAy",
+        "service_item_kyeH96"
+      ],
+      "name": "Service",
+      "settings": {
+        "hero_title": "Private Label",
+        "hero_subtitle": "Z-II STUDIOS — Design & Production Partner<br><br>A design-led apparel product development & production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
+        "hero_image": "shopify://shop_images/Private_Label-banner.jpg",
+        "cta_title": "CONTACT US NOW",
+        "cta_subtitle": "Send logo + label specs + quantities — we’ll propose the best private label route.",
+        "cta_background_image": "shopify://shop_images/9b5aef2a5d368cab55fdd67aaf83188e_46f47918-520a-4268-8fe3-e16cdce3ab07.jpg",
+        "cta_button_text": "Request Private Label",
+        "cta_button_link": "shopify://pages/contact-us"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "service_UxiADA"
+  ]
+}

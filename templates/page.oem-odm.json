@@ -1,0 +1,155 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "service_UxiADA": {
+      "type": "service",
+      "blocks": {
+        "service_item_iVCXnQ": {
+          "type": "service_item",
+          "settings": {
+            "title": "Who this is for",
+            "image": "shopify://shop_images/eaa219ca25d5ea2e35815a2aa74c6f12.jpg",
+            "image_position": "left",
+            "step_1": "Boutique buyers building curated drops",
+            "step_2": "Emerging brands developing signature styles",
+            "step_3": "Teams that have a tech pack but don’t want to manage multiple vendors",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_GhTbnF": {
+          "type": "service_item",
+          "settings": {
+            "title": "What we deliver (End-to-End)",
+            "image": "shopify://shop_images/c0dd0ecfce7a74d1c4d8d653be685a26.jpg",
+            "image_position": "right",
+            "step_1": "Design review & feasibility check",
+            "step_2": "Fabric & trim sourcing support (or work with your nominated materials)",
+            "step_3": "Patternmaking, grading, sampling",
+            "step_4": "Bulk production execution via long-term partner factories",
+            "step_5": "QC coordination (inline + final), packing, logistics support",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_czfYgp": {
+          "type": "service_item",
+          "settings": {
+            "title": "Workflow (Concept → Garment)",
+            "image": "shopify://shop_images/1_7eb6b807-e4de-45ee-978a-8cdf498c85e1.jpg",
+            "image_position": "left",
+            "step_1": "<b>Brief:</b> tech pack / sketches / reference images + target qty<br>",
+            "step_2": "<b>Development:</b> materials & construction confirmation<br>",
+            "step_3": "<b>Sampling:</b> prototype sample for fit & finish<br>",
+            "step_4": "<b>Revisions:</b> typically <b>1–2 rounds</b><br>",
+            "step_5": "<b>Bulk production:</b> based on approved sample & specs<br>",
+            "step_6": "<b>QC + Shipping:</b> packing + dispatch coordination",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_GhGcAy": {
+          "type": "service_item",
+          "settings": {
+            "title": "Timeline & MOQ",
+            "image": "shopify://shop_images/2_c4cf0c0f-7f1f-4f6b-a7fd-87ec57ea3a2e.jpg",
+            "image_position": "right",
+            "step_1": "Sampling: <b>5–7 working days</b> (typical)<br>",
+            "step_2": "Bulk production: <b>15–20 working days</b> after approval (typical)<br>",
+            "step_3": "MOQ: from <b>50 pcs per style per color</b> (OEM / private label)",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_kyeH96": {
+          "type": "service_item",
+          "settings": {
+            "title": "<b>Sampling Fee (Reference)</b><br>",
+            "image_position": "left",
+            "step_1": "T-shirt / pants / small items: <b>USD 100 / style</b>",
+            "step_2": "Blazer / jacket: <b>USD 150 / style</b><br>",
+            "step_3": "Long coat / overcoat: <b>USD 200 / style</b><br>",
+            "step_4": "Sample fee can be credited back when you proceed with bulk production.",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        },
+        "service_item_9KweKJ": {
+          "type": "service_item",
+          "settings": {
+            "title": "What we need from you (Copy-Paste)",
+            "image_position": "right",
+            "step_1": "<b>Reply with:</b> style refs/tech pack + target market + target price + qty + size run + target date",
+            "step_2": "",
+            "step_3": "",
+            "step_4": "",
+            "step_5": "",
+            "step_6": "",
+            "step_7": "",
+            "step_8": "",
+            "step_9": "",
+            "step_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "service_item_iVCXnQ",
+        "service_item_GhTbnF",
+        "service_item_czfYgp",
+        "service_item_GhGcAy",
+        "service_item_kyeH96",
+        "service_item_9KweKJ"
+      ],
+      "name": "Service",
+      "settings": {
+        "hero_title": "OEM / ODM",
+        "hero_subtitle": "Z-II STUDIOS — Design & Production PartnerA design-led apparel product development & production management partner that turns digital designs into boutique-ready goods — with clear milestones and one point of contact.",
+        "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
+        "cta_title": "CONTACT US NOW",
+        "cta_subtitle": "Send your tech pack + target qty — we’ll confirm feasibility & sampling plan.",
+        "cta_background_image": "shopify://shop_images/333.jpg",
+        "cta_button_text": "Start OEM/ODM",
+        "cta_button_link": "shopify://pages/contact-us"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "service_UxiADA"
+  ]
+}
