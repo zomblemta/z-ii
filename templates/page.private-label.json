@@ -23,7 +23,7 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "Who this is for",
+            "title": "<b>Who this is for</b>",
             "image": "shopify://shop_images/2_6fbf53f2-6aab-461f-8fb5-b9f4d0ea2a26.jpg",
             "image_position": "left",
             "step_1": "Boutiques creating an own-label capsule<br>",
@@ -41,7 +41,7 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "What we offer",
+            "title": "<b>What we offer</b>",
             "image_position": "right",
             "step_1": "<b>Relabeling / label application</b> (as required)<br>\n• Main label, size label, care label, hangtag<br>",
             "step_2": "<b>Packaging support</b> (as required)\n<br><br>\n• Polybag, barcode/labeling, carton marking<br>",
@@ -117,7 +117,7 @@
       "name": "Service",
       "settings": {
         "hero_title": "Private Label",
-        "hero_subtitle": "Z-II STUDIOS — <b>Design & Production Partner</b><br>A design-led apparel product development & production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
+        "hero_subtitle": "Z-II STUDIOS — Design & Production PartnerA design-led apparel product development & production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
         "hero_image": "shopify://shop_images/Private_Label-banner.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Send logo + label specs + quantities — we’ll propose the best private label route.",
