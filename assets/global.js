@@ -1111,8 +1111,9 @@ class VariantSelects extends HTMLElement {
       const selectedSwatchValue = inputWrapper?.querySelector('[data-selected-value]');
       if (selectedSwatchValue) selectedSwatchValue.innerHTML = value;
 
-      const colorNameNode = inputWrapper?.querySelector('[data-js-color-name]');
-      if (colorNameNode) colorNameNode.textContent = value;
+      // data-js-color-name 已禁用
+      // const colorNameNode = inputWrapper?.querySelector('[data-js-color-name]');
+      // if (colorNameNode) colorNameNode.textContent = value;
     }
   }
 
