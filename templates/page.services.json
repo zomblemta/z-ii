@@ -23,7 +23,8 @@
         "service_item_jDhhUz": {
           "type": "service_item",
           "settings": {
-            "title": "<b>In-Stock Wholesale</b>",
+            "title": "In-Stock Wholesale",
+            "image": "shopify://shop_images/2_57d155bb-3b0b-4a5b-b5cf-2bb9d5d14a14.jpg",
             "image_position": "left",
             "step_1": "<b>Low-risk buying</b>. Fast dispatch. Boutique-ready finishing.<br>",
             "step_2": "<b>MOQ:</b> from <b>1 piece</b><br>",
@@ -40,7 +41,8 @@
         "service_item_tzeyjX": {
           "type": "service_item",
           "settings": {
-            "title": "<b>OEM / ODM</b>",
+            "title": "OEM / ODM",
+            "image": "shopify://shop_images/ODM-banner.jpg",
             "image_position": "right",
             "step_1": "From tech pack to finished goods — we manage <b>end-to-end execution</b>.<br>",
             "step_2": "Development: fabric/trim support, pattern, sampling<br>",

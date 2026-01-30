@@ -23,7 +23,8 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Who this is for</b><br>",
+            "title": "Who this is for",
+            "image": "shopify://shop_images/2_6fbf53f2-6aab-461f-8fb5-b9f4d0ea2a26.jpg",
             "image_position": "left",
             "step_1": "Boutiques creating an own-label capsule<br>",
             "step_2": "Emerging brands needing brand-ready execution<br>",
@@ -117,7 +118,7 @@
       "settings": {
         "hero_title": "Private Label",
         "hero_subtitle": "Z-II STUDIOS — Design & Production Partner A design-led apparel product development & production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
-        "hero_image": "shopify://shop_images/5_c25a5b5b-a0d3-4f98-a6a7-205ee12f9660.jpg",
+        "hero_image": "shopify://shop_images/Private_Label-banner.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Send logo + label specs + quantities — we’ll propose the best private label route.",
         "cta_background_image": "shopify://shop_images/9b5aef2a5d368cab55fdd67aaf83188e_46f47918-520a-4268-8fe3-e16cdce3ab07.jpg",
