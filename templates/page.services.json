@@ -77,12 +77,12 @@
         "service_item_ygyRUT": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Which Program Fits You?</b>",
+            "title": "Which Program Fits You?",
             "image_position": "right",
-            "step_1": "<b>Not sure which program fits?</b><br>\nTalk to our team below.",
-            "step_2": "",
-            "step_3": "",
-            "step_4": "",
+            "step_1": "In-stock wholesale → fastest, lowest risk, ready to ship",
+            "step_2": "OEM/ODM → build to spec from your tech pack",
+            "step_3": "Private Label → branding (labels/hangtags/packaging) on in-stock or OEM",
+            "step_4": "Not sure yet? Use the Contact section below — we’ll route you.",
             "step_5": "",
             "step_6": "",
             "step_7": "",
