@@ -109,10 +109,10 @@
         "service_item_9KweKJ": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we need from you (Copy-Paste)</b>",
+            "title": "What we need from you (Copy-Paste)",
             "image_position": "right",
             "step_1": "<b>Reply with:</b> style refs/tech pack + target market + target price + qty + size run + target date",
-            "step_2": "<b>WhatsApp (1-click):</b> https://wa.me/8618688873388\n<br>",
+            "step_2": "",
             "step_3": "",
             "step_4": "",
             "step_5": "",
