@@ -21,10 +21,10 @@
       "type": "image-text",
       "name": "Image Text",
       "settings": {
-        "desktop_image": "shopify://shop_images/IMG_0454.heic",
-        "mobile_image": "shopify://shop_images/IMG_0454.heic",
-        "title": "About Z-II STUDIOS — Minimalist Womenswear Wholesale & Private Label",
-        "description": "<p><strong>Z-II STUDIOS</strong> is a minimalist womenswear wholesale partner for boutiques, online sellers, resellers, and emerging brands. With <strong>15+ years</strong> focused on women’s apparel in <strong>Guangzhou, China</strong>, we’ve grown from a two-person studio into a <strong>50+ specialist team</strong>—serving <strong>5,000+ registered brands</strong> worldwide. Each month we release <strong>100+ new styles</strong>, built at the intersection of <strong>minimal design, precise fit, and boutique finishing</strong>.</p><h2><strong>Quick Facts</strong></h2><p>· <strong>MOQ:</strong> In-stock from <strong>1 pc</strong> / MTO & private label from <strong>50 pcs per style per color</strong><br/>· <strong>Sampling:</strong> <strong>5–7 working days</strong><br/>· <strong>Bulk lead time:</strong> <strong>15–20 working days</strong> (after approval & materials confirmed)<br/>· <strong>Capacity:</strong> <strong>100,000+ pcs/month</strong><br/>· <strong>QC:</strong> Inline QC + <strong>100% pre-shipment inspection (AQL)</strong><br/>· <strong>Compliance:</strong> <strong>SMETA / BSCI audited</strong> partners<br/>· <strong>New arrivals:</strong> <strong>100+ styles/month</strong><br/>· <strong>Support:</strong> Optional logistics + export docs (<strong>CI/PL</strong>) & HS code info</p>",
+        "desktop_image": "shopify://shop_images/pc.jpg",
+        "mobile_image": "shopify://shop_images/2_0353ecc3-b0f1-494a-939e-089f92fb8ee9.jpg",
+        "title": "Z-II STUDIOS — Design-led Apparel Product Development & Production Management Partner",
+        "description": "<p>Based in Guangzhou, we specialize in <strong>design, product development (sampling), and production execution management</strong>. We are not positioned as a factory—rather, we act as your <strong>Design & Production Partner</strong>, turning digital concepts into <strong>boutique-ready, sellable garments</strong> through a streamlined, low-friction process.</p><p><strong>Strong Design Capability | 100+ New Styles Monthly</strong><br/><br/>With <strong>10+ in-house designers</strong> and a <strong>50+ specialist team</strong>, we release <strong>100+ new styles every month</strong>. Our aesthetic is <strong>minimal, gender-neutral, and niche-forward</strong>—clean silhouettes with restrained yet distinctive details. The range stays fresh without feeling mass-market, making it ideal for boutiques and brands building consistent drops and repeatable best sellers.</p><p><strong>One-Stop OEM/ODM | From File to Finished Goods</strong><br/><br/>If you have a design (tech pack, sketches, or reference images), we manage the full workflow end to end: <strong>development → sampling → bulk production via long-term partner factories → QC → packing → logistics</strong>. You don’t need to coordinate multiple vendors or chase separate steps—we run the process, keep milestones clear, and deliver production-ready results so you can stay focused on merchandising, sales, and brand growth.</p>",
         "image_position": "right"
       }
     },
@@ -37,7 +37,7 @@
       "type": "image-text-block",
       "name": "图片文案块",
       "settings": {
-        "image": "shopify://shop_images/f71537e0cd10fbdbd13f30bf6e5bc1a5_origin_1_08bd3521-b7be-42ba-9e80-c24f69e8a9ac.jpg",
+        "image": "shopify://shop_images/WechatIMG871.jpg",
         "title": "What You Get When You Work With Us",
         "description": "· Consistent quality & fit: stable sizing, clean finishing, repeatable hand-feel—helping reduce returns and protect your store reputation.\n<br><br>· In-stock drops + fast restocks: buy light, test fast, and replenish winners quickly—so you don’t miss selling windows.\n<br><br>· Curated minimal (not generic): one clear aesthetic with wearable runway proportions—saving you sourcing time and back-and-forth.\n<br><br>· Store-ready delivery + optional support: retail-ready packing, with optional relabeling/private label and shipping coordination—plus export paperwork (CI/PL) and HS code info to simplify planning.",
         "image_position": "left",
@@ -81,7 +81,7 @@
       "settings": {
         "image": "shopify://shop_images/4_d5f9fb80-649e-4059-9b07-227dc0604d54.jpg",
         "title": "Supply Model",
-        "description": "Two complementary tracks balance speed and authorship:\nIn-Stock (Immediates / At-Once / NOS) for immediate availability and rapid market response.\nMade-to-Order (MTO) for private-label edits with sensible MOQs, aligning spend with demand while preserving design intent.\n<br><br>\nEnd-to-end quality governance includes vetted mills and trims; digital patterning with graded S/M/L size sets; inline QC; and 100% pre-shipment inspection (AQL). For private label, we provide brand/care labels, barcodes, compliant inner/outer packing, and full export documentation (commercial invoice, packing list, HS codes), with optional duty/tax assistance to streamline cross-border fulfillment.\nBeyond capacity, we emphasize clarity—defined milestones, transparent communication, and measurable operations (OTIF—On-Time, In-Full; First-Pass Yield)—to ensure reliable execution and repeatable outcomes.",
+        "description": "Two complementary tracks balance speed and authorship:<br>\n1.In-Stock (Immediates / At-Once / NOS) for immediate availability and rapid market response.<br>\n2.Made-to-Order (MTO) for private-label edits with sensible MOQs, aligning spend with demand while preserving design intent.\n<br><br>\nEnd-to-end quality governance includes vetted mills and trims; digital patterning with graded S/M/L size sets; inline QC; and 100% pre-shipment inspection (AQL). For private label, we provide brand/care labels, barcodes, compliant inner/outer packing, and full export documentation (commercial invoice, packing list, HS codes), with optional duty/tax assistance to streamline cross-border fulfillment.\nBeyond capacity, we emphasize clarity—defined milestones, transparent communication, and measurable operations (OTIF—On-Time, In-Full; First-Pass Yield)—to ensure reliable execution and repeatable outcomes.",
         "image_position": "right",
         "full_width": true,
         "color_scheme": "",
@@ -100,7 +100,7 @@
         "full_width": true,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 60
+        "padding_bottom": 0
       }
     },
     "image_text_block_wfbAhr": {
