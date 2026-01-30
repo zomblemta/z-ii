@@ -188,7 +188,7 @@
           "settings": {
             "parent_category": "Product",
             "question": "What is the lead time?",
-            "answer": "<p>· <strong>In-stock items:</strong> ship within <strong>1–3 business days</strong> after ordering.<br/>· <strong>Custom items:</strong> standard production lead time is <strong>10–15 business days</strong>, depending on order quantity. Please contact us to confirm your timeline.</p>"
+            "answer": "<p>· <strong>In-stock items:</strong> ship within <strong>1–3 business days</strong> after ordering.<br/>· <strong>Custom items:</strong> standard production lead time is <strong>10–15 working days</strong>, depending on order quantity. Please contact us to confirm your timeline.</p>"
           }
         },
         "category_4UXQzY": {
