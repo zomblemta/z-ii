@@ -41,11 +41,11 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we offer</b>",
+            "title": "What we offer",
             "image_position": "right",
             "step_1": "<b>Relabeling / label application</b> (as required)<br>\n• Main label, size label, care label, hangtag<br>",
             "step_2": "<b>Packaging support</b> (as required)\n<br><br>\n• Polybag, barcode/labeling, carton marking<br>",
-            "step_3": "• <b>Brand-ready consistency</b>\n<br><br>\n• Standardized placement, clean finishing, QC checks<br>",
+            "step_3": "<b>Brand-ready consistency</b>\n<br><br>\n• Standardized placement, clean finishing, QC checks<br>",
             "step_4": "<b>Size set support</b>\n<br><br>\n• S–M–L or custom size sets (based on your specs)",
             "step_5": "",
             "step_6": "",
