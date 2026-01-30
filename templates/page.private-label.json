@@ -41,7 +41,7 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we offer</b><br>",
+            "title": "What we offer",
             "image_position": "right",
             "step_1": "<b>Relabeling / label application</b> (as required)<br>\n• Main label, size label, care label, hangtag<br>",
             "step_2": "<b>Packaging support</b> (as required)\n<br><br>\n• Polybag, barcode/labeling, carton marking<br>",
@@ -92,13 +92,13 @@
         "service_item_kyeH96": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we need from you (Copy-Paste)</b>",
+            "title": "What we need from you (Copy-Paste)",
             "image_position": "left",
             "step_1": "<b>Program:</b> In-stock private label OR OEM private label<br>",
             "step_2": "<b>Branding assets:</b> logo file + label/hangtag specs (or request our standard templates)<br>",
             "step_3": "<b>Quantities:</b> style links + qty per color/size<br>",
             "step_4": "<b>Target market + target delivery date</b>",
-            "step_5": "Talk to our team below.",
+            "step_5": "",
             "step_6": "",
             "step_7": "",
             "step_8": "",

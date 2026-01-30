@@ -23,7 +23,8 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Who this is for</b><br>",
+            "title": "Who this is for",
+            "image": "shopify://shop_images/eaa219ca25d5ea2e35815a2aa74c6f12.jpg",
             "image_position": "left",
             "step_1": "Boutique buyers building curated drops",
             "step_2": "Emerging brands developing signature styles",
