@@ -59,7 +59,8 @@
         "service_item_p3aAWb": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Private Label</b>",
+            "title": "Private Label",
+            "image": "shopify://shop_images/OEM_2.jpg",
             "image_position": "left",
             "step_1": "Brand-ready details, without operational hassle.<br>",
             "step_2": "Relabeling: labels, hangtags, packaging (as required)<br>",
