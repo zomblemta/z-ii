@@ -166,7 +166,6 @@ product-info {
 
 /* Form Elements */
 .product-form__input {
-  margin: 0 0 1.2rem 0;
   min-width: fit-content;
   border: none;
 }
