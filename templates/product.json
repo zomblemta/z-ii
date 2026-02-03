@@ -67,6 +67,7 @@
         "share"
       ],
       "settings": {
+        "sale_image": "shopify://shop_images/2_6fbf53f2-6aab-461f-8fb5-b9f4d0ea2a26.jpg",
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "large",
