@@ -114,6 +114,7 @@
           "type": "service_item",
           "settings": {
             "title": "What we need from you (Copy-Paste)",
+            "image": "shopify://shop_images/b6ae7ebda0c48439a8bf68688ac13ef6.jpg",
             "image_position": "right",
             "step_1": "<b>Reply with:</b> style refs/tech pack + target market + target price + qty + size run + target date",
             "step_2": "",
