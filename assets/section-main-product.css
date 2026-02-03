@@ -166,7 +166,6 @@ product-info {
 
 /* Form Elements */
 .product-form__input {
-  flex: 0 0 100%;
   margin: 0 0 1.2rem 0;
   min-width: fit-content;
   border: none;
@@ -211,9 +210,6 @@ product-info {
 }
 
 /* Product info */
-
-.product__info-container > * + * {
-}
 
 .product__info-container iframe {
   max-width: 100%;
@@ -351,9 +347,6 @@ a.product__text {
 
 .product-form__quantity-top .form__label {
   margin-bottom: 1.2rem;
-}
-
-.product-form__buttons {
 }
 
 .product--no-media .product__info-container > modal-opener {
@@ -1492,4 +1485,56 @@ quantity-input input[type='number']::-webkit-inner-spin-button {
 quantity-input input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+/* 将加减按钮“放到 input 里”（视觉上覆盖在输入框内部左右侧） */
+quantity-input.quantity-input--inside {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+quantity-input.quantity-input--inside > input[type='number'] {
+  /* 给左右按钮留空间 */
+  padding-left: 1.6rem !important;
+  padding-right: 1.6rem !important;
+  /* 避免原先 max-width 太小导致内容被挤压 */
+}
+
+quantity-input.quantity-input--inside > button.quantity__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+/* 控制放在 input 内侧的数量按钮图标尺寸为 10px */
+quantity-input.quantity-input--inside > button.quantity__button .svg-wrapper {
+  width: 10px;
+  height: 10px;
+}
+
+quantity-input.quantity-input--inside > button.quantity__button[name='minus'] {
+  left: 0.4rem;
+}
+
+quantity-input.quantity-input--inside > button.quantity__button[name='plus'] {
+  right: 0.4rem;
+}
+
+@media screen and (min-width: 750px) {
+  quantity-input.quantity-input--inside > input[type='number'] {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  quantity-input.quantity-input--inside > button.quantity__button {
+    width: 10px;
+    height: 10px;
+  }
 }
