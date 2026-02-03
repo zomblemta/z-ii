@@ -78,6 +78,7 @@
           "type": "service_item",
           "settings": {
             "title": "Which Program Fits You?",
+            "image": "shopify://shop_images/2_c0711d4b-73ab-4705-9f45-c53c3348159e.jpg",
             "image_position": "right",
             "step_1": "In-stock wholesale → fastest, lowest risk, ready to ship",
             "step_2": "OEM/ODM → build to spec from your tech pack",
@@ -101,7 +102,7 @@
       "name": "Service",
       "settings": {
         "hero_title": "Services",
-        "hero_subtitle": "Two supply programs + Private Label support. One streamlined execution.<br><br>Z-II STUDIOS is your <b>Design & Production Partner</b>—helping boutiques and brands buy smarter (in-stock) or build better (OEM/ODM), with clear timelines and one point of contact.",
+        "hero_subtitle": "Two supply programs + Private Label support. One streamlined execution.<br><br>Z-II STUDIOS is your <b>Design &amp; Production Partner</b>—helping boutiques and brands buy smarter (in-stock) or build better (OEM/ODM), with clear timelines and one point of contact.",
         "hero_image": "shopify://shop_images/9b5aef2a5d368cab55fdd67aaf83188e_46f47918-520a-4268-8fe3-e16cdce3ab07.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Tell us your market + budget + qty — we’ll match the right program",
