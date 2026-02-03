@@ -41,7 +41,8 @@
         "service_item_GhTbnF": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we offer</b>",
+            "title": "What we offer",
+            "image": "shopify://shop_images/2_c0711d4b-73ab-4705-9f45-c53c3348159e.jpg",
             "image_position": "right",
             "step_1": "<b>Relabeling / label application</b> (as required)<br>\n• Main label, size label, care label, hangtag<br>",
             "step_2": "<b>Packaging support</b> (as required)\n<br><br>\n• Polybag, barcode/labeling, carton marking<br>",
@@ -58,7 +59,8 @@
         "service_item_czfYgp": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Two ways to Private Label</b>",
+            "title": "Two ways to Private Label",
+            "image": "shopify://shop_images/eb3119b9043debdc337bec9b35eb3079.jpg",
             "image_position": "left",
             "step_1": "<b>Option A — Private Label on In-Stock Styles (Fastest)</b><br><br>\n• Choose styles from our in-stock collections<br><br>\n• Confirm labeling/packaging requirements<br><br>\n• QC + branding application + dispatch coordination<br><br>\n<i>Best for:</i> quick drops, low-risk testing, fast replenishment",
             "step_2": "<b>Option B — Private Label via OEM/ODM (Most Customizable)</b><br><br>\n• Share your tech pack / references + target qty<br><br>\n• Sampling & approval<br><br>\n• Bulk production + branding execution + QC + shipping<br><br>\n<i>Best for:</i> signature styles, long-term programs, tighter control on materials & fit",
@@ -75,7 +77,8 @@
         "service_item_GhGcAy": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Timeline & MOQ (Reference)</b>",
+            "title": "Timeline & MOQ (Reference)",
+            "image": "shopify://shop_images/beeacfb06421778122bf310d81c5cdc1.jpg",
             "image_position": "right",
             "step_1": "In-stock private label: timeline depends on branding requirements + order size<br>",
             "step_2": "OEM/private label:<br>\n  — Sampling: <b>5–7 working days</b> (typical)<br>\n  — Bulk: <b>15–20 working days</b> after approval (typical)<br>",
@@ -92,7 +95,8 @@
         "service_item_kyeH96": {
           "type": "service_item",
           "settings": {
-            "title": "<b>What we need from you (Copy-Paste)</b>",
+            "title": "What we need from you (Copy-Paste)",
+            "image": "shopify://shop_images/2_a8f2dd4d-a84d-47b4-9937-8ec971722ce3.jpg",
             "image_position": "left",
             "step_1": "<b>Program:</b> In-stock private label OR OEM private label<br>",
             "step_2": "<b>Branding assets:</b> logo file + label/hangtag specs (or request our standard templates)<br>",
@@ -117,7 +121,7 @@
       "name": "Service",
       "settings": {
         "hero_title": "Private Label",
-        "hero_subtitle": "Z-II STUDIOS — Design & Production Partner<br><br>A design-led apparel product development & production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
+        "hero_subtitle": "Z-II STUDIOS — Design &amp; Production Partner<br><br>A design-led apparel product development &amp; production management partner helping you launch brand-ready womenswear with minimal operational hassle—whether you start from in-stock styles or build from your own designs.",
         "hero_image": "shopify://shop_images/Private_Label-banner.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Send logo + label specs + quantities — we’ll propose the best private label route.",
