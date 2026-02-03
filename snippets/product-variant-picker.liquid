@@ -42,14 +42,81 @@
           {% endif %}
           {% endcomment %}
         </span>
-        <div class="flex gap-x-[25px] gap-y-2 w-full flex-wrap">
+        <div class="variant-values flex gap-x-[25px] gap-y-2 w-full flex-wrap">
           {% render 'product-variant-options', product: product, option: option, block: block, picker_type: 'button', is_color_label: is_color_label %}
         </div>
+        <span class="variant-values__arrows" aria-hidden="true">
+          <svg class="variant-values__arrow variant-values__arrow--down" width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="variant-values__arrow variant-values__arrow--up" width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
       </fieldset>
     {%- endfor -%}
 
     <script type="application/json" data-selected-variant>
       {{ product.selected_or_first_available_variant | json }}
+    </script>
+
+    <script>
+      (() => {
+        const root = document.getElementById('variant-selects-{{ section.id }}');
+        if (!root) return;
+
+        const updateOne = (fieldset) => {
+          const values = fieldset.querySelector('.variant-values');
+          const arrows = fieldset.querySelector('.variant-values__arrows');
+          if (!values || !arrows) return;
+
+          const labels = values.querySelectorAll('label');
+          if (!labels || labels.length < 2) {
+            fieldset.classList.remove('variant-values--collapsible');
+            values.classList.remove('variant-values--clip-enabled');
+            return;
+          }
+
+          const baseTop = labels[0].offsetTop;
+          let wrapped = false;
+          for (let i = 1; i < labels.length; i++) {
+            if (labels[i].offsetTop > baseTop + 1) {
+              wrapped = true;
+              break;
+            }
+          }
+
+          fieldset.classList.toggle('variant-values--collapsible', wrapped);
+          values.classList.toggle('variant-values--clip-enabled', wrapped);
+
+          // 记录完整高度，供 CSS 折叠为一半高度使用
+          if (wrapped) {
+            const fullHeight = values.scrollHeight || 0;
+            if (fullHeight > 0) {
+              values.style.setProperty('--variant-values-full-height', fullHeight + 'px');
+            }
+          } else {
+            values.style.removeProperty('--variant-values-full-height');
+          }
+        };
+
+        const updateAll = () => {
+          root.querySelectorAll('fieldset.product-form__input').forEach(updateOne);
+        };
+
+        let raf = 0;
+        const schedule = () => {
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(updateAll);
+        };
+
+        // 首次渲染后计算一次
+        schedule();
+        // 屏幕尺寸变化可能导致换行变化
+        window.addEventListener('resize', schedule, { passive: true });
+        // 变体切换可能导致 DOM 更新（安全起见再算一次）
+        root.addEventListener('change', schedule);
+      })();
     </script>
   </variant-selects>
 {%- endunless -%}

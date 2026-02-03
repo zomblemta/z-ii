@@ -59,6 +59,65 @@ variant-selects {
   position: relative;
 }
 
+/* 右侧上下箭头指示（折叠/展开） */
+.product-form__input {
+  position: relative;
+}
+
+.variant-values__arrows {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  pointer-events: none;
+}
+
+.variant-values__arrow {
+  display: none;
+}
+
+/* 默认：没有换行时不显示箭头（仅在可折叠时显示） */
+.product-form__input:not(.variant-values--collapsible) .variant-values__arrows {
+  display: none;
+}
+
+/* 有换行：默认折叠态显示向下箭头 */
+.product-form__input.variant-values--collapsible .variant-values__arrow--down {
+  display: block;
+}
+
+/* 展开态显示向上箭头 */
+.product-form__input.variant-values--collapsible:hover .variant-values__arrow--down,
+.product-form__input.variant-values--collapsible:focus-within .variant-values__arrow--down {
+  display: none;
+}
+.product-form__input.variant-values--collapsible:hover .variant-values__arrow--up,
+.product-form__input.variant-values--collapsible:focus-within .variant-values__arrow--up {
+  display: block;
+}
+
+/* 选项值换行时折叠（clip-path + max-height，实现“高度减半”效果），交互时展开 */
+.variant-values--clip-enabled {
+  /* JS 会写入 --variant-values-full-height 为真实高度 */
+  --variant-values-full-height: 0px;
+  max-height: calc(var(--variant-values-full-height) / 2);
+  clip-path: inset(0 0 0 0);
+  overflow: hidden;
+  transition: max-height 180ms ease, clip-path 180ms ease;
+  will-change: max-height, clip-path;
+}
+
+/* 鼠标悬停或键盘聚焦（可访问）时展开全部行 */
+.product-form__input.variant-values--collapsible:hover .variant-values--clip-enabled,
+.product-form__input.variant-values--collapsible:focus-within .variant-values--clip-enabled {
+  max-height: var(--variant-values-full-height);
+  clip-path: inset(0 0 0 0);
+}
+
 .product-form__input--size input[type='radio'] + label {
   padding: 6px 24px;
   text-align: center;
