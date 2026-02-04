@@ -25,6 +25,8 @@
           "settings": {
             "title": "In-Stock Wholesale",
             "image": "shopify://shop_images/2_57d155bb-3b0b-4a5b-b5cf-2bb9d5d14a14.jpg",
+            "btn_label": "12",
+            "btn_url": "shopify://products/arc-drape-blazer",
             "image_position": "left",
             "step_1": "<b>Low-risk buying</b>. Fast dispatch. Boutique-ready finishing.<br>",
             "step_2": "<b>MOQ:</b> from <b>1 piece</b><br>",
@@ -43,6 +45,8 @@
           "settings": {
             "title": "OEM / ODM",
             "image": "shopify://shop_images/ODM-banner.jpg",
+            "btn_label": "",
+            "btn_url": "",
             "image_position": "right",
             "step_1": "From tech pack to finished goods — we manage <b>end-to-end execution</b>.<br>",
             "step_2": "Development: fabric/trim support, pattern, sampling<br>",
@@ -61,6 +65,8 @@
           "settings": {
             "title": "Private Label",
             "image": "shopify://shop_images/OEM_2.jpg",
+            "btn_label": "",
+            "btn_url": "",
             "image_position": "left",
             "step_1": "Brand-ready details, without operational hassle.<br>",
             "step_2": "Relabeling: labels, hangtags, packaging (as required)<br>",
@@ -78,6 +84,8 @@
           "type": "service_item",
           "settings": {
             "title": "Which Program Fits You?",
+            "btn_label": "",
+            "btn_url": "",
             "image_position": "right",
             "step_1": "In-stock wholesale → fastest, lowest risk, ready to ship",
             "step_2": "OEM/ODM → build to spec from your tech pack",
@@ -101,7 +109,7 @@
       "name": "Service",
       "settings": {
         "hero_title": "Services",
-        "hero_subtitle": "Two supply programs + Private Label support. One streamlined execution.<br><br>Z-II STUDIOS is your <b>Design & Production Partner</b>—helping boutiques and brands buy smarter (in-stock) or build better (OEM/ODM), with clear timelines and one point of contact.",
+        "hero_subtitle": "Two supply programs + Private Label support. One streamlined execution.<br><br>Z-II STUDIOS is your <b>Design &amp; Production Partner</b>—helping boutiques and brands buy smarter (in-stock) or build better (OEM/ODM), with clear timelines and one point of contact.",
         "hero_image": "shopify://shop_images/9b5aef2a5d368cab55fdd67aaf83188e_46f47918-520a-4268-8fe3-e16cdce3ab07.jpg",
         "cta_title": "CONTACT US NOW",
         "cta_subtitle": "Tell us your market + budget + qty — we’ll match the right program",
