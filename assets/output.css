@@ -1008,6 +1008,9 @@
   .gap-y-\[28px\] {
     row-gap: 28px;
   }
+  .gap-y-\[48px\] {
+    row-gap: 48px;
+  }
   .truncate {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2112,6 +2115,11 @@
       width: 200px;
     }
   }
+  .md\:w-\[240px\] {
+    @media (width >= 48rem) {
+      width: 240px;
+    }
+  }
   .md\:w-\[280px\] {
     @media (width >= 48rem) {
       width: 280px;
@@ -2310,6 +2318,11 @@
   .md\:gap-y-\[40px\] {
     @media (width >= 48rem) {
       row-gap: 40px;
+    }
+  }
+  .md\:gap-y-\[48px\] {
+    @media (width >= 48rem) {
+      row-gap: 48px;
     }
   }
   .md\:bg-\[\#F2F2F2\] {
