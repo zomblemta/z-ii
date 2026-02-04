@@ -12,12 +12,12 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
-        "slide_nECWVe": {
+        "slide_gUi7BK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/56fab573504bfd9f67f8dc4d2bde419c.jpg",
-            "title": "Start Small. Scale Fast.",
-            "description": "In-stock from 1 piece · Fast restocks.",
+            "image": "shopify://shop_images/143894534bacbdb7b3c873b5ff5d1a34.jpg",
+            "title": "Not Generic. Design-Led.",
+            "description": "More newness · Stronger identity.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -26,12 +26,12 @@
             "mobile_description_text_size": 12
           }
         },
-        "slide_gUi7BK": {
+        "slide_nECWVe": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/143894534bacbdb7b3c873b5ff5d1a34.jpg",
-            "title": "Not Generic. Design-Led.",
-            "description": "More newness · Stronger identity.",
+            "image": "shopify://shop_images/56fab573504bfd9f67f8dc4d2bde419c.jpg",
+            "title": "Start Small. Scale Fast.",
+            "description": "In-stock from 1 piece · Fast restocks.",
             "title_color": "#ffffff",
             "description_color": "#ffffff",
             "title_text_size": 24,
@@ -56,8 +56,8 @@
         }
       },
       "block_order": [
-        "slide_nECWVe",
         "slide_gUi7BK",
+        "slide_nECWVe",
         "slide_yzHmBm"
       ],
       "name": "首页轮播Banner",
