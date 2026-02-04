@@ -199,14 +199,14 @@
                   </div>
                 </div>
               </div>
-                  
-              {% if block.settings.url != blank %}
-              <a
-                class=" bg-black text-white border  flex items-center justify-center hover:bg-white hover:text-black px-4  w-[160px]  md:w-[240px] py-3 text-[14px] md:text-[20px] leading-normal transition-all duration-300 rounded-[5px]"
-                href="{{ block.settings.btn_url }}"
-              >
-                {{ block.settings.btn_label }}
-              </a>
+
+              {% if block.settings.btn_url != blank %}
+                <a
+                  class=" bg-black text-white border  flex items-center justify-center hover:bg-white hover:text-black px-4  w-[160px]  md:w-[240px] py-3 text-[14px] md:text-[20px] leading-normal transition-all duration-300 rounded-[5px]"
+                  href="{{ block.settings.btn_url }}"
+                >
+                  {{ block.settings.btn_label }}
+                </a>
               {% endif %}
             </div>
           {%- endif -%}
