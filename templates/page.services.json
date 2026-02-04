@@ -25,8 +25,8 @@
           "settings": {
             "title": "In-Stock Wholesale",
             "image": "shopify://shop_images/2_57d155bb-3b0b-4a5b-b5cf-2bb9d5d14a14.jpg",
-            "btn_label": "test",
-            "btn_url": "shopify://products/arc-drape-blazer",
+            "btn_label": "",
+            "btn_url": "",
             "image_position": "left",
             "step_1": "<b>Low-risk buying</b>. Fast dispatch. Boutique-ready finishing.<br>",
             "step_2": "<b>MOQ:</b> from <b>1 piece</b><br>",
