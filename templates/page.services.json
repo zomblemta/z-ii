@@ -45,7 +45,7 @@
           "settings": {
             "title": "OEM / ODM",
             "image": "shopify://shop_images/ODM-banner.jpg",
-            "btn_label": "",
+            "btn_label": "ddd",
             "btn_url": "",
             "image_position": "right",
             "step_1": "From tech pack to finished goods — we manage <b>end-to-end execution</b>.<br>",
