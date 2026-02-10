@@ -23,7 +23,7 @@
         "service_item_iVCXnQ": {
           "type": "service_item",
           "settings": {
-            "title": "<b>Who this is for</b>",
+            "title": "Who this is for",
             "image": "shopify://shop_images/2_6fbf53f2-6aab-461f-8fb5-b9f4d0ea2a26.jpg",
             "image_position": "left",
             "step_1": "Boutiques creating an own-label capsule<br>",
