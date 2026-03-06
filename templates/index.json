@@ -12,6 +12,20 @@
     "hero_banner_swiper_BfbYLG": {
       "type": "hero-banner-swiper",
       "blocks": {
+        "slide_cbV4WW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/12af3f144fdb109f08e2e03cf3c65496.jpg",
+            "title": "",
+            "description": "",
+            "title_color": "#ffffff",
+            "description_color": "#ffffff",
+            "title_text_size": 24,
+            "mobile_title_text_size": 16,
+            "description_text_size": 16,
+            "mobile_description_text_size": 12
+          }
+        },
         "slide_gUi7BK": {
           "type": "slide",
           "settings": {
@@ -56,6 +70,7 @@
         }
       },
       "block_order": [
+        "slide_cbV4WW",
         "slide_gUi7BK",
         "slide_nECWVe",
         "slide_yzHmBm"
