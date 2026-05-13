@@ -160,6 +160,14 @@
             "answer": "<p>Samples typically take <strong>about 5-7 business days</strong>, depending on stock availability. If all items are in stock, delivery may be as fast as <strong>3 business days</strong>. If some/all items are out of stock, it will take longer. Contact us for rush requests.</p>"
           }
         },
+        "faq_item_X8LYk9": {
+          "type": "faq_item",
+          "settings": {
+            "parent_category": "Samples",
+            "question": "Custom Sample Development Policy",
+            "answer": "<p>This product is a custom-made sample development service. By placing an order and making payment, the buyer authorizes the seller to begin sample development based on the approved references, measurements, materials, and project requirements.</p><p>Because custom sample development involves immediate and non-recoverable work and costs, including but not limited to pattern making, technical development, sample sewing, labor, sourced fabrics, trims, and related preparation expenses, all sample-making charges, development charges, and materials costs become non-refundable once development has started.</p><p>If the seller has already purchased fabric, trims, or other materials, or has already completed pattern making, cutting, sewing, or other development work for the custom sample, those costs are deemed earned and non-refundable.</p><p>If a cancellation request is made after development has started, the seller may, at its discretion, ship the completed or partially completed sample together with any purchased materials to the buyer, but no refund will be issued for the development work already performed or the costs already incurred, except as required by applicable law.</p><p>For clarity, dissatisfaction based solely on personal preference, style preference, subjective aesthetic opinion, or a change of mind does not entitle the buyer to a refund once custom development has started.</p><p>If there is a verified issue involving a material manufacturing defect or a material deviation from the approved sample, confirmed measurements, or written specifications, the seller may review the matter and, where appropriate, offer a commercially reasonable remedy in accordance with applicable law.</p><p>Shipping charges, duties, taxes, transfer fees, and any third-party service fees are non-refundable unless otherwise expressly agreed in writing.</p><p>By completing payment, the buyer acknowledges and accepts this custom sample development policy.</p>"
+          }
+        },
         "category_EaMara": {
           "type": "category",
           "settings": {
@@ -342,6 +350,7 @@
         "category_YcMQHq",
         "faq_item_gJHhXQ",
         "faq_item_9HWXXD",
+        "faq_item_X8LYk9",
         "category_EaMara",
         "faq_item_hPLDkx",
         "faq_item_hVRdew",
