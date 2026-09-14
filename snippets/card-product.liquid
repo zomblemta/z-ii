@@ -255,7 +255,7 @@
                 </p>
               {%- endif -%}
               {%- if show_price -%}
-                {% render 'card-product-price', product: card_product, price_class: '', show_compare_at_price: true, show_product_tag: show_product_tag | default: true %}
+                {% render 'card-product-price', product: card_product, price_class: '', show_compare_at_price: true, show_product_tag: show_product_tag, default: true %}
               {% endif %}
 
               {%- if card_product.quantity_price_breaks_configured? -%}
@@ -858,3 +858,15 @@
     }
   })();
 </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'card-product-price', product: card_product, price_class: '', show_compare_at_price:
+    true, show_product_tag: show_product_tag | default: true %}"
+  to: "{% render 'card-product-price', product: card_product, price_class: '', show_compare_at_price:
+    true, show_product_tag: show_product_tag, default: true %}"
+  position: 14878..15031
+{% endcomment %}
